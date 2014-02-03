@@ -830,10 +830,11 @@ book:
       content: "parameters_ref/core_mailaction.md"
     - level: 3
       content: "parameters_ref/core_start_app.md"
-
     - level: 2
       content: "parameters_ref/system.md"
       subtoc:   1
+      flags:
+        new : "updated"
     - level: 3
       content: "parameters_ref/core_loglevel.md"
     - level: 3
@@ -852,7 +853,12 @@ book:
       content: "parameters_ref/authent_accountexpiredelay.md"
     - level: 3
       content: "parameters_ref/authent_failurecount.md"
-
+    - level: 3
+      content: "parameters_ref/core_dbdocviewcompat.md"
+      flags:
+        draft : "draft"
+        new : "new"
+        next-release : "3.3.0"
     - level: 2
       content: "parameters_ref/smtp.md"
       subtoc:   1

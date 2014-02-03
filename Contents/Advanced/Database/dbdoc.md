@@ -26,8 +26,9 @@ c'est à dire  tout ce qui est commun à tout type de document.
 | dprofid      | integer                     | Identifiant du [profil dynamique][docprofdyn] associé à ce document.                              |
 | forumid      | integer                     | *Obsolète*                                                                                        |
 | fromid       | integer                     | Id de la famille d'appartenance.                                                                  |
+| fromname     | text                        | Nom logique de la famille d'appartenance.                                                         |
 | fulltext     | tsvector                    | Ensemble des valeurs du document y compris les textes des fichiers indexés.                       |
-| id           | integer                     | Identifiant unique du document (issue de la séquence `seq_id_doc`).                               |
+| id           | integer                     | Identifiant unique du document (issue de la séquence `family.seq_id_doc`).                               |
 | icon         | text                        | Référence au fichier d'icone du document.                                                         |
 | initid       | integer                     | Id du premier document de la lignée documentaire.                                                 |
 | ldapdn       | text                        | *Obsolète*                                                                                        |
