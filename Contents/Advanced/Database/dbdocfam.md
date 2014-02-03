@@ -1,9 +1,9 @@
 # Description de la table des familles de document {#core-ref:ccad55c7-5ff1-40c3-ad6f-ec79b1a9ac3c}
 
-La table `docfam` contient les caractéristiques des [familles][famprop]. Cette
-table hérite de la [table `doc`][dbdoc].
+La table `family.families` contient les caractéristiques des [familles][famprop]. Cette
+table hérite de la [table `family.documents`][dbdoc].
 
-Colonnes spécifiques de la table `docfam` :
+Colonnes spécifiques de la table `family.families` :
 
 |    Colonne    |       Type       |                                          Définition                                         |
 | ------------- | ---------------- | ------------------------------------------------------------------------------------------- |
@@ -23,7 +23,7 @@ Colonnes spécifiques de la table `docfam` :
 | tagable       | text             | Spécifique module [Dynacase tags][tag]                                                      |
 
 
-![ Relation d'héritage entre docfam et doc ](advanced/dbdocfam.png)
+![ Relation d'héritage entre family.families et family.documents ](advanced/dbdocfam.png)
 
 <!-- links -->
 [famprop]:          #core-ref:cfc7f53b-7982-431e-a04b-7b54eddf4a75  "Propriétés des familles"

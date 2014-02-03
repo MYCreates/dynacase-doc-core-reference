@@ -1,8 +1,8 @@
 book:
   title: "Manuel de référence"
   module: "Core"
-  version: "3.2"
-  edition: "4"
+  version: "3.3"
+  edition: "1"
   githubsrc: "https://github.com/Anakeen/dynacase-doc-core-reference"
   googleSearchAPI : "008147054905479727235:j5nj6h1_ye4"
   chapters:
@@ -39,8 +39,6 @@ book:
       content:  "object_model/hooks.md"
     - level:   2
       content:  "object_model/revision.md"
-      flags:
-        new: "new"
 ##
 # famille
 ##
@@ -137,8 +135,6 @@ book:
       content:  "documents_systemes/report.md"
     - level:   2
       content:  "documents_systemes/dossier.md"
-      flags:
-        new : "new"
     - level:   2
       content:  "documents_systemes/masques.md"
     - level:   2
@@ -173,9 +169,6 @@ book:
       subtoc:   2
     - level:   2
       content:  "importation_exportation_documents/importations.md"
-      flags:
-        new: "updated"
-        next-release : "3.2.12"
     - level:   2
       content:  "importation_exportation_documents/importationsxml.md"
     - level:   2
@@ -267,8 +260,6 @@ book:
 ##
     - level:   1
       content:  "API/introduction.md"
-      flags:
-        new : "updated"
       subtoc:   2
 #
 # START of API Content
@@ -344,71 +335,45 @@ book:
     - level:   2
       element: "chapter"
       content:  "API/Class_Dir.md"
-      flags:
-        new : "new"
       subtoc:   2
     - level:   3
       element: "chapter"
       content: "API/Class_Dir/methods.md"
       subtoc:  1
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Dir/Method_insertDocument.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Dir/Method_insertMultipleDocuments.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Dir/Method_removeDocument.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content: "API/Class_Dir/hooks.md"
       subtoc:  1
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Dir/Method_preInsertDocument.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Dir/Method_postInsertDocument.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Dir/Method_preInsertMultipleDocuments.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Dir/Method_postInsertMultipleDocuments.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Dir/Method_preRemoveDocument.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Dir/Method_postRemoveDocument.md"
-      flags:
-        new : "new"
     - level:   2
       element: "chapter"
       content:  "API/Class_Doc.md"
-      flags:
-        new: "updated"
       subtoc:   2
     - level:   3
       element: "chapter"
@@ -417,8 +382,6 @@ book:
       element: "chapter"
       content:  "API/Class_Doc/dochooks.md"
       subtoc:   1
-      flags:
-        new: "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_PreCreated.md"
@@ -428,23 +391,15 @@ book:
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_preDelete.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_postDelete.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_preDuplicate.md"
-      flags:
-        new :  "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_postDuplicate.md"
-      flags:
-        new :  "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_preStore.md"
@@ -460,130 +415,82 @@ book:
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_preImport.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_postImport.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_preUndelete.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_postUndelete.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_preConsultation.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_preEdition.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_Doc/docmethods.md"
       subtoc:   1
-      flags:
-        new: "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_addArrayRow.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_addHistoryEntry.md"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_clearValue.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_arrayToRawValue.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_hasPermission.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_delete.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_clearArrayValues.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_disableEditControl.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_duplicate.md"
-      flags:
-        new :  "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_editattr.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_enableEditControl.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getArrayRawValues.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getAttribute.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getCustomTitle.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getDate.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getDocAnchor.md"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getFamilyDocument.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getFamilyParameterValue.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getMultipleRawValues.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getOldRawValue.md"
@@ -593,18 +500,12 @@ book:
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getPropertyValue.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getState.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getTitle.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getRawValue.md"
@@ -614,28 +515,18 @@ book:
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_isAlive.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_isChanged.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getLatestId.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_rawValueToArray.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_removeArrayRow.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_Refresh.md"
@@ -645,8 +536,6 @@ book:
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_setState.md"
-      flags:
-        new:   "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_setValue.md"
@@ -659,13 +548,9 @@ book:
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_undelete.md"
-      flags:
-        new : "new"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_viewattr.md"
-      flags:
-        new : "new"
     - level:   2
       element: "chapter"
       content:  "API/Class_Docfam.md"
@@ -676,47 +561,29 @@ book:
     - level:   2
       element: "chapter"
       content:  "API/Class_DocumentList.md"
-      flags:
-        new:   "new"
       subtoc:   1
     - level:   3
       element: "chapter"
       content:  "API/Class_DocumentList/Method_addDocumentIdentifiers.md"
-      flags:
-        new:   "new"
     - level:   2
       element: "chapter"
       content:  "API/Class_Layout.md"
       subtoc:   1
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_Layout/Method_gen.md"
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_Layout/Method_set.md"
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_Layout/Method_eSet.md"
-      flags:
-        new:   "new"
-        next-release : "3.2.12"
     - level:   3
       element: "chapter"
       content:  "API/Class_Layout/Method_setBlockData.md"
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_Layout/Method_eSetBlockData.md"
-      flags:
-        new:   "new"
-        next-release : "3.2.12"
     - level:   2
       element: "chapter"
       content:  "API/Class_Log.md"
@@ -782,206 +649,123 @@ book:
     - level:   2
       element: "chapter"
       content:  "API/Class_SearchAccount.md"
-      flags:
-        new:   "new"
       subtoc:   1
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchAccount/Method_addFilter.md"
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchAccount/Method_addGroupFilter.md"
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchAccount/Method_addRoleFilter.md"
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchAccount/Method_getLoginFromDocName.md"
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchAccount/Method_search.md"
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchAccount/Method_setReturnType.md"
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchAccount/Method_setOrder.md"
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchAccount/Method_setSlice.md"
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchAccount/Method_setStart.md"
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchAccount/Method_setTypeFilter.md"
-      flags:
-        new:   "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchAccount/Method_overrideViewControl.md"
-      flags:
-        new:   "new"
     - level:   2
       element: "chapter"
       content:  "API/Class_SearchDoc.md"
-      flags:
-        new : "new"
       subtoc:   1
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_setObjectReturn.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_setOrder.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_setPertinenceOrder.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_setSlice.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_setStart.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_setRecursiveSearch.md"
-      flags:
-        new : "new"
-        next-release : "3.2.12"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_useCollection.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_addFilter.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_addGeneralFilter.md"
-      flags:
-        next-release : "3.2.12"
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_onlyCount.md"
-      flags:
-        new : "new"
-        next-release : "3.2.12"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_join.md"
-      flags:
-        next-release : "3.2.12"
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_overrideViewControl.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_excludeConfidential.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_search.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_reset.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_count.md"
-      flags:
-        next-release : "3.2.12"
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_getDocumentList.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_getError.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_getIds.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_returnsOnly.md"
-      flags:
-        new: "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_getSearchInfo.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_getNextDoc.md"
-      flags:
-        new : "new"
     - level:   2
       element: "chapter"
       content:  "API/Utils_DocManager.md"
-      flags:
-        new : "new"
       subtoc:   1
     - level:   3
       element: "chapter"
       content:  "API/Utils_DocManager/Utils_new_Doc.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Utils_DocManager/Utils_createDoc.md"
-      flags:
-        new : "new"
     - level:   3
       element: "chapter"
       content:  "API/Utils_DocManager/Utils_createTmpDoc.md"
-      flags:
-        new : "new"
 #
 # END of API Content
 #
@@ -991,57 +775,44 @@ book:
 #
     - level:   1
       content:  "Actions_zones_ref/introduction.md"
-      flags:
-        new: "new"
+
       subtoc:   1
     - level:   2
       content:  "Actions_zones_ref/zones/zone_fdl_html_head.md"
-      flags:
-        new: "new"
+
     - level:   2
       content:  "Actions_zones_ref/zones/zone_fdl_html_foot.md"
-      flags:
-        new: "new"
+
     - level : 2
       content:  "Actions_zones_ref/zones/zone_fdl_input_attribute.md"
-      flags:
-        new: "new"
+
     - level : 2
       content:  "Actions_zones_ref/zones/zone_fdl_view_frame.md"
-      flags:
-        new: "new"
+
     - level : 2
       content:  "Actions_zones_ref/zones/zone_fdl_edit_frame.md"
-      flags:
-        new: "new"
+
     - level : 2
       content:  "Actions_zones_ref/zones/zone_fdl_view_array.md"
-      flags:
-        new: "new"
+
     - level : 2
       content:  "Actions_zones_ref/zones/zone_fdl_edit_array.md"
-      flags:
-        new: "new"
+
     - level : 2
       content:  "Actions_zones_ref/zones/zone_edit_parameters.md"
-      flags:
-        new: "new"
+
     - level : 2
       content:  "Actions_zones_ref/actions/action_fdl_opendoc.md"
-      flags:
-        new: "new"
+
     - level : 2
       content:  "Actions_zones_ref/actions/action_fdl_impcard.md"
-      flags:
-        new: "new"
+
     - level : 2
       content:  "Actions_zones_ref/actions/action_fdl_exportfile.md"
-      flags:
-        new: "new"
+
     - level : 2
       content:  "Actions_zones_ref/actions/action_fdl_method.md"
-      flags:
-        new: "new"
+
 
 #
 # parametres de ref
@@ -1059,10 +830,11 @@ book:
       content: "parameters_ref/core_mailaction.md"
     - level: 3
       content: "parameters_ref/core_start_app.md"
-
     - level: 2
       content: "parameters_ref/system.md"
       subtoc:   1
+      flags:
+        new : "updated"
     - level: 3
       content: "parameters_ref/core_loglevel.md"
     - level: 3
@@ -1081,7 +853,12 @@ book:
       content: "parameters_ref/authent_accountexpiredelay.md"
     - level: 3
       content: "parameters_ref/authent_failurecount.md"
-
+    - level: 3
+      content: "parameters_ref/core_dbdocviewcompat.md"
+      flags:
+        draft : "draft"
+        new : "new"
+        next-release : "3.3.0"
     - level: 2
       content: "parameters_ref/smtp.md"
       subtoc:   1
@@ -1154,9 +931,6 @@ book:
       content:  "wsh_ref/getApplicationParameter.md"
     - level:   2
       content:  "wsh_ref/importDocuments.md"
-      flags:
-        new: "updated"
-        next-release : "3.2.12"
     - level:   2
       content:  "wsh_ref/refreshDocuments.md"
     - level:   2
@@ -1178,170 +952,104 @@ book:
       content:  "Style/styles.md"
     - level:   2
       content:  "Advanced/Internationalisation/introduction.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
       subtoc:   2
     - level:   3
       content:  "Advanced/Internationalisation/description.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
+
     - level:   3
       content:  "Advanced/Internationalisation/catalogue.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
+
     - level:   4
       content:  "Advanced/Internationalisation/localelayout.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
+
     - level:   4
       content:  "Advanced/Internationalisation/localeworkflow.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
+
     - level:   3
       content:  "Advanced/Internationalisation/localegenphp.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
+
     - level:   4
       content:  "Advanced/Internationalisation/localegenfamily.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
+
     - level:   4
       content:  "Advanced/Internationalisation/localegencv.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
+
     - level:   4
       content:  "Advanced/Internationalisation/localegenlayout.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
+
     - level:   3
       content:  "Advanced/Internationalisation/translate.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
+
     - level:   3
       content:  "Advanced/Internationalisation/publish.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
+
     - level:   3
       content:  "Advanced/Internationalisation/setlanguage.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
+
     - level:   3
       content:  "Advanced/Internationalisation/addlanguage.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
+
     - level:   3
       content:  "Advanced/Internationalisation/javascript.md"
-      flags:
-        new: "new"
-        next-release : "3.2.12"
+
     - level:   2
       content:  "Advanced/Cinematique/introduction.md"
       subtoc:   2
-      flags:
-        new: "new"
     - level:   3
       content:  "Advanced/Cinematique/actionrequest.md"
-      flags:
-        new: "new"
     - level:   3
       content:  "Advanced/Cinematique/docrequest.md"
-      flags:
-        new: "new"
     - level:   3
       content:  "Advanced/Cinematique/staterequest.md"
-      flags:
-        new: "new"
     - level:   3
       content:  "Advanced/Cinematique/wshrequest.md"
-      flags:
-        new: "new"
     - level:   2
       content:  "Advanced/Database/introduction.md"
-      subtoc:   2
       flags:
-        new: "new"
+        new : "updated"
+      subtoc:   2
     - level:   3
       content:  "Advanced/Database/databaseaccess.md"
-      flags:
-        new : "new"
     - level:   3
       content:  "Advanced/Database/simplequery.md"
-      flags:
-        new : "new"
     - level:   3
       content:  "Advanced/Database/dbdoc.md"
       flags:
-        new: "new"
+        new : "updated"
+        next-release : "3.3.0"
     - level:   3
       content:  "Advanced/Database/dbdocfam.md"
       flags:
-        new: "new"
+        new : "updated"
+        next-release : "3.3.0"
     - level:   3
       content:  "Advanced/Database/dbattr.md"
-      flags:
-        new: "new"
+
     - level:   3
       content:  "Advanced/Database/dbaccount.md"
-      flags:
-        new: "new"
     - level:   3
       content:  "Advanced/Database/dbsecurity.md"
-      flags:
-        new: "new"
     - level:   3
       content:  "Advanced/Database/dbhistory.md"
-      flags:
-        new: "new"
     - level:   3
       content:  "Advanced/Database/dbvault.md"
-      flags:
-        new: "new"
     - level:   3
       content:  "Advanced/Database/dbapp.md"
-      flags:
-        new: "new"
     - level:   3
       content:  "Advanced/Database/dbparam.md"
-      flags:
-        new: "new"
     - level:   2
       content:  "Advanced/Persistance/introduction.md"
       subtoc:   2
-      flags:
-        new: "new"
     - level:   3
       content:  "Advanced/Persistance/dbobj.md"
-      flags:
-        new: "new"
     - level:   3
       content:  "Advanced/Persistance/querydb.md"
-      flags:
-        new: "new"
     - level:   3
       content:  "Advanced/Persistance/transaction.md"
-      flags:
-        new: "new"
     - level:   2
       content:  "Advanced/Persistance/user.md"
-      flags:
-        new: "updated"
     - level:   2
       content:  "Advanced/Migration/introduction.md"
-      flags:
-        new: "new"
     - level:   2
       content:  "Advanced/Recherche/introduction.md"
       subtoc:   2
@@ -1387,77 +1095,43 @@ book:
     - level:   2
       content:  "Advanced/Security/introduction.md"
       subtoc:   2
-      flags:
-         new: "new"
     - level:   3
       content:  "Advanced/Security/controlaction.md"
-      flags:
-         new: "new"
     - level:   3
       content:  "Advanced/Security/controldoc.md"
-      flags:
-         new: "new"
     - level:   3
       content:  "Advanced/Security/controlfile.md"
-      flags:
-         new: "new"
     - level:   3
       content:  "Advanced/Security/confidential.md"
-      flags:
-        new : "new"
     - level:   2
       content:  "Advanced/Template/introduction.md"
-      flags:
-         new: "new"
       subtoc:   1
     - level:   3
       content:  "Advanced/Template/texte.md"
-      flags:
-         new: "new"
     - level:   3
       content:  "Advanced/Template/encode.md"
-      flags:
-        new : "new"
     - level:   3
       content:  "Advanced/Template/tag_list_texte.md"
-      flags:
-         new:   "new"
     - level:   3
       content:  "Advanced/Template/odt.md"
-      flags:
-         new: "new"
       subtoc:   2
     - level:   4
       content:  "Advanced/Template/odtcontrol.md"
-      flags:
-         new: "new"
     - level:   4
       content:  "Advanced/Template/odtcaution.md"
-      flags:
-         new: "new"
     - level:   4
       content:  "Advanced/Template/odtrepeat.md"
-      flags:
-         new: "new"
     - level:   4
       content:  "Advanced/Template/odtprop.md"
-      flags:
-         new: "new"
     - level:   3
       content:  "Advanced/Template/convertpdf.md"
-      flags:
-         new: "new"
     - level:   3
       content:  "Advanced/Template/formatcollection.md"
     - level:   2
       content:  "Advanced/familles/introduction.md"
-      flags:
-        new: "new"
       subtoc:   3
     - level:   3
       content:  "Advanced/familles/processus.md"
-      flags:
-        new: "new"
     - level:   2
       content:  "Advanced/autoloader.md"
 
