@@ -49,8 +49,8 @@ droit sur un document car il faut aussi corréler le résultat au groupe
 d'appartenance et aux rôles affectés à l'utilisateur.
 
 Pour connaître l'ensemble des documents que l'utilisateur 'john.doe' peut voir,
-il est possible d'utiliser la colonne `views` de la table [`doc`][dbdoc] ou
-[`docread`][docread].
+il est possible d'utiliser la colonne `views` de la table
+[`family.documents`][dbdoc] ou [`docread`][docread].
 
     [sql]
     SELECT docread.id, docread.title, users.memberof  

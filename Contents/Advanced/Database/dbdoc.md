@@ -1,12 +1,12 @@
 # Description des tables de documents {#core-ref:b3ef653f-e8ca-4385-b551-2ead886133e6}
 
-## La table _Doc_ {#core-ref:d4b8d8ce-6f7a-4c1c-a5c4-f1adfcb74864}
+## La table _family.documents_ {#core-ref:d4b8d8ce-6f7a-4c1c-a5c4-f1adfcb74864}
 
 Toutes les informations des documents sont enregistrées dans les tables héritées
-de la table `doc`.
+de la table `family.documents`.
 
-La table `doc` définie les [propriétés des documents][docprop] ; c'est à dire
- tout ce qui est commun à tout type de document.
+La table `family.documents` définie les [propriétés des documents][docprop] ;
+c'est à dire  tout ce qui est commun à tout type de document.
  
 
 |   Colonne    |             Type            |                                             Définition                                            |
@@ -17,7 +17,7 @@ La table `doc` définie les [propriétés des documents][docprop] ; c'est à dir
 | atags        | text                        | Balises applicatives.                                                                             |
 | attrids      | text                        | Liste de l'ensemble des attributs ayant une valeur non nulle (calculé par trigger).               |
 | cdate        | timestamp without time zone | Date de création de la révision.                                                                  |
-| classname    | text                        | Nom de la classe PHP associée au document (utilisé dans la table `docfam` uniquement).            |
+| classname    | text                        | Nom de la classe PHP associée au document (utilisé dans la table `family.families` uniquement).   |
 | comment      | text                        | *Obsolète*                                                                                        |
 | confidential | integer                     | Indique si le document est confidentiel (>0).                                                     |
 | cvid         | integer                     | Identifiant du document [contrôle de vue][CVDoc] associé à ce document.                           |
@@ -54,7 +54,7 @@ La table `doc` définie les [propriétés des documents][docprop] ; c'est à dir
 ## Les tables des documents {#core-ref:0c6cc474-d5e9-4ee0-aeed-1aa00100d7df}
 
 Pour chacune des familles enregistrées, une table associée est créée. Cette
-table  est nommée `doc<famid>` où `<famid>` est l'identifiant numérique de la
+table  est nommée `family.<famname>` où `<famname>` est le nom logique de la
 famille. Une même famille peut avoir un nom de table différent sur différente
 installation suivant l'identifiant qui lui a été attribué au moment de la
 création. De même si la famille est [détruite][destroyfam], une nouvelle table
@@ -63,57 +63,59 @@ avec un nom différent lui est attribué.
 Exemple :
 ![ Héritage des tables de documents ](advanced/dbinherit.png)
 
-Les tables de documents sont créées avec le schéma _public_. Pour chacune des
-familles, une vue est créée avec le nom logique de la famille en même temps
-que la table réelle. Toutes les vues de documents sont créées sous le schéma
-_family_.
+Les tables de documents sont créées avec le schéma _family_. 
+
+Pour des raisons de compatibilité avec la version 9.2 de Dynacase, pour chacune
+des familles, une vue est créée avec l'identifiant numérique de la famille en
+même temps que la table réelle. Cette vue est nommé `doc<famId>`. Toutes les
+vues de documents sont créées sous le schéma _public_.
 
     [sql]
     SELECT * FROM public.doc1098;
     -- equivalent à
     SELECT * FROM family.myfamily;
 
-**Important** : Ces vues ne sont utilisables qu'en lecture seule. À partir de 
+**Important** :  À partir de 
 postgresql 9.3, ces vues sont utilisables en mise à jour.
 
 Note : Les noms des tables en postgresql ne sont pas sensibles à la casse.
 
-La table `doc` propre ne comprend aucune données.
+La table `family.documents` propre ne comprend aucune donnée.
 
     [sql]
-    db# SELECT count(id) FROM ONLY doc ; -- aucun document
+    db# SELECT count(id) FROM ONLY family.documents ; -- aucun document
      count 
     -------
          0
          
-    db=# SELECT count(id) FROM doc ; -- tous les documents
+    db=# SELECT count(id) FROM family.documents ; -- tous les documents
      count 
     -------
      15008
 
 Chacune des tables de documents contient en plus des propriétés héritées de la
-table `doc`, une colonne par attributs pouvant contenir une valeur. Cela exclu
-les attributs de type _tab_, _frame_, _array_, et _menu_. Le nom de ces colonnes
-sont les identifiants des attributs. Le type de ces colonnes est fonction du
-[type d'attribut][docattr]. Le type correspondant en base est indiqué dans
-chacun des chapitres décrivant les attributs.
+table `family.documents`, une colonne par attributs pouvant contenir une valeur.
+Cela exclu les attributs de type _tab_, _frame_, _array_, et _menu_. Le nom de
+ces colonnes sont les identifiants des attributs. Le type de ces colonnes est
+fonction du [type d'attribut][docattr]. Le type correspondant en base est
+indiqué dans chacun des chapitres décrivant les attributs.
 
 Pour plus de détails sur le mécanisme d'héritage de PostgreSQL :
 
-- [PostgreSQL: Documentation: 9.1: Inheritance][tutorial-inheritance]
+- [PostgreSQL: Documentation: Inheritance][tutorial-inheritance]
 
 ## Table de recherche générale {#core-ref:378a7ed5-2703-4167-a980-c84bc29f8c56}
 
-La table `docread` a les mêmes colonnes que la table `doc` mais elle n'en
-hérite pas. Cette table contient une réplication de l'ensemble des documents
-qui sont disséminés dans l'ensemble des tables `doc<famid>`.
+La table `public.docread` a les mêmes colonnes que la table `family.documents`
+mais elle n'en hérite pas. Cette table contient une réplication de l'ensemble
+des documents qui sont disséminés dans l'ensemble des tables `family.<famname>`.
 
 Cette table répliquée a ses propres index globaux et permet dans le cas d'une
 recherche globale, c'est à dire non liée à une famille particulière, d'être
 plus rapide.
 
     [sql]
-    db=# SELECT id, title FROM doc WHERE id = 1098;
+    db=# SELECT id, title FROM family.documents WHERE id = 1098;
       id  |           title           
     ------+---------------------------
      1098 | lecteur de Premier espace
@@ -128,9 +130,10 @@ plus rapide.
     Temps : 1,037 ms
 
 
-Cette table est maintenue synchronisée avec le contenu des tables `doc<famid>`
-par des triggers, et ne doit donc être utilisée qu'en lecture seule. Seules
-les tables `doc<famid>` peuvent être utilisées en modification.
+Cette table est maintenue synchronisée avec le contenu des tables
+`family.<famname>` par des triggers, et ne doit donc être utilisée qu'en lecture
+seule. Seules les tables `family.<famname>` peuvent être utilisées en
+modification.
 
 ## Indexation des fichiers {#core-ref:354273d6-7fab-4096-8f22-6dc3e540ee65}
 
@@ -182,4 +185,4 @@ colonnes.
 [te]:               https://docs.anakeen.com/dynacase/3.2/dynacase-doc-tengine-installation-operating/website/book/index.html "Manuel d'installation"
 [globsearch]:       #core-ref:19b9f4b4-c960-46eb-b4e0-805ed76be3a6
 [dbuser]:           #core-ref:6d5684f4-73e8-431c-8b2b-6224a9e6b074 "table users"
-[tutorial-inheritance]: http://www.postgresql.org/docs/9.1/static/tutorial-inheritance.html
+[tutorial-inheritance]: http://www.postgresql.org/docs/9.3/static/tutorial-inheritance.html
