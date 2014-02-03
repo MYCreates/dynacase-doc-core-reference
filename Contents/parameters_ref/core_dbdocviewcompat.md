@@ -1,6 +1,6 @@
-# `CORE_DBDOCVIEWCOMPAT` 
+# `CORE_DBDOCVIEWCOMPAT`  {#core-ref:7bb6122b-ab0e-4d9f-8a67-2643d2369aa8}
 
-## Description 
+## Description  {#core-ref:c28e18d6-2d56-4946-9717-d74cf4fc9021}
 
 Le paramètre `CORE_DBDOCVIEWCOMPAT` permet de conserver l'usage des tables de
 documents telles qu'elles étaient nommée dans la version 9.2 de Dynacase.
@@ -11,7 +11,7 @@ documents telles qu'elles étaient nommée dans la version 9.2 de Dynacase.
 *   Valeur initiale : `no`
 *   Utilisateur : Non
 
-## Valeur 
+## Valeur  {#core-ref:d1faf1db-e5ac-48b9-8e05-a624176c51c5}
 
 Si la valeur est `yes`, des vues de compatibilités sont construites lors de la
 [génération des familles][generate].
@@ -28,7 +28,7 @@ respectivement sur les tables [`family.families`][docfam] et
 Si la valeur est `no`, aucune vue de compatibilité est ajoutée.
 
 
-## Notes 
+## Notes  {#core-ref:b5982d9a-b660-4323-ab62-813969d775f2}
 
 La valeur par défaut est `no`.
 
