@@ -3,7 +3,7 @@
 ## Description  {#core-ref:c28e18d6-2d56-4946-9717-d74cf4fc9021}
 
 Le paramètre `CORE_DBDOCVIEWCOMPAT` permet de conserver l'usage des tables de
-documents telles qu'elles étaient nommée dans la version 9.2 de Dynacase.
+documents telles qu'elles étaient nommées dans les versions 3.2 et précédentes de Dynacase.
 
 *   App : `CORE`
 *   Portée : Global
@@ -25,7 +25,7 @@ Les vues `public.docfam` et `public.doc` sont aussi ajoutées et pointent
 respectivement sur les tables [`family.families`][docfam] et
 [`family.documents`][dbdoc].
 
-Si la valeur est `no`, aucune vue de compatibilité est ajoutée.
+Si la valeur est `no`, aucune vue de compatibilité n'est ajoutée.
 
 
 ## Notes  {#core-ref:b5982d9a-b660-4323-ab62-813969d775f2}

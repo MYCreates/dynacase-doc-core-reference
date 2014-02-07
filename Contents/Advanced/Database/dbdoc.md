@@ -5,8 +5,8 @@
 Toutes les informations des documents sont enregistrées dans les tables héritées
 de la table `family.documents`.
 
-La table `family.documents` définie les [propriétés des documents][docprop] ;
-c'est à dire  tout ce qui est commun à tout type de document.
+La table `family.documents` définit les [propriétés des documents][docprop] ;
+c'est à dire tout ce qui est commun à toutes familles de documents.
  
 
 |   Colonne    |             Type            |                                             Définition                                            |
@@ -28,7 +28,7 @@ c'est à dire  tout ce qui est commun à tout type de document.
 | fromid       | integer                     | Id de la famille d'appartenance.                                                                  |
 | fromname     | text                        | Nom logique de la famille d'appartenance.                                                         |
 | fulltext     | tsvector                    | Ensemble des valeurs du document y compris les textes des fichiers indexés.                       |
-| id           | integer                     | Identifiant unique du document (issue de la séquence `family.seq_id_doc`).                               |
+| id           | integer                     | Identifiant unique du document (issue de la séquence `family.seq_id_doc`).                        |
 | icon         | text                        | Référence au fichier d'icone du document.                                                         |
 | initid       | integer                     | Id du premier document de la lignée documentaire.                                                 |
 | ldapdn       | text                        | *Obsolète*                                                                                        |
@@ -54,34 +54,28 @@ c'est à dire  tout ce qui est commun à tout type de document.
 
 ## Les tables des documents {#core-ref:0c6cc474-d5e9-4ee0-aeed-1aa00100d7df}
 
-Pour chacune des familles enregistrées, une table associée est créée. Cette
+Pour chacune des familles, une table est créée. Cette
 table  est nommée `family.<famname>` où `<famname>` est le nom logique de la
-famille. Une même famille peut avoir un nom de table différent sur différente
+famille. <span class="fixme">Une même famille peut avoir un nom de table différent sur différente
 installation suivant l'identifiant qui lui a été attribué au moment de la
 création. De même si la famille est [détruite][destroyfam], une nouvelle table
-avec un nom différent lui est attribué.
+avec un nom différent lui est attribué.</span>
 
 Exemple :
 ![ Héritage des tables de documents ](advanced/dbinherit.png)
 
 Les tables de documents sont créées avec le schéma _family_. 
 
-Pour des raisons de compatibilité avec la version 9.2 de Dynacase, pour chacune
-des familles, une vue est créée avec l'identifiant numérique de la famille en
-même temps que la table réelle. Cette vue est nommé `doc<famId>`. Toutes les
-vues de documents sont créées sous le schéma _public_.
+Pour des raisons de compatibilité avec la version 3.2 de Dynacase, il est possible
+de créer une vue avec l'identifiant numérique de la famille en
+même temps que la table réelle. Pour plus de détail, reportez-vous au paragraphe
+[sur le paramètre de compatiblité `CORE_DBDOCVIEWCOMPAT`](#core-ref:7bb6122b-ab0e-4d9f-8a67-2643d2369aa8).
 
-    [sql]
-    SELECT * FROM public.doc1098;
-    -- equivalent à
-    SELECT * FROM family.myfamily;
-
-**Important** :  À partir de 
-postgresql 9.3, ces vues sont utilisables en mise à jour.
+**Important** :  À partir de Dynacase 3.3 (PostgreSQL 9.3), ces vues sont utilisables en mise à jour.
 
 Note : Les noms des tables en postgresql ne sont pas sensibles à la casse.
 
-La table `family.documents` propre ne comprend aucune donnée.
+La table `family.documents` ne comprend aucune donnée propre.
 
     [sql]
     db# SELECT count(id) FROM ONLY family.documents ; -- aucun document
@@ -95,9 +89,10 @@ La table `family.documents` propre ne comprend aucune donnée.
      15008
 
 Chacune des tables de documents contient en plus des propriétés héritées de la
-table `family.documents`, une colonne par attributs pouvant contenir une valeur.
-Cela exclu les attributs de type _tab_, _frame_, _array_, et _menu_. Le nom de
-ces colonnes sont les identifiants des attributs. Le type de ces colonnes est
+table `family.documents`, une colonne par attribut pouvant contenir une valeur.
+<span class="fixme">Cela exclu les attributs de type _tab_, _frame_, _array_, et _menu_.
+(je ne comprends pas)</span>
+Le nom de ces colonnes sont les identifiants des attributs. Le type de ces colonnes est
 fonction du [type d'attribut][docattr]. Le type correspondant en base est
 indiqué dans chacun des chapitres décrivant les attributs.
 
