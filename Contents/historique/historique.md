@@ -3,16 +3,43 @@
 Ce chapitre contient un descriptif des améliorations entre les releases de 
 Dynacase.
 
-## Édition 3.3 / 1
+## Modification release 3.3.0
 
-|        Modifications        |                Chapitre                |                                    Version                                    |   Date   |
-| :-------------------------- | :------------------------------------- | :---------------------------------------------------------------------------- | :------- |
-| Ajout paramètre             | [COREDBDOCVIEWCOMPAT][DBDOCVIEWCOMPAT] | <span class="flag new">New</span><span class="flag next-release">3.0.0</span> | 03/02/14 |
-| Mise à jour base de données | [La base de données][database]         | <span class="flag new">New</span>                                             | 03/02/14 |
-|                             |                                        |                                                                               |          |
+### Édition 3.3 / 1
+
+|           Modifications           |                Chapitre                |                                    Version                                    |   Date   |
+| :-------------------------------- | :------------------------------------- | :---------------------------------------------------------------------------- | :------- |
+| Ajout paramètre                   | [COREDBDOCVIEWCOMPAT][DBDOCVIEWCOMPAT] | <span class="flag new">New</span><span class="flag next-release">3.0.0</span> | 03/02/14 |
+| Mise à jour base de données       | [La base de données][database]         | <span class="flag new">New</span>                                             | 03/02/14 |
+| Importation CSV                   | [Importation CVS][importcsv]           | <span class="flag new">Updated</span>                                         |          |
+| Opérateur de recherche multivalué | [Recherche dans un array][searcharray] | <span class="flag new">Updated</span>                                         |          |
 
 
-## Édition 3.2 / 4 {#core-ref:ee35db85-a173-4840-b6d9-ce26eb93e01b}
+
+### Modification des tables des documents de la base de données
+
+Les [tables des documents][dbdoc] sont basées sur leur nom logique et non plus
+sur leur identifiant numérique.
+
+Des [vues de compatibilités][DBDOCVIEWCOMPAT] permettent de conserver les
+anciens noms des tables.
+
+### Utilisation des types "array" pour les attributs multivalués.
+
+Les données des attributs multivalués utilisent maintenant le type
+[`array`][pgArray] de postgresql.
+
+Cette modification a entrainé des modifications dans l'[importation][importcsv]
+et [exportation][exportcsv] des données csv brutes.
+
+Elle a aussi des impacts sur les requêtes de [recherches dans les
+tableaux][searcharray].
+
+## Modification release 3.2.12 {#core-ref:d402539b-f0dd-4ade-9ea0-03f1d55da1da}
+
+
+
+### Édition 3.2 / 4 {#core-ref:ee35db85-a173-4840-b6d9-ce26eb93e01b}
 
 L'édition 4 de la documentation a modifié les points suivants.
 
@@ -32,19 +59,6 @@ L'édition 4 de la documentation a modifié les points suivants.
 | Mise à jour des chapitres API                  | [Les essentiels de l'API][apichapter]           | <span class="flag new">Updated</span> | 12/11/13 |
 | Ajout chapitre Utilitaire gestion de documents | [Utilitaire gestion de documents][utilDoc]      | <span class="flag new">New</span>     | 07/01/14 |
 
-
-## Modification release 3.3.0
-
-### Modification des tables des documents de la base de données
-
-Les [tables des documents][dbdoc] sont basées sur leur nom logique et non plus
-sur leur identifiant numérique.
-
-Des [vues de compatibilités][DBDOCVIEWCOMPAT] permettent de conserver les
-anciens noms des tables.
-
-
-## Modification release 3.2.12 {#core-ref:d402539b-f0dd-4ade-9ea0-03f1d55da1da}
 
 ### Internationalisation {#core-ref:ccb46f7b-04f3-4398-b3f4-a09bf9eb508c}
 
@@ -94,9 +108,13 @@ modifiée afin de faire remonter le message d'erreur de la méthode hameçon
 retour d'erreur.
 
 <!-- link -->
-[DBDOCVIEWCOMPAT]:             q#core-ref:7bb6122b-ab0e-4d9f-8a67-2643d2369aa8
-[docfam]:  #core-ref:d4b8d8ce-6f7a-4c1c-a5c4-f1adfcb74864
-[dbdoc]:  #core-ref:0c6cc474-d5e9-4ee0-aeed-1aa00100d7df
+[searcharray]:          #core-ref:5342d63e-edc8-44fb-bed9-2fb113742849
+[importcsv]:            #core-ref:2fb3284a-2424-44b2-93ae-41dc3969e093
+[exportcsv]:            #core-ref:88fb91b5-51a3-4b33-ac2e-5f20eddd8210
+[pgArray]:              http://www.postgresql.org/docs/9.3/static/arrays.html "Tableaux PostgreSql"
+[DBDOCVIEWCOMPAT]:             #core-ref:7bb6122b-ab0e-4d9f-8a67-2643d2369aa8
+[docfam]:               #core-ref:d4b8d8ce-6f7a-4c1c-a5c4-f1adfcb74864
+[dbdoc]:                #core-ref:0c6cc474-d5e9-4ee0-aeed-1aa00100d7df
 [insertMultipleDocuments]:      #core-ref:098cf44e-568d-4dd2-8dd0-e2f104bc8615
 [postinsertMultipleDocuments]:  #core-ref:e3cd509f-8678-4dec-a0cf-33aa39674cfe
 [layoutesetblock]:      #core-ref:088e711c-ea91-45e7-841d-289ffc53c80b

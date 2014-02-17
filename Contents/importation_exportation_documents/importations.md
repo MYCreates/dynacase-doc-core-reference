@@ -45,15 +45,15 @@ les documents sont importés avec le dernier ordre interprété.
 
 Exemple :
 
-| #         | famille        |   |   |                   |                      |                      |
-| --------- | -------------- | - | - | ----------------- | -------------------- | -------------------- |
-| ORDER | ZOO_CLASSE |   |   | cl_latinname  | cl_commonname    | cl_caracteristic |
-| DOC       | ZOO_CLASSE     |   |   | Actinopterygii    | Poissons             | Nage                 |
-| DOC       | ZOO_CLASSE     |   |   | Reptilia          | Reptiles             | Rampe                |
-|           |                |   |   |                   |                      |                      |
-| ORDER | ZOO_CLASSE |   |   | cl_commonname | cl_caracteristic | cl_latinname     |
-| DOC       | ZOO_CLASSE     |   |   | Oiseaux           | Vole                 | Aves                 |
-| DOC       | ZOO_CLASSE     |   |   | Mammifères        | Allaite              | Mammalia             |
+|   #   |  famille   |     |     |                |                  |                  |
+| ----- | ---------- | --- | --- | -------------- | ---------------- | ---------------- |
+| ORDER | ZOO_CLASSE |     |     | cl_latinname   | cl_commonname    | cl_caracteristic |
+| DOC   | ZOO_CLASSE |     |     | Actinopterygii | Poissons         | Nage             |
+| DOC   | ZOO_CLASSE |     |     | Reptilia       | Reptiles         | Rampe            |
+|       |            |     |     |                |                  |                  |
+| ORDER | ZOO_CLASSE |     |     | cl_commonname  | cl_caracteristic | cl_latinname     |
+| DOC   | ZOO_CLASSE |     |     | Oiseaux        | Vole             | Aves             |
+| DOC   | ZOO_CLASSE |     |     | Mammifères     | Allaite          | Mammalia         |
 
 Dans ce cas, les deux premiers documents utilisent le premier `ORDER`, et les
 documents suivants le deuxième `ORDER` (la deuxième ligne `ORDER` a écrasé les
@@ -133,41 +133,108 @@ l'utilisateur réalisant l'importation :
 
 Dans tous ces  cas la valeur de la date stockée sera au format ISO.
 
-#### Attributs multivalués {#core-ref:1b8cd020-a2ed-4997-aefe-a4fcbb3564f1}
+#### Attributs multivalués <span class="flag next-release">3.3.0</span> {#core-ref:1b8cd020-a2ed-4997-aefe-a4fcbb3564f1}
 
-*   Pour les attributs multivalués à un seul niveau (attribut *contenu dans un
+
+##### MultiValué à un seul niveau de profondeur
+
+Pour les attributs multivalués à un seul niveau (attribut *contenu dans un
     tableau*, ou ayant l'option `multiple=yes` et n'étant pas contenu dans un
     tableau) :
-    *   la chaîne `\n` délimite deux valeurs consécutives,
-    *   la chaîne `<BR>` correspond à un saut de ligne au sein d'une valeur.
-*   Pour les attributs multivalués à 2 niveaux (cas des relations ayant l'option
+
+Deux notations sont acceptées. La première utilise le caractère `\n` comme séparateur de valeur.
+
+    Première valeur\nDeuxième valeur\nTroisième valeur
+
+| index |      valeur      |
+| :---: | ---------------- |
+|   1   | Première valeur  |
+|   2   | Deuxième valeur  |
+|   2   | Troisième valeur |
+|       |                  |
+
+Cette première notation est simple à écrire mais ne permet pas d'indiquer des
+retours à la lignes pour les textes longs.
+
+
+La deuxième notation est issue de la notation des [tableaux de
+postgreSql][pgarray].
+
+    {"Première valeur","Deuxième valeur","Troisième valeur"}
+
+| index |      valeur      |
+| :---: | ---------------- |
+|   1   | Première valeur  |
+|   2   | Deuxième valeur  |
+|   3   | Troisième valeur |
+
+
+Exemple pour un attribut de type `longtext` contenu dans un tableau, la valeur
+
+    {"Première valeur.\nEt ensuite","Deuxième valeur","Troisième valeur\npour finir."}
+
+correspond à la structure suivante :
+
+| index |               valeur              |
+| :---: | --------------------------------- |
+|   1   | Première valeur<br />Et ensuite   |
+|   2   | Deuxième valeur                   |
+|   3   | Troisième valeur<br />pour finir. |
+
+Cette notation permet d'indiquer les retours à la lignes à l'aide des 2 caractères
+`\` et `n` (paramètre `csv-linebreak`) ou du caractère de retour chariot`"\n"`.
+
+
+Il est nécessaire d'échapper les guillemets s'ils sont présents dans le texte.
+
+Le texte suivant :
+
+    {"Première valeur est \"1\","Deuxième valeur est \"2\"","Troisième valeur
+    pour finir est \"3\"."}
+
+donne le résultat suivant :
+
+| index |                   valeur                  |
+| :---: | ----------------------------------------- |
+|   1   | Première valeur est "1"                   |
+|   2   | Deuxième valeur est "2"                   |
+|   3   | Troisième valeur<br />pour finir est "3". |
+
+
+**Note** : la chaîne `<BR>` n'est plus interprétée comme un retour chariot comme
+c'est le cas dans la version 3.2.
+
+
+##### MultiValué à deux niveaux de profondeur
+
+Pour les attributs multivalués à 2 niveaux (cas des relations ayant l'option
     `multiple=yes` et *contenues dans un tableau*) :
-    *   la chaîne `\n` délimite deux valeurs de premier niveau,
-    *   la chaîne `<BR>` délimite deux valeurs de second niveau.
 
-Par exemple :
+*   la chaîne `\n` délimite deux valeurs de premier niveau,
+*   la chaîne `<BR>` délimite deux valeurs de second niveau.
 
-*   pour un attribut de type `longtext` contenu dans un tableau, la valeur
-    `Première rangée<BR>suite du texte\nDeuxième rangée` correspond à la structure suivante :
-    
-    | index |              relations              |
-    | :---: | ----------------------------------- |
-    |   1   | Première rangée<br />suite du texte |
-    |   2   | Deuxième rangée                     |
-    
-*   pour un attribut de type `docid`, ayant l'option `multiple=yes` et contenu
-    dans un tableau, la valeur `1236\n6375<BR>8755<BR>564\n567<BR><BR>4569`
-    correspond à la structure suivante :
-    
-    | index | relations                     |
-    | :---: | ----------------------------- |
-    | 1     | • 1236                        |
-    | 2     | • 6375<br />• 8755<br />• 564 |
-    | 3     | • 567<br />• <br />• 4569     |
+Pour un attribut de type `docid`, ayant l'option `multiple=yes` et contenu
+dans un tableau, la valeur 
 
-**Note** <span class="flag next-release">3.2.12</span> : Si un
-délimiteur de texte est défini, le retour chariot est alors possible sur une
-ligne et est interprété comme la chaîne `\n`.
+    1236\n6375<BR>8755<BR>564\n567<BR><BR>4569
+
+correspond à la structure suivante :
+
+| index |           relations           |
+| :---: | ----------------------------- |
+|   1   | • 1236                        |
+|   2   | • 6375<br />• 8755<br />• 564 |
+|   3   | • 567<br />• <br />• 4569     |
+
+La notation [postgresql][pgarray] est aussi acceptée. Le texte équivalent à
+l'exemple ci-dessus est :
+
+    {{1236},{6375,8755,564},{567,NULL,4569}}
+
+
+
+**Note** : Si un délimiteur de texte est défini, le retour chariot est alors
+possible sur une ligne et est interprété comme la chaîne `\n`.
 
 
 ### Hameçons déclenchés lors de l'importation {#core-ref:d3b06745-35c5-447c-9b88-01181736c21e}
@@ -300,13 +367,13 @@ Lors de l'import de documents quelques précautions d'usage sont à prendre en c
 
 * Les attributs calculés peuvent devenir incohérent, ils sont en effet initialisés
 avec les valeurs lors de l'import. Ceci peut créer des incohérences.
-* Les documents de faisant référence à un `account` ne sont pas ré-importables tel
+* Les documents faisant référence à un `account` ne sont pas ré-importables tel
 que. Il faut suivre la procédure de ré-import tel que décrite dans ce 
 [chapitre][importation].
 
 <!-- links -->
-[CSV]: http://fr.wikipedia.org/wiki/Comma-separated_values "Comma-separated values sur wikipedia"
-[ODS]: http://fr.wikipedia.org/wiki/OpenDocument "Open Document sur wikipedia"
+[CSV]:              http://fr.wikipedia.org/wiki/Comma-separated_values "Comma-separated values sur wikipedia"
+[ODS]:              http://fr.wikipedia.org/wiki/OpenDocument "Open Document sur wikipedia"
 [hooks]:            #core-ref:8f3d47de-32b5-4748-8a00-b1569c5423e5
 [order]:            #core-ref:e41116ee-a682-4033-a7ab-22dc1b99e56a
 [doc]:              #core-ref:3acb8fbe-6e5a-4933-95fa-2cea0eae2fc5
@@ -315,3 +382,4 @@ que. Il faut suivre la procédure de ré-import tel que décrite dans ce
 [importation]:      #core-ref:a0cb9a84-6bde-476c-b55c-95c8f12abd3a
 [preimport]:        #core-ref:adb6ba8b-15c4-42d3-97dc-1da16c2112ae
 [postimport]:       #core-ref:9de7e922-150a-416b-b846-b6e195bf0921 
+[pgarray]:          http://FIXME "Définition du type array de postgreSql"

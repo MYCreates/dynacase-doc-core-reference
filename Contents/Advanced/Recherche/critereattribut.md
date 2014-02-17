@@ -65,24 +65,61 @@ hiérarchie dans ce type d'attribut.
 Cet exemple permet de sélectionner la liste des chefs de service. Le chef de
 service a pour clef 'chefserv'.
 
-## Recherche dans un array {#core-ref:5342d63e-edc8-44fb-bed9-2fb113742849}
+## Recherche dans un array <span class="flag next-release">3.0.0</span> {#core-ref:5342d63e-edc8-44fb-bed9-2fb113742849}
 
 Pour une famille avec un tableau contenant une liste de valeur, le
 filtre Postgresql suivant permet de filtrer les documents dont une des valeurs
 est égale à une valeur précise :
 
     [php]
-    $s->addFilter("string_to_array(%s,E'\\n') && '{%s}'", $attrId, $expectedValue);
+    $s->addFilter("'%s' = any(%s)", $expectedValue, $attrId);
 
-Si le tableau contient une liste d'identifiants de document, le filtre
-Postgresql suivant peut être utilisé pour retourner tous les documents contenant
-cet identifiant :
+Ce filtre, utilisant la fonction [`ANY`][pgallany], fonctionne aussi pour les
+attributs multiples présents dans des tableaux (2 niveaux de profondeur).
+
+Si le tableau contient une liste de nombre, pour filtrer ceux qui ont une des
+valeurs  supérieurs à 10, le filtre suivant peut être utilisé.
 
     [php]
-    $s->addFilter("%s ~ E'\\\\y%d\\\\y'", $attrId, $expectedInitid);
+    $s->addFilter("10 < any(%s)", $attrId);
 
-Ce filtre ne peut être utilisé qu'avec des valeurs qui n'ont pas d'espace.
-Le filtre précédent fonctionne aussi mais il est un peu moins performant.
+Attention : du fait de l'écriture, l'opérateur est inversé.
+
+Si le tableau contient une liste de texte, pour filtrer les documents dont un
+des éléments contient une expression, le filtre suivant peut être utilisé
+
+
+    [php]
+    $s->addFilter("'%s' ~*< any(%s)", $expectedText, $attrId);
+
+Les opérateurs `~*<` et `~<` ne sont pas des opérateurs natifs de postgreSql.
+Ils sont fournis par Dynacase pour gérer ce type de requêtes. Ce sont les
+opérateurs "commutateur" des opérateurs natifs `~*` et `~` fournis par
+postgreSql.
+
+Le filtre suivant effectué sur l'ensemble des valeurs du tableau est plus
+rapide que le filtre précédent. Il peut être utilisé 
+
+    [php]
+    $s->addFilter("%s::text ~* '%s'", $attrId, $expectedText);
+
+Soit `my_v` l'attribut qui fait l'objet de la recherche. Le tableau suivant
+illustre les différences entre ces deux filtres.
+
+|             Filtre             | {"Hello world", "Goodbye others"} |
+| ------------------------------ | --------------------------------- |
+| `my_v::text ~ 'Hello'`         | True                              |
+| `my_v::text ~ 'others'`        | True                              |
+| `my_v::text ~ 'Hello.*others'` | True                              |
+| `my_v::text ~ '"Hello"`        | True                              |
+|                                |                                   |
+| `'Hello' ~< any(my_v)`         | True                              |
+| `'others' ~< any(my_v)`        | True                              |
+| `'Hello.*others' ~< any(my_v)` | False                             |
+| `'"Hello"' ~< any(my_v)`       | False                             |
+|                                |                                   |
+
+
 
 ## Recherche avec jointure {#core-ref:82d4a6a8-39da-4ad1-a697-8da77c9aff07}
 
@@ -148,3 +185,4 @@ construction de l'objet _recherche_.
 [attdocid]:         #core-ref:d461d5f5-b635-47a0-944d-473c227587ab
 [phpiterator]:      http://php.net/manual/fr/class.iterator.php "Interface Iterator"
 [docacl]:           #core-ref:a99dcc5f-f42f-4574-bbfa-d7bb0573c95d "Droits du document"
+[pgallany]:         http://www.postgresql.org/docs/9.3/static/functions-comparisons.html#AEN18482 "Opérateurs ANY/ALL"

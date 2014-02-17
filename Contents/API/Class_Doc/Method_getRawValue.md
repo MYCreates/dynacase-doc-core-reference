@@ -43,6 +43,11 @@ Aucune erreur retournée.
 
 Cette méthode était anciennement nommée `getValue`.
 
+### Version 3.3.0
+
+Modification des retours pour les valeurs des attributs multivalués (voir
+[note][inote]).
+
 ## Exemples {#core-ref:0134ab3f-26b4-4826-af8a-183786c18460}
 
 Soit la famille suivante :
@@ -118,14 +123,28 @@ Format brut en fonction des types d'attributs :
 Pour les autres types, aucun formatage spécial n'est appliqué, la valeur brute
 correspond à la valeur donnée.
 
-Pour les valeurs multiples, chaque valeur est séparée par le caractère `\n`
-(retour chariot). Si une des valeurs multiples contient un retour chariot,
-celui-ci est remplacé par les caractères `<BR>`.
 
-Pour les multiples à 2 niveaux (attribut multiple dans un tableau), le premier
-niveau a comme séparateur le caractère '\n' et le deuxième niveau les caractères
-"<BR>".
-Exemple : "`1234\n567<BR>8876<BR>987\n678<BR>295`"
+Pour les valeurs multiples, chaque valeur est séparée par une virgule dans une
+[structure avec accolades][pgarray].
+
+Exemple : `{Hello, World, "Good day isn't it ?"}`
+
+indique 3 valeurs qui sont respectivement :
+
+1.  Hello
+2.  World
+3.  Good day isn't it ?
+
+
+
+Pour les multiples à 2 niveaux (attribut multiple dans un tableau), les
+accolades sont imbriquées. 
+
+**Note** : pour des raisons de contrainte de type les tableaux à deux dimensions
+sont de dimension fixe. Le nombre de chacune des sous-valeurs est identique, la
+valeur "NULL" est ajoutée pour satisfaire la contrainte
+
+Exemple : "`{{1234,NULL,NULL},{567,8876,987},{678,295,NULL}}`"
 indique la structure à 2 niveaux suivante :
 
 1.   -
@@ -152,3 +171,5 @@ indique la structure à 2 niveaux suivante :
 [docgetoldvalue]:   #core-ref:dccf7c64-8f4f-4c4a-8d0d-79b21b924848
 [docsetvalue]:      #core-ref:febc397f-e629-4d47-955d-27cab8f4ed2f
 [computeattr]:      #core-ref:4565cab9-73c8-4eee-bfa7-218ffbd4b687
+[pgarray]:          http://www.postgresql.org/docs/9.3/static/arrays.html#ARRAYS-INPUT "Notation des tableaux postgreSql"
+[inote]:    #core-ref:6302d6cf-bbd1-43ec-a74c-2537581d051c
