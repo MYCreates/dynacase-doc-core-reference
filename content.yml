@@ -1041,10 +1041,16 @@ book:
       content:  "Advanced/Database/dbhistory.md"
     - level:   3
       content:  "Advanced/Database/dbvault.md"
+      flags:
+        new : "updated"
+        next-release : "3.3.0"
     - level:   3
       content:  "Advanced/Database/dbapp.md"
     - level:   3
       content:  "Advanced/Database/dbparam.md"
+      flags:
+        new : "updated"
+        next-release : "3.3.0"
     - level:   2
       content:  "Advanced/Persistance/introduction.md"
       subtoc:   2

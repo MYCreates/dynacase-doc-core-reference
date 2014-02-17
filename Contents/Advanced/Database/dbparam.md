@@ -16,8 +16,8 @@ paramètres][parammgr].
 
 | Colonne |          Type         |                                    Définition                              |
 | ------- | --------------------- | -------------------------------------------------------------------------- |
-| name    | character varying(50) | Nom du paramètre                                                           |
-| type    | character varying(21) | Type du paramètre : `G` (global), `A` (applicatif), `U<uid>` (utilisateur) |
+| name    | text                  | Nom du paramètre                                                           |
+| type    | text                  | Type du paramètre : `G` (global), `A` (applicatif), `U<uid>` (utilisateur) |
 | appid   | integer               | Identifiant de l'application                                               |
 | val     | text                  | Valeur du paramètre                                                        |
 
