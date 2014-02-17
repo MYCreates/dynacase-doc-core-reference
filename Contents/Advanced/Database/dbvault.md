@@ -17,7 +17,7 @@ La table `vaultdiskfsstorage` indique les différents coffres enregistrés.
 | subdir_cnt_bydir   | integer                 | *Obsolète* Non utilisé                                                      |
 | subdir_deep        | integer                 | *Obsolète* Non utilisé                                                      |
 | max_entries_by_dir | integer                 | *Obsolète* Non utilisé                                                      |
-| r_path             | character varying(2048) | Chemin absolu d'accès au coffre                                             |
+| r_path             | text                    | Chemin absolu d'accès au coffre                                             |
 
 Le répertoire `r_path` doit être accessible en lecture/écriture à l'utilisateur
 du serveur web.
@@ -46,7 +46,7 @@ niveau inférieur est créé.
 | id_dir       | integer                 | Identificateur de répertoire (issue de la séquence `seq_id_vaultdiskdirstorage) |
 | id_fs        | integer                 | Identificateur du coffre lié au répertoire                                      |
 | free_entries | integer                 | Nombre d'entrée libre (1000 à l'initialisation)                                 |
-| l_path       | character varying(2048) | Chemin du répertoire relatif à `r_path`                                         |
+| l_path       | text                    | Chemin du répertoire relatif à `r_path`                                         |
 
 
 
@@ -69,7 +69,7 @@ coffre lié (`id_fs`) et `l_path` provient du répertoire lié (`id_dir`).
 | id_dir        | integer                     | Identificateur du répertoire lié au fichier                                                   |
 | public_access | boolean                     | Si vrai, l'[accès au fichier][expfile] est possible sans contrôle du droit d'accès au document |
 | size          | integer                     | Taille du fichier (en octets)                                                                 |
-| name          | character varying(2048)     | Nom du fichier original (basename)                                                            |
+| name          | text                        | Nom du fichier original (basename)                                                            |
 | mime_t        | text                        | Type mime (humainement lisible, e.g. `PDF document, version 1.4`)                             |
 | mime_s        | text                        | Type mime système (e.g. `application/pdf`)                                                    |
 | cdate         | timestamp without time zone | Date d'insertion dans le coffre                                                               |
