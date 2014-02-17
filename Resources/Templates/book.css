@@ -52,6 +52,7 @@ span.flag.next-release {
     border-radius: 3px;
     border: 1px solid #fff;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    z-index:1;
 
     /* Safari */
     -webkit-transform: rotate(45deg);

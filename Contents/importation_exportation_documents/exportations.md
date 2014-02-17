@@ -89,16 +89,24 @@ Le fichier produit est réimportable. Son format dépend de l'option `Fichiers`�
     
     Exemple de fichier _csv_ produit : (ici avec l'option _avec les identificateurs_)
     
-    | //FAM | animal(ZOO_ANIMAL) | Identifiant | Dossier |   nom    |    espèce    |   classe  |
-    | ----- | ------------------ | ----------- | ------- | -------- | ------------ | --------- |
-    | ORDER | ZOO_ANIMAL         |             |         | an_nom   | an_espece    | an_classe |
-    | DOC   | ZOO_ANIMAL         | aliRotor    |         | Rotor    | ZOO_ESP_ALLI | Reptilia  |
-    | DOC   | ZOO_ANIMAL         | 2079        |         | Théodor  | ZOO_ESP_ALLI | Reptilia  |
-    | DOC   | ZOO_ANIMAL         | 2080        |         | Éléonore | ZOO_ESP_ALLI | Reptilia  |
+    | //FAM | animal(ZOO_ANIMAL) | Identifiant | Dossier |   nom    |    espèce    |   classe  |      an_enfants      |
+    | ----- | ------------------ | ----------- | ------- | -------- | ------------ | --------- | -------------------- |
+    | ORDER | ZOO_ANIMAL         |             |         | an_nom   | an_espece    | an_classe |                      |
+    | DOC   | ZOO_ANIMAL         | aliRotor    |         | Rotor    | ZOO_ESP_ALLI | Reptilia  |                      |
+    | DOC   | ZOO_ANIMAL         | 2079        |         | Théodor  | ZOO_ESP_ALLI | Reptilia  | {aliRotor,1546,1532} |
+    | DOC   | ZOO_ANIMAL         | 2080        |         | Éléonore | ZOO_ESP_ALLI | Reptilia  | {aliRotor,2079}      |
 
 *   Si l'option _avec les fichiers_ est choisie, le fichier produit est une
     archive de type zip conforme au format
     d'[importation d'archive][importArchive]
+
+Les valeurs retournées sont les valeurs brutes de la base de données.
+Voir [`Doc::getRawValue()`][getrawvalue] pour plus de détails.
+
+Pour les attributs "relation" (type `docid` ou `account`), si le document pointé
+contient un nom logique, il sera retourné sinon c'est l'identifiant numérique
+qui est utilisé.
+
 
 ### Données brutes {#core-ref:2e22b0a8-5148-4f74-8cc8-e56baae42c7e}
 
@@ -164,3 +172,4 @@ XML][exportxml].
 [exportxml]: #core-ref:9cebde3e-d40c-421c-85f6-e3e8282d547f "détail format exportation XML"
 [exportprofil]: #core-ref:602c6331-7cdb-4b24-8a56-ffd11e00502f
 [keys]: #core-ref:7eefc8e7-16a6-4188-99d5-c2c9d817a1fe
+[getrawvalue]: #core-ref:f779391c-ee61-4c3a-8976-6b74f83ecc8f

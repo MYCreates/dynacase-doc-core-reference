@@ -169,6 +169,10 @@ book:
       subtoc:   2
     - level:   2
       content:  "importation_exportation_documents/importations.md"
+      flags:
+        need-review : "need-review"
+        new : "updated"
+        next-release : "3.3.0"
     - level:   2
       content:  "importation_exportation_documents/importationsxml.md"
     - level:   2
@@ -509,6 +513,10 @@ book:
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getRawValue.md"
+      flags:
+        need-review : "need-review"
+        new : "updated"
+        next-release : "3.3.0"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getAttributeValue.md"
@@ -856,7 +864,7 @@ book:
     - level: 3
       content: "parameters_ref/core_dbdocviewcompat.md"
       flags:
-        draft : "draft"
+        need-review : "need-review"
         new : "new"
         next-release : "3.3.0"
     - level: 2
@@ -1057,6 +1065,10 @@ book:
       content:  "Advanced/Recherche/searchdoc.md"
     - level:   4
       content:  "Advanced/Recherche/critereattribut.md"
+      flags:
+        need-review : "need-review"
+        new : "updated"
+        next-release : "3.3.0"
     - level:   4
       content:  "Advanced/Recherche/critereid.md"
     - level:   4
