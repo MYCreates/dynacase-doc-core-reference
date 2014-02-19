@@ -47,61 +47,83 @@ book:
       subtoc:   1
     - level:   2
       content:  "famille/attributs.md"
-      subtoc:   1
+      subtoc:   2
     - level:   3
       content:  "famille/attribut_type_common.md"
     - level:   3
-      content:  "famille/attribut_type_account.md"
-    - level:   3
-      content:  "famille/attribut_type_action.md"
-    - level:   3
-      content:  "famille/attribut_type_array.md"
-    - level:   3
-      content:  "famille/attribut_type_color.md"
-    - level:   3
-      content:  "famille/attribut_type_date.md"
-    - level:   3
-      content:  "famille/attribut_type_docid.md"
-    - level:   3
-      content:  "famille/attribut_type_double.md"
-    - level:   3
-      content:  "famille/attribut_type_enum.md"
+      content:  "famille/attributsdata.md"
+      subtoc:   1
+      need-review : "need-review"
+      flags:
+        new : "updated"
     - level:   4
+      content:  "famille/attribut_type_account.md"
+    - level:   4
+      content:  "famille/attribut_type_color.md"
+    - level:   4
+      content:  "famille/attribut_type_date.md"
+    - level:   4
+      content:  "famille/attribut_type_docid.md"
+    - level:   4
+      content:  "famille/attribut_type_double.md"
+    - level:   4
+      content:  "famille/attribut_type_enum.md"
+    - level:   5
       content:  "famille/def_enum.md"
-    - level:   3
+    - level:   4
       content:  "famille/attribut_type_file.md"
-    - level:   3
-      content:  "famille/attribut_type_frame.md"
-    - level:   3
+    - level:   4
       content:  "famille/attribut_type_htmltext.md"
-    - level:   3
+    - level:   4
       content:  "famille/attribut_type_idoc.md"
-    - level:   3
+    - level:   4
       content:  "famille/attribut_type_ifile.md"
-    - level:   3
+    - level:   4
       content:  "famille/attribut_type_image.md"
-    - level:   3
+    - level:   4
       content:  "famille/attribut_type_int.md"
-    - level:   3
+    - level:   4
       content:  "famille/attribut_type_longtext.md"
-    - level:   3
-      content:  "famille/attribut_type_menu.md"
-    - level:   3
+    - level:   4
       content:  "famille/attribut_type_money.md"
-    - level:   3
+    - level:   4
       content:  "famille/attribut_type_password.md"
+    - level:   4
+      content:  "famille/attribut_type_text.md"
+    - level:   4
+      content:  "famille/attribut_type_thesaurus.md"
+    - level:   4
+      content:  "famille/attribut_type_time.md"
+    - level:   4
+      content:  "famille/attribut_type_timestamp.md"
+    - level:   4
+      content:  "famille/attribut_type_xml.md"    
     - level:   3
+      content:  "famille/attributsstruct.md"
+      subtoc:   1
+      need-review : "need-review"
+      flags:
+        new : "updated"
+    - level:   4
+      content:  "famille/attribut_type_array.md"
+      flags:
+        need-review : "need-review"
+        new : "updated"
+        next-release : "3.3.0"
+    - level:   4
+      content:  "famille/attribut_type_frame.md"
+    - level:   4
       content:  "famille/attribut_type_tab.md"
     - level:   3
-      content:  "famille/attribut_type_text.md"
-    - level:   3
-      content:  "famille/attribut_type_thesaurus.md"
-    - level:   3
-      content:  "famille/attribut_type_time.md"
-    - level:   3
-      content:  "famille/attribut_type_timestamp.md"
-    - level:   3
-      content:  "famille/attribut_type_xml.md"    
+      content:  "famille/attributsaction.md"
+      subtoc:   1
+      need-review : "need-review"
+      flags:
+        new : "updated"
+    - level:   4
+      content:  "famille/attribut_type_action.md"
+    - level:   4
+      content:  "famille/attribut_type_menu.md"
     - level:   2
       content:  "famille/attribut_visibility.md"
     - level:   2
@@ -725,6 +747,9 @@ book:
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_onlyCount.md"
+      flags:
+        new : "updated"
+        next-release : "3.3.0"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_join.md"
@@ -755,6 +780,9 @@ book:
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_returnsOnly.md"
+      flags:
+        new : "updated"
+        next-release : "3.3.0"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_getSearchInfo.md"
@@ -1023,11 +1051,13 @@ book:
     - level:   3
       content:  "Advanced/Database/dbdoc.md"
       flags:
+        need-review : "need-review"
         new : "updated"
         next-release : "3.3.0"
     - level:   3
       content:  "Advanced/Database/dbdocfam.md"
       flags:
+        need-review : "need-review"
         new : "updated"
         next-release : "3.3.0"
     - level:   3
@@ -1083,6 +1113,10 @@ book:
       content:  "Advanced/Recherche/critereacl.md"
     - level:   4
       content:  "Advanced/Recherche/critererevision.md"
+      flags:
+        need-review : "need-review"
+        new : "updated"
+        next-release : "3.3.0"
     - level:   4
       content:  "Advanced/Recherche/docrel.md"
     - level:   4
@@ -1091,6 +1125,9 @@ book:
       content:  "Advanced/Recherche/count.md"
     - level:   4
       content:  "Advanced/Recherche/errors.md"
+      flags:
+        new : "updated"
+        next-release : "3.3.0"
     - level:   4
       content:  "Advanced/Recherche/generalsearch.md"
     - level:   3

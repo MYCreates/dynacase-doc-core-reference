@@ -17,7 +17,7 @@ Pour chaque clé définie par ce moyen :
     jour,
 *   si la clé n'existe pas pour cet énuméré, elle est ajoutée.
 
-### Restrictions sur la valeur des clés {#core-ref:bd7ca69d-80a6-4f44-a2c3-fcf83a0abd69}
+## Restrictions sur la valeur des clés {#core-ref:bd7ca69d-80a6-4f44-a2c3-fcf83a0abd69}
 
 Lors de la composition des clés, il est interdit d'utiliser
 
@@ -35,7 +35,7 @@ En outre, les valeurs suivantes doivent être échappées au moyen du caractère
 
 *   `.` (*point*) : voir les [énumérés multi-niveaux][multi_level]
 
-### Restrictions sur la valeur des labels {#core-ref:8c21b7c1-91e7-445c-ab0b-b149e77eaf97}
+## Restrictions sur la valeur des labels {#core-ref:8c21b7c1-91e7-445c-ab0b-b149e77eaf97}
 
 Lors de la composition des labels, il est interdit d'utiliser
 

@@ -41,13 +41,14 @@ Résultat :
     Array
     (
         [count] => 4
-        [query] => select doc128.id, owner, title, ... us_accexpiredate, values, attrids  from  doc128  
-            where (doc128.archiveid is null) and (doc128.doctype != 'T') and (doc128.locked != -1) 
-                and (us_extmail is not null) 
-                ORDER BY title LIMIT ALL OFFSET 0;
+        [query] => select family."iuser".*  from  family."iuser" 
+                    where  (family."iuser".archiveid is null) and (family."iuser".doctype != 'T') 
+                    and (family."iuser".locked != -1) and (us_extmail is not null) 
+                    ORDER BY title LIMIT ALL OFFSET 0;
         [error] => 
-        [delay] => 0.008s
+        [delay] => 0.107s
     )
+
 
 
 <!-- link -->

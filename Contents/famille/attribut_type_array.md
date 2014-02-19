@@ -36,13 +36,15 @@ Le libellé de la colonne est le libellé de l'attribut correspondant.
 
 Aucun comportement particulier.
 
-## Format de stockage {#core-ref:2448fbfc-c138-4134-aa46-800080f63738}
+## Format de stockage <span class="flag next-release">3.3.0</span>{#core-ref:2448fbfc-c138-4134-aa46-800080f63738}
 
-Le tableau en lui même n'est pas stocké, mais modifie la façon dont les attributs qu'il contient sont stockés.
-En effet, une fois dans un tableau, un attribut est multiple, et nécessite donc le stockage de plusieurs valeurs.
-Pour rester simple, la valeur stockée sera une suite des valeurs de stockage simples séparées par un séparateur interne.
+Le tableau en lui même n'est pas stocké, mais modifie la façon dont les
+attributs qu'il contient sont stockés. En effet, une fois dans un tableau, un
+attribut est multiple, et nécessite donc le stockage de plusieurs valeurs. La
+valeur stockée sera de type [`array`][pgArray] conformément au type de base.
 
-Pour plus de précisions, se reporter au chapitre avancé sur les formats de stockage.
+Par exemple, pour un attribut de type `int`, le type en base de donnée,lorsqu'il
+est dans un tableau, est `int[]`.
 
 ## Options applicables à l'array {#core-ref:9eb6f53f-158d-497d-a472-2602a195cbce}
 
@@ -92,7 +94,8 @@ sorttable
     
     Le tri est effectué au moyen du script [sorttable.js][SORTTABLEJS_home].
     
-    L'utilisation avancée de sorttable.js sort du sujet de cette documentation, et est à charge et de la responsabilité du développeur.
+    L'utilisation avancée de sorttable.js sort du sujet de cette documentation,
+    et est à charge et de la responsabilité du développeur.
     
     Les valeurs possibles sont :
     
@@ -114,7 +117,8 @@ userowadd
 :   Indique si l'utilisateur est autorisé à ajouter des rangées au tableau.
     Dans ce cas, le bouton correspondant est affiché.
     
-    Cela permet de ne pas être en conflit si le tableau doit être rempli par un code spécifique sur l'interface, mais pas par l'utilisateur.
+    Cela permet de ne pas être en conflit si le tableau doit être rempli par un
+    code spécifique sur l'interface, mais pas par l'utilisateur.
     
     Les valeurs possibles sont :
     
@@ -177,3 +181,4 @@ cwidth
 [odt_restrictions]: #core-ref:3742b35d-ddc0-440e-a0aa-08ea2faf0e46
 [viewrow]:  #core-ref:d237e0d4-ca4e-4b9e-8249-45aef7d2ef0f
 [editrow]:  #core-ref:c0ed29f6-02e5-4ff2-8943-511a7d00c106
+[pgArray]: http://www.postgresql.org/docs/9.3/static/arrays.html "Tableaux PostgreSql"

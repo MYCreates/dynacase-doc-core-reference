@@ -87,19 +87,15 @@ Résultat :
 <!--beware there is no tab here for sql syntax-->
 
     [sql]
-        [query] => SELECT doc1053.id, owner, title, revision, version, initid, fromid, 
-                          doctype, locked, allocated, archiveid, icon, lmodify, profid, 
-                          usefor, cdate, adate, revdate, comment, classname, state, wid, 
-                          postitid, domainid, lockdomainid, cvid, name, dprofid, views, atags,
-                          prelid, confidential, ldapdn, 
-                          an_nom, an_tatouage, an_espece, an_espece_title, an_ordre, 
-                          an_classe, an_sexe, an_photo, an_gardien, an_naissance, 
-                          an_entree, an_enfant, an_pere, an_mere, an_classe_title, 
-                          an_pere_title, an_mere_title, values, attrids  
-                   FROM doc1053  
-                   WHERE (doc1053.archiveid is null) AND (doc1053.doctype != 'T') AND (doc1053.locked != -1) AND (views && '{2,0,11}') 
-                   ORDER BY initid LIMIT ALL OFFSET 0;
-
+        [query] => select family."zoo_animal".*  from  family."zoo_animal" where  (family."zoo_animal".archiveid is null) and (family."zoo_animal".doctype != 'T') and (family."zoo_animal".locked != -1) and (views && '{2,0,172}') ORDER BY initid LIMIT ALL OFFSET 0;
+        
+        select family."zoo_animal".*  
+        from  family."zoo_animal" 
+        where  (family."zoo_animal".archiveid is null) 
+           and (family."zoo_animal".doctype != 'T') 
+           and (family."zoo_animal".locked != -1) 
+           and (views && '{2,0,172}') 
+        ORDER BY initid LIMIT ALL OFFSET 0;select family."zoo_animal".*  from  family."zoo_animal" where  (family."zoo_animal".archiveid is null) and (family."zoo_animal".doctype != 'T') and (family."zoo_animal".locked != -1) ORDER BY initid LIMIT ALL OFFSET 0;
         [error] => 
         [delay] => 0.017s
     )
@@ -150,11 +146,13 @@ Résultat :
 <!--beware there is no tab here for sql syntax-->
 
     [sql]
-        [query] => SELECT doc1053.id, title, fromid, doctype  
-                   FROM doc1053  
-                   WHERE (doc1053.archiveid is null) AND (doc1053.doctype != 'T') AND (doc1053.locked != -1) AND (views && '{2,0,11}') 
+        [query] => select family."zoo_animal".id, title, fromid, doctype  
+                   from  family."zoo_animal" 
+                   where  (family."zoo_animal".archiveid is null) 
+                     and (family."zoo_animal".doctype != 'T') 
+                     and (family."zoo_animal".locked != -1) 
+                     and (views && '{2,0,172}') 
                    ORDER BY initid LIMIT ALL OFFSET 0;
-
         [error] => 
         [delay] => 0.003s
     )
@@ -214,11 +212,13 @@ Résultat :
 <!--beware there is no tab here for sql syntax-->
 
     [sql]
-        [query] => SELECT doc1053.id, title, fromid, doctype, locked, an_classe, an_espece
-                   FROM doc1053
-                   WHERE (doc1053.archiveid is null) AND (doc1053.doctype != 'T') AND (doc1053.locked != -1) AND (views && '{2,0,11}')
+        [query] => SELECT family."zoo_animal".id, title, fromid, doctype, locked, an_classe, an_espece
+                   from  family."zoo_animal" 
+                   where  (family."zoo_animal".archiveid is null) 
+                     and (family."zoo_animal".doctype != 'T') 
+                     and (family."zoo_animal".locked != -1) 
+                     and (views && '{2,0,172}') 
                    ORDER BY initid LIMIT ALL OFFSET 0;
-
         [error] => 
         [delay] => 0.003s
     )
@@ -257,10 +257,7 @@ Avec un retour "normal" : **&gt; 6 min**
 <!--beware there is no tab here for sql syntax-->
 
     [sql]
-        [query] => SELECT docread.id, owner, title, revision, version, initid, fromid,
-                        doctype, locked, allocated, archiveid, icon, lmodify, profid, usefor, cdate, 
-                        adate, revdate, comment, classname, state, wid, postitid, domainid, lockdomainid, 
-                        cvid, name, dprofid, atags, prelid, confidential, ldapdn, values, svalues, attrids
+        [query] => SELECT docread.*
                    FROM docread
                    WHERE (docread.archiveid is null) AND (docread.doctype != 'Z') AND (docread.doctype != 'T') AND (docread.locked != -1) 
                    ORDER BY initid LIMIT ALL OFFSET 0;
