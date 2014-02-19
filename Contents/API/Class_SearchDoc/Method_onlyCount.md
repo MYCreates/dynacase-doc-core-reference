@@ -104,7 +104,7 @@ Exemple de searchDoc :
 <!--beware there is no tab here for sql syntax-->
 
     [sql]
-      'query' => 'select docread.id, owner, title, revision, version, initid, fromid, doctype, locked, allocated, archiveid, icon, lmodify, profid, usefor, cdate, adate, revdate, comment, classname, state, wid, postitid, domainid, lockdomainid, cvid, name, dprofid, atags, prelid, confidential, ldapdn, values, svalues, attrids  from  docread  where   (docread.archiveid is null) and (docread.doctype != \'Z\') and (docread.doctype != \'T\') and (docread.locked != -1) ORDER BY title LIMIT ALL OFFSET 0;',
+      'query' => 'select docread.*  from  docread  where   (docread.archiveid is null) and (docread.doctype != \'Z\') and (docread.doctype != \'T\') and (docread.locked != -1) ORDER BY title LIMIT ALL OFFSET 0;',
 
       'error' => '',
       'delay' => '0.073s',
@@ -116,7 +116,7 @@ Exemple de searchDoc :
 <!--beware there is no tab here for sql syntax-->
 
     [sql]
-      'query' => 'select docread.id, owner, title, revision, version, initid, fromid, doctype, locked, allocated, archiveid, icon, lmodify, profid, usefor, cdate, adate, revdate, comment, classname, state, wid, postitid, domainid, lockdomainid, cvid, name, dprofid, atags, prelid, confidential, ldapdn, values, svalues, attrids  from  docread  where   (docread.archiveid is null) and (docread.doctype != \'Z\') and (docread.doctype != \'T\') and (docread.locked != -1) ORDER BY title LIMIT ALL OFFSET 0;',
+      'query' => 'select docread.*  from  docread  where   (docread.archiveid is null) and (docread.doctype != \'Z\') and (docread.doctype != \'T\') and (docread.locked != -1) ORDER BY title LIMIT ALL OFFSET 0;',
 
       'error' => '',
       'delay' => '0.073s',

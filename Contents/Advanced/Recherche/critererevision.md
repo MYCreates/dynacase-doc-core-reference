@@ -36,7 +36,7 @@ la concaténation des valeurs des autres attributs séparés par le caractère `
     [php]
     $searchExpression='myWord';
     $s=new SearchDoc();// famid : toute famille
-    $s->addFilter("svalues ~* '%s'", $searchExpression); 
+    $s->addSearchFilter("svalues ~* '%s'", $searchExpression); 
 
 
 ## Recherche sur les états d'un document lié à un cycle de vie {#core-ref:1b9c384a-bd2d-445b-9232-f07d59788482}

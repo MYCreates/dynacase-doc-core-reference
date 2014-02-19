@@ -9,57 +9,51 @@ La table `family.documents` définit les [propriétés des documents][docprop] ;
 c'est à dire tout ce qui est commun à toutes familles de documents.
  
 
-|   Colonne    |             Type            |                                             Définition                                            |
-| ------------ | --------------------------- | ------------------------------------------------------------------------------------------------- |
-| adate        | timestamp without time zone | Date de dernier accès au document.                                                                |
-| allocated    | integer                     | Identifiant système de l'utilisateur auquel le document est affecté.                              |
-| archiveid    | integer                     | Id de l'archive dans laquelle est contenu ce document.                                            |
-| atags        | text                        | Balises applicatives.                                                                             |
-| attrids      | text                        | Liste de l'ensemble des attributs ayant une valeur non nulle (calculé par trigger).               |
-| cdate        | timestamp without time zone | Date de création de la révision.                                                                  |
-| classname    | text                        | Nom de la classe PHP associée au document (utilisé dans la table `family.families` uniquement).   |
-| comment      | text                        | *Obsolète*                                                                                        |
-| confidential | integer                     | Indique si le document est confidentiel (>0).                                                     |
-| cvid         | integer                     | Identifiant du document [contrôle de vue][CVDoc] associé à ce document.                           |
-| doctype      | character(1)                | Type de document.                                                                                 |
-| domainid     | text                        | *pour application offline*                                                                        |
-| dprofid      | integer                     | Identifiant du [profil dynamique][docprofdyn] associé à ce document.                              |
-| forumid      | integer                     | *Obsolète*                                                                                        |
-| fromid       | integer                     | Id de la famille d'appartenance.                                                                  |
-| fromname     | text                        | Nom logique de la famille d'appartenance.                                                         |
-| fulltext     | tsvector                    | Ensemble des valeurs du document y compris les textes des fichiers indexés.                       |
-| id           | integer                     | Identifiant unique du document (issue de la séquence `family.seq_id_doc`).                        |
-| icon         | text                        | Référence au fichier d'icone du document.                                                         |
-| initid       | integer                     | Id du premier document de la lignée documentaire.                                                 |
-| ldapdn       | text                        | *Obsolète*                                                                                        |
-| lmodify      | character(1)                | Tag de modification.                                                                              |
-| lockdomainid | integer                     | *Pour application offline*                                                                        |
-| locked       | integer                     | Indique l'identifiant système de l'utilisateur qui a verrouillé le document.                      |
-| name         | text                        | Nom logique du document.                                                                          |
-| owner        | integer                     | Identifiant système de l'utilisateur ayant créé le document.                                      |
-| postitid     | text                        | Identifiant du document post-it associé.                                                          |
-| prelid       | integer                     | Identifiant du document (dossier) de relation primaire.                                           |
-| profid       | integer                     | Identifiant du [profil de document][docprof].                                                     |
-| revdate      | integer                     | Date de révision.                                                                                 |
-| revision     | integer                     | Numéro d'ordre du document dans sa lignée documentaire.                                           |
-| state        | text                        | Étape du document.                                                                                |
-| svalues      | text                        | Liste des valeurs d'[attributs recherchables][attropt] y compris les textes des fichiers indexés. |
-| title        | character varying(256)      | Titre du document.                                                                                |
-| usefor       | text                        | Type d'utilisation du document.                                                                   |
-| values       | text                        | Liste de l'ensemble des valeurs non nulles en corrélation avec _attrids_.                         |
-| version      | text                        | Libellé de la version : il est vide par défaut.                                                   |
-| views        | integer[]                   | Liste des [identifiants de compte][dbuser] qui ont accès au document.                             |
-| wid          | integer                     | Identifiant du [document *cycle de vie*][WF_document] associé à ce document.                      |
+|   Colonne    |             Type            |                                                                Définition                                                               |
+| ------------ | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| adate        | timestamp without time zone | Date de dernier accès au document.                                                                                                      |
+| allocated    | integer                     | Identifiant système de l'utilisateur auquel le document est affecté.                                                                    |
+| archiveid    | integer                     | Id de l'archive dans laquelle est contenu ce document.                                                                                  |
+| atags        | text                        | Balises applicatives.                                                                                                                   |
+| avalues      | json                        | Liste de l'ensemble des valeurs non nulles des attributs de données. (calculé par trigger) <span class="flag next-release">3.3.0</span> |
+| cdate        | timestamp without time zone | Date de création de la révision.                                                                                                        |
+| classname    | text                        | Nom de la classe PHP associée au document (utilisé dans la table `family.families` uniquement).                                         |
+| comment      | text                        | *Obsolète*                                                                                                                              |
+| confidential | integer                     | Indique si le document est confidentiel (>0).                                                                                           |
+| cvid         | integer                     | Identifiant du document [contrôle de vue][CVDoc] associé à ce document.                                                                 |
+| doctype      | character(1)                | Type de document.                                                                                                                       |
+| domainid     | text                        | *pour application offline*                                                                                                              |
+| dprofid      | integer                     | Identifiant du [profil dynamique][docprofdyn] associé à ce document.                                                                    |
+| forumid      | integer                     | *Obsolète*                                                                                                                              |
+| fromid       | integer                     | Id de la famille d'appartenance.                                                                                                        |
+| fromname     | text                        | Nom logique de la famille d'appartenance.                                                                                               |
+| id           | integer                     | Identifiant unique du document (issue de la séquence `family.seq_id_doc`).                                                              |
+| icon         | text                        | Référence au fichier d'icone du document.                                                                                               |
+| initid       | integer                     | Id du premier document de la lignée documentaire.                                                                                       |
+| ldapdn       | text                        | *Obsolète*                                                                                                                              |
+| lmodify      | character(1)                | Tag de modification.                                                                                                                    |
+| lockdomainid | integer                     | *Pour application offline*                                                                                                              |
+| locked       | integer                     | Indique l'identifiant système de l'utilisateur qui a verrouillé le document.                                                            |
+| name         | text                        | Nom logique du document.                                                                                                                |
+| owner        | integer                     | Identifiant système de l'utilisateur ayant créé le document.                                                                            |
+| postitid     | text                        | Identifiant du document post-it associé.                                                                                                |
+| prelid       | integer                     | Identifiant du document (dossier) de relation primaire.                                                                                 |
+| profid       | integer                     | Identifiant du [profil de document][docprof].                                                                                           |
+| revdate      | integer                     | Date de révision.                                                                                                                       |
+| revision     | integer                     | Numéro d'ordre du document dans sa lignée documentaire.                                                                                 |
+| state        | text                        | Étape du document.                                                                                                                      |
+| title        | character varying(256)      | Titre du document.                                                                                                                      |
+| usefor       | text                        | Type d'utilisation du document.                                                                                                         |
+| version      | text                        | Libellé de la version : il est vide par défaut.                                                                                         |
+| views        | integer[]                   | Liste des [identifiants de compte][dbuser] qui ont accès au document.                                                                   |
+| wid          | integer                     | Identifiant du [document *cycle de vie*][WF_document] associé à ce document.                                                            |
 
 
 ## Les tables des documents {#core-ref:0c6cc474-d5e9-4ee0-aeed-1aa00100d7df}
 
 Pour chacune des familles, une table est créée. Cette
 table  est nommée `family.<famname>` où `<famname>` est le nom logique de la
-famille. <span class="fixme">Une même famille peut avoir un nom de table différent sur différente
-installation suivant l'identifiant qui lui a été attribué au moment de la
-création. De même si la famille est [détruite][destroyfam], une nouvelle table
-avec un nom différent lui est attribué.</span>
+famille. 
 
 Exemple :
 ![ Héritage des tables de documents ](advanced/dbinherit.png)
@@ -89,9 +83,8 @@ La table `family.documents` ne comprend aucune donnée propre.
      15008
 
 Chacune des tables de documents contient en plus des propriétés héritées de la
-table `family.documents`, une colonne par attribut pouvant contenir une valeur.
-<span class="fixme">Cela exclu les attributs de type _tab_, _frame_, _array_, et _menu_.
-(je ne comprends pas)</span>
+table `family.documents`, une colonne par [attribut de données][attrdata].
+
 Le nom de ces colonnes sont les identifiants des attributs. Le type de ces colonnes est
 fonction du [type d'attribut][docattr]. Le type correspondant en base est
 indiqué dans chacun des chapitres décrivant les attributs.
@@ -134,8 +127,11 @@ modification.
 ## Indexation des fichiers {#core-ref:354273d6-7fab-4096-8f22-6dc3e540ee65}
 
 Si le [moteur de transformation][te] est opérationnel, les contenus des
-fichiers peuvent être indexés. Un attribut fichier produit trois colonnes dans
-la table associée à sa famille.
+fichiers peuvent être indexés. 
+
+
+Un attribut fichier produit trois colonnes : une dans la table de sa famille et
+deux autres dans la table du schéma `filecontent` associée à sa famille.
 
 1.  colonne `<attrid>`
 :   Contient la référence au fichier : `<vaultId>|<mimeType>|<fileName>`.
@@ -143,7 +139,9 @@ la table associée à sa famille.
     1. vaultId : Identifiant dans le coffre (table `vaultdiskstorage`, colonne `id_file`),
     1. mimeType : type mime du fichier,
     1. fileName : nom du fichier (basename).
-    
+
+Colonnes de la table dans le schéma `filecontent` :
+
 1.  colonne `<attrid>_txt`
 :   Contient le contenu textuel (type `text`) du fichier qui a été retourné par 
     le moteur de transformation.
@@ -151,19 +149,31 @@ la table associée à sa famille.
 1.  colonne `<attrid>_vec`
 :   Contient le contenu vectorisé (type `tsvector`) de la colonne `<attrid>_txt`.
 
-## Colonne de recherche générale. {#core-ref:d5fc4bc8-067d-4dd8-b617-9641e3b11707}
+## Recherche générale. {#core-ref:d5fc4bc8-067d-4dd8-b617-9641e3b11707}
 
-La colonne `svalues` contient l'ensemble des valeurs recherchables ainsi que les
-contenus des colonnes `_txt` des attributs fichiers. Cette colonne est utilisée
-pour les [recherches générales][globsearch] utilisant des expressions (partie de
+Les tables du schéma `search` contiennet les valeurs recherchables des documents.
+
+
+![ Tables de recherche ](advanced/dbsearch.png)
+
+
+Ces tables sont utilisées 
+pour les [recherches générales][globsearch].
+
+Les colonnes `svalues` contient l'ensemble des valeurs [recherchables][attropt]
+ainsi que les contenus des colonnes `_txt` des attributs fichiers présents dans
+les tables du schéma `filecontent`.
+
+Ces colonnes sont utilisées lors de recherche utilisant des expressions (partie de
 mot).
 
-La colonne `fulltext` contient la version vectorisée de `svalues`.
+Les colonnes `fulltext` contiennent la version vectorisée de `svalues`.
 Cette colonne est utilisée pour les recherches globales de mot entier.
 
 Ces deux colonnes sont calculées par trigger. Toutes modifications
 d'enregistrements sur les tables documentaires déclenchent le recalcul de ces
 colonnes.
+
 
 <!-- links -->
 [docprop]:          #core-ref:9aa8edfa-2f2a-11e2-aaec-838a12b40353 "Propriétés de la classe Doc" 
@@ -182,3 +192,5 @@ colonnes.
 [globsearch]:       #core-ref:19b9f4b4-c960-46eb-b4e0-805ed76be3a6
 [dbuser]:           #core-ref:6d5684f4-73e8-431c-8b2b-6224a9e6b074 "table users"
 [tutorial-inheritance]: http://www.postgresql.org/docs/9.3/static/tutorial-inheritance.html
+[attrdata]:         #core-ref:8a135f78-5d52-42e8-9601-a29c21ef98c9
+[addgnlfilter]:     #core-ref:453cff11-09d9-4607-ab81-7acd36e99750
