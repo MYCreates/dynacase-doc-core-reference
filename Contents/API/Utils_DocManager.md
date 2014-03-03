@@ -7,7 +7,7 @@ récupérer des documents.
 
 </div>
 
-## Notes
+## Notes {#core-ref:35bf06e8-8999-4e94-a652-a4890e58bc8a}
 
 Les fonctions de manipulation de documents ne font pas partie d'une classe mais
 sont présentes dans le fichier PHP `FDL/freedom_util.php` qui doit donc être

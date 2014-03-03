@@ -103,9 +103,10 @@ Les valeurs inscrites dans le document sont insérés avec la
 Les attributs relations (`docid`, `account`, `thesaurus`) peuvent contenir :
 
 *   soit le nom logique du document cible;
+
 *   soit l'identifiant système du document cible.
     
-    Attention, dans ce cas, le document cible peut ne pas être valable sur
+    **Attention** : dans ce cas, le document cible peut ne pas être valable sur
     n'importe quelle instance de Dynacase.
 
 Si le document référencé est un nom logique qui n'existe pas alors la valeur
@@ -131,33 +132,20 @@ l'utilisateur réalisant l'importation :
     positionné à la valeur `en_US`), alors la date est interprétée selon le
     format `MM/DD/YYYY`.
 
-Dans tous ces  cas la valeur de la date stockée sera au format ISO.
+Dans tous ces cas, la valeur de la date stockée sera au format ISO.
 
 #### Attributs multivalués <span class="flag next-release">3.3.0</span> {#core-ref:1b8cd020-a2ed-4997-aefe-a4fcbb3564f1}
 
 
-##### MultiValué à un seul niveau de profondeur
+##### MultiValué à un seul niveau de profondeur {#core-ref:17d717f9-6a15-48a9-b5c6-0dc9e52a3993}
 
 Pour les attributs multivalués à un seul niveau (attribut *contenu dans un
     tableau*, ou ayant l'option `multiple=yes` et n'étant pas contenu dans un
     tableau) :
 
-Deux notations sont acceptées. La première utilise le caractère `\n` comme séparateur de valeur.
+Deux notations sont acceptées. 
 
-    Première valeur\nDeuxième valeur\nTroisième valeur
-
-| index |      valeur      |
-| :---: | ---------------- |
-|   1   | Première valeur  |
-|   2   | Deuxième valeur  |
-|   2   | Troisième valeur |
-|       |                  |
-
-Cette première notation est simple à écrire mais ne permet pas d'indiquer des
-retours à la lignes pour les textes longs.
-
-
-La deuxième notation est issue de la notation des [tableaux de
+La première notation est issue de la notation des [tableaux de
 postgreSql][pgarray].
 
     {"Première valeur","Deuxième valeur","Troisième valeur"}
@@ -201,22 +189,42 @@ donne le résultat suivant :
 |   3   | Troisième valeur<br />pour finir est "3". |
 
 
+
+La deuxième notation utilise le caractère `\n` comme séparateur de valeur.
+
+**Note** : Cette deuxième notation est conservée pour compatibilité avec la
+version précédente. Elle est déclarée obsolète.
+
+    Première valeur\nDeuxième valeur\nTroisième valeur
+
+| index |      valeur      |
+| :---: | ---------------- |
+|   1   | Première valeur  |
+|   2   | Deuxième valeur  |
+|   2   | Troisième valeur |
+|       |                  |
+
+Cette notation est simple à écrire mais ne permet pas d'indiquer des
+retours à la lignes pour les textes longs.
+
+
+
 **Note** : la chaîne `<BR>` n'est plus interprétée comme un retour chariot comme
 c'est le cas dans la version 3.2.
 
 
-##### MultiValué à deux niveaux de profondeur
+##### MultiValué à deux niveaux de profondeur {#core-ref:c72af782-3573-4916-85b4-f96de0968084}
 
 Pour les attributs multivalués à 2 niveaux (cas des relations ayant l'option
     `multiple=yes` et *contenues dans un tableau*) :
 
-*   la chaîne `\n` délimite deux valeurs de premier niveau,
-*   la chaîne `<BR>` délimite deux valeurs de second niveau.
+La notation [postgresql][pgarray] permet de définir les valeurs du tableau à 2
+dimensions. 
 
 Pour un attribut de type `docid`, ayant l'option `multiple=yes` et contenu
 dans un tableau, la valeur 
 
-    1236\n6375<BR>8755<BR>564\n567<BR><BR>4569
+    {{1236},{6375,8755,564},{567,NULL,4569}}
 
 correspond à la structure suivante :
 
@@ -226,10 +234,18 @@ correspond à la structure suivante :
 |   2   | • 6375<br />• 8755<br />• 564 |
 |   3   | • 567<br />• <br />• 4569     |
 
-La notation [postgresql][pgarray] est aussi acceptée. Le texte équivalent à
-l'exemple ci-dessus est :
+Pour des raisons de compatibilité avec la version précédente la notation
+suivante est aussi acceptée.
 
-    {{1236},{6375,8755,564},{567,NULL,4569}}
+**Note** : Cette notation est obsolète.
+
+*   la chaîne `\n` délimite deux valeurs de premier niveau,
+*   la chaîne `<BR>` délimite deux valeurs de second niveau.
+
+Le texte équivalent à l'exemple ci-dessus est 
+
+    1236\n6375<BR>8755<BR>564\n567<BR><BR>4569
+
 
 
 
@@ -365,10 +381,11 @@ Le nom de l'image doit référencer un fichier présent dans le répertoire
 
 Lors de l'import de documents quelques précautions d'usage sont à prendre en compte :
 
-* Les attributs calculés peuvent devenir incohérent, ils sont en effet initialisés
-avec les valeurs lors de l'import. Ceci peut créer des incohérences.
+* Les attributs calculés peuvent devenir incohérents, ils sont en effet
+initialisés avec les valeurs lors de l'import. Ceci peut créer des incohérences.
+
 * Les documents faisant référence à un `account` ne sont pas ré-importables tel
-que. Il faut suivre la procédure de ré-import tel que décrite dans ce 
+que. Il faut suivre la procédure de réimportation tel que décrite dans ce 
 [chapitre][importation].
 
 <!-- links -->
@@ -382,4 +399,4 @@ que. Il faut suivre la procédure de ré-import tel que décrite dans ce
 [importation]:      #core-ref:a0cb9a84-6bde-476c-b55c-95c8f12abd3a
 [preimport]:        #core-ref:adb6ba8b-15c4-42d3-97dc-1da16c2112ae
 [postimport]:       #core-ref:9de7e922-150a-416b-b846-b6e195bf0921 
-[pgarray]:          http://FIXME "Définition du type array de postgreSql"
+[pgarray]:          http://www.postgresql.org/docs/9.3/static/arrays.html#ARRAYS-INPUT "Tableaux en postgreSql"
