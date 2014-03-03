@@ -3,20 +3,20 @@
 Ce chapitre contient un descriptif des améliorations entre les releases de 
 Dynacase.
 
-## Modification release 3.3.0
+## Modification release 3.3.0 {#core-ref:be43d482-217f-4d0a-a80e-ff37c70a54e4}
 
-### Édition 3.3 / 1
+### Édition 3.3 / 1 {#core-ref:3f57c134-87d1-4893-8ad5-783f583a0c4a}
 
 |           Modifications           |                Chapitre                |                                    Version                                    |   Date   |
 | :-------------------------------- | :------------------------------------- | :---------------------------------------------------------------------------- | :------- |
-| Ajout paramètre                   | [COREDBDOCVIEWCOMPAT][DBDOCVIEWCOMPAT] | <span class="flag new">New</span><span class="flag next-release">3.0.0</span> | 03/02/14 |
+| Ajout paramètre                   | [COREDBDOCVIEWCOMPAT][DBDOCVIEWCOMPAT] | <span class="flag new">New</span><span class="flag next-release">3.3.0</span> | 03/02/14 |
 | Mise à jour base de données       | [La base de données][database]         | <span class="flag new">New</span>                                             | 03/02/14 |
 | Importation CSV                   | [Importation CVS][importcsv]           | <span class="flag new">Updated</span>                                         |          |
 | Opérateur de recherche multivalué | [Recherche dans un array][searcharray] | <span class="flag new">Updated</span>                                         |          |
 
 
 
-### Modification des tables des documents de la base de données
+### Modification des tables des documents de la base de données {#core-ref:bcac3c07-a788-49c5-a7f4-5873bbc8a1b7}
 
 Les [tables des documents][dbdoc] sont basées sur leur nom logique et non plus
 sur leur identifiant numérique.
@@ -24,7 +24,7 @@ sur leur identifiant numérique.
 Des [vues de compatibilités][DBDOCVIEWCOMPAT] permettent de conserver les
 anciens noms des tables.
 
-### Utilisation des types "array" pour les attributs multivalués.
+### Utilisation des types "array" pour les attributs multivalués. {#core-ref:90fd6543-b2ae-4887-bd3f-d5a96162b61d}
 
 Les données des attributs multivalués utilisent maintenant le type
 [`array`][pgArray] de postgresql.
@@ -34,6 +34,27 @@ et [exportation][exportcsv] des données csv brutes.
 
 Elle a aussi des impacts sur les requêtes de [recherches dans les
 tableaux][searcharray].
+
+
+## Incompatibilités 3.2 / 3.3 {#core-ref:d3530b54-d9d9-4c6b-a922-d621097b539b}
+
+Les attributs multiples (attributs déclarés dans des tableaux ou ayant l'option
+multiple) sont enregistrés sous la forme de [`array`][pgarray] dans la base de
+données dans la version 4 de Dynacase à la place du type `text`.
+
+Cette modification entraîne la restriction suivante : un attribut modifié
+(MODATTR) ou redéfini dans une sous-famille ne peut pas changer le caractère
+"multiple" de l'attribut originel.
+
+Par contre, un attribut multiple hors d'un tableau peut être placé dans un
+tableau dans une famille dérivée. Un attribut multiple "simple" peut être
+dérivé en multiple "à deux niveaux" et inversement. 
+
+Cette modification entraîne aussi une contrainte supplémentaire lié au type. Les
+contraintes de type des différentes valeurs sont vérifiées aussi au niveau de la
+base de données. Ces contraintes s'applique aux types "int", "double", "date",
+"timestamp" et "time".
+
 
 ## Modification release 3.2.12 {#core-ref:d402539b-f0dd-4ade-9ea0-03f1d55da1da}
 

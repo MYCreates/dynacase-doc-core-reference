@@ -78,7 +78,7 @@ Ce filtre, utilisant la fonction [`ANY`][pgallany], fonctionne aussi pour les
 attributs multiples présents dans des tableaux (2 niveaux de profondeur).
 
 Si le tableau contient une liste de nombre, pour filtrer ceux qui ont une des
-valeurs  supérieurs à 10, le filtre suivant peut être utilisé.
+valeurs supérieurs à 10, le filtre suivant peut être utilisé.
 
     [php]
     $s->addFilter("10 < any(%s)", $attrId);
@@ -97,7 +97,7 @@ Ils sont fournis par Dynacase pour gérer ce type de requêtes. Ce sont les
 opérateurs "commutateur" des opérateurs natifs `~*` et `~` fournis par
 postgreSql.
 
-Le filtre suivant effectué sur l'ensemble des valeurs du tableau est plus
+Le filtre suivant, effectué sur l'ensemble des valeurs du tableau, est moins
 rapide que le filtre précédent. Il peut être utilisé 
 
     [php]
@@ -185,4 +185,4 @@ construction de l'objet _recherche_.
 [attdocid]:         #core-ref:d461d5f5-b635-47a0-944d-473c227587ab
 [phpiterator]:      http://php.net/manual/fr/class.iterator.php "Interface Iterator"
 [docacl]:           #core-ref:a99dcc5f-f42f-4574-bbfa-d7bb0573c95d "Droits du document"
-[pgallany]:         http://www.postgresql.org/docs/9.3/static/functions-comparisons.html#AEN18482 "Opérateurs ANY/ALL"
+[pgallany]:         http://www.postgresql.org/docs/9.3/static/functions-comparisons.html#AEN18486 "Opérateurs ANY/ALL"

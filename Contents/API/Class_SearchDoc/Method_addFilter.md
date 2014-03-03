@@ -44,29 +44,13 @@ Si les variables contiennent du texte, celui-ci doit être encodé en
         addFilter est ajouté tel quel dans la requête SQL, il est donc possible qu'il 
         puisse déclencher une injection SQL. Les données doivent être 
         échappées (par exemple à l'aide de [pg_escape_string][pgEscape]),
-    *   gestion de la multiplicité : les valeurs des attributs [multiples][multiple] (premier et second 
-        niveau de multiplicité) sont stockées avec 
-        [des caractères d'échappement][separateurMultiplicite]. La création d'une requête les prenant en
-        compte nécessite l'utilisation d'opérateurs propre à postgreSql, il
-        existe plusieurs manières d'aborder le problème :
-        *   recherche à base [d'expressions régulières][postgresREGEXP] : `"ATTRNAME ~ E'\\\\y%s\\\\y'"` : il faut remplacer ATTRNAME par le nom de l'attribut.  
-            **Limitation** : l'opérateur utilisé est une expression régulière avec le 
-            séparateur de mot `\y` cela peut engendrer des faux positifs si jamais la 
-            valeur contient elle-même des séparateurs de mot.  
-            Ce type de recherche permet de faire les filtres les plus simples 
-            (un parmi, etc.) avec le risque d'avoir des faux positifs.
-        *   recherche à base de conversion en [array postgres][postgresARRAY], deux cas sont à prendre en compte :
-            *   l'attribut a 1 niveau de multiplicité : `(regexp_split_to_array(ATTRNAME, E\'\\n\' ))`
-            *   l'attribut a 2 niveaux de multiplicité : `(regexp_split_to_array(replace(ATTRNAME, \'<BR>\', E\'\\n\'), E\'\\n\' ))` 
-            
-            Dans les deux cas, il faut remplacer `ATTRNAME` par le nom de
-            l'attribut.  Le comparaison se fait ensuite à l'aide des [opérateurs
-            propres aux tableaux][postgresArrayOperator].
-            
-            Ce type de recherche est plus coûteux en ressource que le premier
-            type mais permet de faire des recherches plus complexes (a des
-            éléments en commun, est contenu par, etc.) et limite le risque de
-            faux positif.
+        
+    *   gestion de la multiplicité : les valeurs des attributs [multiples][multiple] 
+        (premier et second 
+        niveau de multiplicité) sont stockées avec des [tableaux postgresql][postgresARRAY].
+        La création d'une requête les prenant en
+        compte nécessite l'utilisation d'[opérateurs propres][searchinarray] à postgreSql
+
 
 (string|int|double) `value`
 :   Valeurs qui sont concaténées à la partie `filter` à l'aide la fonction 
@@ -121,28 +105,18 @@ contient "John Wayne" :
 
     [php]
     $searchDoc = new SearchDoc("", "FILM");
-    $searchDoc->addFilter("actors ~* E'\\\\y%s\\\\y'", preg_quote("John Wayne"));
+    $searchDoc->addFilter("any(actors) ~*< '%s'", "John Wayne");
 
-**Attention** : L'expression ci-dessus peut engendrer des faux positifs, par
-exemple, si acteur contient `John Wayne Junior` il est aussi trouvé car `\y`
-désigne un séparateur de mot et espace est un séparateur de mot.
+*Note* : Cela inclut aussi"John Wayneagain" et "Big John Wayne" par exemple.
 
-Recherche de documents dont l'attribut multivalué actors contient `John Wayne`
-et `Paul Newnam` :
+Recherche de documents dont une des valeurs de l'attribut multivalué `actors`
+est égale à `John Wayne` et une autre égale à `Paul Newnam` :
 
     [php]
     $searchDoc = new SearchDoc("", "FILM");
-    $searchDoc->addFilter("actors ~* E'\\\\y%s\\\\y'", preg_quote("John Wayne"));
-    $searchDoc->addFilter("actors ~* E'\\\\y%s\\\\y'", preg_quote("Paul Newnam"));
+    $searchDoc->addFilter("any(actors) = '%s'", "John Wayne");
+    $searchDoc->addFilter("any(actors) = '%s'", "Paul Newnam");
 
-**Attention** : L'expression ci-dessus peut engendrer des faux positifs.
-
-Recherche de documents dont l'attribut multivalué actors contient `John Wayne`
-et `Paul Newnam` :
-
-    [php]
-    $searchDoc = new SearchDoc("", "FILM");
-    $searchDoc->addFilter("ARRAY[$s] && (regexp_split_to_array(replace(actors, \'<BR>\', E\'\\n\'), E\'\\n\' ))", "'Paul Newnam', 'John Wayne'");
 
 
 ## Notes {#core-ref:9c0906a3-9ee9-461e-ad85-f8294f4799d6}
@@ -152,6 +126,7 @@ Aucunes.
 ## Voir aussi {#core-ref:36e05af7-bfd1-480a-a643-339da40c3e69}
 
 *   [`SearchDoc::addGeneralFilter()][addgeneralfilter]
+*   [Recherche avancée][advsearch]
 
 <!-- links -->
 [addgeneralfilter]:         #core-ref:453cff11-09d9-4607-ab81-7acd36e99750
@@ -159,9 +134,11 @@ Aucunes.
 [pgEscape]:                 http://us1.php.net/manual/en/function.pg-escape-string.php "pg_escape_string"
 [multiple]:                 #core-ref:324c7c7e-bd80-4c19-ad24-daf0f39caa61
 [separateurMultiplicite]:   #core-ref:1b8cd020-a2ed-4997-aefe-a4fcbb3564f1
-[postgresREGEXP]:           http://www.postgresql.org/docs/9.1/static/functions-matching.html#FUNCTIONS-POSIX-REGEXP "Postgres : POSIX Regular Expressions"
-[postgresARRAY]:            http://www.postgresql.org/docs/9.1/static/functions-array.html "Postgres : Array"
+[postgresREGEXP]:           http://www.postgresql.org/docs/9.3/static/functions-matching.html#FUNCTIONS-POSIX-REGEXP "Postgres : POSIX Regular Expressions"
+[postgresARRAY]:            http://www.postgresql.org/docs/9.3/static/functions-array.html "Postgres : Array"
 [phpSprintf]:               http://us3.php.net/manual/en/function.sprintf.php "PHP : sprintf"
-[postgresArrayOperator]:    http://www.postgresql.org/docs/9.1/static/functions-comparisons.html "Postgres : Array operators"
+[postgresArrayOperator]:    http://www.postgresql.org/docs/9.3/static/functions-comparisons.html "Postgres : Array operators"
 [preg_quote]:               http://us2.php.net/preg_quote "PHP : preg_quote"
 [utf8]:                     http://fr.wikipedia.org/wiki/UTF-8 "UTF-8 sur Wikipédia"
+[searchinarray]:            #core-ref:5342d63e-edc8-44fb-bed9-2fb113742849
+[advsearch]:                #core-ref:0f8f5e66-5ed7-47b8-bcfd-038e0eec9d26
