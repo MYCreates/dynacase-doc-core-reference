@@ -370,19 +370,19 @@ CLASS
     Hiérarchie de classe lorsque la famille _MY_PHOTO_ est intégrée :
     
         [php]
-        namespace \Dcp\Core {
+        namespace Dcp\Core {
             // classe métier de la famille IMAGE
             class Images extends \Dcp\Family\Document {}
         }
-        namespace \Dcp\Family {
+        namespace Dcp\Family {
             // classe générée de la famille IMAGE
             class Images extends \Dcp\CoreFamily\Image {}
         }
-        namespace \My {
+        namespace My {
             // classe métier de la famille MY_PHOTO
             class MyPhotoFamily extends \Dcp\Family\Image {}
         }
-        namespace \Dcp\Family {
+        namespace Dcp\Family {
             // classe générée de la famille MY_PHOTO
             class My_photo extends \My\MyPhotoFamily {}
         }
@@ -436,7 +436,8 @@ METHOD
         directement dans la classe générée.
     *   Lorsque le nom est préfixé par `*`, le fichier n'est pas intégré
         directement dans la famille, mais une classe intermédiaire est générée.
-        Cela permet notamment une surcharge plus fine des méthodes.
+        Cela permet notamment une surcharge plus fine des méthodes. Le prefix '*'
+        ne peut être utilisé qu'une seule fois par famille.
     
     Si la valeur est vide, *toutes* les méthodes incluses au moyen de ce mot clé
     sont enlevées (y compris celles déclarées avec `*` ou `+`).
@@ -450,18 +451,19 @@ METHOD
     | ATTR   | MYPHO_FR_INFO      |               | Informations | N        | N   | frame    | 100 |
     | ATTR   | MYPHO_EXIF         | MYPHO_FR_INFO | Exif         | N        | N   | longtext | 110 |
     | END    |                    |               |              |          |     |          |     |
+    
     Hiérarchie de classe lorsque la famille _MY_PHOTO_ est intégrée :
     
         [php]
-        namespace \Dcp\Core {
+        namespace Dcp\Core {
             // classe métier de la famille IMAGE
             class Images extends \Dcp\Family\Document {}
         }
-        namespace \Dcp\Family {
+        namespace Dcp\Family {
             // classe générée de la famille IMAGE
             class Images extends \Dcp\CoreFamily\Image {}
         }
-        namespace \My {
+        namespace My {
             // classe métier de la famille MY_PHOTO
             class MyPhotoFamily extends \Dcp\Family\Image {}
         }
@@ -471,7 +473,7 @@ METHOD
                 // inclus le contenu de Method.MyPhoto.php
             }
         }
-        namespace \Dcp\Family {
+        namespace Dcp\Family {
             // classe générée de la famille MY_PHOTO
             class My_photo extends _Method_MY_PHOTO_ {}
         }
