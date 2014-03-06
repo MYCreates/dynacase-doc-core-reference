@@ -43,7 +43,7 @@ applicatifs][paramapp].
 | ------- | -------------------- | -------------------------------------------------------------------------------- |
 | name    | text                 | Nom du paramètre                                                                 |
 | isuser  | character varying(1) | Valeurs possibles : `Y` (paramètre utilisateur), `N` (paramètre non utilisateur) |
-| isstyle | character varying(1) | *Obsolète* Non utilisé                                                           |
+| isstyle | character varying(1) | Utilisé pour paramètre de style (usage interne)                                  |
 | isglob  | character varying(1) | Valeurs possibles : `Y` (paramètre global), `N` (paramètre applicatif)           |
 | appid   | integer              | Identifiant de l'application                                                     |
 | descr   | text                 | Description du paramètre                                                         |

@@ -13,22 +13,14 @@ Cette action appelle une autre action suivant le mode demandé :
 ## Paramètres {#core-ref:e8e5c473-54b0-4eb0-8cd7-dc5b1cbc0238}
 
 id
-:   L'[id][id_document] du document source. Facultatif si `classid` ou `famid` 
-    est déjà fourni, obligatoire sinon.
+:   L'[id][id_document] du document source. Obligatoire si mode est `view` 
+    ou `edit`.
 
 mode
 :   (`view`|`edit`|`new`). Si la valeur est `view` le document est affiché en 
     consultation. Si elle est `edit` ou `new` le document est affiché en édition.
     **obligatoire**.
 
-famid
-:   Nom logique de la famille de document. Cet élément est utilisé pour créer
-    un nouveau document. Si un `id` est fourni alors ce paramètre est ignoré.
-    Obligatoire si `id` n'est pas fourni.
-
-classid
-:   Déprécié. Équivaut à `famid`. Si `classid` et `famid` sont fourni tous les 
-    deux, alors seul `classid` est utilisé.
 
 ## Paramètres : mode=view {#core-ref:0fb9377e-1117-473c-bd15-ce2519254820}
 
@@ -122,6 +114,48 @@ autoclose
 :   (yes). Si autoclose est à `yes` alors la fenêtre est fermée automatiquement
     après la modification.
 
+## Paramètres : mode=new {#core-ref:00345042-c8a2-44a9-a351-43e646b09b0b}
+
+Mode utilisé pour la création de document. Le paramètre `id` n'est pas pris en
+compte.
+
+Tous les paramètres du mode `edit` sont utilisables. 
+
+Les paramètres spécifiques sont :
+
+famid
+:   Nom logique de la famille de document. Cet élément est utilisé pour créer
+    un nouveau document. Si un `id` est fourni alors ce paramètre est ignoré.
+    Obligatoire si `id` n'est pas fourni.
+
+classid
+:   Déprécié. Équivaut à `famid`. Si `classid` et `famid` sont fournis tous les 
+    deux, alors seul `classid` est utilisé.
+
+En plus de ces paramètres, il est possible d'utiliser les identifiants des
+attributs comme variable HTTP pour pré-remplir des valeurs dans le formulaire.
+
+    ?app=FDL&action=OPENDOC&mode=new&famid=1059&an_sexe=F&an_espece=1409
+
+Cet exemple pré-rempli les attributs `an_sexe` et `an_espece`.
+
+Pour les valeurs multivaluée, il faut utiliser la notation standard avec les
+crochets.
+
+    ?app=FDL&action=OPENDOC&mode=new&famid=1059&an_enfant[]=1433&an_enfant[]=1578
+
+Cet exemple pré-rempli l'attribut `an_enfant` avec les deux valeurs 1433 et
+1578.
+
+Le pré-remplissage n'est pas pris en compte si l'attribut à une [zone d'édition
+spécifique][editattrview].
+
+**Important** : L'utilisation d'url avec des variables HTTP GET est limité en
+longueur (variable suivant les configurations du serveurs). Il est déconseillé
+d'utiliser la notation par URL GET si le nombre de variables et la longueur
+n'est pas maîtrisé. Il est possible d'utiliser cette même URL avec des variables
+POST pour contourner cette limite.
+
 ## Limites {#core-ref:96fc7d17-36bc-4dc6-bc90-9054fe380330}
 
 N/A
@@ -140,3 +174,4 @@ document est : `app=FDL&action=FDL_CARD`.
 [MDNtarget]:            https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a "Descriptif de la balise a"
 [templateB]:            #core-ref:96d615e5-b6a6-46d3-b42d-4396dbc42b8b
 [dir]:                  #core-ref:977910df-1dc1-4def-9e0b-fb938f5d849f
+[editattrview]:         #core-ref:4faa4b17-56fc-4e42-a091-f1a97b7591b8
