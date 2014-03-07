@@ -24,7 +24,6 @@ c'est à dire tout ce qui est commun à toutes familles de documents.
 | doctype      | character(1)                | Type de document.                                                                                                                       |
 | domainid     | text                        | *pour application offline*                                                                                                              |
 | dprofid      | integer                     | Identifiant du [profil dynamique][docprofdyn] associé à ce document.                                                                    |
-| forumid      | integer                     | *Obsolète*  <span class="flag release obsolete">3.2.0</span>                                                                            |
 | fromid       | integer                     | Id de la famille d'appartenance.                                                                                                        |
 | fromname     | text                        | Nom logique de la famille d'appartenance.                                                                                               |
 | id           | integer                     | Identifiant unique du document (issue de la séquence `family.seq_id_doc`).                                                              |
