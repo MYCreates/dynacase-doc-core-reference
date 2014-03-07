@@ -53,9 +53,9 @@ book:
     - level:   3
       content:  "famille/attributsdata.md"
       subtoc:   1
-      need-review : "need-review"
       flags:
-        new : "updated"
+        review : "À relire"
+        update : "Modifié"
     - level:   4
       content:  "famille/attribut_type_account.md"
     - level:   4
@@ -101,15 +101,14 @@ book:
     - level:   3
       content:  "famille/attributsstruct.md"
       subtoc:   1
-      need-review : "need-review"
+      review : "À relire"
       flags:
-        new : "updated"
+        update : "Modifié"
     - level:   4
       content:  "famille/attribut_type_array.md"
       flags:
-        need-review : "need-review"
-        new : "updated"
-        next-release : "3.3.0"
+        review : "À relire"
+        update : "Modifié"
     - level:   4
       content:  "famille/attribut_type_frame.md"
     - level:   4
@@ -117,9 +116,9 @@ book:
     - level:   3
       content:  "famille/attributsaction.md"
       subtoc:   1
-      need-review : "need-review"
+      review : "À relire"
       flags:
-        new : "updated"
+        new : "Modifié"
     - level:   4
       content:  "famille/attribut_type_action.md"
     - level:   4
@@ -192,9 +191,8 @@ book:
     - level:   2
       content:  "importation_exportation_documents/importations.md"
       flags:
-        need-review : "need-review"
-        new : "updated"
-        next-release : "3.3.0"
+        review : "À relire"
+        update : "Modifié"
     - level:   2
       content:  "importation_exportation_documents/importationsxml.md"
     - level:   2
@@ -536,9 +534,8 @@ book:
       element: "chapter"
       content:  "API/Class_Doc/Method_getRawValue.md"
       flags:
-        need-review : "need-review"
-        new : "updated"
-        next-release : "3.3.0"
+        review : "À relire"
+        update : "Modifié"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getAttributeValue.md"
@@ -748,8 +745,7 @@ book:
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_onlyCount.md"
       flags:
-        new : "updated"
-        next-release : "3.3.0"
+        update : "Modifié"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_join.md"
@@ -781,8 +777,7 @@ book:
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_returnsOnly.md"
       flags:
-        new : "updated"
-        next-release : "3.3.0"
+        update : "Modifié"
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_getSearchInfo.md"
@@ -870,7 +865,7 @@ book:
       content: "parameters_ref/system.md"
       subtoc:   1
       flags:
-        new : "updated"
+        update : "Modifié"
     - level: 3
       content: "parameters_ref/core_loglevel.md"
     - level: 3
@@ -892,9 +887,8 @@ book:
     - level: 3
       content: "parameters_ref/core_dbdocviewcompat.md"
       flags:
-        need-review : "need-review"
-        new : "new"
-        next-release : "3.3.0"
+        review : "À relire"
+        new : "Nouveauté"
     - level: 2
       content: "parameters_ref/smtp.md"
       subtoc:   1
@@ -1042,7 +1036,7 @@ book:
     - level:   2
       content:  "Advanced/Database/introduction.md"
       flags:
-        new : "updated"
+        update : "Modifié"
       subtoc:   2
     - level:   3
       content:  "Advanced/Database/databaseaccess.md"
@@ -1051,15 +1045,13 @@ book:
     - level:   3
       content:  "Advanced/Database/dbdoc.md"
       flags:
-        need-review : "need-review"
-        new : "updated"
-        next-release : "3.3.0"
+        review : "À relire"
+        update : "Modifié"
     - level:   3
       content:  "Advanced/Database/dbdocfam.md"
       flags:
-        need-review : "need-review"
-        new : "updated"
-        next-release : "3.3.0"
+        review : "À relire"
+        update : "Modifié"
     - level:   3
       content:  "Advanced/Database/dbattr.md"
 
@@ -1072,15 +1064,13 @@ book:
     - level:   3
       content:  "Advanced/Database/dbvault.md"
       flags:
-        new : "updated"
-        next-release : "3.3.0"
+        update : "Modifié"
     - level:   3
       content:  "Advanced/Database/dbapp.md"
     - level:   3
       content:  "Advanced/Database/dbparam.md"
       flags:
-        new : "updated"
-        next-release : "3.3.0"
+        update : "Modifié"
     - level:   2
       content:  "Advanced/Persistance/introduction.md"
       subtoc:   2
@@ -1102,9 +1092,8 @@ book:
     - level:   4
       content:  "Advanced/Recherche/critereattribut.md"
       flags:
-        need-review : "need-review"
-        new : "updated"
-        next-release : "3.3.0"
+        review : "À relire"
+        update : "Modifié"
     - level:   4
       content:  "Advanced/Recherche/critereid.md"
     - level:   4
@@ -1114,9 +1103,8 @@ book:
     - level:   4
       content:  "Advanced/Recherche/critererevision.md"
       flags:
-        need-review : "need-review"
-        new : "updated"
-        next-release : "3.3.0"
+        review : "À relire"
+        update : "Modifié"
     - level:   4
       content:  "Advanced/Recherche/docrel.md"
     - level:   4
@@ -1126,8 +1114,7 @@ book:
     - level:   4
       content:  "Advanced/Recherche/errors.md"
       flags:
-        new : "updated"
-        next-release : "3.3.0"
+        update : "Modifié"
     - level:   4
       content:  "Advanced/Recherche/generalsearch.md"
     - level:   3

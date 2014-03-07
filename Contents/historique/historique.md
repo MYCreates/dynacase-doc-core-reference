@@ -7,12 +7,12 @@ Dynacase.
 
 ### Édition 3.3 / 1 {#core-ref:3f57c134-87d1-4893-8ad5-783f583a0c4a}
 
-|           Modifications           |                Chapitre                |                                    Version                                    |   Date   |
-| :-------------------------------- | :------------------------------------- | :---------------------------------------------------------------------------- | :------- |
-| Ajout paramètre                   | [COREDBDOCVIEWCOMPAT][DBDOCVIEWCOMPAT] | <span class="flag new">New</span><span class="flag next-release">3.3.0</span> | 03/02/14 |
-| Mise à jour base de données       | [La base de données][database]         | <span class="flag new">New</span>                                             | 03/02/14 |
-| Importation CSV                   | [Importation CVS][importcsv]           | <span class="flag new">Updated</span>                                         |          |
-| Opérateur de recherche multivalué | [Recherche dans un array][searcharray] | <span class="flag new">Updated</span>                                         |          |
+|           Modifications           |                Chapitre                |                   Version                   |   Date   |
+| :-------------------------------- | :------------------------------------- | :------------------------------------------ | :------- |
+| Ajout paramètre                   | [COREDBDOCVIEWCOMPAT][DBDOCVIEWCOMPAT] | <span class="flag new">Nouveauté</span>     | 03/02/14 |
+| Mise à jour base de données       | [La base de données][database]         | <span class="flag update">Modifié</span> | 03/02/14 |
+| Importation CSV                   | [Importation CVS][importcsv]           | <span class="flag update">Modifié</span> |          |
+| Opérateur de recherche multivalué | [Recherche dans un array][searcharray] | <span class="flag update">Modifié</span> |          |
 
 
 

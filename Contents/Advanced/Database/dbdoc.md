@@ -15,22 +15,22 @@ c'est à dire tout ce qui est commun à toutes familles de documents.
 | allocated    | integer                     | Identifiant système de l'utilisateur auquel le document est affecté.                                                                    |
 | archiveid    | integer                     | Id de l'archive dans laquelle est contenu ce document.                                                                                  |
 | atags        | text                        | Balises applicatives.                                                                                                                   |
-| avalues      | json                        | Liste de l'ensemble des valeurs non nulles des attributs de données. (calculé par trigger) <span class="flag next-release">3.3.0</span> |
+| avalues      | json                        | Liste de l'ensemble des valeurs non nulles des attributs de données. (calculé par trigger) <span class="flag release from">3.3.0</span> |
 | cdate        | timestamp without time zone | Date de création de la révision.                                                                                                        |
 | classname    | text                        | Nom de la classe PHP associée au document (utilisé dans la table `family.families` uniquement).                                         |
-| comment      | text                        | *Obsolète*                                                                                                                              |
+| comment      | text                        | *Obsolète*  <span class="flag release obsolete">3.1.0</span>                                                                            |
 | confidential | integer                     | Indique si le document est confidentiel (>0).                                                                                           |
 | cvid         | integer                     | Identifiant du document [contrôle de vue][CVDoc] associé à ce document.                                                                 |
 | doctype      | character(1)                | Type de document.                                                                                                                       |
 | domainid     | text                        | *pour application offline*                                                                                                              |
 | dprofid      | integer                     | Identifiant du [profil dynamique][docprofdyn] associé à ce document.                                                                    |
-| forumid      | integer                     | *Obsolète*                                                                                                                              |
+| forumid      | integer                     | *Obsolète*  <span class="flag release obsolete">3.2.0</span>                                                                            |
 | fromid       | integer                     | Id de la famille d'appartenance.                                                                                                        |
 | fromname     | text                        | Nom logique de la famille d'appartenance.                                                                                               |
 | id           | integer                     | Identifiant unique du document (issue de la séquence `family.seq_id_doc`).                                                              |
 | icon         | text                        | Référence au fichier d'icone du document.                                                                                               |
 | initid       | integer                     | Id du premier document de la lignée documentaire.                                                                                       |
-| ldapdn       | text                        | *Obsolète*                                                                                                                              |
+| ldapdn       | text                        | *Obsolète* <span class="flag release obsolete">3.2.0</span>                                                                             |
 | lmodify      | character(1)                | Tag de modification.                                                                                                                    |
 | lockdomainid | integer                     | *Pour application offline*                                                                                                              |
 | locked       | integer                     | Indique l'identifiant système de l'utilisateur qui a verrouillé le document.                                                            |
