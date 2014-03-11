@@ -43,13 +43,6 @@ cdate
     
     Le format de la date est `YYYY-MM-DD HH:MM:SS`.
 
-classname
-:   Nom de la classe associée au document. Utilisé uniquement pour les familles.
-
-comment<span class="flag release obsolete">3.1.0</span>
-:   Commentaire de révision.
-    **Obsolète** (voir Objet DocHisto). 
-
 confidential
 :   Indique si le document est confidentiel.
     

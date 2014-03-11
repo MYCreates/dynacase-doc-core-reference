@@ -11,15 +11,13 @@ Colonnes spécifiques de la table `family.families` :
 | dfldid        | integer          | Identifiant du dossier principal                                                            |
 | cfldid        | integer          | Identifiant de la recherche principale                                                      |
 | ccvid         | integer          | Indique le [contrôle de vue][CVDoc] qui sera associé aux documents créés avec cette famille |
-| ddocid        | integer          | *Obsolète - non utilisé*                                                                    |
+| classname     | text             | Nom de la classe PHP associée au document (utilisé dans la table `family.families` uniquement). |
 | methods       | text             | Liste des fichiers méthodes (METHOD)                                                        |
 | defval        | text             | Valeurs par défaut                                                                          |
 | schar         | character(1)     | Indique les modalités de révision                                                           |
 | param         | text             | Liste des valeurs des paramètres                                                            |
-| genversion    | double precision | *Non utilisé*                                                                               |
 | maxrev        | integer          | Nombre [maximum de révisions][docrevise] pour les documents de cette famille                |
-| usedocread    | integer          | *Obsolète - non utilisé*                                                                    |
-| configuration | text             | *Non utilisé*                                                                               |
+| configuration | text             | Stockage des caractéristiques des propriétés (voir [Définition de paramètres de propriété][import_prop]) |
 | tagable       | text             | Spécifique module [Dynacase tags][tag]                                                      |
 
 
@@ -43,3 +41,4 @@ Colonnes spécifiques de la table `family.families` :
 [te]:               https://docs.anakeen.com/dynacase/3.2/dynacase-doc-tengine-installation-operating/website/book/index.html "Manuel d'installation"
 [globsearch]:       #core-ref:19b9f4b4-c960-46eb-b4e0-805ed76be3a6
 [tag]:              https://docs.anakeen.com/dynacase/3.2/dynacase-doc-tags/website/book/index.html "Module Dynacase tags"
+[import_prop]:      #core-ref:40d229c4-33c4-11e2-9147-a3eaf356c37c

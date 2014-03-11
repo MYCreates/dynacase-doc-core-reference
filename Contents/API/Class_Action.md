@@ -80,9 +80,6 @@ modifications qui auront pu être faites si les caractéristiques de l'action on
 (string) acl
 :   Nom du droit nécessaire pour exécuter l'action.
 
-(string) grant_level
-:   **Obsolète** - non utilisé
-
 (string) openaccess
 :   Indique que l'action peut être exécutée avec un jeton d'authentification 
     sans demande de mot de passe.
@@ -110,15 +107,6 @@ modifications qui auront pu être faites si les caractéristiques de l'action on
 
 (string) icon
 :   Icône de l'action. Non utilisé
-
-(string) toc
-:   **Obsolète**. Indique que l'action peut faire l'objet d'une présentation en onglets
-
-(string) toc_order
-:   **Obsolète**. Rang de l'action pour une présentation en onglets
-
-(string) father
-:   **Obsolète**. Non utilisé
 
 ## Principales propriétés de la classe Action {#core-ref:8bfc8d93-ec52-4049-8576-55b255f00e01}
 

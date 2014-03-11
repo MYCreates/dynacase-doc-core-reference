@@ -121,7 +121,6 @@ applications.
 | id             | integer      | Identifiant de l'acl - issus de la séquence `seq_id_acl`                                       |
 | id_application | integer      | Identifiant de l'application (table `application`)                                             |
 | name           | text         | Nom de l'acl                                                                                   |
-| grant_level    | integer      | *Obsolète*                                                                                     |
 | description    | text         | Texte descriptif du droit                                                                      |
 | group_default  | character(1) | Indique si cette acl est posée par défaut sur le groupe `all`. Valeurs possibles : [Y&#124;N]. |
 

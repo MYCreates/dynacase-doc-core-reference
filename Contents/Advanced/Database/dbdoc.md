@@ -17,8 +17,6 @@ c'est à dire tout ce qui est commun à toutes familles de documents.
 | atags        | text                        | Balises applicatives.                                                                                                                   |
 | avalues      | json                        | Liste de l'ensemble des valeurs non nulles des attributs de données. (calculé par trigger) <span class="flag release from">3.3.0</span> |
 | cdate        | timestamp without time zone | Date de création de la révision.                                                                                                        |
-| classname    | text                        | Nom de la classe PHP associée au document (utilisé dans la table `family.families` uniquement).                                         |
-| comment      | text                        | *Obsolète*  <span class="flag release obsolete">3.1.0</span>                                                                            |
 | confidential | integer                     | Indique si le document est confidentiel (>0).                                                                                           |
 | cvid         | integer                     | Identifiant du document [contrôle de vue][CVDoc] associé à ce document.                                                                 |
 | doctype      | character(1)                | Type de document.                                                                                                                       |
