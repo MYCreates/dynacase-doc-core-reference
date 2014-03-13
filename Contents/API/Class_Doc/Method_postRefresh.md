@@ -94,3 +94,4 @@ disposer des mêmes fonctionnalités.
 [docrefresh]:       #core-ref:0bab02de-50e0-46f2-8bdb-81c62dc86c93
 [computeattr]:      #core-ref:4565cab9-73c8-4eee-bfa7-218ffbd4b687
 [hook]:             https://fr.wikipedia.org/wiki/Hook_(informatique)
+[docsetvalue]:      #core-ref:febc397f-e629-4d47-955d-27cab8f4ed2f
