@@ -784,6 +784,90 @@ book:
     - level:   3
       element: "chapter"
       content:  "API/Class_SearchDoc/Method_getNextDoc.md"
+      element: "chapter"
+    - level:   2
+      content:  "API/Class_DocManager.md"
+      flags:
+        new: "Nouveauté"
+      subtoc:   1
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_getDocument.md"
+      flags:
+        new: "Nouveauté"
+        draft: "À relire"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_createDocument.md"
+      flags:
+        new: "Nouveauté"
+        draft: "À relire"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_createTemporaryDocument.md"
+      flags:
+        new: "Nouveauté"
+        draft: "À relire"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_getRawDocument.md"
+      flags:
+        new: "Nouveauté"
+        draft: "À relire"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_getDocumentFromRawDocument.md"
+      flags:
+        new: "Nouveauté"
+        draft: "À relire"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_getTitle.md"
+      flags:
+        new: "Nouveauté"
+        draft: "À relire"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_getRawValue.md"
+      flags:
+        new: "Nouveauté"
+        draft: "À relire"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_getIdFromName.md"
+      flags:
+        new: "Nouveauté"
+        draft: "À relire"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_getNameFromId.md"
+      flags:
+        new: "Nouveauté"
+        draft: "À relire"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_addInCache.md"
+      flags:
+        draft: "À relire"
+        new: "Nouveauté"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_clearCache.md"
+      flags:
+        new: "Nouveauté"
+        draft: "À relire"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_removeFromCache.md"
+      flags:
+        draft: "À relire"
+        new: "Nouveauté"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_setCacheHandler.md"
+      flags:
+        draft: "À relire"
+        new: "Nouveauté"
     - level:   2
       element: "chapter"
       content:  "API/Utils_DocManager.md"
