@@ -134,7 +134,7 @@ l'utilisateur réalisant l'importation :
 
 Dans tous ces cas, la valeur de la date stockée sera au format ISO.
 
-#### Attributs multivalués <span class="flag next-release">3.3.0</span> {#core-ref:1b8cd020-a2ed-4997-aefe-a4fcbb3564f1}
+#### Attributs multivalués <span class="flag release from">3.3.0</span> {#core-ref:1b8cd020-a2ed-4997-aefe-a4fcbb3564f1}
 
 
 ##### MultiValué à un seul niveau de profondeur {#core-ref:17d717f9-6a15-48a9-b5c6-0dc9e52a3993}

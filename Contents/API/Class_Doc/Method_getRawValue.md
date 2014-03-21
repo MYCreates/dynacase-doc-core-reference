@@ -140,7 +140,7 @@ indique 3 valeurs qui sont respectivement :
 Pour les multiples à 2 niveaux (attribut multiple dans un tableau), les
 accolades sont imbriquées. 
 
-**Note** : pour des raisons de contrainte de type les tableaux à deux dimensions
+**Note** : pour des raisons de contrainte de type, les tableaux à deux dimensions
 sont de dimension fixe. Le nombre de chacune des sous-valeurs est identique, la
 valeur "NULL" est ajoutée pour satisfaire la contrainte
 

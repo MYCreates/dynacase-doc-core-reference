@@ -46,9 +46,9 @@ cdate
 classname
 :   Nom de la classe associée au document. Utilisé uniquement pour les familles.
 
-comment
+comment<span class="flag release obsolete">3.1.0</span>
 :   Commentaire de révision.
-    **Obsolète** (voir Objet DocHisto).
+    **Obsolète** (voir Objet DocHisto). 
 
 confidential
 :   Indique si le document est confidentiel.
@@ -85,8 +85,6 @@ dprofid
     *dprofid* est renseignée, la propriété *profid* est égale à l'*id du
     document* (ce qui correspond à un profil dédié).
 
-forumid
-:   **Obsolète**
 
 fromid
 :   Id de la famille d'appartenance.
@@ -113,7 +111,6 @@ initid
 
 ldapdn
 :   Chemin LDAP dans le cas d'une copie sur un serveur LDAP.
-    **obsolète**
 
 lmodify
 :   Permet de savoir si le document a été modifié depuis sa dernière révision.

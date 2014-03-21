@@ -14,16 +14,16 @@ description de l'[application][app].
 | name        | text         | Nom de l'application                                                        |
 | short_name  | text         | Description courte                                                          |
 | description | text         | Description longue                                                          |
-| access_free | character(1) | *Obsolète* Non utilisé                                                      |
+| access_free | character(1) | *Obsolète* Non utilisé  <span class="flag release obsolete">3.2.0</span>    |
 | available   | character(1) | Valeurs possibles : `Y` (pour disponible) ou `N` (non disponible)           |
 | icon        | text         | Nom du fichier icône de l'application                                       |
 | displayable | character(1) | Valeurs possibles : `Y` (pour affichable) ou `N` (non affichable)           |
-| with_frame  | character(1) | *Obsolète* Non utilisé                                                      |
+| with_frame  | character(1) | *Obsolète* Non utilisé   <span class="flag release obsolete">3.2.0</span>   |
 | childof     | text         | Nom de l'application parente - Vide si pas de parent                        |
-| objectclass | character(1) | *Obsolète* Non utilisé                                                      |
-| ssl         | character(1) | *Obsolète* Non utilisé                                                      |
-| machine     | text         | *Obsolète* Non utilisé                                                      |
-| iorder      | integer      | *Obsolète* Non utilisé                                                      |
+| objectclass | character(1) | *Obsolète* Non utilisé  <span class="flag release obsolete">3.2.0</span>    |
+| ssl         | character(1) | *Obsolète* Non utilisé  <span class="flag release obsolete">3.2.0</span>    |
+| machine     | text         | *Obsolète* Non utilisé   <span class="flag release obsolete">3.2.0</span>   |
+| iorder      | integer      | *Obsolète* Non utilisé  <span class="flag release obsolete">3.2.0</span>    |
 | tag         | text         | Balise applicative. Permet d'identifier des groupes d'applications          |
 
 ## La table `action` {#core-ref:07a1af43-e051-474c-a4c8-b32bf4245a6b}
@@ -46,13 +46,13 @@ dans le fichier de description de l'[application][app].
 | layout         | text         | Template de l'action                                                                                                            |
 | available      | character(1) | Valeurs possibles : `Y` (pour disponible) ou `N` (non disponible)                                                               |
 | acl            | text         | Nom de l'acl nécessaire pour exécuter l'action                                                                                  |
-| grant_level    | integer      | *Obsolète* Non utilisé                                                                                                          |
+| grant_level    | integer      | *Obsolète* Non utilisé   <span class="flag release obsolete">3.2.0</span>                                                       |
 | openaccess     | character(1) | Valeurs possibles : `Y` (pour utilisation possible en [authentification par jetons][openaccess]) ou `N` (dans le cas contraire) |
 | root           | character(1) | Valeurs possibles : `Y` (action principale) ou `N` (action non principale)                                                      |
 | icon           | text         | Icône de l'action                                                                                                               |
-| toc            | character(1) | *Obsolète* Non utilisé                                                                                                          |
-| father         | integer      | *Obsolète* Non utilisé                                                                                                          |
-| toc_order      | integer      | *Obsolète* Non utilisé                                                                                                          |
+| toc            | character(1) | *Obsolète* Non utilisé   <span class="flag release obsolete">3.2.0</span>                                                       |
+| father         | integer      | *Obsolète* Non utilisé   <span class="flag release obsolete">3.2.0</span>                                                       |
+| toc_order      | integer      | *Obsolète* Non utilisé   <span class="flag release obsolete">3.2.0</span>                                                       |
 
 ## La table `acl` {#core-ref:cb5cf06a-d859-4c2f-b35f-3f70492612ed}
 
