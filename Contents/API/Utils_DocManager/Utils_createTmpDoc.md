@@ -56,7 +56,9 @@ doit être considéré comme un retour d'erreur.
 
 ## Historique {#core-ref:846b4bf9-7e55-4f6b-9ec0-f7b67af3674a}
 
-Aucun
+
+<span class="flag release obsolete">3.3.0</span>
+Remplacé par [`Dcp\DocManager::createTemporariDoc()`][createtmpdocument].
 
 ## Exemple {#core-ref:c94038b0-45ac-4ed1-8ff1-a83d32d3dfa2}
 
@@ -100,3 +102,4 @@ Aucune
 [new_Doc]:          #core-ref:e978cbd1-5f54-4a06-a6be-f1c079c2d734
 [wsh]:              #core-ref:bab8c1c9-fe71-4629-9773-5cd67a8693bf
 [cleancontext]:     #core-ref:100b123b-da1a-45b4-848b-0622f3e09a40
+[createtmpdocument]:    #core-ref:5e5cda73-398a-49fd-a14f-24ee877cf3fa

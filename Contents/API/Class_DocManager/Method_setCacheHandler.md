@@ -14,6 +14,7 @@ Cette méthode permet de changer le comportement du cache de document.
 
 L'interface `CacheInterface` est composée des méthodes suivantes :
 
+Ces méthodes ne déclenchent pas d'exception.
 
 *   `&$mixed ::get(scalar $key);`
 :    Récupère un objet du cache (retourne `null` si pas trouvé)
@@ -31,6 +32,7 @@ L'interface `CacheInterface` est composée des méthodes suivantes :
 
 ### Avertissements   {#core-ref:7c0ae390-8176-4d33-93f2-07913b4021b2}
 
+Aucuns.
 
 ## Liste des paramètres   {#core-ref:6f75f13c-8c38-4072-9a61-b934ebc66bb9}
  
@@ -44,7 +46,7 @@ Aucune
 
 ## Erreurs / Exceptions   {#core-ref:89cea671-eb28-47c8-87f8-2f739134200d}
 
-Aucune.
+Aucunes.
 
 
 
@@ -65,12 +67,14 @@ Aucun.
 
 ## Notes   {#core-ref:ec2c2e66-a0de-457a-8eff-dcaaca184aef}
 
-Aucune.
+Aucunes.
 
 ## Voir aussi   {#core-ref:2e297436-6f5a-4a57-b547-d41f0ca831de}
 
 
 *   [`Dcp\DocManager::getDocument`][getdocument]
+*   [`Dcp\DocManager::addInCache`][addincache]
 
 <!-- links -->
 [getdocument]:      #core-ref:dfa0762f-6ff3-4349-bd21-6442740d9dcc
+[addincache]:       #core-ref:15d6a036-3b6e-4dbd-a0fe-361b925e6186

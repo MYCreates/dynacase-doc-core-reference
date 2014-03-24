@@ -69,7 +69,8 @@ effectué alors `false` est retourné.
 
 ## Historique {#core-ref:846b4bf9-7e55-4f6b-9ec0-f7b67af3674a}
 
-Aucun
+<span class="flag release obsolete">3.3.0</span>
+Remplacé par [`Dcp\DocManager::createDocument()`][createdocument].
 
 ## Exemple {#core-ref:c94038b0-45ac-4ed1-8ff1-a83d32d3dfa2}
 
@@ -102,7 +103,6 @@ Aucune
 
 ## Voir aussi {#core-ref:5762458e-0672-4dd7-b50a-e2c469f5ff97}
 
-
 * [createTmpDoc()][createTmpDoc],
 * [new_Doc()][new_Doc].
 
@@ -111,3 +111,4 @@ Aucune
 [store]:            #core-ref:b8540d13-ece6-4e9e-9b72-6a56bca9da12
 [createTmpDoc]:     #core-ref:6b745549-eb65-46f5-b0c1-5fa80661f1b7
 [new_Doc]:          #core-ref:e978cbd1-5f54-4a06-a6be-f1c079c2d734
+[createdocument]:   #core-ref:2f5afd12-1db3-4c69-a0fa-4b7fb044b723

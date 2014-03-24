@@ -7,12 +7,14 @@ Dynacase.
 
 ### Édition 3.3 / 1 {#core-ref:3f57c134-87d1-4893-8ad5-783f583a0c4a}
 
-|           Modifications           |                Chapitre                |                   Version                   |   Date   |
-| :-------------------------------- | :------------------------------------- | :------------------------------------------ | :------- |
-| Ajout paramètre                   | [COREDBDOCVIEWCOMPAT][DBDOCVIEWCOMPAT] | <span class="flag new">Nouveauté</span>     | 03/02/14 |
-| Mise à jour base de données       | [La base de données][database]         | <span class="flag update">Modifié</span> | 03/02/14 |
-| Importation CSV                   | [Importation CVS][importcsv]           | <span class="flag update">Modifié</span> |          |
-| Opérateur de recherche multivalué | [Recherche dans un array][searcharray] | <span class="flag update">Modifié</span> |          |
+|            Modifications            |                  Chapitre                 |                     Version                      |   Date   |
+| :---------------------------------- | :---------------------------------------- | :----------------------------------------------- | :------- |
+| Utilitaires de gestion de documents | [Fonction d'accès aux documents][utilDoc] | <span class="flag release obsolete">3.3.0</span> | 24/03/14 |
+| DocManager                          | [Classe DocManager][DocManager]           | <span class="flag new">Nouveauté</span>          | 24/03/14 |
+| Ajout paramètre                     | [COREDBDOCVIEWCOMPAT][DBDOCVIEWCOMPAT]    | <span class="flag new">Nouveauté</span>          | 03/02/14 |
+| Mise à jour base de données         | [La base de données][database]            | <span class="flag update">Modifié</span>         | 03/02/14 |
+| Importation CSV                     | [Importation CVS][importcsv]              | <span class="flag update">Modifié</span>         |          |
+| Opérateur de recherche multivalué   | [Recherche dans un array][searcharray]    | <span class="flag update">Modifié</span>         |          |
 
 
 
@@ -164,3 +166,4 @@ retour d'erreur.
 [Dir::insertMultipleDocuments]: #core-ref:098cf44e-568d-4dd2-8dd0-e2f104bc8615
 [Dir::postInsertMultipleDocuments]: #core-ref:e3cd509f-8678-4dec-a0cf-33aa39674cfe
 [utilDoc]:                          #core-ref:deb7de49-dbfb-4feb-8f35-cc9aedf352a2
+[DocManager]:                       #core-ref:f97206a3-be5f-4fff-91a9-64e5cb1b04f7

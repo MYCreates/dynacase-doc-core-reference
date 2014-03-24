@@ -8,7 +8,7 @@ Enlève un document du cache
 ## Description  {#core-ref:5d86b069-425b-4fee-a048-054908564428}
 
     [php]
-    static void Dcp\DocManager::removeFromCache ( Doc &$document )
+    static &Dcp\Family\Document Dcp\DocManager::removeFromCache ( Dcp\Family\Document  &$document )
 
 
 ### Avertissements  {#core-ref:68d3a5ff-8dcd-4d9d-99d7-83cf581c81ac}
@@ -16,13 +16,14 @@ Enlève un document du cache
 
 ## Liste des paramètres  {#core-ref:989e4cde-84c0-466a-9f55-08d0ff3cc035}
  
-(Doc) `document`
+(Dcp\Family\Document) `document`
 :   Objet document à enlever du cache
 
 
 ## Valeur de retour  {#core-ref:037b31aa-6554-4059-83d2-505608767498}
 
-Aucune
+Retourne l'objet qui a été enlevé du cache.
+Retourne `null`, si l'objet n'est pas présent dans le cache.
 
 ## Erreurs / Exceptions  {#core-ref:524a79bd-76b0-4bb0-835c-6fc36a03f052}
 
@@ -31,9 +32,13 @@ d'identificateur.
 
 ## Historique  {#core-ref:2ff0e090-42f2-4ad2-a140-93c82d10d1b4}
 
+Aucun.
 
 ## Exemples  {#core-ref:c295dfa1-e265-4c50-87c7-4343d29d6259}
 
+
+    [php]
+    $myDocument=Dcp\DocManager::removeFromCache(Dcp\DocManager::getDocument(1234));
 
 ## Notes  {#core-ref:d682b795-a6f9-4cda-abb3-c773d81fe6aa}
 
