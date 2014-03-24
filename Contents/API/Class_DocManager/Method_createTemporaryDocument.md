@@ -58,7 +58,7 @@ Exception `\Dcp\DocumentManager\Exception` :
 
 ## Historique  {#core-ref:e2b8cb26-b643-46d4-988c-ab1b866af86c}
 
-Remplace la fonction `createTmpDoc`.
+Remplace la fonction [`createTmpDoc`][createtmpdoc].
 
 ## Exemples  {#core-ref:08fba235-ab93-45dd-a99a-1cee3cc896cd}
 
@@ -84,4 +84,4 @@ autant nécessiter un enregistrement en base de données.
 
 <!--links -->
 [createdocument]:   #core-ref:2f5afd12-1db3-4c69-a0fa-4b7fb044b723
-
+[createtmpdoc]:     #core-ref:6b745549-eb65-46f5-b0c1-5fa80661f1b7

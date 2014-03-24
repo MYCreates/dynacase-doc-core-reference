@@ -68,7 +68,8 @@ pouvez utiliser les fonctions :
 
 ## Historique {#core-ref:723bf281-45bd-46ad-bc1d-1917c6d05f79}
 
-Aucun
+<span class="flag release obsolete">3.3.0</span>
+Remplacé par [`Dcp\DocManager::getDocument()`][getdocument].
 
 ## Exemple {#core-ref:a6344de2-7961-4715-b7b7-455a0498bf57}
 
@@ -127,3 +128,4 @@ La création de document est réalisée par la fonction [createDoc()][createDoc]
 [isAlive]:      #core-ref:b791d14e-800a-4b3b-bee7-41e271a8087e
 [createDoc]:    #core-ref:9886581a-243a-4c78-8490-8fda2209fd93
 [createTmpDoc]: #core-ref:6b745549-eb65-46f5-b0c1-5fa80661f1b7
+[getdocument]:  #core-ref:dfa0762f-6ff3-4349-bd21-6442740d9dcc
