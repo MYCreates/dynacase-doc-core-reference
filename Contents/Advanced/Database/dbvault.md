@@ -14,9 +14,6 @@ La table `vaultdiskfsstorage` indique les différents coffres enregistrés.
 | fsname             | text                    | Nom du coffre                                                               |
 | max_size           | bigint                  | Capacité maximum du coffre (en octets)                                      |
 | free_size          | bigint                  | Capacité restante en octets (calculé en fonction de la taille des fichiers) |
-| subdir_cnt_bydir   | integer                 | *Obsolète* Non utilisé                                                      |
-| subdir_deep        | integer                 | *Obsolète* Non utilisé                                                      |
-| max_entries_by_dir | integer                 | *Obsolète* Non utilisé                                                      |
 | r_path             | text                    | Chemin absolu d'accès au coffre                                             |
 
 Le répertoire `r_path` doit être accessible en lecture/écriture à l'utilisateur

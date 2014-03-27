@@ -15,12 +15,9 @@ Composition de la table `users` :
 | firstname   | text         | Prénom                                                                                                        |
 | login       | text         | Identifiant de connexion                                                                                      |
 | password    | text         | Mot de passe crypté                                                                                           |
-| isgroup     | character(1) | *Obsolète*                                                                                                    |
 | substitute  | integer      | Identifiant du compte qui est suppléant de ce compte (restreint aux utilisateurs)                             |
 | accounttype | character(1) | `U` : Utilisateur, `G` : Groupe, `R` : Rôle                                                                   |
 | memberof    | integer[]    | Liste des identifiants des groupes et rôles du compte (calculé à partir de la table `groups`)                 |
-| expires     | integer      | *Obsolète* Non utilisé                                                                                        |
-| passdelay   | integer      | *Obsolète* Non utilisé                                                                                        |
 | status      | character(1) | `A` : Actif, `D` : Désactivé                                                                                  |
 | mail        | text         | Adresse principale de courriel                                                                                |
 | fid         | integer      | Identifiant du document associé (pointe vers `doc128` (Utilisateurs), `doc130` (Rôles) ou `doc127` (Groupes)) |

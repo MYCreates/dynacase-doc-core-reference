@@ -36,12 +36,6 @@ available
     actions ne pourront être exécutées et un message d'erreur est renvoyé à la
     place du résultat de l'action.
 
-access_free
-:   Indique que toutes les actions de l'application ne nécessitent pas de droit 
-    d'exécution.
-    Elle contient soit `Y` soit `N`. `Y` indique que les actions n'ont pas d'ACL
-    définies.
-
 icon
 :   Icone de l'application.
 
@@ -49,25 +43,6 @@ childof
 :   Nom de l'application parente.
     Cela indique que les actions de l'application parente sont disponibles sur
     cette application.
-
-with_frame
-:   Obsolète. 
-    Indique que les actions de l'application utilisent une entête commune.
-
-objectclass
-: Obsolète. Non utilisé
-
-ssl
-:   Obsolète. 
-    Indique que l'application doit être exécutée avec le protocole *https*.
-
-machine
-:   Obsolète. 
-    Indique l'application est déployée sur un autre serveur.
-
-iorder
-:   Ordre d'installation des applications pour un module déclarant plusieurs 
-    applications.
 
 tag
 :   Permet d'indiquer une marque.
