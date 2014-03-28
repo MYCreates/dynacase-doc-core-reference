@@ -21,16 +21,16 @@ Un template de vue de rangés de tableau est un fichier XML **valide**.
 Il doit respecter la `DTD` suivante :
 
     [dtd]
-    <?xml version="1.0" encoding="UTF-8" ?>
-    <!ELEMENT table (table-head,table-body)>
+    <!ELEMENT table (table-head*,table-body*)>
     
-    <!ELEMENT table-head (cell)+>
-    <!ELEMENT table-body (cell)+>
+    <!ELEMENT table-head (cell)*>
+    <!ELEMENT table-body (cell)*>
     
-    <!ELEMENT cell (#PCDATA)>
+    <!ELEMENT cell ANY>
     <!ATTLIST cell
-        class CDATA #IMPLIED
-        style CDATA #IMPLIED>
+            class CDATA #IMPLIED
+            style CDATA #IMPLIED>
+    ]>
 
 Voici un exemple de fichier valide (ici, la DTD est déclarée inline, mais elle
 n'est pas obligatoire) :
@@ -38,16 +38,16 @@ n'est pas obligatoire) :
     [xml]
     <?xml version="1.0" encoding="UTF-8" ?>
     <!DOCTYPE table [
-        <!ELEMENT table (table-head,table-body)>
+        <!ELEMENT table (table-head*,table-body*)>
         
-        <!ELEMENT table-head (cell)+>
-        <!ELEMENT table-body (cell)+>
+        <!ELEMENT table-head (cell)*>
+        <!ELEMENT table-body (cell)*>
         
-        <!ELEMENT cell (#PCDATA)>
+        <!ELEMENT cell ANY>
         <!ATTLIST cell
-            class CDATA #IMPLIED
-            style CDATA #IMPLIED>
-    ]>
+                class CDATA #IMPLIED
+                style CDATA #IMPLIED>
+        ]>
     <table>
         <table-head>
             <cell>…</cell>
