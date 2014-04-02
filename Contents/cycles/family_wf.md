@@ -137,7 +137,7 @@ en base de données.
 ### `$stateActivity` {#core-ref:e75c4b8d-ec3c-4be9-8824-5ef5fe4117a3}
 
 La propriété `$stateActivity` définit l'ensemble des activités. C'est un tableau
-associatif ; la clé est l'identifiant' de l'état et la valeur est le libellé
+associatif ; la clé est l'identifiant de l'état et la valeur est le libellé
 de l'activité.
 
 ### Les méthodes de transition {#core-ref:1300a480-0f82-427e-b7ba-4a3bd031535c}
