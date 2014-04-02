@@ -154,7 +154,7 @@ contient  `@the-avengers.net`, et les insérer dans un nouveau groupe
     /**
      * @var \dcp\Family\Igroup $group
      */
-    $group = createDoc('', 'IGROUP');
+    $group = \Dcp\DocManager::createDocument('IGROUP');
     $group->setAttributeValue('us_login', 'grp_the_avengers');
     $group->setAttributeValue('grp_name', 'Groupe @the-avengers.net');
     $group->store();

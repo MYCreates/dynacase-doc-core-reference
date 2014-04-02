@@ -28,7 +28,7 @@ XML pour ce faire, on peut :
     * ou encore si la valeur provient d'un document :
         
             [php]
-            $myAnimal = new_Doc("", "MY_ANIMAL");
+            $myAnimal = \Dcp\DocManager::getDocument( "MY_ANIMAL");
             $name = $myAnimal->getValue("animal_name");
             $name = $myAnimal->getOooValue($myAnimal->getAttribute("the_name"), $name);
             $this->lay->set("MY_ATTR",$name);

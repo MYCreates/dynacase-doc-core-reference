@@ -49,8 +49,8 @@ Cet exemple supprime un document lié.
         public function postDelete() {
             $linkedId=$this->getAttributeValue(MyAttributes::sp_linkeddoc);
             if (linkedId != "")) {
-                $linked=new_doc($this->dbaccess, linkedId);
-                if (linked->isAlive()) {
+                $linked=\Dcp\DocManager::getDocument(linkedId);
+                if ($linked && $linked->isAlive()) {
                     return $linked->delete();
                 }
             }

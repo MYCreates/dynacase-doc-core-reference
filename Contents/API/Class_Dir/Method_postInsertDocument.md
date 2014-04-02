@@ -71,7 +71,7 @@ dynacase-core.
                  * Appeler la méthode archiverFacture() des
                  * factures insérées dans le dossier.
                  */
-                $facture = new_Doc('', $docId, true);// prendre la dernière révision
+                $facture = \Dcp\DocManager::getDocument( $docId, true);// prendre la dernière révision
                 $facture->archiverFacture();
             }
             return $err;

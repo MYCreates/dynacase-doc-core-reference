@@ -41,7 +41,7 @@ Remplace la fonction `getIdFromName`.
 
     [php]
     use AMyFamily as \Dcp\AttributeIdentifiers\MyFamily
-    $docId=\Dcp\DocumentManager::getIdFromName('MY_DOCUMENT');
+    $docId=\Dcp\DocManager::getIdFromName('MY_DOCUMENT');
     if ($docId !== null) {
         printf("Id %d", $docId);
     }

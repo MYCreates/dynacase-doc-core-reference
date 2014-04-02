@@ -46,7 +46,7 @@ Retour un objet de la classe de la famille indiquée.
 
 ## Erreurs / Exceptions  {#core-ref:1e7af7c1-5263-48df-9d97-fb5443821b3c}
 
-Exception `\Dcp\DocumentManager\Exception` :
+Exception `\Dcp\DocManager\Exception` :
 
 *    Si l'identifiant de famille n'est pas syntaxiquement valide.
     L'identifiant doit être un nombre positif ou une  chaine de caractère non
@@ -65,7 +65,7 @@ Remplace la fonction [`createTmpDoc`][createtmpdoc].
     [php]
     use AMyFamily as \Dcp\AttributeIdentifiers\MyFamily
     use MyFamily as \Dcp\Family\MyFamily
-    $doc=\Dcp\DocumentManager::createTemporaryDocument(MyFamily::familyName);
+    $doc=\Dcp\DocManager::createTemporaryDocument(MyFamily::familyName);
     $doc->setAttributeValue(AMyFamily::my_number1, 345);
     $doc->setAttributeValue(AMyFamily::my_number2, 654);
     $err=$doc->store();

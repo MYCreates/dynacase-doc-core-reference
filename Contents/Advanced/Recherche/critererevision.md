@@ -51,7 +51,7 @@ La recherche suivant l'activité est forcément effectuée sur les dernières r�
     /**
      * @var WDoc $wdoc
      */
-    $wdoc=new_doc("","ZOO_CYCLEDA" ); // Cycle sur les demandes d'adoption
+    $wdoc=\Dcp\DocManager::getDocument("ZOO_CYCLEDA" ); // Cycle sur les demandes d'adoption
     $s=new SearchDoc("", "ZOO_DEMANDEADOPTION"); // Famille demande d'adoption
     $s->addFilter("state = '%s'", $wdoc->getFirstState()); // recherche des document étant dans la première activité
     $s->search();

@@ -57,7 +57,7 @@ Exemple de création d'une révision.
 
     [php]
     /** @var \Dcp\Family\MyFamily */
-    $d = new_Doc("", "MY_DOCUMENT");
+    $d = \Dcp\DocManager::getDocument( "MY_DOCUMENT");
     if ($d->isAlive()) {
         printf("Identifiant %d\n", $d->id);
         $err=$d->revise();

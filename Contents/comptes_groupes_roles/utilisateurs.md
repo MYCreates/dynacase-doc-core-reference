@@ -159,7 +159,7 @@ suffisants.
 Par programmation il suffit de créer un document de la famille `IUSER`.
 
     [php]
-    $du = createDoc("","IUSER");
+    $du = \Dcp\DocManager::createDocument("IUSER");
     if ($du) {
         $du->setValue("us_login","jean.martin");
         $du->setValue("us_lname","martin");

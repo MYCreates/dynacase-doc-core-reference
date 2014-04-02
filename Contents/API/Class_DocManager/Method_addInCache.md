@@ -29,7 +29,7 @@ Retourne l'objet mis en cache.
 
 ## Erreurs / Exceptions  {#core-ref:df2d93d2-5e24-4070-8733-f42a0f01708d}
 
-Exception `\Dcp\DocumentManager\Exception`,  si le document n'a pas
+Exception `\Dcp\DocManager\Exception`,  si le document n'a pas
 d'identificateur et s'il ne possède pas toutes les caractéristiques d'un document
 (ensemble des propriétés) instancié.
 
@@ -50,6 +50,8 @@ Aucune.
 
 
 *   [`Dcp\DocManager::getDocument`][getdocument]
+*   [`Dcp\DocManager::isInCache`][isincache]
 
 <!-- links -->
 [getdocument]:      #core-ref:dfa0762f-6ff3-4349-bd21-6442740d9dcc
+[isincache]:        #core-ref:45b26670-f06a-4054-959f-dc4408346e22

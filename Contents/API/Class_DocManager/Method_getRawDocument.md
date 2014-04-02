@@ -40,7 +40,7 @@ retournée.
 
 ## Erreurs / Exceptions  {#core-ref:7dd04857-448e-46f9-95d4-190f35a90279}
 
-Exception `\Dcp\DocumentManager\Exception`, si l'identifiant n'est pas
+Exception `\Dcp\DocManager\Exception`, si l'identifiant n'est pas
 syntaxiquement valide. L'identifiant doit être un nombre positif ou une chaine
 de caractère non vide.
 
@@ -57,7 +57,7 @@ La document `1234` est de la famille `MY_FAMILY`.
 
     [php]
     use AMyFamily as \Dcp\AttributeIdentifiers\MyFamily
-    $rawDoc=\Dcp\DocumentManager::getRawDocument(1234);
+    $rawDoc=\Dcp\DocManager::getRawDocument(1234);
     if ($rawDoc !== null) {
         // le titre
         print $rawDoc["title"];

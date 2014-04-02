@@ -27,7 +27,7 @@ Retourne `null`, si l'objet n'est pas présent dans le cache.
 
 ## Erreurs / Exceptions  {#core-ref:524a79bd-76b0-4bb0-835c-6fc36a03f052}
 
-Exception `\Dcp\DocumentManager\Exception`,  si le document n'a pas
+Exception `\Dcp\DocManager\Exception`,  si le document n'a pas
 d'identificateur.
 
 ## Historique  {#core-ref:2ff0e090-42f2-4ad2-a140-93c82d10d1b4}

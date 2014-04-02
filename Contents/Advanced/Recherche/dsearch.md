@@ -13,7 +13,7 @@ suivant des critères pré- établis.
     /**
      * @var \Dcp\Family\Dsearch $rd
      */
-    $rd= createDoc("", \Dcp\Family\Dsearch::familyName);
+    $rd= \Dcp\DocManager::createDocument( \Dcp\Family\Dsearch::familyName);
     $rd->setValue(\Dcp\AttributeIdentifiers\Dsearch::se_famid, \Dcp\Family\Iuser::familyName);
     $rd->store();
     
@@ -29,7 +29,7 @@ De façon similaire, la classe `SearchDoc` peut utiliser une recherche détaill�
     /**
      * @var \Dcp\Family\Dsearch $rd
      */
-    $rd= createDoc("", \Dcp\Family\Dsearch::familyName);
+    $rd= \Dcp\DocManager::createDocument(\Dcp\Family\Dsearch::familyName);
     $rd->setValue(\Dcp\AttributeIdentifiers\Dsearch::se_famid, \Dcp\Family\Iuser::familyName);
     $rd->store();
     
@@ -51,7 +51,7 @@ L'affectation des critères est effectuée en valorisant les attributs du tablea
     /**
      * @var \Dcp\Family\Dsearch $rd
      */
-    $rd= createDoc("", \Dcp\Family\Dsearch::familyName);
+    $rd= \Dcp\DocManager::createDocument(\Dcp\Family\Dsearch::familyName);
     $rd->setAttributeValue(Attribute\Dsearch::se_famid, \Dcp\Family\Iuser::familyName);
     $rd->setAttributeValue(Attribute\Dsearch::ba_title, "Search Active Users with email");
     $criteria=array(
@@ -80,7 +80,7 @@ critères du document _recherche_.
     /**
      * @var \Dcp\Family\Dsearch $rd
      */
-    $rd= createDoc("", \Dcp\Family\Dsearch::familyName);
+    $rd= \Dcp\DocManager::createDocument(\Dcp\Family\Dsearch::familyName);
     $rd->setValue(\Dcp\AttributeIdentifiers\Dsearch::ba_title, "my Search");
     $rd->store();
     // on remplace la requête qui sera utilisée par celle produite par SearchDoc

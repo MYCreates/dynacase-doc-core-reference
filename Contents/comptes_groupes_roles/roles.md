@@ -40,7 +40,7 @@ suffisants.
 Par programmation il suffit de créer un document de la famille rôle `ROLE`.
 
     [php]
-    $dr = createDoc("","ROLE");
+    $dr = \Dcp\DocManager::createDocument("ROLE");
     if ($dr) {
          $dr->setValue("role_login","designer");
          $dr->setValue("role_name","Concepteurs");
@@ -65,9 +65,9 @@ C'est l'attribut `us_roles` qu'il faut modifier pour changer les associations de
 rôles aux utilisateurs.
 
     [php]
-    $dr = new_doc("",2435); // Rôle à ajouter
-    $du = new_doc("",1073); // Utilisateur
-    if ($du->isAlive()) {
+    $dr = \Dcp\DocManager::getDocument(2435); // Rôle à ajouter
+    $du = \Dcp\DocManager::getDocument(1073); // Utilisateur
+    if ($du && $du->isAlive()) {
       $uRoles = $du->getMultipleRawValues("us_roles");
       printf("Ajout rôle %s pour %s\n",$dr->getTitle(),$du->getTitle());
       $uRoles[] = $dr->getProperty('initid');
@@ -94,9 +94,9 @@ C'est l'attribut `grp_roles` qu'il faut modifier pour changer les associations
 de rôles aux groupes.
 
     [php]
-    $dr = new_doc("",2435); // Rôle à ajouter
-    $dg = new_doc("",2434); // Groupe
-    if ($dg->isAlive()) {
+    $dr = \Dcp\DocManager::getDocument(2435); // Rôle à ajouter
+    $dg = \Dcp\DocManager::getDocument(2434); // Groupe
+    if ($dg && $dg->isAlive()) {
         $gRoles = $dg->getMultipleRawValues("grp_roles");
         printf("Ajout rôle %s pour %s\n",$dr->getTitle(),$dg->getTitle());
         $gRoles[] = $dr->initid;

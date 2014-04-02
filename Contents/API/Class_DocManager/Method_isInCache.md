@@ -31,7 +31,7 @@ Retourne `false` s'il n'est pas présent.
 
 ## Erreurs / Exceptions {#core-ref:ca2acba0-ee43-4574-ac16-c73e3b0e91e5}
 
-Exception `\Dcp\DocumentManager\Exception`,  si le document n'a pas
+Exception `\Dcp\DocManager\Exception`,  si le document n'a pas
 d'identificateur.
 
 ## Historique  {#core-ref:75994e9e-02c6-4b7f-9c02-a647f8de862b}
@@ -57,7 +57,8 @@ On suppose que les 2 documents ne sont pas encore dans le cache.
 
     [php]
     $myDoc1=Dcp\DocManager::getDocument(1234);
-    $myDoc2=Dcp\DocManager::addInCache(Dcp\DocManager::getDocument(1234));
+    $myDoc2=Dcp\DocManager::getDocument(1234);
+    Dcp\DocManager::addInCache($myDoc2);
     
     printf("Document myDoc1 is%scached\n",
             Dcp\DocManager::isInCache($myDoc1)?"":" not " );
@@ -75,7 +76,8 @@ On suppose que les 2 documents ne sont pas encore dans le cache.
 
     [php]
     $myDoc1=Dcp\DocManager::getDocument(1234);
-    $myDoc2=Dcp\DocManager::addInCache($myDoc1);
+    Dcp\DocManager::addInCache($myDoc1);
+    $myDoc2=Dcp\DocManager::getDocument(1234);
     
     printf("Document myDoc1 is%scached\n",
             Dcp\DocManager::isInCache($myDoc1)?" ":" not " );

@@ -112,8 +112,8 @@ Avec la classe :
             if ($redacId === null) {
                 $this->clearValue(MyAttributes::my_mail);
             } else {
-                $redacDoc=new_doc($this->dbaccess,$redacId );
-                if ($redacDoc->isAlive()) {
+                $redacDoc=\Dcp\DocManager::getDocument($redacId );
+                if ($redacDoc && $redacDoc->isAlive()) {
                     $this->setAttributeValue(MyAttributes::my_mail, $redacDoc->getAttributeValue(AIuser::us_mail));
                 } else {
                     $this->clearValue(MyAttributes::my_mail);

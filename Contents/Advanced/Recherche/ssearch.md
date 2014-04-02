@@ -59,7 +59,7 @@ utiliser.
     /**
      * @var \Dcp\Family\Ssearch $rd
      */
-    $sd = createDoc("", \Dcp\Family\Ssearch::familyName);
+    $sd = \Dcp\DocManager::createDocument(\Dcp\Family\Ssearch::familyName);
     $sd->setValue(Attribute\Ssearch::ba_title, "Search TOVIEWDOC Tag");
     $sd->setValue(Attribute\Ssearch::se_phpfile, "mytest.php"); // EXTERNALS/mytest.php
     $sd->setValue(Attribute\Ssearch::se_phpfunc, "My\\myToViewTags");

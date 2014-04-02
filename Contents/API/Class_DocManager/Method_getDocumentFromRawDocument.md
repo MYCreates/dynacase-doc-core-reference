@@ -36,7 +36,7 @@ Retourne `null` si l'identifiant ne correspond à aucun document.
 
 ## Erreurs / Exceptions  {#core-ref:af176c69-b195-485b-9b3b-30ee5b991ef2}
 
-Exception `\Dcp\DocumentManager\Exception` :
+Exception `\Dcp\DocManager\Exception` :
 
 *   si l'identifiant n'est pas
     syntaxiquement valide. L'identifiant doit être un nombre positif ou une chaîne
@@ -51,12 +51,12 @@ Aucun.
 
 ## Exemples  {#core-ref:763002ea-76f0-4b1b-9fdd-f4aae37084d6}
 
-Conversion depuis `Dcp\DocumentManager::getRawDocument`.
+Conversion depuis `Dcp\DocManager::getRawDocument`.
 La document `1234` est de la famille `MY_FAMILY`.
 
     [php]
     use AMyFamily as \Dcp\AttributeIdentifiers\MyFamily
-    $rawDoc=\Dcp\DocumentManager::getRawDocument(1234);
+    $rawDoc=\Dcp\DocManager::getRawDocument(1234);
     if ($rawDoc !== null) {
         // le titre
         print $rawDoc["title"];

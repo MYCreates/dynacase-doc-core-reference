@@ -43,8 +43,8 @@ Anciennement `Doc::revive()`.
 Restauration du document référencé par l'identificateur `$documentId`.
 
     [php]
-    $doc=new_doc('', $documentId);
-    if ($doc->isAffected() && !$doc->isAlive()) {
+    $doc=\Dcp\DocManager::getDocument( $documentId);
+    if ($doc && !$doc->isAlive()) {
         $err=$doc->undelete();
         // maintenant le document est vivant
         if ($err == "") {

@@ -30,7 +30,7 @@ avant que la fonction ne retourne, même en cas de retour anticipé à cause d'u
 erreur. Notamment, le code suivant laisse les contrôles désactivés :
 
     [php]
-    $doc = new_Doc("", 1000);
+    $doc = \Dcp\DocManager::getDocument( 1000);
     $doc->disableEditControl();
     $doc->disableEditControl();
     $doc->enableEditControl();
@@ -92,7 +92,7 @@ L'utilisateur courant n'a pas le droit `edit` sur le document n°1420.
         return $err;
     }
     
-    $doc=new_doc("", "1420");
+    $doc=\Dcp\DocManager::getDocument( "1420");
     
     if ($doc->isAlive()) {
         $err = modifyNameAndBirthday($doc);

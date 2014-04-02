@@ -39,7 +39,7 @@ Si l'identifiant ne correspond à aucun document `null` est retourné.
 
 ## Erreurs / Exceptions  {#core-ref:7aca59ca-12b5-4d05-b32c-7bae0ad28dec}
 
-Exception `\Dcp\DocumentManager\Exception`, si l'identifiant n'est pas
+Exception `\Dcp\DocManager\Exception`, si l'identifiant n'est pas
 syntaxiquement valide. L'identifiant doit être un nombre positif ou une chaîne
 de caractère non vide.
 
@@ -51,7 +51,7 @@ Remplace la fonction `getDocTitle`.
 ## Exemples  {#core-ref:e1ab2b65-129b-4636-89ac-1774cd777eeb}
 
     [php]
-    $myTitle=\Dcp\DocumentManager::getTitle(1234);
+    $myTitle=\Dcp\DocManager::getTitle(1234);
     
 
 ## Notes  {#core-ref:dbf0144e-d788-4ab8-bb75-8f668cfcd252}
@@ -69,7 +69,6 @@ Cette méthode est plus rapide que l'accès au titre à partir de
 [getdocument]:      #core-ref:dfa0762f-6ff3-4349-bd21-6442740d9dcc
 [searchdoc]:        #core-ref:a5216d5c-4e0f-4e3c-9553-7cbfda6b3255
 [doclist]:          #core-ref:23c71c28-dbce-4d34-819a-50d5bc4a38c3
-[new_doc]:          #core-ref:e978cbd1-5f54-4a06-a6be-f1c079c2d734
 [DocClass]:         #core-ref:1d557fb4-4eca-4ab8-a334-974fe563ddd2
 [docstore]:         #core-ref:b8540d13-ece6-4e9e-9b72-6a56bca9da12
 [gettitle]:         #core-ref:84011cc8-2aec-4f39-81f0-c7ae803e4913

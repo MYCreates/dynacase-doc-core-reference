@@ -117,13 +117,13 @@ L'exemple ci-dessous montre comment insérer l'utilisateur ayant pour nom logiqu
      * Instancier le groupe
      */
     
-    $group = new_Doc('', $grpName);
+    $group = \Dcp\DocManager::getDocument( $grpName);
     
     /*
      * Instancier l'utilisateur
      */
     
-    $user = new_Doc('', $usrName);
+    $user = \Dcp\DocManager::getDocument( $usrName);
     
     /*
      * Afficher le contenu du groupe

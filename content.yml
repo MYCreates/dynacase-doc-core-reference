@@ -39,6 +39,9 @@ book:
       content:  "object_model/hooks.md"
     - level:   2
       content:  "object_model/revision.md"
+      flags:
+        review : "À relire"
+        update : "Modifié"
 ##
 # famille
 ##
@@ -509,6 +512,8 @@ book:
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getFamilyDocument.md"
+      flags:
+        update : "Modifié"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_getFamilyParameterValue.md"

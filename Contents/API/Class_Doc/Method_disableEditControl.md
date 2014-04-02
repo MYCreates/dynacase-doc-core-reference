@@ -32,7 +32,7 @@ avant que la fonction ne retourne, même en cas de retour anticipé à cause d'u
 erreur. Notamment, le code suivant laisse les contrôles désactivés :
 
     [php]
-    $doc = new_Doc("", 1000);
+    $doc = \Dcp\DocManager::getDocument( 1000);
     $doc->disableEditControl();
     $doc->disableEditControl();
     $doc->enableEditControl();
@@ -61,8 +61,8 @@ L'utilisateur courant n'a pas le droit `edit` sur le document n°1420.
 
     [php]
     require_once("FDL/Class.Doc.php");
-    $doc = new_doc("", "1420");
-    if ($doc->isAlive()){
+    $doc = \Dcp\DocManager::getDocument( "1420");
+    if ($doc && $doc->isAlive()){
         $err1 = $doc->setValue(\Dcp\AttributeIdentifiers\Zoo_animal::an_nom,"Gastor");  
         $err2 = $doc->store();
         printf( "Erreur : [1:%s] - [2:%s]\n", $err1, $err2);
@@ -82,8 +82,8 @@ détectée, l'enregistrement en base de données n'a pas eu lieu.
 
     [php]
     require_once("FDL/Class.Doc.php");
-    $doc = new_doc("", "1420");
-    if ($doc->isAlive()){
+    $doc = \Dcp\DocManager::getDocument( "1420");
+    if ($doc && $doc->isAlive()){
         $doc->disableEditControl();
         $err1=$doc->setValue(\Dcp\AttributeIdentifiers\Zoo_animal::an_nom,"Gastor");  
         $doc->enableEditControl();
@@ -101,8 +101,8 @@ Résultat :
 
     [php]
     require_once("FDL/Class.Doc.php");
-    $doc = new_doc("", "1420");
-    if ($doc->isAlive()) 
+    $doc = \Dcp\DocManager::getDocument( "1420");
+    if ($doc && $doc->isAlive()) 
         $doc->disableEditControl();
         $err1=$doc->setValue(\Dcp\AttributeIdentifiers\Zoo_animal::an_nom,"Gastor");  
         $err2=$doc->store();

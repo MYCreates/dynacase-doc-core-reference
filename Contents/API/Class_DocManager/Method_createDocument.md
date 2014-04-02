@@ -41,7 +41,7 @@ Retour un objet de la classe de la famille indiquée.
 
 ## Erreurs / Exceptions  {#core-ref:0e8a72e8-e6fc-46a7-a4d3-7741f6cb0b90}
 
-Exception `\Dcp\DocumentManager\Exception` :
+Exception `\Dcp\DocManager\Exception` :
 
 *   `DMG0001`: Si l'identifiant de famille n'est pas syntaxiquement valide.
     L'identifiant doit être un nombre positif ou une  chaine de caractère non
@@ -63,7 +63,7 @@ Remplace la fonction [`createDoc`][createdoc].
     use AMyFamily as \Dcp\AttributeIdentifiers\MyFamily
     use MyFamily as \Dcp\Family\MyFamily
     
-    $doc=\Dcp\DocumentManager::createDocument(MyFamily::familyName);
+    $doc=\Dcp\DocManager::createDocument(MyFamily::familyName);
     $doc->setAttributeValue(AMyFamily::my_number1, 345);
     $doc->setAttributeValue(AMyFamily::my_number2, 654);
     $err=$doc->store();
@@ -76,7 +76,7 @@ Remplace la fonction [`createDoc`][createdoc].
     [php]
     function createWithValues($family, array $values) {
         try {
-            $doc=\Dcp\DocumentManager::createDocument($family);
+            $doc=\Dcp\DocManager::createDocument($family);
             foreach (values as $attrid=>$value) {
                 $doc->setAttributeValue($attrid, $value);
             }
@@ -84,7 +84,7 @@ Remplace la fonction [`createDoc`][createdoc].
             if (empty($err)) {
                 printf("Nouveau document %s n°%d\n", $doc->getTitle(), $doc->id);
             }
-        } catch (Dcp\DocumentManager\Exception $e) {
+        } catch (Dcp\DocManager\Exception $e) {
             switch ($e->getDcpCode()) {
                 case"DMG0002":
                     // famille inconnue
@@ -120,7 +120,6 @@ L'identifiant de la famille utilisée en paramètre n'est pas sensible à la cas
 [getrawdocument]:   #core-ref:27f42abc-23c2-43c7-9a28-cfd32250632c
 [searchdoc]:        #core-ref:a5216d5c-4e0f-4e3c-9553-7cbfda6b3255
 [doclist]:          #core-ref:23c71c28-dbce-4d34-819a-50d5bc4a38c3
-[new_doc]:          #core-ref:e978cbd1-5f54-4a06-a6be-f1c079c2d734
 [DocClass]:         #core-ref:1d557fb4-4eca-4ab8-a334-974fe563ddd2
 [docstore]:         #core-ref:b8540d13-ece6-4e9e-9b72-6a56bca9da12
 [createdoc]:        #core-ref:9886581a-243a-4c78-8490-8fda2209fd93

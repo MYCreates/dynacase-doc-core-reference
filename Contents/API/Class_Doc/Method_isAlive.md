@@ -45,7 +45,7 @@ Aucun.
 - Exemple #1
 
     [php]
-    $facture = new_Doc('', $id);
+    $facture = \Dcp\DocManager::getDocument( $id);
     if (!$facture->isAlive()) {
         throw new Exception(
             sprintf("Le document avec l'identifiant '%d' n'existe pas ou a été supprimé.", $id)
@@ -59,7 +59,7 @@ Aucun.
      * $facture est un objet qui n'existe qu'en mémoire,
      * par conséquent, isAlive() retourne `false`
      */
-    $facture = createDoc('', 'FACTURE');
+    $facture = \Dcp\DocManager::createDocument('FACTURE');
     var_dump($facture->isAlive());
     
     /*

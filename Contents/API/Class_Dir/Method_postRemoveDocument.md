@@ -55,7 +55,7 @@ dynacase-core.
         	 * Mettre la facture dans l'état 'Brouillon'
         	 * lorsqu'elle est enlevé du dossier
         	 */
-        	$facture = new_Doc('', $docId, true);
+        	$facture = \Dcp\DocManager::getDocument( $docId, true);
         	$facture->setState('ST_Brouillon');
         	return '';
         }

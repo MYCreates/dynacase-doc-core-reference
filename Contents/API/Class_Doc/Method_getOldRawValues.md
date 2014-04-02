@@ -69,7 +69,7 @@ Avec la classe :
 Le code suivant indique le résultat de `getOldRawvalues()`.
 
     [php]
-    if ($myDoc->isAlive()) {
+    if ($myDoc && $myDoc->isAlive()) {
         print "### Valeurs initiales ### \n";
         print_r($myDoc->getValues());
         $myDoc->setValue(Attributes\MyFamily::my_numberone, 342);

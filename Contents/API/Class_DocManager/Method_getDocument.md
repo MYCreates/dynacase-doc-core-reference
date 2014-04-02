@@ -49,7 +49,7 @@ Retourne la dernière révision correspondante du document par défaut.
 
 ## Erreurs / Exceptions  {#core-ref:c90f798d-6682-4e1c-8e60-21b2204a586d}
 
-Exception `\Dcp\DocumentManager\Exception`, si l'identifiant n'est pas
+Exception `\Dcp\DocManager\Exception`, si l'identifiant n'est pas
 syntaxiquement valide. L'identifiant doit être un nombre positif ou une chaine
 de caractère non vide.
 
@@ -64,7 +64,7 @@ Remplace la fonction [`new_Doc`][new_doc].
 Identifiant numérique :
 
     [php]
-    $doc=\Dcp\DocumentManager::getDocument(1234);
+    $doc=\Dcp\DocManager::getDocument(1234);
     if ($doc !== null && $doc->isAlive()) {
         if ($doc->hasPermission('view')) {
             print $doc->getTitle();
@@ -74,7 +74,7 @@ Identifiant numérique :
 Nom logique :
 
     [php]
-    $doc=\Dcp\DocumentManager::getDocument('MY_DOCUMENT');
+    $doc=\Dcp\DocManager::getDocument('MY_DOCUMENT');
     if ($doc !== null && $doc->isAlive()) {
         if ($doc->hasPermission('view')) {
             print $doc->getTitle();
@@ -87,16 +87,16 @@ Nom logique :
     [php]
     use AMyFamily as \Dcp\AttributeIdentifiers\MyFamily
     function myFirst($docid) {
-        $doc=\Dcp\DocumentManager::getDocument($docid);
+        $doc=\Dcp\DocManager::getDocument($docid);
         if ($doc !== null && $doc->isAlive()) {
             // ici on met le document en cache
-            Dcp\DocumentManager::addInCache($doc); 
+            Dcp\DocManager::addInCache($doc); 
             $doc->setAttributeValue(AMyFamily::my_number1, 324)
         }
     }
     function mySecond($docid) {
         // ici on récupère le document du cache
-        $doc=\Dcp\DocumentManager::getDocument($docid); 
+        $doc=\Dcp\DocManager::getDocument($docid); 
         if ($doc !== null && $doc->isAlive()) {
             $doc->setAttributeValue(AMyFamily::my_number2, 765)
         }
@@ -105,7 +105,7 @@ Nom logique :
         myFirst(1234); // le document est mis en cache par cette méthode
         mySecond(1234);
         // ici on récupère le document du cache
-        $doc=\Dcp\DocumentManager::getDocument(1234);
+        $doc=\Dcp\DocManager::getDocument(1234);
         if ($doc !== null && $doc->isAlive()) {
             $n1=$doc->getAttributeValue(AMyFamily::my_number1);
             // n1 vaut 324
