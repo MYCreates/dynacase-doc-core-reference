@@ -1,4 +1,4 @@
-# Dcp\DocManager::isInCache()   {#core-ref:45b26670-f06a-4054-959f-dc4408346e22}
+# Dcp\DocManager\Cache::hasDocument()   {#core-ref:45b26670-f06a-4054-959f-dc4408346e22}
 <div class="short-description">
 Teste si un document est dans le cache
 </div>
@@ -7,10 +7,10 @@ Teste si un document est dans le cache
 ## Description  {#core-ref:1597cc78-3086-4cd3-a6cc-f8da0cd1f379}
 
     [php]
-    static bool Dcp\DocManager::isInCache ( Dcp\Family\Document  &$document )
+    static bool Dcp\DocManager\Cache::hasDocument ( Doc  &$document )
 
 Vérifie si l'objet _document_ est dans la cache. Un document ne peut être mis
-dans le cache que par la méthode [`::addInCache()`][addincache].
+dans le cache que par la méthode [`::addDocument()`][addincache].
 
 ### Avertissements   {#core-ref:c36f949e-adff-4af4-8197-74b226a4d490}
 
@@ -47,8 +47,8 @@ dans le cache.
 
     [php]
     $myDoc=Dcp\DocManager::getDocument(1234);
-    if (! Dcp\DocManager::isInCache($myDoc)) {
-        Dcp\DocManager::addInCache($myDoc);
+    if (! Dcp\DocManager::cache()->hasDocument($myDoc)) {
+        Dcp\DocManager::cache()->addDocument($myDoc);
     }
 
 ### Instance multiple {#core-ref:4c603c35-2786-4ca0-982c-7d516363c8b4}
@@ -58,12 +58,12 @@ On suppose que les 2 documents ne sont pas encore dans le cache.
     [php]
     $myDoc1=Dcp\DocManager::getDocument(1234);
     $myDoc2=Dcp\DocManager::getDocument(1234);
-    Dcp\DocManager::addInCache($myDoc2);
+    Dcp\DocManager::cache()->addDocument($myDoc2);
     
     printf("Document myDoc1 is%scached\n",
-            Dcp\DocManager::isInCache($myDoc1)?"":" not " );
+            Dcp\DocManager::cache()->hasDocument($myDoc1)?"":" not " );
     printf("Document myDoc2 is%scached\n",
-            Dcp\DocManager::isInCache($myDoc2)?"":" not " );
+            Dcp\DocManager::cache()->hasDocument($myDoc2)?"":" not " );
 
 Résultat :
 
@@ -76,13 +76,13 @@ On suppose que les 2 documents ne sont pas encore dans le cache.
 
     [php]
     $myDoc1=Dcp\DocManager::getDocument(1234);
-    Dcp\DocManager::addInCache($myDoc1);
+    Dcp\DocManager::cache()->addDocument($myDoc1);
     $myDoc2=Dcp\DocManager::getDocument(1234);
     
     printf("Document myDoc1 is%scached\n",
-            Dcp\DocManager::isInCache($myDoc1)?" ":" not " );
+            Dcp\DocManager::cache()->hasDocument($myDoc1)?" ":" not " );
     printf("Document myDoc2 is%scached\n",
-            Dcp\DocManager::isInCache($myDoc2)?" ":" not " );
+            Dcp\DocManager::cache()->hasDocument($myDoc2)?" ":" not " );
 
 Résultat :
 
@@ -98,7 +98,7 @@ Aucunes.
 ## Voir aussi {#core-ref:76d75aa6-86fd-4cde-a1a8-ef7a96904621}
 
 *   [`Dcp\DocManager::getDocument`][getdocument]
-*   [`Dcp\DocManager::addInCache`][addincache]
+*   [`Dcp\DocManager\Cache::addDocument`][addincache]
 
 <!-- links -->
 [getdocument]:      #core-ref:dfa0762f-6ff3-4349-bd21-6442740d9dcc

@@ -57,7 +57,7 @@ Remplace la fonction [`createDoc`][createdoc].
 
 ## Exemples  {#core-ref:2eb81df0-63bc-46bd-978f-c463f0279092}
 
-### Création simple
+### Création simple {#core-ref:1163629f-0ab2-4abf-b542-da0488b96384}
 
     [php]
     use AMyFamily as \Dcp\AttributeIdentifiers\MyFamily
@@ -71,7 +71,7 @@ Remplace la fonction [`createDoc`][createdoc].
         printf("Nouveau document %s n°%d", $doc->getTitle(), $doc->id);
     }
 
-### Avec traitement des exceptions
+### Avec traitement des exceptions {#core-ref:226a6772-6641-4d9c-b22e-d676fe922ff7}
 
     [php]
     function createWithValues($family, array $values) {

@@ -85,7 +85,7 @@ propriétés.
 ## Voir aussi  {#core-ref:1286e9bb-d516-40f3-b22a-89a6c62e992f}
 
 *   [`Doc::getRawValue()`][getrawvalue]
-*   [`DocManager::addInCache()`][addincache]
+*   [`DocManager\Cache::addDocument()`][addincache]
 
 <!-- links -->
 

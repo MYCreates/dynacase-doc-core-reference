@@ -90,7 +90,7 @@ Nom logique :
         $doc=\Dcp\DocManager::getDocument($docid);
         if ($doc !== null && $doc->isAlive()) {
             // ici on met le document en cache
-            Dcp\DocManager::addInCache($doc); 
+            Dcp\DocManager::cache->addDocument($doc); 
             $doc->setAttributeValue(AMyFamily::my_number1, 324)
         }
     }
@@ -131,7 +131,7 @@ documents.
 ## Voir aussi  {#core-ref:0dc39da2-2e73-471e-b8a4-157f3f51384b}
 
 *   [`DocManager::getRawDocument()`][getrawdocument]
-*   [`DocManager::addInCache()`][addincache]
+*   [`DocManager\cache::addDocument()`][addincache]
 
 <!-- links -->
 [getrawdocument]:   #core-ref:27f42abc-23c2-43c7-9a28-cfd32250632c

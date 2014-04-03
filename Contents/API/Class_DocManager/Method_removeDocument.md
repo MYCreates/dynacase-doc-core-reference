@@ -1,4 +1,4 @@
-# Dcp\DocManager::removeFromCache()  {#core-ref:3ac7bd00-7420-4ce8-8bba-d5a86c2261f6}
+# Dcp\DocManager\Cache::removeDocument()  {#core-ref:3ac7bd00-7420-4ce8-8bba-d5a86c2261f6}
 
 <div class="short-description">
 Enlève un document du cache
@@ -8,7 +8,7 @@ Enlève un document du cache
 ## Description  {#core-ref:5d86b069-425b-4fee-a048-054908564428}
 
     [php]
-    static &Dcp\Family\Document Dcp\DocManager::removeFromCache ( Dcp\Family\Document  &$document )
+    static &Doc Dcp\DocManager\Cache::removeDocument ( Doc  &$document )
 
 
 ### Avertissements  {#core-ref:68d3a5ff-8dcd-4d9d-99d7-83cf581c81ac}
@@ -38,7 +38,8 @@ Aucun.
 
 
     [php]
-    $myDocument=Dcp\DocManager::removeFromCache(Dcp\DocManager::getDocument(1234));
+    $document=Dcp\DocManager::getDocument(1234);
+    $myRemovedDocument=Dcp\DocManager::cache()->removeDocument($document);
 
 ## Notes  {#core-ref:d682b795-a6f9-4cda-abb3-c773d81fe6aa}
 

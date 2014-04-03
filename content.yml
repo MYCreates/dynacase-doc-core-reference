@@ -794,56 +794,63 @@ book:
       content:  "API/Class_DocManager.md"
       flags:
         new: "Nouveauté"
-      subtoc:   1
+      subtoc:   2
     - level:   3
+      element: "chapter"
+      content:  "API/Class_DocManager/methods.md"
+      subtoc:   1
+      flags:
+        new: "Nouveauté"
+        draft: "À relire"
+    - level:   4
       element: "chapter"
       content:  "API/Class_DocManager/Method_getDocument.md"
       flags:
         new: "Nouveauté"
         draft: "À relire"
-    - level:   3
+    - level:   4
       element: "chapter"
       content:  "API/Class_DocManager/Method_createDocument.md"
       flags:
         new: "Nouveauté"
         draft: "À relire"
-    - level:   3
+    - level:   4
       element: "chapter"
       content:  "API/Class_DocManager/Method_createTemporaryDocument.md"
       flags:
         new: "Nouveauté"
         draft: "À relire"
-    - level:   3
+    - level:   4
       element: "chapter"
       content:  "API/Class_DocManager/Method_getRawDocument.md"
       flags:
         new: "Nouveauté"
         draft: "À relire"
-    - level:   3
+    - level:   4
       element: "chapter"
       content:  "API/Class_DocManager/Method_getDocumentFromRawDocument.md"
       flags:
         new: "Nouveauté"
         draft: "À relire"
-    - level:   3
+    - level:   4
       element: "chapter"
       content:  "API/Class_DocManager/Method_getTitle.md"
       flags:
         new: "Nouveauté"
         draft: "À relire"
-    - level:   3
+    - level:   4
       element: "chapter"
       content:  "API/Class_DocManager/Method_getRawValue.md"
       flags:
         new: "Nouveauté"
         draft: "À relire"
-    - level:   3
+    - level:   4
       element: "chapter"
       content:  "API/Class_DocManager/Method_getIdFromName.md"
       flags:
         new: "Nouveauté"
         draft: "À relire"
-    - level:   3
+    - level:   4
       element: "chapter"
       content:  "API/Class_DocManager/Method_getNameFromId.md"
       flags:
@@ -851,29 +858,42 @@ book:
         draft: "À relire"
     - level:   3
       element: "chapter"
-      content:  "API/Class_DocManager/Method_addInCache.md"
+      content:  "API/Class_DocManager/cache.md"
+      subtoc:   1
+      flags:
+        new: "Nouveauté"
+        draft: "À relire"
+    - level:   4
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_cache.md"
       flags:
         draft: "À relire"
         new: "Nouveauté"
-    - level:   3
+    - level:   4
+      element: "chapter"
+      content:  "API/Class_DocManager/Method_addDocument.md"
+      flags:
+        draft: "À relire"
+        new: "Nouveauté"
+    - level:   4
       element: "chapter"
       content:  "API/Class_DocManager/Method_clearCache.md"
       flags:
         new: "Nouveauté"
         draft: "À relire"
-    - level:   3
+    - level:   4
       element: "chapter"
-      content:  "API/Class_DocManager/Method_removeFromCache.md"
+      content:  "API/Class_DocManager/Method_removeDocument.md"
       flags:
         draft: "À relire"
         new: "Nouveauté"
-    - level:   3
+    - level:   4
       element: "chapter"
       content:  "API/Class_DocManager/Method_isInCache.md"
       flags:
         draft: "À relire"
         new: "Nouveauté"
-    - level:   3
+    - level:   4
       element: "chapter"
       content:  "API/Class_DocManager/Method_setCacheHandler.md"
       flags:
