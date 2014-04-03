@@ -126,6 +126,6 @@ sur le serveur.
 
 ## Voir aussi {#core-ref:447d6155-3af5-4274-a308-cb647db1966a}
 
-- [`Application::addJsCode`](#core-ref:49A8E28B-F286-45D7-B9E0-CC3591A8EFDE)
-- [`Application::addJsRef`](#core-ref:B4B041AA-2649-498D-ACE7-52131053C7DB)
+- [`Application::addJsCode`](#core-ref:49a8e28b-f286-45d7-b9e0-cc3591a8efde)
+- [`Application::addJsRef`](#core-ref:b4b041aa-2649-498d-ace7-52131053c7db)
 
