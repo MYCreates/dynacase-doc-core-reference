@@ -96,5 +96,5 @@ N/A
 
 ## Voir aussi {#core-ref:ca7ba655-2ca2-4aec-adb5-6916c7382f32}
 
-- [`Application::addJsRef`](#core-ref:B4B041AA-2649-498D-ACE7-52131053C7DB)
-- [`Application::getJSLink`](#core-ref:95056B5D-5002-4A5D-BC26-31595FAD9AFD)
+- [`Application::addJsRef`](#core-ref:b4b041aa-2649-498d-ace7-52131053c7db)
+- [`Application::getJSLink`](#core-ref:95056b5d-5002-4a5d-bc26-31595fad9afd)

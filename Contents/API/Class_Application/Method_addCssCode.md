@@ -104,5 +104,10 @@ N/A
 
 ## Voir aussi {#core-ref:46f3a61e-2ff9-490a-8c9e-69f01df5e823}
 
-- [`Application::addCssRef`](#core-ref:4BBA8A6B-8002-4C0A-8AC7-70D75B31B02B)
-- [`Application::getCSSLink`](#core-ref:7A7BE83F-FBC2-4F45-8115-BC295321BCF4)
+- [`Application::addCssRef`][addCSSRef]
+- [`Application::getCSSLink`][getCSSLink]
+
+<!-- links -->
+
+[addCSSRef]: #core-ref:4bba8a6b-8002-4c0a-8ac7-70d75b31b02b
+[getCSSLink]: #core-ref:7a7be83f-fbc2-4f45-8115-bc295321bcf4

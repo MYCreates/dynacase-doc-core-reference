@@ -134,5 +134,5 @@ sur le serveur.
 
 ## Voir aussi {#core-ref:0f8f1e52-37fb-4c9e-9c71-051b98ffeac2}
 
-- [`Application::addCssCode`](#core-ref:5480ED21-5027-45C3-9EFE-3897784B8865)
-- [`Application::getCSSLink`](#core-ref:7A7BE83F-FBC2-4F45-8115-BC295321BCF4)
+- [`Application::addCssCode`](#core-ref:5480ed21-5027-45c3-9efe-3897784b8865)
+- [`Application::getCSSLink`](#core-ref:7a7be83f-fbc2-4f45-8115-bc295321bcf4)

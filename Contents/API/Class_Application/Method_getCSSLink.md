@@ -128,5 +128,5 @@ sur le serveur.
 
 ## Voir aussi {#core-ref:c9bc22f8-4d83-4d16-aefb-684b25f7cbc4}
 
-- [`Application::addCssCode`](#core-ref:5480ED21-5027-45C3-9EFE-3897784B8865)
-- [`Application::addCssRef`](#core-ref:4BBA8A6B-8002-4C0A-8AC7-70D75B31B02B)
+- [`Application::addCssCode`](#core-ref:5480ed21-5027-45c3-9efe-3897784b8865)
+- [`Application::addCssRef`](#core-ref:4bba8a6b-8002-4c0a-8ac7-70d75b31b02b)

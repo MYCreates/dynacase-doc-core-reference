@@ -128,5 +128,5 @@ sur le serveur.
 
 ## Voir aussi {#core-ref:b925e618-7dc9-4fa5-ab65-3e7b556befa0}
 
-- [`Application::addJsCode`](#core-ref:49A8E28B-F286-45D7-B9E0-CC3591A8EFDE)
-- [`Application::getJSLink`](#core-ref:95056B5D-5002-4A5D-BC26-31595FAD9AFD)
+- [`Application::addJsCode`](#core-ref:49a8e28b-f286-45d7-b9e0-cc3591a8efde)
+- [`Application::getJSLink`](#core-ref:95056b5d-5002-4a5d-bc26-31595fad9afd)
