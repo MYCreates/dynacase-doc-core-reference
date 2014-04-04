@@ -11,7 +11,7 @@ retours.
 
     [php]
     include_once("FDL/Class.Doc.php");
-    $document = new_doc("",8160); // Doc dérive de DbObj
+    $document = \Dcp\DocManager::getDocument(8160); // Doc dérive de DbObj
     $document->savePoint("One");
     $document->setValue("us_lname","Test one");
     $document->store();  // modification en base doc n°8160 à comme nom "Test One"

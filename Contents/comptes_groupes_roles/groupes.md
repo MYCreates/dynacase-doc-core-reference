@@ -60,7 +60,7 @@ suffisants.
 Par programmation il suffit de créer un document de la famille groupe `IGROUP`.
 
     [php]
-    $dg = createDoc("","IGROUP");
+    $dg = \Dcp\DocManager::createDocument("IGROUP");
     if ($dg) {
         $dg->setValue("us_login","driver");
         $dg->setValue("grp_name","Conducteurs");
@@ -84,9 +84,9 @@ L'ajout direct d'un groupe à un utilisateur se fait depuis le groupe au moyen d
 la méthode `_IGROUP::insertDocument()`.
 
     [php]
-    $g = new_Doc($dbaccess,"GADMIN");
-    $u = new_Doc($dbaccess,1075); // 1075 est la référence documentaire de l'utilisateur
-    if ( $g->isAlive() && $u->isAlive() ) {
+    $g = \Dcp\DocManager::getDocument("GADMIN");
+    $u = \Dcp\DocManager::getDocument(1075); // 1075 est la référence documentaire de l'utilisateur
+    if ($g && $u &&  $g->isAlive() && $u->isAlive() ) {
         printf("ajout de l'utilisateur %s [%d] au groupe %s [%d]\n",
              $u->getTitle(),$u->id,$g->getTitle(),$g->id);
         printf("Liste des groupes avant\n");

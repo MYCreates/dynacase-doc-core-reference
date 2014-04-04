@@ -65,8 +65,8 @@ Avec la classe :
             $msg = '';
             $redactorId = $this->getRawValue(MyAttributes::my_redactor);
             if ($redactorId) {
-                $du = new_doc($this->dbaccess, $redactorId);
-                if ($du->isAlive()) {
+                $du = \Dcp\DocManager::getDocument($redactorId);
+                if ($du && $du->isAlive()) {
                     $redactorMail=$du->getRawValue(Aiuser::us_mail);
                     if ($redactorMail != $this->getRawValue(MyAttributes::my_mail)) {
                         $err=$this->setValue(MyAttributes::my_mail, $du->getRawValue(Aiuser::us_mail));

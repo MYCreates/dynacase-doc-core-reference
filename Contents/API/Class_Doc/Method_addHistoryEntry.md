@@ -66,8 +66,8 @@ Enregistrement d'un nouveau message d'avertissement.
 
     [php]
     /** @var \Dcp\Family\MyFamily */
-    $d = new_Doc("", "MY_DOCUMENT");
-    if ($d->isAlive()) {
+    $d = \Dcp\DocManager::getDocument( "MY_DOCUMENT");
+    if ($d !== null) {
         // enregistrement
         $d->addHistoryEntry("Hello world", DocHisto:: WARNING);
     }

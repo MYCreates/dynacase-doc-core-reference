@@ -51,7 +51,7 @@ Retourne la valeur `""` (chaîne vide) si l'attribut est vide.
 
 ## Erreurs / Exceptions  {#core-ref:79769f3f-fedc-4568-bf52-d3131fd261e5}
 
-Exception `\Dcp\DocumentManager\Exception`
+Exception `\Dcp\DocManager\Exception`
 
 *   Si l'identifiant n'est pas syntaxiquement valide. 
     L'identifiant doit être un nombre positif ou une chaîne
@@ -69,7 +69,7 @@ Pas de parcours de relation.
 
     [php]
     use AMyFamily as \Dcp\AttributeIdentifiers\MyFamily
-    $rawNumber=\Dcp\DocumentManager::getRawValue(1234, AMyFamily::my_number1);
+    $rawNumber=\Dcp\DocManager::getRawValue(1234, AMyFamily::my_number1);
     
     
 
@@ -85,7 +85,7 @@ propriétés.
 ## Voir aussi  {#core-ref:1286e9bb-d516-40f3-b22a-89a6c62e992f}
 
 *   [`Doc::getRawValue()`][getrawvalue]
-*   [`DocManager::addInCache()`][addincache]
+*   [`DocManager\Cache::addDocument()`][addincache]
 
 <!-- links -->
 

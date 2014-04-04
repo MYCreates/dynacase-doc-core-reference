@@ -104,8 +104,8 @@ Vérification de l'attribut `my_sum` en fonction des valeurs de `my_numberone` e
     use \Dcp\AttributeIdentifiers\MyFamily as Attributes\MyFamily;
     
     /** @var \Dcp\Family\MyFamily */
-    $myDoc = new_Doc("", "MY_DOCUMENT");
-    if ($myDoc->isAlive()) {
+    $myDoc = \Dcp\DocManager::getDocument( "MY_DOCUMENT");
+    if ($myDoc && $myDoc->isAlive()) {
         $n1=$myDoc->getAttributeValue(Attributes\MyFamily::my_numberone);
         $n2=$myDoc->getAttributeValue(Attributes\MyFamily::my_numbertwo);
         $sum=$myDoc->getAttributeValue(Attributes\MyFamily::my_sum);
@@ -120,8 +120,8 @@ Retour d'un tableau. Le document a deux rangées.
     use \Dcp\AttributeIdentifiers\MyFamily as Attributes\MyFamily;
     
     /** @var \Dcp\Family\MyFamily */
-    $myDoc = new_Doc("", "MY_DOCUMENT");
-    if ($myDoc->isAlive()) {
+    $myDoc = \Dcp\DocManager::getDocument( "MY_DOCUMENT");
+    if ($myDoc && $myDoc->isAlive()) {
         $partipants=$myDoc->getAttributeValue(Attributes\MyFamily::my_t_partner);
         print_r($partipants);
     }

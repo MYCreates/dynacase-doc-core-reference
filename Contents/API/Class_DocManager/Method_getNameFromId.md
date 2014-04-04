@@ -40,7 +40,7 @@ Remplace la fonction `getNameFromId`.
 
     [php]
     use AMyFamily as \Dcp\AttributeIdentifiers\MyFamily
-    $docName=\Dcp\DocumentManager::getNameFromId(1234);
+    $docName=\Dcp\DocManager::getNameFromId(1234);
     if ($docName !== null) {
         printf("Nom logique : name = %s", $docName);
     }

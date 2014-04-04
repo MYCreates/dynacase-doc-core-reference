@@ -62,7 +62,7 @@ dérivées) et `FAM_B` (sans ses dérivées) dans le dossier `My_FOLDER`.
     /**
      * @var Dir $myFolder
      */
-    $myFolder = new_doc(getDbAccess(), "My_FOLDER");
+    $myFolder =  \Dcp\DocManager::getDocument("My_FOLDER");
       
     $idFamA = getIdFromName(getDbAccess(), 'FAM_A');
     $idFamB = getIdFromName(getDbAccess(), 'FAM_B');

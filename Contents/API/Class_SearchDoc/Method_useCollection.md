@@ -56,7 +56,7 @@ Récupérer le contenu d'un dossier
 Ceci est équivalent au code suivant :
 
     [php]
-    $folder=new_doc('', "MY_FAVORITE_FOLDER");
+    $folder=\Dcp\DocManager::getDocument( "MY_FAVORITE_FOLDER");
     $rawResults=$folder->getContent();
 
 

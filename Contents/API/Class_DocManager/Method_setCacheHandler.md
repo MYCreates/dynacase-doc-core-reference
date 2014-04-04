@@ -1,4 +1,4 @@
-# Dcp\DocManager::setCacheHandler()   {#core-ref:4c6ec4b0-363d-4230-8086-0bbdd82f2e1d}
+# Dcp\DocManager\Cache::setHandler()   {#core-ref:4c6ec4b0-363d-4230-8086-0bbdd82f2e1d}
 
 <div class="short-description">
 Modifie le comportement du cache.
@@ -8,7 +8,7 @@ Modifie le comportement du cache.
 ## Description   {#core-ref:cdb1855f-b4ff-4130-8043-23ff13e96772}
 
     [php]
-    static void Dcp\DocManager::setCacheHandler ( Dcp\DocManager\CacheInterface $cache)
+    static void Dcp\DocManager\Cache::setHandler ( Dcp\DocManager\CacheInterface $cache)
 
 Cette méthode permet de changer le comportement du cache de document.
 
@@ -63,7 +63,7 @@ Aucun.
     }
     
     $myCacheObject=new MyCache();
-    Dcp\DocManager::setCacheHandler($myCacheObject);
+    Dcp\DocManager::cache()->setHandler($myCacheObject);
 
 ## Notes   {#core-ref:ec2c2e66-a0de-457a-8eff-dcaaca184aef}
 
@@ -72,8 +72,8 @@ Aucunes.
 ## Voir aussi   {#core-ref:2e297436-6f5a-4a57-b547-d41f0ca831de}
 
 
-*   [`Dcp\DocManager::getDocument`][getdocument]
-*   [`Dcp\DocManager::addInCache`][addincache]
+*   [`Dcp\DocManager::getDocument()`][getdocument]
+*   [`Dcp\DocManager::addDocument()`][addincache]
 
 <!-- links -->
 [getdocument]:      #core-ref:dfa0762f-6ff3-4349-bd21-6442740d9dcc

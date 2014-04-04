@@ -64,8 +64,8 @@ le paramètre `$really` mis à `true`.
 Suppression du document référencé par l'identificateur `$documentId`.
 
     [php]
-    $doc=new_doc('', $documentId);
-    if ($doc->isAlive()) {
+    $doc=\Dcp\DocManager::getDocument( $documentId);
+    if ($doc && $doc->isAlive()) {
         $err=$doc->delete();
         // maintenant le document est supprime
         if ($err == "") {

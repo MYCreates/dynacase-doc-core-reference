@@ -1,9 +1,10 @@
 # Recherche de document depuis leur identifiant {#core-ref:de554832-30f5-485a-8303-31cf464d613d}
 
 Si vous disposez d'une liste d'identifiant de document, il n'est pas conseillé
-de réaliser une boucle avec l'appel au constructeur new_doc car cela se révèle
-lent et consommateur en mémoire. Il est conseillé dans ce cas d'utiliser
-l'itérateur de document.
+de réaliser une boucle avec l'appel à la méthode
+[`DocManager::getDocument()`][getdocument] car cela se révèle lent et
+consommateur en mémoire. Il est conseillé dans ce cas d'utiliser l'itérateur de
+document.
 
     [php]
     $dl=new DocumentList();
@@ -47,3 +48,4 @@ de la liste (voir `DocumentList::listMap()`).
 [attdocid]:         #core-ref:d461d5f5-b635-47a0-944d-473c227587ab
 [phpiterator]:      http://php.net/manual/fr/class.iterator.php "Interface Iterator"
 [docacl]:           #core-ref:a99dcc5f-f42f-4574-bbfa-d7bb0573c95d "Droits du document"
+[getdocument]:      #core-ref:dfa0762f-6ff3-4349-bd21-6442740d9dcc

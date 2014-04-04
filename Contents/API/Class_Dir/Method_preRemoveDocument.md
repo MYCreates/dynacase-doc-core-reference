@@ -52,8 +52,8 @@ dynacase-core.
     class ArchiveFacture extends \Dcp\Family\Dir {
     
         public function preRemoveDocument($docId) {
-            $facture = new_Doc('', $docId, true); // prendre la dernière révision
-            if (!$facture->isPaid()) {
+            $facture = \Dcp\DocManager::getDocument( $docId); // prendre la dernière révision
+            if ($facture && !$facture->isPaid()) {
             	return sprintf(
             		'La facture doit être payée pour pouvoir être enlevée du dossier.'
                 );

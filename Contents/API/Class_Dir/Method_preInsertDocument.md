@@ -71,8 +71,8 @@ dynacase-core.
         public function preInsertDocument($docId, $multiple = false) {
             $err=parent::preInsertDocument($docId, $multiple);
             if (empty($err)) {
-                $facture = new_Doc('', $docId, true); // prendre la dernière révision
-                if ($facture->isAlive()) {
+                $facture = \Dcp\DocManager::getDocument( $docId); // prendre la dernière révision
+                if ($facture) {
                     /*
                      * Seule les factures payés peuvent
                      * être insérées dans ce dossier.

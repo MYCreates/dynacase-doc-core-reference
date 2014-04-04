@@ -100,7 +100,7 @@ Exemple d'enregistrement d'une modification sans contrôle d'erreur.
     use \Dcp\AttributeIdentifiers\MyFamily as MyAttributes;
     
     /** @var \Dcp\Family\MyFamily */
-    $d=new_Doc("","MY_DOCUMENT");
+    $d=\Dcp\DocManager::getDocument("MY_DOCUMENT");
     $d->setValue(MyAttributes::my_numberone, 234);
     $d->store($info); // enregistrement en base de données
 
@@ -112,7 +112,7 @@ Exemple d'enregistrement d'un nouveau document sans contrôle d'erreur.
     use \Dcp\AttributeIdentifiers\MyFamily as MyAttributes;
     
     /** @var \Dcp\Family\MyFamily */
-    $d=createDoc("","MY_FAMILY");
+    $d=\Dcp\DocManager::createDocument("MY_FAMILY");
     $d->setValue(MyAttributes::my_numberone, 234);
     $d->setValue(MyAttributes::my_numbertwo, 873);
     $d->store($info);// enregistrement en base de données
@@ -126,7 +126,7 @@ Les codes erreurs de `$info` permettent de préciser l'origine du problème.
     use \Dcp\AttributeIdentifiers\MyFamily as MyAttributes;
     
     /** @var \Dcp\Family\MyFamily */
-    $d = new_Doc("", "MY_DOCUMENT");
+    $d = \Dcp\DocManager::getDocument( "MY_DOCUMENT");
     $err = $d->setValue(MyAttributes::my_numberone, 234);
     
     if (empty($err)) {

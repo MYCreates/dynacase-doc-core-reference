@@ -73,7 +73,7 @@ Anciennement `Doc::copy()`.
 Duplication du document référencé par l'identificateur `$documentId`.
 
     [php]
-    $doc=new_doc('', $documentId);
+    $doc=\Dcp\DocManager::getDocument( $documentId);
     if ($doc->isAlive()) {
         $copyDoc=$doc->duplicate();
         // maintenant le document est dupliqué

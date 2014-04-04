@@ -23,7 +23,7 @@ Code minimaliste pour créer un utilisateur via les documents.
 
     [php]
     include_once("FDL/Class.Doc.php");
-    $iUser=createDoc("",'IUSER');
+    $iUser=\Dcp\DocManager::createDocument('IUSER');
     if ($iUser) {
         $iUser->setValue("us_login","jean.martin");
         $iUser->setValue("us_lname","martin");
@@ -66,7 +66,7 @@ pouvez utiliser l'attribut "fid".
     $user=new Account();
     $user->setLoginName("john.doe");
     if ($user->isAffected()) {
-      $doc=new_doc("", $user->fid);
+      $doc=\Dcp\DocManager::getDocument( $user->fid);
     }
 
 Attributs de correspondance : Compte User &hArr; Document IUSER
@@ -130,8 +130,8 @@ Ajout de l'utilisateur n°1009 dans le groupe GDEFAULT :
      
     $dbaccess = getDbAccess();
      
-    $group = new_Doc($dbaccess,"GDEFAULT");
-    $user = new_Doc($dbaccess,1009); // 1009 est la référence documentaire de l'utilisateur
+    $group = \Dcp\DocManager::getDocument("GDEFAULT");
+    $user = \Dcp\DocManager::getDocument(1009); // 1009 est la référence documentaire de l'utilisateur
      
     printf("ajout de l'utilisateur %s [%d] au groupe %s [%d]\n",
            $user->getTitle(),$user->id,$group->getTitle(),$group->id);
@@ -154,8 +154,8 @@ Utilisation de `Dcp\Family\IGROUP::removeDocument()`.
      
     $dbaccess=getDbAccess();
      
-    $group=new_Doc($dbaccess,"GDEFAULT");
-    $user=new_Doc($dbaccess,1009);
+    $group=\Dcp\DocManager::getDocument("GDEFAULT");
+    $user=\Dcp\DocManager::getDocument(1009);
      
     printf("suppression de l'utilisateur %s [%d] du groupe %s [%d]\n",
            $user->getTitle(),$user->id,$group->getTitle(),$group->id);
@@ -176,7 +176,7 @@ Utilisation de `Dcp\Family\IGROUP::removeDocument()`.
 Exemple d'utilisation :
 
     [php]
-    $docGroup=new_Doc("", "GDEFAULT");
+    $docGroup=\Dcp\DocManager::getDocument("GDEFAULT");
     $group=$docGroup->getAccount();
     $members=$group->getAllMembers();
     $userDocIdList=array();
@@ -220,7 +220,7 @@ Comme pour les groupes, à partir de l'objet "Account" d'un rôle :
 Exemple d'utilisation :
 
     [php]
-    $docRole=new_Doc("", "TST_ROLE");
+    $docRole=\Dcp\DocManager::getDocument( "TST_ROLE");
     $members=$docRole->getAccount()->getAllMembers();
     $userDocIdList=array();
     foreach ($members as $user) {

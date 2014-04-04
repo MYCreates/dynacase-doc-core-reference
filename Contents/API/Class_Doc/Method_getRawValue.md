@@ -90,7 +90,7 @@ Vérification de l'attribut `my_sum` en fonction des valeurs de `my_numberone` e
     [php]
     use \Dcp\AttributeIdentifiers\MyFamily as Attributes\MyFamily;
     /** @var \Dcp\Family\MyFamily */
-    $myDoc = new_Doc("", "MY_DOCUMENT");
+    $myDoc = \Dcp\DocManager::getDocument( "MY_DOCUMENT");
     if ($myDoc->isAlive()) {
         $n1=intval($myDoc->getRawValue(Attributes\MyFamily::my_numberone));
         $n2=intval($myDoc->getRawValue(Attributes\MyFamily::my_numbertwo, "543"));

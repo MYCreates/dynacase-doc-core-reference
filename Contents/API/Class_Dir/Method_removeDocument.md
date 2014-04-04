@@ -75,7 +75,7 @@ core.
 ## Exemples {#core-ref:7b7badcd-3fef-4834-97fd-4461684289ce}
 
     [php]
-    $dossier = new_Doc('', 'MY_FOLDER');
+    $dossier = \Dcp\DocManager::getDocument( 'MY_FOLDER');
     
     /*
      * Rechercher tous les documents référencés dans le dossier

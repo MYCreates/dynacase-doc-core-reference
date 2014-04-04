@@ -43,6 +43,13 @@ La méthode `getFamilyDocument` remplace la méthode précédemment nommée
 L'utilisation de `getFamDoc` est obsolète depuis la version 3.2.5 de
 dynacase-core.
 
+### Release 3.3.0 {#core-ref:994eff3e-49b8-455e-93d7-8a807b361b47}
+
+Si le document n'a pas de famille, null est retourné à la place d'un object
+`DocFam` non initialisé.
+
+Ceci concerne les documents "Famille" qui n'hérite pas d'une autre famille.
+
 ## Exemples {#core-ref:7b1d96d4-3e99-4c76-91ce-0be187c75eda}
 
 - Exemple #1

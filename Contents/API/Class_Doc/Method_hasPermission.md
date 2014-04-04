@@ -69,8 +69,8 @@ Le droit de modifier est le droit `edit`.
 
     [php]
     require_once("FDL/Class.Doc.php");
-    $doc = new_doc("", "1420"); // document n°1420
-    if ($doc->isAlive()) {
+    $doc = \Dcp\DocManager::getDocument( "1420"); // document n°1420
+    if ($doc && $doc->isAlive()) {
         if ($doc->hasPermission('edit')) {
             printf('Utilisateur "%s" a le droit de modifier "%s"'."\n",
                 getCurrentUser()->login,
@@ -96,8 +96,8 @@ La liste des droits du documents est dans la propriété `acls` de l'objet.
 
     [php]
     require_once("FDL/Class.Doc.php");
-    $doc = new_doc("", "1420");
-    if ($doc->isAlive()) {
+    $doc = \Dcp\DocManager::getDocument( "1420");
+    if ($doc && $doc->isAlive()) {
         $acls = $doc->acls;
         printf('Utilisateur "%s" a les droits suivants pour "%s" :'."\n",
             getCurrentUser()->login,

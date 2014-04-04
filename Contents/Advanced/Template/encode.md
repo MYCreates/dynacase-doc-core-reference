@@ -43,7 +43,7 @@ Code PHP :
     function zoo_favorite(Action & $action)
     {
     
-        $doc = new_Doc("", "FAVORITE");
+        $doc = \Dcp\DocManager::getDocument( "FAVORITE");
         $action->lay->set("TITRE", $doc->getTitle());
     
     }
@@ -122,7 +122,7 @@ On a donc le PHP suivant :
     function zoo_favorite(Action & $action)
     {
     
-        $doc = new_Doc("", "FAVORITE");
+        $doc = \Dcp\DocManager::getDocument( "FAVORITE");
         $action->lay->eSet("TITRE", $doc->getTitle());
     
     }

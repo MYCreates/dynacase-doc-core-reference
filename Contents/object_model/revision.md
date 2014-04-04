@@ -68,12 +68,13 @@ est ajusté pour pointer vers la dernière révision de sa lignée documentaire.
 Ce comportement peut être modifié au moyen de l'option [`docrev` des attributs
 relation][docid].
 
-## Révisions et `new_doc` {#core-ref:4932c928-7789-4bd2-8493-aa781caf21a9}
+## Révisions et `DocManager::getDocument` {#core-ref:4932c928-7789-4bd2-8493-aa781caf21a9}
 
-Par défaut, la fonction [`new_doc`][newdoc] récupère la révision correspondant à
-l'`id` passé en paramètre ; ce qui veut dire que ce n'est pas nécessairement la
-révision courante. Le troisième paramètre de `new_doc` permet de récupérer
-systématiquement la révision courante.
+Par défaut, la méthode [`DocManager::getDocument()`][getdocument] récupère la
+dernière révision correspondant à l'`id` passé en paramètre ; ce qui veut dire
+que ce n'est pas forcément la révision demandée. Le deuxième paramètre de
+cette méthode permet de récupérer systématiquement la révision correspondant
+précisément à l'identifiant.
 
 ## Révisions et recherche {#core-ref:0164de5f-5968-4a43-8963-30a087314a83}
 
@@ -87,4 +88,4 @@ critère plus complexe tenant compte des ids de toutes les révisions.
 
 [locked]: #core-ref:9aa8edfa-2f2a-11e2-aaec-838a12b40353
 [docid]: #core-ref:d461d5f5-b635-47a0-944d-473c227587ab
-[newdoc]:  #core-ref:e978cbd1-5f54-4a06-a6be-f1c079c2d734
+[getdocument]:      #core-ref:dfa0762f-6ff3-4349-bd21-6442740d9dcc

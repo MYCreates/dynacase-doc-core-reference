@@ -16,7 +16,7 @@ détaillée][dsearch].
     /**
      * @var \Dcp\Family\Report $report
      */
-    $report = createDoc("", \Dcp\Family\Report::familyName);
+    $report = \Dcp\DocManager::createDocument(\Dcp\Family\Report::familyName);
     
     $report->setAttributeValue(Attribute\Report::ba_title, "Report With toview Tag");
     $report->setAttributeValue(Attribute\Report::se_famid, \Dcp\Family\Iuser::familyName);

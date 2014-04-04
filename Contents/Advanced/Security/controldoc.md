@@ -4,9 +4,10 @@ La consultation des documents est contrôlée par les [profils de
 documents][acldoc].
 
 Le contrôle d'accès au document est fait par les interfaces de haut-niveau. La
-[classe Doc][classdoc] et notamment la fonction `new_Doc()` ne vérifie pas les
-accès. Ces vérifications doivent être fait par les actions avec la
-méthode [`Doc::hasPermission()`][docctrl].
+[classe Doc][classdoc] et notamment la méthode
+[`DocManager::getDocument()`][getdocument] ne vérifie pas les accès. Ces
+vérifications doivent être fait par les actions avec la méthode
+[`Doc::hasPermission()`][docctrl].
 
 Le schéma suivant décrit les contrôles de l'action [FDL:OPENDOC][opendoc] et
 précise la cinématique de l'[accès à un document][viewdocreq].
@@ -25,3 +26,4 @@ précise la cinématique de l'[accès à un document][viewdocreq].
 [opendoc]:      #core-ref:f9e68fa7-01b7-4903-9718-744271d63112
 [exportfile]:   #core-ref:0fc93676-888f-497e-b9bc-28cdbead52df
 [dbvault]:      #core-ref:7c41b8d8-5ace-489c-886f-a6500c717423
+[getdocument]:  #core-ref:dfa0762f-6ff3-4349-bd21-6442740d9dcc

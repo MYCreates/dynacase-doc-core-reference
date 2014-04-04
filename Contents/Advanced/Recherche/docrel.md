@@ -6,7 +6,7 @@ La méthode `DocRel::getIRelations()` donne la liste des documents liés vers un
     [php]
     include_once("FDL/Class.Doc.php");
     $docrelation=new DocRel();
-    $doc=new_doc("", 5835 , true);
+    $doc=\Dcp\DocManager::getDocument( 5835 , true);
     
     $docrelation=new DocRel($doc->initid);
     

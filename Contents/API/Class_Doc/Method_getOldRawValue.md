@@ -85,8 +85,8 @@ Le document de l'exemple a son attribut `my_numberone` initialisé à `-3`.
     }
     
     /** @var \Dcp\Family\MyFamily */
-    $myDoc = new_Doc("", "MY_DOCUMENT");
-    if ($myDoc->isAlive()) {
+    $myDoc = \Dcp\DocManager::getDocument( "MY_DOCUMENT");
+    if ($myDoc && $myDoc->isAlive()) {
         printOldValue($myDoc);
         
         updateValue($myDoc, 34);
