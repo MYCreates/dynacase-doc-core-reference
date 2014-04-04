@@ -37,6 +37,14 @@ et [exportation][exportcsv] des données csv brutes.
 Elle a aussi des impacts sur les requêtes de [recherches dans les
 tableaux][searcharray].
 
+### Nouvelles fonctions dépréciées
+
+*   createDoc
+*   createTmpDoc
+*   new_Doc
+*   getTDoc
+*   getIdFromName
+*   getNameFromId
 
 ## Incompatibilités 3.2 / 3.3 {#core-ref:d3530b54-d9d9-4c6b-a922-d621097b539b}
 
@@ -56,6 +64,8 @@ Cette modification entraîne aussi une contrainte supplémentaire lié au type. 
 contraintes de type des différentes valeurs sont vérifiées aussi au niveau de la
 base de données. Ces contraintes s'applique aux types "int", "double", "date",
 "timestamp" et "time".
+
+
 
 
 ## Modification release 3.2.12 {#core-ref:d402539b-f0dd-4ade-9ea0-03f1d55da1da}
