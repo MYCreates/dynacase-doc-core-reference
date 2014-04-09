@@ -46,6 +46,11 @@ tableaux][searcharray].
 *   getIdFromName
 *   getNameFromId
 
+### Fonctions supprimées
+
+*   getDbEnv
+*   getFreedomContext
+
 ## Incompatibilités 3.2 / 3.3 {#core-ref:d3530b54-d9d9-4c6b-a922-d621097b539b}
 
 Les attributs multiples (attributs déclarés dans des tableaux ou ayant l'option
