@@ -37,7 +37,7 @@ void
 
 ## Erreurs / Exceptions {#core-ref:68594dbd-ad1d-4e86-bfb3-071bf82d5c09}
 
-<span class="flag next-release">3.2.12</span>
+<span class="flag from release">3.2.12</span>
 Si le filtre indiqué est invalide une exception `Dcp\SearchDoc\Exception` est
 envoyée.
 

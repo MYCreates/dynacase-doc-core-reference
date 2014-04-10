@@ -129,7 +129,7 @@ core.
 
 ### Release 3.2.12 {#core-ref:151fed1c-a8fe-4d80-84f6-a3239f9d903b}
 
-<span class="flag next-release">3.2.12</span> La méthode
+<span class="flag from release">3.2.12</span> La méthode
 `Dir::insertMultipleDocuments` a été modifiée afin de faire remonter le message
 d'erreur de la méthode hameçon `Dir::postInsertMultipleDocuments` dans son
 retour d'erreur.

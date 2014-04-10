@@ -50,6 +50,8 @@ tableaux][searcharray].
 
 *   getDbEnv
 *   getFreedomContext
+*   Doc::toxml()
+*   Doc::todtd()
 
 ## Incompatibilités 3.2 / 3.3 {#core-ref:d3530b54-d9d9-4c6b-a922-d621097b539b}
 

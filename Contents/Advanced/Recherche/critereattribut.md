@@ -65,7 +65,7 @@ hiérarchie dans ce type d'attribut.
 Cet exemple permet de sélectionner la liste des chefs de service. Le chef de
 service a pour clef 'chefserv'.
 
-## Recherche dans un array <span class="flag next-release">3.0.0</span> {#core-ref:5342d63e-edc8-44fb-bed9-2fb113742849}
+## Recherche dans un array <span class="flag from release">3.0.0</span> {#core-ref:5342d63e-edc8-44fb-bed9-2fb113742849}
 
 Pour une famille avec un tableau contenant une liste de valeur, le
 filtre Postgresql suivant permet de filtrer les documents dont une des valeurs

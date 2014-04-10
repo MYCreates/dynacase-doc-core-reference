@@ -81,14 +81,14 @@ Voir aussi :
     alors une erreur sur un document n'empêchera pas les autres documents
     d'êtres importés.
 
-`csv-separator` (default `;`) <span class="flag next-release">3.2.12</span>
+`csv-separator` (default `;`) <span class="flag from release">3.2.12</span>
 :   Dans le cas d'importation en fichier [csv][CSV] permet d'indiquer le caractère de
     séparation des champs. Généralement le caractère est `,` (virgule) ou 
     `;` (point-virgule).  
     Si la valeur est `auto`, le caractère de séparation parmi `,` et `;` est 
     trouvé automatiquement.
 
-`csv-enclosure` (default `vide`) <span class="flag next-release">3.2.12</span>
+`csv-enclosure` (default `vide`) <span class="flag from release">3.2.12</span>
 :   Dans le cas d'importation en fichier [csv][CSV] permet d'indiquer le caractère de
     de délimiteur de texte. Généralement le caractère est `"` (double quote) ou 
     `'` (simple quote)  
@@ -96,7 +96,7 @@ Voir aussi :
     trouvé automatiquement.
 
 
-`csv-linebreak` (default "`\n` - 2 caractères `\` et `n`") <span class="flag next-release">3.2.12</span>
+`csv-linebreak` (default "`\n` - 2 caractères `\` et `n`") <span class="flag from release">3.2.12</span>
 :   Dans le cas d'importation en fichier [csv][CSV] permet d'indiquer une séquence de 
     caractère indiquant un retour chariot (CRLF). Si `csv-enclosure` n'est pas 
     vide, le retour chariot (caractère `"\n"`) est pris en compte quelque soit 
