@@ -134,9 +134,9 @@ d'attributs pour paramétrer finement chaque état et chaque transition. ces
 attributs sont préfixés par `$attrPrefix` pour éviter les éventuelles collisions
 en base de données.
 
-### `$stateActivity` {#core-ref:e75c4b8d-ec3c-4be9-8824-5ef5fe4117a3}
+### `$stateactivity` {#core-ref:e75c4b8d-ec3c-4be9-8824-5ef5fe4117a3}
 
-La propriété `$stateActivity` définit l'ensemble des activités. C'est un tableau
+La propriété `$stateactivity` définit l'ensemble des activités. C'est un tableau
 associatif ; la clé est l'identifiant de l'état et la valeur est le libellé
 de l'activité.
 
