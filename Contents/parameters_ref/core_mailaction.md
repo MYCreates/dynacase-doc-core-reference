@@ -25,7 +25,9 @@ valeur du paramètre [CORE_URLINDEX][core_urlindex].
 L'URL doit contenir une chaîne de requête qui référence une application et une
 action Dynacase valide (e.g. `?app=MYAPP&action=MYACTION`).
 
-L'URL ne doit pas contenir de hash (partie finale de la forme `#anchor`).
+L'id du document est ajoutée à la suite du paramètre. Aussi, si vous utilisez
+un *hash* (partie finale de la forme `#anchor`), l'action n'aura pas accès à
+cet id. Cela peut être utile dans le cas ou le routage est fait coté client.
 
 <!-- links -->
 [core_urlindex]: #core-ref:9081464e-dfc9-4836-8577-cfa59829eaa0
