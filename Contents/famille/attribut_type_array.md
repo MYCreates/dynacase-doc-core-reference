@@ -36,7 +36,7 @@ Le libellé de la colonne est le libellé de l'attribut correspondant.
 
 Aucun comportement particulier.
 
-## Format de stockage <span class="flag next-release">3.3.0</span>{#core-ref:2448fbfc-c138-4134-aa46-800080f63738}
+## Format de stockage <span class="flag from release">3.3.0</span>{#core-ref:2448fbfc-c138-4134-aa46-800080f63738}
 
 Le tableau en lui même n'est pas stocké, mais modifie la façon dont les
 attributs qu'il contient sont stockés. En effet, une fois dans un tableau, un

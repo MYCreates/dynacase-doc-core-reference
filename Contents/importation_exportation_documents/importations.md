@@ -9,8 +9,8 @@ Le fichier d'importation peut être au format :
 
 *   CSV
     *   Encodage : UTF-8,
-    *   Séparateur de colonnes : `;`(point-virgule par défaut - configurable en <span class="flag next-release">3.2.12</span>).
-    *   Délimiteur de texte : ` ` (vide par défaut - configurable en <span class="flag next-release">3.2.12</span>),
+    *   Séparateur de colonnes : `;`(point-virgule par défaut - configurable en <span class="flag from release">3.2.12</span>).
+    *   Délimiteur de texte : ` ` (vide par défaut - configurable en <span class="flag from release">3.2.12</span>),
 *   ODS OpenDocument Spreadsheet (tableur OpenOffice.org .ods)
 
 Ce fichier d'importation est *auto-descriptif* ; c'est à dire qu'il

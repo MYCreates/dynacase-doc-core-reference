@@ -68,7 +68,28 @@ dynacase-core.
 
 ## Notes {#core-ref:49db0916-cd96-4cc8-972b-706f3d6a4b0d}
 
-Aucune.
+Lors de la construction d'un [rapport][rapport], le document est incomplet et
+les valeurs d'attributs sont partiellement présents en fonction des colonnes
+affichées. Si le titre est dépendant d'un attribut qui n'est pas présent, le
+titre présenté dans le rapport peut être incomplet.
+
+Pour s'assurer que le titre présenté est correct, il est possible de retourner
+le titre "courant" lorsque le document est incomplet comme le montre l'exemple
+suivant.
+
+    [php]
+    public function getCustomTitle() {
+       if ($this->doctype === 'I') { // incomplete document
+          return $this->title;
+       } else {
+          // Doing special title
+          $mySpecialTitle = sprintf("REF/%d/%d/%s", 
+                                 $this->initid, 
+                                 $this->revision,
+                                 $this->getAttributeValue(\Dcp\AttributeIdentifiers\ArchiveFacture::ref_client));
+          return $mySpecialTitle;
+       }
+    } 
 
 ## Voir aussi {#core-ref:e5fb287c-b8e0-433c-b75a-85b15afc7a40}
 
@@ -78,3 +99,4 @@ Aucune.
 <!-- links -->
 [attr_in_title]: #core-ref:b0e414c0-b795-4bbe-b70e-a308b7f1b4ab
 [Doc::getTitle]: #core-ref:84011cc8-2aec-4f39-81f0-c7ae803e4913
+[rapport]:       #core-ref:4d6429f1-b3ae-46c4-8687-1c8d29f92f37
