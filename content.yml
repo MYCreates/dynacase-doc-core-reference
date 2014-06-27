@@ -1207,6 +1207,15 @@ book:
       content:  "Advanced/Persistance/user.md"
     - level:   2
       content:  "Advanced/Migration/introduction.md"
+      subtoc:  2
+    - level:   3
+      content:  "Advanced/Migration/scripts.md"
+      flags:
+        obsolete release: "Obsolète 3.3"
+    - level:   3
+      content:  "Advanced/Migration/migration_xsd.md"
+      flags:
+        review : "À relire"
     - level:   2
       content:  "Advanced/Recherche/introduction.md"
       subtoc:   2
