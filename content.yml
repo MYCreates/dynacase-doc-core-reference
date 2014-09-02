@@ -1103,6 +1103,9 @@ book:
       subtoc:   2
     - level:   2
       content:  "Style/styles.md"
+      flags:
+        review : "À relire"
+        update : "Modifié"
     - level:   2
       content:  "Advanced/Internationalisation/introduction.md"
       subtoc:   2

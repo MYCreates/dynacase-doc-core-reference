@@ -263,6 +263,9 @@ Les parsers fournis par défaut sont :
 :   un parser permettant de copier le contenu d'un répertoire. Ceci est utilisé
     notamment pour copier un ensemble d'images liées à la css.
 
+`\Dcp\Style\dcpLessParser`<span class="flag fixme">à compléter / @import </span>
+:   un parser Less générant les Css à partir du source .less
+
 ## Créer un nouveau style à partir du style par défaut {#core-ref:5df70d18-c735-48d4-8444-53d0cf6880b2}
 
 Le module "Dynacase-core" livre 3 styles :
@@ -592,6 +595,46 @@ Pour créer un style sans héritage il est nécessaire de déclarer l'ensemble d
 *   dcp/jquery-ui.css
 *   dcp/main.css
 *   dcp/system.css
+
+## Surcharger des styles
+
+Il est possible d'ajouter des règles globales qui seront systématiquement ajoutéees à la définition des styles.
+Ces règles seront prise en compte lors de la génération dynamique du thème quel que soit le style appliqué.
+
+Pour cela, il vous faut créer un fichier `.sty` dans le répertoire `STYLES/global-rules.d/`.
+
+La syntaxe est la même que celle vue aux chapitres précédents.
+
+Par exemple, le fichier `STYLES/global-rules.d/monapp.sty` :
+
+    [php]
+    $sty_rules = array(
+        'css' => array(
+            'css/monapp/main.css' => array(
+                "src" => array(
+                    "style" => "MONAPP/Layout/monapp.less"
+                )
+            ),
+            "deploy_parser" => array(
+                "className" => '\Dcp\Style\dcpLessParser',
+                "options" => array(
+                    "sourceMap" => true
+                )
+            )
+        ),
+        'css' => array(
+            'css/monapp/colors.css' => array(
+                "src" => array(
+                    "blue"=>"MONAPP/Layout/colors.css"
+                )
+            )
+        )
+    );
+
+La génération du thème à partir du style va produire les CSS :
+
+* `css/monapp/main.css`, générée par le parser `Less` à partir du source `MONAPP/Layout/monapp.less`
+* `css/monapp/colors.css`
 
 ## Surcharger les templates {#core-ref:dc09a573-64be-4ec6-99a2-2166016a3387}
 
