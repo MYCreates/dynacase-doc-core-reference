@@ -4,6 +4,13 @@ Ce chapitre contient un descriptif des améliorations entre les releases de
 Dynacase.
 
 
+## Édition 9 
+
+
+|              Modifications               |               Chapitre              |                Version                |
+| :--------------------------------------- | :---------------------------------- | :------------------------------------ |
+| Nouveau hook Doc::preAffect / postAffect | [Hook d'affectation][prepostaffect] | <span class="flag new">Nouveau</span> |
+|                                          |                                     |                                       |
 
 ## Édition 8 {#core-ref:f10874a8-78c8-42eb-9908-5eaaf04d247f}
 
@@ -219,3 +226,4 @@ retour d'erreur.
 [shutdown_function]: #core-ref:9f3475a2-b6a5-4927-b6b7-97f128cb4cd4
 [document_destinataire]: #core-ref:e717367f-7a29-473d-a65a-ac2c924bd0cb
 [api_refreshDocuments]: #core-ref:d42dccaf-2225-4727-b528-b66df42aa358
+[prepostaffect]:        #core-ref:e11b3532-6d5b-4a1a-ad20-0667409f1f65

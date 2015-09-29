@@ -44,6 +44,17 @@ avec [`Doc::delete()`][doc_delete] sont :
 *   `Doc::preDelete()`
 *   `Doc::postDelete()`
 
+## Affectation de document {#core-ref:e11b3532-6d5b-4a1a-ad20-0667409f1f65}
+
+<span class="flag from release inline">3.2.20</span>
+Les méthode surchargeables appelées lors de l'affectation d'un document sont
+
+*   [`Doc::preAffect()`][doc_preaffect]
+*   [`Doc::postAffect()`][doc_postaffect]
+
+utilisé principalement par la fonction [`new_doc()`][new_doc] et par la classe 
+[`SearchDoc`][searchdoc].
+
 ## Duplication de document {#core-ref:db739471-d1e7-4762-9cfb-1de1a823b06a}
 
 Les méthode surchargeables appelées lors de la duplication d'un document 
@@ -93,7 +104,12 @@ dans un dossier avec [`Dir::removeDocument()`][dir_removedocument] sont :
 [doc_duplicate]:   #core-ref:f7d4f454-0e45-40bd-9f4c-b149ab620295
 [doc_preimport]: #core-ref:adb6ba8b-15c4-42d3-97dc-1da16c2112ae
 [doc_postimport]: #core-ref:9de7e922-150a-416b-b846-b6e195bf0921
-[dir_insertdocument]:  #core-ref:9575ff95-480a-4dfb-9cd0-b89f44c3fad7
+
+[doc_preaffect]:        #core-ref:e6f36fea-9f42-4751-ba9b-c3aafec56559
+[doc_postaffect]:       #core-ref:7e9f3b6f-f801-4fa9-8215-f02d575b357f
+[dir_insertdocument]:   #core-ref:9575ff95-480a-4dfb-9cd0-b89f44c3fad7
 [dir_removedocument]:   #core-ref:d337e186-8066-49e2-92a0-26aa518cbf41
 [dir_insertmultiple]:   #core-ref:098cf44e-568d-4dd2-8dd0-e2f104bc8615
 [dbobjadd]:             #core-ref:28379dfc-7f6d-450f-b994-834d4fba7452
+[new_doc]:              #core-ref:e978cbd1-5f54-4a06-a6be-f1c079c2d734
+[searchdoc]:            #core-ref:a5216d5c-4e0f-4e3c-9553-7cbfda6b3255
