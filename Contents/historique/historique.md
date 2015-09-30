@@ -10,7 +10,7 @@ Dynacase.
 |              Modifications               |               Chapitre              |                Version                |
 | :--------------------------------------- | :---------------------------------- | :------------------------------------ |
 | Nouveau hook Doc::preAffect / postAffect | [Hook d'affectation][prepostaffect] | <span class="flag new">Nouveau</span> |
-|                                          |                                     |                                       |
+| Nouvelle option d'attribut htmltext      | [allowedcontent][htmltextopt]       | <span class="flag new">Nouveau</span> |
 
 ## Édition 8 {#core-ref:f10874a8-78c8-42eb-9908-5eaaf04d247f}
 
@@ -227,3 +227,4 @@ retour d'erreur.
 [document_destinataire]: #core-ref:e717367f-7a29-473d-a65a-ac2c924bd0cb
 [api_refreshDocuments]: #core-ref:d42dccaf-2225-4727-b528-b66df42aa358
 [prepostaffect]:        #core-ref:e11b3532-6d5b-4a1a-ad20-0667409f1f65
+[htmltextopt]:          #core-ref:8e182116-8762-4157-a743-9abf43db0960
