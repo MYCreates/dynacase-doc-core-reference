@@ -74,9 +74,10 @@ editheight
     La valeur par défaut est `150px`.
 
 htmlclean
-:   Indique que le serveur nettoiera le contenu en supprimant toutes les balises de style, généralement issues d'un copier/coller :
+:   Indique que le serveur nettoiera le contenu en supprimant toutes les balises 
+    de style, généralement issues d'un copier/coller :
     
-    *   les attribut des balises `span` (le conetnu est conservé) et `font` sont supprimés ;
+    *   les attribut des balises `span` (le contenu est conservé) et `font` sont supprimés ;
     *   les attributs `@class` et `@style` sont supprimés ;
     *   les balises `style` sont supprimées.
     
@@ -84,6 +85,35 @@ htmlclean
     
     *   `yes`
     *   **`no` (comportement par défaut)**
+
+allowedcontent <span class="flag from release inline">3.2.20</span>
+:   Indique que la liste des balises autorisées n'est pas liée au menu. Toute balise
+    html supportée peut être insérée à l'exception de la balise `script`. 
+    Les attributs de ces balises peuvent aussi 
+    être utilisées à l'exception des attributs commençant par `on` tel que 
+    `onclick` ou `onmouseover`.
+    
+    Les valeurs possibles sont :
+    
+    *   `all` : toute balise supportée est autorisée
+    *   **`menu` (comportement par défaut)** en fonction de la barre de menu (voir option `toolbar` ci-après).
+    
+    Les balises supportées sont : `a`, `abbr`, `acronym`, `address`, `applet`,
+    `area`, `article`, `aside`, `audio`, `b`, `base`, `basefont`, `bdi`, `bdo`,
+    `big`, `blockquote`, `body`, `br`, `button`, `canvas`, `caption`, `center`,
+    `cite`, `code`, `col`, `colgroup`, `command`, `datalist`, `dd`, `del`,
+    `details`, `dfn`, `dialog`, `dir`, `div`, `dl`, `dt`, `em`, `embed`,
+    `fieldset`, `figcaption`, `figure`, `font`, `footer`, `form`, `h1`, `h2`,
+    `h3`, `h4`, `h5`, `h6`, `head`, `header`, `hgroup`, `hr`, `html`, `i`,
+    `iframe`, `img`, `input`, `ins`, `isindex`, `kbd`, `keygen`, `label`,
+    `legend`, `li`, `link`, `main`, `map`, `mark`, `menu`, `meta`, `meter`,
+    `nav`, `noframes`, `noscript`, `object`, `ol`, `optgroup`, `option`,
+    `output`, `p`, `param`, `pre`, `progress`, `q`, `rp`, `rt`, `ruby`, `s`,
+    `samp`, `section`, `select`, `small`, `source`, `span`, `strike`,
+    `strong`, `style`, `sub`, `summary`, `sup`, `table`, `tbody`, `td`,
+    `textarea`, `tfoot`, `th`, `thead`, `time`, `title`, `tr`, `track`, `tt`,
+    `u`, `ul`, `var`, `video`, `wbr`.
+
 
 jsonconf
 :   Cette option permet de configurer finement l'éditeur de texte WYSIWYG.
