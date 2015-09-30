@@ -61,6 +61,10 @@ Aucun.
 
 ### Retour de document objet {#core-ref:b187e332-49b5-48b6-a49c-56e3c17c83ec}
 
+Dans ce cas, les hooks [`Doc::preAffect()`][preaffect] et
+[`Doc::postAffect()`][postaffect] sont appelés dans la boucle pour chacun des
+documents.
+
     [php]
     $s=new SearchDoc("","DIR");
     $s->setObjectReturn(true);
@@ -107,6 +111,7 @@ suivantes.
 
 *   [`SearchDoc::search`][search].
 *   [Autres exemples][advancedExemple].
+*   [`Doc::preAffect()`][preaffect].
 
 <!-- links -->
 
@@ -117,3 +122,5 @@ suivantes.
 [documentList]:             #core-ref:8f0824fa-eed6-4170-b52d-d3dc7c5cb9c1
 [advancedExemple]:          #core-ref:d0a89548-a743-4dfc-bf43-49192ef1b6a8
 [usecollection]:            #core-ref:881c9fcb-81c2-45af-b89f-70be3a7f24b7
+[preaffect]:                #core-ref:e6f36fea-9f42-4751-ba9b-c3aafec56559
+[postaffect]:               #core-ref:7e9f3b6f-f801-4fa9-8215-f02d575b357f

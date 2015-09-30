@@ -470,6 +470,12 @@ book:
       content:  "API/Class_Doc/Method_postRefresh.md"
     - level:   4
       element: "chapter"
+      content:  "API/Class_Doc/Method_preAffect.md"
+    - level:   4
+      element: "chapter"
+      content:  "API/Class_Doc/Method_postAffect.md"
+    - level:   4
+      element: "chapter"
       content:  "API/Class_Doc/Method_preImport.md"
     - level:   4
       element: "chapter"

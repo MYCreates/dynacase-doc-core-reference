@@ -58,6 +58,10 @@ Anciennement nommé `SearchDoc::nextDoc()`.
     
     var_export($searchDoc->getSearchInfo());
 
+Dans ce cas, les hooks [`Doc::preAffect()`][preaffect] et
+[`Doc::postAffect()`][postaffect] sont appelés dans la boucle à chaque appel de
+ `getNextDoc()`.
+
 ### Récupération du premier dossier {#core-ref:360f3569-83c9-4932-a76b-ec7c740605d3}
 
 Récupération du premier document "dossier" qui a été créé.
@@ -72,8 +76,6 @@ Récupération du premier document "dossier" qui a été créé.
     if (searchDoc->count() > 0) {
         $firstFolder=$searchDoc->getNextDoc();
     }
-
-
 
 ## Notes {#core-ref:09c89d91-b92c-4216-98df-7d2514d9fd10}
 
@@ -92,3 +94,5 @@ de revenir au premier document trouvé.
 [objectReturn]:         #core-ref:3a0b4882-81ff-4030-9f60-a0ed0ff1f958
 [documentList]:         #core-ref:8f0824fa-eed6-4170-b52d-d3dc7c5cb9c1
 [doc]:                  #core-ref:1d557fb4-4eca-4ab8-a334-974fe563ddd2
+[preaffect]:                #core-ref:e6f36fea-9f42-4751-ba9b-c3aafec56559
+[postaffect]:               #core-ref:7e9f3b6f-f801-4fa9-8215-f02d575b357f

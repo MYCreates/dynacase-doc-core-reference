@@ -117,7 +117,8 @@ La création de document est réalisée par la fonction [createDoc()][createDoc]
 ## Voir aussi {#core-ref:f3de1eb0-942f-488b-a9dc-e165a7bf7c9f}
 
 * [createDoc()][createDoc],
-* [createTmpDoc()][createTmpDoc].
+* [createTmpDoc()][createTmpDoc],
+* [Doc::preAffect()][preaffect].
 
 <!-- links -->
 
@@ -127,3 +128,4 @@ La création de document est réalisée par la fonction [createDoc()][createDoc]
 [isAlive]:      #core-ref:b791d14e-800a-4b3b-bee7-41e271a8087e
 [createDoc]:    #core-ref:9886581a-243a-4c78-8490-8fda2209fd93
 [createTmpDoc]: #core-ref:6b745549-eb65-46f5-b0c1-5fa80661f1b7
+[preaffect]:    #core-ref:e6f36fea-9f42-4751-ba9b-c3aafec56559
