@@ -273,11 +273,11 @@ Note: on pourrait aussi utiliser une méthode statique, qui aurait sûrement plu
 | -                     |               |        |            |                                                         |
 | article_qte           | Quantité      | int    | W          |                                                         |
 | article_prix_unitaire | Prix unitaire | double | W          |                                                         |
-| article_prix_total    | Prix total    |        | R          | `MathUtils::product(article_qte,article_prix_unitaire)` |
+| article_prix_total    | Prix total    |        | R          | `MathUtils::mult(article_qte,article_prix_unitaire)` |
 
     [php]
     class MathUtils {
-        public static function product($a, $b){
+        public static function mult($a, $b){
             return floatval($a) * floatval($b);
         }
     }
