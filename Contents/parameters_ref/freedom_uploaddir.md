@@ -27,6 +27,11 @@ La valeur doit désigner un répertoire accessible en écriture par le serveur w
 Si le répertoire est situé en dehors de l'espace d'installation, son contenu ne
 sera pas récupéré lors de la constitution d'une [archive de contexte][savectx].
 
+Lors de la restauration d'une archive de contexte, si la valeur de
+`FREEDOM_UPLOADDIR` référence un répertoire à l'extérieur du répertoire du
+contexte, alors sa valeur est réinitialisée à sa valeur initiale (i.e.
+`./var/tmp`).
+
 <!-- links -->
 
 [importarchive]: #core-ref:021b7db1-7baf-48c4-8eb9-4a388355dd86
