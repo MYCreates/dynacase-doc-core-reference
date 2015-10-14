@@ -20,6 +20,10 @@ La valeur doit désigner un répertoire accessible en écriture par le serveur w
 
 Voir aussi [`CORE_TMPDIRMAXAGE`][core_tmpdirmaxage].
 
+Lors de la restauration d'une archive de contexte, si la valeur de
+`CORE_TMPDIR` référence un répertoire à l'extérieur du répertoire du contexte,
+alors sa valeur est réinitialisée à sa valeur initiale (i.e. `./var/tmp`).
+
 <!-- links -->
 
 [wsh_cleanContext]: #core-ref:100b123b-da1a-45b4-848b-0622f3e09a40
