@@ -33,14 +33,22 @@ Le langage de mise en forme est le html, et un éditeur WYSIWYG (basé sur [CKEd
 L'éditeur CKeditor nettoit le code HTML inséré. Il ne conserve que les balises
 qui peuvent être insérées avec la barre de menu.
 
-<span class="flag from release">3.2.19</span> Lors de l'enregistrement, 
+<span class="flag from release">3.2.19</span> Lors de l'enregistrement sur le serveur, 
 le nettoyage suivant est effectué :
 
 *   Suppression de tous les attributs commençant par "on" ou "xmlns"
-*   Suppression du javascript, applet et vbscript (le contenu est conservé sans les balises)
+*   Suppression du javascript, applet et vbscript (le contenu est conservé sans les balises )
 *   Suppression des éléments avec namespace
 *   Les entités UTF-8 sont décodées ;
 *   Les commentaires sont supprimés.
+
+En ce qui concerne les balises "script", elles ne sont pas autorisées par
+CKEditor quelque soit la configuration. Le nettoyage côté serveur est réalisé
+pour les données qui peuvent provenir d'une autre source que l'éditeur web.
+
+<span class="flag from release">3.2.20</span> Lors de l'[affectation][setvalue]
+de l'attribut, le fragment HTML est controllé afin de vérifier s'il est bien
+[formé][xmlnormalize] et retourne une erreur si ce n'est pas le cas.
 
 ## Format de stockage {#core-ref:083d2816-0682-4c35-b248-caa6e162b80e}
 
@@ -80,6 +88,8 @@ htmlclean
     *   les attribut des balises `span` (le contenu est conservé) et `font` sont supprimés ;
     *   les attributs `@class` et `@style` sont supprimés ;
     *   les balises `style` sont supprimées.
+    
+    De plus, le fragment HTML est réécrit sous une forme [normalisée][xmlnormalize]<span class="flag from release">3.2.20</span>
     
     Les valeurs possibles sont :
     
@@ -332,3 +342,5 @@ toolbarexpand
 [JSCALENDAR_HOME]: http://www.dynarch.com/projects/calendar/old/ "site officiel de JSCalendar"
 [odt_restrictions]: #core-ref:3742b35d-ddc0-440e-a0aa-08ea2faf0e46
 [docrev]: #core-ref:9bcfd205-fb07-4a71-be06-ba07d4a9cc7c
+[xmlnormalize]:     http://php.net/manual/fr/domdocument.normalizedocument.php "PHP DOMDocument::normalizeDocument"
+[setvalue]:         #core-ref:febc397f-e629-4d47-955d-27cab8f4ed2f
