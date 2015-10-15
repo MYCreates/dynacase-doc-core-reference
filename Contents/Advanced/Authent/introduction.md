@@ -49,7 +49,7 @@ le fichier `conf/local-dbaccess.php`.
 ![ Workflow d'authentification ](auth_user_method_calls.png)
 
 Lorsque l'utilisateur demande une page, un appel est effectué à la méthode
-`checkAuthentication()` *(1)* de l'Authenticator qui retourne si l'utilisateur
+`checkAuthentication()` *(1)* de l'Authenticator qui vérifie si l'utilisateur
 est déjà authentifié ou non.
 
 Si l'utilisateur n'est pas authentifié, alors il est redirigé vers la méthode
@@ -65,5 +65,13 @@ d'une part un premier contrôle auprès du Provider via l'appel de la méthode
 `checkAuthorization()` de l'Authenticator *(2)*, et d'autre part, un deuxième
 contrôle d'autorisation final auprès de Dynacase *(3)*.
 
+Si l'authentification réussie, la page est redirigée sur l'url initialement
+demandée. Cette redirection entraine le [contrôle d'accès][acls] à l'action
+demandée.
+
+Si l'authentification échoue, la page de demande d'authentification est de
+nouveau affichée.
+
 <!-- links -->
 [wikipedia_Basic_access_authentication]: http://en.wikipedia.org/wiki/Basic_access_authentication
+[acls]:     #core-ref:a98b72ea-c063-4907-abc4-e5171ab55e59
