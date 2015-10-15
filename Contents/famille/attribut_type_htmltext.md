@@ -319,6 +319,14 @@ toolbar
         * "u"
         * "ul[list-style-type]"
         * "var"
+    
+    Pour les toolbars qui comportent le bouton "insérer une image", le widget
+    permet d'insérer des documents "image" déjà enregistrés sur le serveur. Il
+    permet aussi d'ajouter de nouvelles images si le [droit][profil] "créer"
+    sur la  famille "image" (nom logique : `IMAGE`) est donné à l'utilisateur.
+    Les nouvelles images créées n'ont pas de profilage particulier et peuvent être
+    réutilisées par d'autres utilisateurs.
+
 
 toolbarexpand
 :   Indique si la barre de menu doit être dépliée lors de l'affichage de l'éditeur.
@@ -344,3 +352,4 @@ toolbarexpand
 [docrev]: #core-ref:9bcfd205-fb07-4a71-be06-ba07d4a9cc7c
 [xmlnormalize]:     http://php.net/manual/fr/domdocument.normalizedocument.php "PHP DOMDocument::normalizeDocument"
 [setvalue]:         #core-ref:febc397f-e629-4d47-955d-27cab8f4ed2f
+[profil]:           #core-ref:f1575705-10e8-4bf2-83b3-4c0b5bfb77cf
