@@ -46,5 +46,5 @@ N/A
 [id_document]:          #core-ref:9aa8edfa-2f2a-11e2-aaec-838a12b40353 "Propriété ID"
 [header_location]:      https://en.wikipedia.org/wiki/HTTP_location "Wikipedia : Header location"
 [referer]:              https://en.wikipedia.org/wiki/Referer "Wikipedia : Referer"
-[warningMessage]:       https://docs.anakeen.com/dynacase/3.2/dynacase-core-api-reference/_lib_8_common_8php.html#ab39caef8851ccc293383615211dee0c3 "AddWarningMessage"
+[warningMessage]:       #core-ref:4ee92978-bed2-4c2a-8e1a-04d37b1a3328
 [attrmenu]:             #core-ref:c976efc3-dc70-463e-a147-2934c96b7bb3
