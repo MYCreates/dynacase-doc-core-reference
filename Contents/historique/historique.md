@@ -13,6 +13,7 @@ Dynacase.
 | Nouvelle option d'attribut htmltext                                | [allowedcontent][htmltextopt]                                               | <span class="flag new">Nouveau</span>       |
 | Ajout description des méthodes addWarningMsg et addLogMsg          | [Action::addwarningmsg()][addwarningmsg],  [Action::addLogmsg()][addlogmsg] | <span class="flag update">Mis à jour</span> |
 | Précision sur la détection paramètre des CSV lors de l'importation | [Précaution sur l'importation de document][importlimits]                    | <span class="flag update">Mis à jour</span> |
+| Orientation des images jpeg                                        | [Vue des attributs images][imgview]                                         | <span class="flag update">Mis à jour</span> |
 
 ## Édition 8 {#core-ref:f10874a8-78c8-42eb-9908-5eaaf04d247f}
 
@@ -233,3 +234,4 @@ retour d'erreur.
 [addwarningmsg]:        #core-ref:4ee92978-bed2-4c2a-8e1a-04d37b1a3328
 [addlogmsg]:            #core-ref:1e4c336f-f2af-462b-86d5-938f6b385b79
 [importlimits]:         #core-ref:ab8856e9-1850-46d9-ae22-20fb54f9c078
+[imgview]:              #core-ref:ce33d1ac-a7b6-4129-b8f2-ee5e11c02055
