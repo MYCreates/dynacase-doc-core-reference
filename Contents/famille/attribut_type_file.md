@@ -30,7 +30,7 @@ Les attributs de type *file* permettent d'insérer un fichier.
     Le paramètre applicatif "FDL_OLDFILEINPUTCOMPAT" indique si l'attribut doit présenter,
     de manière systématique, le bouton original "Parcourir"
     
-    ![ file - Modification html ](famille/attributs/file-old-modification.png "file - Compatibilité Modification html")
+    ![ file - FDL_OLDFILEINPUTCOMPAT Modification html ](famille/attributs/file-old-modification.png "file - Compatibilité Modification html")
 
 *   odt :
     
@@ -45,13 +45,14 @@ Lors de l'enregistrement du document, le fichier est stocké dans le *vault*.
 ## Format de stockage {#core-ref:2ff4878c-6db2-419f-9dcc-64db69c769d2}
 
 La valeur stockée est l'identifiant vault du fichier 
-(sous la forme *&lt;type-mime&gt;|&lt;vaultid&gt;|&lt;file-name&gt;*).
+(sous la forme *`<type-mime>|<vaultid>|<file-name>`*).
 
 Le type utilisé en base de donnée est `text`. 
 
 ## Options {#core-ref:cb7fd9e2-a5eb-4f4c-bff0-ed5593904ca5}
 
-En plus des [options communes à tous les types d'attributs](#core-ref:16e19c90-3233-11e2-a58f-6b135c3a2496), ce type d'attribut dispose des options suivantes :
+En plus des [options communes à tous les types d'attributs][commonopt], ce type
+d'attribut dispose des options suivantes :
 
 hideindav
 :   Indique si le fichier apparaît lors de l'accès au moyen du protocole webdav.
@@ -62,8 +63,14 @@ hideindav
     *   `no`
 
 inline
-:   Indique si le fichier doit être consulté directement dans le navigateur.
-    Dans le cas contraire, le téléchargement est forcé.
+:   Si le paramètre est `yes`, il indique que le fichier doit être consulté 
+    directement dans le navigateur.
+    Seuls les types de fichiers supportés par le navigateur peuvent être affichés
+    directement.  
+    Si le paramètre est `no`, le téléchargement est proposé par le navigateur.
+    Le nom du fichier proposé au téléchargement est celui du fichier enregistré.
+    Si le nom du fichier comporte des double-quotes `"`, ils sont remplacés par
+    des tirets `-`.
     
     Les valeurs possibles sont :
     
@@ -152,3 +159,4 @@ viewfiletype
 [JSCOLOR_home]: http://jscolor.com/ "site officiel de JSColor"
 [JSCALENDAR_HOME]: http://www.dynarch.com/projects/calendar/old/ "site officiel de JSCalendar"
 [odt_restrictions]: #core-ref:3742b35d-ddc0-440e-a0aa-08ea2faf0e46
+[commonopt]:        #core-ref:16e19c90-3233-11e2-a58f-6b135c3a2496
