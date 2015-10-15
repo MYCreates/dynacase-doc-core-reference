@@ -11,6 +11,16 @@ Les attributs de type *image* permettent d'insérer une image.
     une balise `img` alignée à droite.
     
     ![ image - consultation html ](famille/attributs/image-consultation.png "image - Consultation html")
+    L'image affichée par défaut est une miniature de l'image 
+    (sauf si l'option iwidth=auto) au format `png`.  
+    <span class="flag inline from release">3.2.20</span> Dans le cas d'image 
+    `jpeg`, la miniature est réorientée automatiquement 
+    en fonction des données exif de l'image. Par contre, si c'est l'image 
+    originale qui est affichée, elle n'est pas réorientée par le navigateur.  
+    Les navigateurs (pour l'instant) ne tiennent pas compte de
+    l'[orientation][setimageorient] dans les tags `image` mais seulement lors
+    de l'affichage direct sur une page.
+
 
 *   modification :
     
@@ -54,7 +64,7 @@ Le type utilisé en base de donnée est `text`.
 
 ## Options {#core-ref:b1a5a304-9eff-4e7a-8e0d-ab2363eaa346}
 
-En plus des [options communes à tous les types d'attributs](#core-ref:16e19c90-3233-11e2-a58f-6b135c3a2496), ce type d'attribut dispose des options suivantes :
+En plus des [options communes à tous les types d'attributs][commonopt], ce type d'attribut dispose des options suivantes :
 
 hideindav
 :   Indique si le fichier apparaît lors de l'accès au moyen du protocole webdav.
@@ -126,3 +136,5 @@ rn
 [JSCOLOR_home]: http://jscolor.com/ "site officiel de JSColor"
 [JSCALENDAR_HOME]: http://www.dynarch.com/projects/calendar/old/ "site officiel de JSCalendar"
 [odt_restrictions]: #core-ref:3742b35d-ddc0-440e-a0aa-08ea2faf0e46
+[commonopt]:        #core-ref:16e19c90-3233-11e2-a58f-6b135c3a2496
+[setimageorient]:   https://developer.mozilla.org/en-US/docs/Web/CSS/image-orientation "MDN : css image-orientation"

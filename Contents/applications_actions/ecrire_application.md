@@ -147,7 +147,10 @@ Les différentes clés utilisables dans `$app_desc` sont :
     qui donnent accès à plusieurs applications suivant leur tag. Pour 
     préciser plusieurs tags sur une même application, il faut les séparer par un
     espace. Exemple : Une application avec comme valeur dans tag `"CORE ADMIN"`
-    a le tag `"CORE"` et le tag `"ADMIN"`.
+    a le tag `"CORE"` et le tag `"ADMIN"`.  
+    Le tag "ADMIN" est réservé. Il signifie que l'application ne pourra pas être
+    utilisée depuis le point d'entrée par défaut ("index.php") mais qu'à partir du
+    _centre d'administration_ ("admin.php").
 
 Ces clés correspondent aux propriétés de la [classe Application][classapplication]
 

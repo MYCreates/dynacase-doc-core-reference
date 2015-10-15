@@ -106,6 +106,10 @@ Exemple d'exécution de l'action `FDL_FAMILYSCHEMA` de l'application `FDL` :
 
     ./wsh.php --app=FDL --action=FDL_FAMILYSCHEMA --id=DIR > dir.xsd
 
+Toute action ou tout script exécuté avec wsh n'utilise pas les sessions. Les
+sessions, étant utilisées pour une connexion avec le client web, n'ont pas lieu
+d'être utilisées.
+
 ## Retour d'erreur {#core-ref:982b9e0c-56ef-40c4-a8f8-0ae0826f07a2}
 
 Le script retourne un *exit status* indiquant si une erreur s'est produite.

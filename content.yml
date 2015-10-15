@@ -296,6 +296,12 @@ book:
     - level:   3
       element: "chapter"
       content:  "API/Class_Action/Method_getImageUrl.md"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_Action/Method_addWarningMsg.md"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_Action/Method_addLogMsg.md"
     - level:   2
       element: "chapter"
       content:  "API/Class_ActionUsage.md"
