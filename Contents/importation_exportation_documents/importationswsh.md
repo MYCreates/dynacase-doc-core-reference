@@ -6,9 +6,9 @@ documents en ligne de commande. Les types suivants sont supportés par le script
 
 *   [CVS][import_csv]
     *   Encodage : UTF-8,
-    *   Séparateur de colonnes : `;`(point-virgule par défaut - configurable en <span class="flag from release">3.2.12</span>).
-    *   Délimiteur de texte : ` ` (vide par défaut - configurable en <span class="flag from release">3.2.12</span>),
-    [ODS][import_csv],
+    *   Séparateur de colonnes : `;`(point-virgule par défaut - configurable en <span class="flag inline from release">3.2.12</span>).
+    *   Délimiteur de texte : ` ` (vide par défaut - configurable en <span class="flag inline from release">3.2.12</span>),
+*   [ODS][import_csv],
 *   [XML][import_xml],
 *   [ZIP][import_archive],
 *   [TGZ][import_archive]

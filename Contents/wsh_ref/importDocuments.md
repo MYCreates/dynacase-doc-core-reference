@@ -86,15 +86,14 @@ Voir aussi :
     séparation des champs. Généralement le caractère est `,` (virgule) ou 
     `;` (point-virgule).  
     Si la valeur est `auto`, le caractère de séparation parmi `,` et `;` est 
-    trouvé automatiquement.
+    trouvé automatiquement. 
 
 `csv-enclosure` (default `vide`) <span class="flag from release">3.2.12</span>
 :   Dans le cas d'importation en fichier [csv][CSV] permet d'indiquer le caractère de
     de délimiteur de texte. Généralement le caractère est `"` (double quote) ou 
     `'` (simple quote)  
     Si la valeur est `auto`, le caractère de séparation parmi `"` et `'` est 
-    trouvé automatiquement.
-
+    trouvé automatiquement. 
 
 `csv-linebreak` (default "`\n` - 2 caractères `\` et `n`") <span class="flag from release">3.2.12</span>
 :   Dans le cas d'importation en fichier [csv][CSV] permet d'indiquer une séquence de 
@@ -106,7 +105,10 @@ Voir aussi :
 
 ## Limite d'usage {#core-ref:ab8856e9-1850-46d9-ae22-20fb54f9c078}
 
-Aucunes.
+En cas d'importation de fichier CSV, la détection automatique de délimiteur et
+de séparateur (csv-enclosure=auto et csv-separator=auto) peux être erroné car la
+détection se base sur des statistiques d'apparition de ces caractères. Si ces
+paramètres sont connus, il est recommandé de les indiquer explicitement.
 
 <!-- links -->
 [wshImportDocuments]:   #core-ref:1c97f553-dcba-454e-96a0-8059230065b3
