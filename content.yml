@@ -1153,6 +1153,14 @@ book:
       content:  "wsh_ref/cleanVaultOrphans.md"
       flags:
         new: "nouveauté"
+    - level:   2
+      content:  "wsh_ref/wstop.md"
+      flags:
+        update: "mis à jour"
+    - level:   2
+      content:  "wsh_ref/wstart.md"
+      flags:
+        update: "mis à jour"
 
 ##
 # Advanced
