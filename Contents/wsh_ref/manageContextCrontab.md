@@ -20,6 +20,9 @@ dans l’ordonnanceur cron du système.
     
     `unregister`
     :   Décharger un fichier de définition de crontab pour le contexte.
+    
+    `unregister-all`
+    :   Décharger toutes les définitions de crontab pour le contexte.
 
 `file`
 :   Permet de spécifier le fichier de crontab à charger/décharger pour le

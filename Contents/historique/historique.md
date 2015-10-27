@@ -15,6 +15,7 @@ Dynacase.
 | Précision sur la détection paramètre des CSV lors de l'importation | [Précaution sur l'importation de document][importlimits]                    | <span class="flag update">Mis à jour</span> |
 | Orientation des images jpeg                                        | [Vue des attributs images][imgview]                                         | <span class="flag update">Mis à jour</span> |
 | Script `wstop` et `wstart`                                         | [`wstop`][wstop], [`wstart`][wstart]                                        | <span class="flag update">Mis à jour</span> |
+| Ajout option `--cmd=unregister-all` à [manageContextCrontab][manageContextCrontab] | [manageContextCrontab][manageContextCrontab]                | <span class="flag update">Mis à jour</span> |
 
 ## Édition 8 {#core-ref:f10874a8-78c8-42eb-9908-5eaaf04d247f}
 
@@ -238,3 +239,4 @@ retour d'erreur.
 [imgview]:              #core-ref:ce33d1ac-a7b6-4129-b8f2-ee5e11c02055
 [wstop]:                #core-ref:f88c39a9-dc65-4443-a344-ab0ab56f4ca1
 [wstart]:               #core-ref:04a8b73b-c1b3-44a9-bb19-6a712592a7f3
+[manageContextCrontab]: #core-ref:6aa4de16-1e51-49df-9926-7079aab0d268
