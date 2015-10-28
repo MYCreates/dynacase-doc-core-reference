@@ -2,7 +2,7 @@ book:
   title: "Manuel de référence"
   module: "Core"
   version: "3.2"
-  edition: "8"
+  edition: "9"
   githubsrc: "https://github.com/Anakeen/dynacase-doc-core-reference"
   googleSearchAPI : "008147054905479727235:j5nj6h1_ye4"
   chapters:
