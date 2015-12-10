@@ -4,6 +4,14 @@ Ce chapitre contient un descriptif des améliorations entre les releases de
 Dynacase.
 
 
+## Édition 10
+
+
+|                 Modifications                  |                  Chapitre                 |                Version                |
+| :--------------------------------------------- | :---------------------------------------- | :------------------------------------ |
+| Explications de l'objet de partage de document | [Objet de partage de document][shareddoc] | <span class="flag new">Nouveau</span> |
+|                                                |                                           |                                       |
+
 ## Édition 9  {#core-ref:568e128a-3a2b-493c-b59d-1c5cce8ae515}
 
 
@@ -240,3 +248,4 @@ retour d'erreur.
 [wstop]:                #core-ref:f88c39a9-dc65-4443-a344-ab0ab56f4ca1
 [wstart]:               #core-ref:04a8b73b-c1b3-44a9-bb19-6a712592a7f3
 [manageContextCrontab]: #core-ref:6aa4de16-1e51-49df-9926-7079aab0d268
+[shareddoc]:            #core-ref:947948f6-242c-40a7-8f70-8013fe2ab1f1

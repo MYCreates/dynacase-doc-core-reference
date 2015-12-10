@@ -30,6 +30,10 @@ l'identifiant n'existe pas où n'est pas indiqué.
 Cet objet n'est pas utilisable en tant que tel et doit être considéré comme un
 retour d'erreur.
 
+Cette méthode utilise l'objet de [partage de document][shareddoc]. Si le
+document demandé est dans cet objet de partage, le document est récupéré de la
+zone de partage et non de la base de données.
+
 ## Liste des paramètres {#core-ref:1f4c5acd-963a-4b13-95c8-8edd3cc783ff}
 
 (string) `dbaccess`
@@ -118,7 +122,8 @@ La création de document est réalisée par la fonction [createDoc()][createDoc]
 
 * [createDoc()][createDoc],
 * [createTmpDoc()][createTmpDoc],
-* [Doc::preAffect()][preaffect].
+* [Doc::preAffect()][preaffect],
+* [Partage de documents][shareddoc].
 
 <!-- links -->
 
@@ -129,3 +134,4 @@ La création de document est réalisée par la fonction [createDoc()][createDoc]
 [createDoc]:    #core-ref:9886581a-243a-4c78-8490-8fda2209fd93
 [createTmpDoc]: #core-ref:6b745549-eb65-46f5-b0c1-5fa80661f1b7
 [preaffect]:    #core-ref:e6f36fea-9f42-4751-ba9b-c3aafec56559
+[shareddoc]:    #core-ref:947948f6-242c-40a7-8f70-8013fe2ab1f1
