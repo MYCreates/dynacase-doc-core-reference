@@ -6,7 +6,11 @@ associés aux documents en plus des données du documents.
 Cette option n'est applicable qu'avec le format _"Données réimportables"_.
 
 Si le document a un profil lié alors le document _Profil_ sera aussi exporté.
+
 Si le document a un profil dédié, la clef `PROFIL` portera sur le document même.
+
+Si le profil lié est un profil dynamique, le profil calculé ne sera pas exporté,
+mais le profil dynamique sera exporté.
 
 Soit les 4 documents suivants :
 
@@ -25,33 +29,34 @@ Soit les 4 documents suivants :
 
 Le fichier _csv_ produit sera comme décrit ci-dessous :
 
-|   //FAM    |            animal(ZOO_ANIMAL)           |               Identifiant               | Dossier |        nom         |       espèce       |       classe       |             |
-| ---------- | --------------------------------------- | --------------------------------------- | ------- | ------------------ | ------------------ | ------------------ | ----------- |
-| ORDER      | ZOO_ANIMAL                              |                                         |         | an_nom             | an_espece          | an_classe          |             |
-| DOC        | ZOO_ANIMAL                              | aliRotor                                |         | Rotor              | ZOO_ESP_ALLI       | Reptilia           |             |
-|            |                                         |                                         |         |                    |                    |                    |             |
-| _//FAM_    | _profil de document(PDOC) _             | Identifiant                             | Dossier | titre              | description        | family id          | famille     |
-| ORDER      | PDOC                                    |                                         |         | ba_title           | prf_desc           | dpdoc_famid        | dpdoc_fam   |
-| DOC        | PDOC                                    | __ZOO_PRF_CLASSIFICATION__              |         | Classification     |                    |                    |             |
-| __PROFIL__ | __ZOO_PRF_CLASSIFICATION__              |                                         |         | view=ZOO_ROLE_VETO | edit=ZOO_ROLE_VETO | view=ZOO_ROLE_SURV | view=GADMIN |
-| __PROFIL__ | aliRotor                                | __ZOO_PRF_CLASSIFICATION__              |         |                    |                    |                    |             |
-| ORDER      | ZOO_ANIMAL                              |                                         |         | an_nom             | an_espece          | an_classe          |             |
-| DOC        | ZOO_ANIMAL                              | TEMPORARY_ZOO_ANIMAL_2079_51a707c53aa48 |         | Théodor            | ZOO_ESP_ALLI       | Reptilia           |             |
-| __PROFIL__ | TEMPORARY_ZOO_ANIMAL_2079_51a707c53aa48 | ZOO_PRF_CLASSIFICATION                  |         |                    |                    |                    |             |
-| DOC        | ZOO_ANIMAL                              | TEMPORARY_ZOO_ANIMAL_2080_51a707c54ae36 |         | Éléonore           | ZOO_ESP_ALLI       | Reptilia           |             |
-| DOC        | ZOO_ANIMAL                              | TEMPORARY_ZOO_ANIMAL_3296_51a707c54ce55 | Gastor  | ZOO_ESP_ALLI       | Reptilia           |                    |             |
-| __PROFIL__ | TEMPORARY_ZOO_ANIMAL_3296_51a707c54ce55 |                                         |         | view=ZOO_ROLE_SURV | view=ZOO_ROLE_VETO | edit=ZOO_ROLE_VETO |             |
+|   //FAM    |            animal(ZOO_ANIMAL)           |               Identifiant               |  Dossier  |        nom         |       espèce       |       classe       |             |
+| ---------- | --------------------------------------- | --------------------------------------- | --------- | ------------------ | ------------------ | ------------------ | ----------- |
+| ORDER      | ZOO_ANIMAL                              |                                         |           | an_nom             | an_espece          | an_classe          |             |
+| DOC        | ZOO_ANIMAL                              | aliRotor                                |           | Rotor              | ZOO_ESP_ALLI       | Reptilia           |             |
+|            |                                         |                                         |           |                    |                    |                    |             |
+| _//FAM_    | _profil de document(PDOC) _             | _Identifiant_                           | _Dossier_ | _titre_            | _description _     | _family id_        | _famille_   |
+| ORDER      | PDOC                                    |                                         |           | ba_title           | prf_desc           | dpdoc_famid        | dpdoc_fam   |
+| DOC        | PDOC                                    | __ZOO_PRF_CLASSIFICATION__              |           | Classification     |                    |                    |             |
+| __PROFIL__ | __ZOO_PRF_CLASSIFICATION__              |                                         |           | view=ZOO_ROLE_VETO | edit=ZOO_ROLE_VETO | view=ZOO_ROLE_SURV | view=GADMIN |
+| __PROFIL__ | aliRotor                                | __ZOO_PRF_CLASSIFICATION__              |           |                    |                    |                    |             |
+| ORDER      | ZOO_ANIMAL                              |                                         |           | an_nom             | an_espece          | an_classe          |             |
+| DOC        | ZOO_ANIMAL                              | TEMPORARY_ZOO_ANIMAL_2079_51a707c53aa48 |           | Théodor            | ZOO_ESP_ALLI       | Reptilia           |             |
+| __PROFIL__ | TEMPORARY_ZOO_ANIMAL_2079_51a707c53aa48 | __ZOO_PRF_CLASSIFICATION__              |           |                    |                    |                    |             |
+| DOC        | ZOO_ANIMAL                              | TEMPORARY_ZOO_ANIMAL_2080_51a707c54ae36 |           | Éléonore           | ZOO_ESP_ALLI       | Reptilia           |             |
+| __PROFIL__ | TEMPORARY_ZOO_ANIMAL_2080_51a707c54ae36 | __ZOO_PRF_CLASSIFICATION__              |           |                    |                    |                    |             |
+| DOC        | ZOO_ANIMAL                              | TEMPORARY_ZOO_ANIMAL_3296_51a707c54ce55 |           | Gastor             | ZOO_ESP_ALLI       | Reptilia           |             |
+| __PROFIL__ | TEMPORARY_ZOO_ANIMAL_3296_51a707c54ce55 |                                         |           | view=ZOO_ROLE_SURV | view=ZOO_ROLE_VETO | edit=ZOO_ROLE_VETO |             |
 
 Un nom logique temporaire est généré pour les documents n'ayant pas de nom
 logique. Cet identifiant temporaire est supprimé tous les soirs avec le
-programme _wsh_ `cleanContext`.
+programme _wsh_ [`cleanContext`][cleancontext].
 
 La clef `PROFIL` contient l'ensemble des droits explicites mis sur les
-[profils][profilage]. L'affectation des droits est faite avec les noms
-logiques des documents _Utilisateurs_,  _Groupes_ et _Rôles_ associés aux
-comptes. Si le nom logique n'est pas présent, l'identifiant système du compte
-est utilisé. Attention dans ce cas, il s'agit de l'identifiant du compte et non
-du document lié au compte.
+[profils][profilage]. L'affectation des droits est faite avec les noms logiques
+des documents _Utilisateurs_,  _Groupes_ et _Rôles_ associés aux comptes. Si le
+nom logique n'est pas présent, l'identifiant système du compte est utilisé.
+Attention dans ce cas, il s'agit de l'[identifiant du compte][userid] et non du
+document lié au compte.
 
 Les différents notations de profils sont :
 
@@ -60,9 +65,10 @@ Les différents notations de profils sont :
 *   [attributeName]=[documentName] // Cas des profils dynamiques
 *   [attributeName]=[accountIdentifier]
 
-**Attention** : Par défaut, l'import des éléments ci-dessus ne fait qu'ajouter les nouveaux droits et ne supprime
-pas les droits supprimés. Il existe différentes [options][options_profil_import] pour l'import des profils permettant de
- modifier ce comportement.
+**Attention** : Par défaut, l'import des éléments ci-dessus ne fait qu'ajouter
+les nouveaux droits et ne supprime pas les droits supprimés. Il existe
+différentes [options][options_profil_import] pour l'importation des profils
+permettant de  modifier ce comportement.
 
 ## Exportation de profil de famille {#core-ref:8701cd51-0767-4620-8770-57dff9c4460a}
 
@@ -125,3 +131,5 @@ pas les droits supprimés. Il existe différentes [options][options_profil_impor
 <!-- links -->
 [profilage]: #core-ref:ce576351-dbe6-45d1-8097-f9573502b651
 [options_profil_import]: #core-ref:2ec1ae6f-4b2a-4bc2-a100-4e5873538bb5
+[cleancontext]:  #core-ref:100b123b-da1a-45b4-848b-0622f3e09a40
+[userid]:        #core-ref:4842d6c2-f88d-41d9-aa30-04437ffdb67e
