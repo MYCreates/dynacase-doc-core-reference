@@ -6,14 +6,13 @@ Dynacase.
 
 ## Édition 10
 
-
-|                 Modifications                  |                  Chapitre                 |                Version                |
-| :--------------------------------------------- | :---------------------------------------- | :------------------------------------ |
-| Explications de l'objet de partage de document | [Objet de partage de document][shareddoc] | <span class="flag new">Nouveau</span> |
-|                                                |                                           |                                       |
+|                     Modifications                      |                                Chapitre                                |                 Version                  |
+| :----------------------------------------------------- | :--------------------------------------------------------------------- | :--------------------------------------- |
+| Explications de l'objet de partage de document         | [Objet de partage de document][shareddoc]                              | <span class="flag new">Nouveau</span>    |
+| Précision sur les exportations vis-à-vis des révisions | [Révision et exportation][exportrevision], [Révision XML][revisionxml] | <span class="flag new">Mis à jour</span> |
+|                                                        |                                                                        |                                          |
 
 ## Édition 9  {#core-ref:568e128a-3a2b-493c-b59d-1c5cce8ae515}
-
 
 |                           Modifications                            |                                   Chapitre                                  |                   Version                   |
 | :----------------------------------------------------------------- | :-------------------------------------------------------------------------- | :------------------------------------------ |
@@ -249,3 +248,5 @@ retour d'erreur.
 [wstart]:               #core-ref:04a8b73b-c1b3-44a9-bb19-6a712592a7f3
 [manageContextCrontab]: #core-ref:6aa4de16-1e51-49df-9926-7079aab0d268
 [shareddoc]:            #core-ref:947948f6-242c-40a7-8f70-8013fe2ab1f1
+[exportrevision]:       #core-ref:c44857d2-6a33-4552-af61-3aafad359416
+[revisionxml]:          #core-ref:7b0f2e8f-bdd0-44b1-b664-2ab4e3975740

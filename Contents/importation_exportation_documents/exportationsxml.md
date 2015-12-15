@@ -37,6 +37,54 @@ porte la date de génération et l'auteur.
 
 Avec cette option les schémas _Xml_ des familles ne sont pas exportés.
 
+## Format du XML de document {#core-ref:84e4a7f3-34f2-434e-bc32-54c4d1946cf3}
+
+Les attributs non structurant sont insérés dans les attributs de structure (tab,
+frame, array). 
+
+    [xml]
+    <my_tab><!-- Onglet -->
+        <my_frame><!-- Cadre -->
+            <my_array><!-- Tableau : rangée par rangée -->
+                <my_attr_col1>Rangée 1 Colonne 1</my_attr_col1>
+                <my_attr_col2>Rangée 1 Colonne 2</my_attr_col2>
+            </my_array>
+            <my_array>
+                <my_attr_col1>Rangée 2 Colonne 1</my_attr_col1>
+                <my_attr_col2>Rangée 2 Colonne 2</my_attr_col2>
+            </my_array>
+            
+             <my_attribute1>Valeur</my_attribute1>
+             <my_attribute2>Valeur</my_attribute2>
+        </my_frame>
+    </my_tab>
+
+Les valeurs brutes des attributs non structurant sont contenus dans le
+contenu de la balise.
+
+### Attributs spécifiques {#core-ref:8818159b-2f2c-4b5e-9e0f-3a87d96c0d1b}
+
+Les attributs de type ["docid"][docid] et ["file"][file] ont des attributs
+supplémentaires.
+
+#### Attribut XML docid, account, thésaurus {#core-ref:7b0f2e8f-bdd0-44b1-b664-2ab4e3975740}
+
+*   `id` : Identifiant numérique de la relation
+*   `name` : Nom logique de la relation
+*   `revision` : <span class="flag from release">3.2.21</span> Contient 
+    le numéro de la révision si l'option "[`docrev`][docrev]`=fixed`". 
+    Contient "`state:<état>`" si l'option est "[`docrev`][docrev]`=state(<état>)`".
+
+#### Attribut XML file, image {#core-ref:cdd3d492-f605-414c-9642-18391e9f441c}
+
+*   `vid`: Identifiant du fichier dans le [coffre][vault]
+*   `mime` : Type mime du fichier
+*   `href` : Url de download du fichier
+*   `title` : Nom du fichier
+
+Le contenu de la balise est le fichier encodé si l'option "*Avec les fichiers*" a
+été sélectionnée.
+
 ## Exemple d'un document exporté {#core-ref:f0d2fdee-efd0-4c31-937b-b29b7a5da5d2}
 
     [xml]
@@ -163,4 +211,8 @@ Les paramètres sont :
 
 <!-- links -->
 [xmlschema]: http://fr.wikipedia.org/wiki/XML_Schema
-[importXML]: #core-ref:81ad5a48-4c0f-468b-90ed-fe462fba7b96
+[importXML]:    #core-ref:81ad5a48-4c0f-468b-90ed-fe462fba7b96
+[vault]:        #core-ref:4e91a88e-66a3-46e7-824d-d11adb0c39fe
+[docid]:        #core-ref:d461d5f5-b635-47a0-944d-473c227587ab
+[file]:         #core-ref:0e904376-317c-426e-bc6d-e56fd52bad89
+[docrev]:       #core-ref:9bcfd205-fb07-4a71-be06-ba07d4a9cc7c

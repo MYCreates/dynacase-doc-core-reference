@@ -178,6 +178,25 @@ dans un fichier d'[archive Zip][exportxmlzip].
 Tous les documents sont enregistrés dans un seul et même [fichier
 XML][exportxml].
 
+## Exportations et révisions {#core-ref:c44857d2-6a33-4552-af61-3aafad359416}
+
+Les documents révisés peuvent faire partie du résultat de l'exportation si la
+recherche spécifie l'option "toutes les révisions".
+
+Si un document révisé (document figé) à un nom logique, il ne sera pas utilisé
+comme [identificateur][importcsvid].  C'est son identifiant numérique qui sera
+utilisé dans ce cas.
+
+Si un document référence une révision précise d'un document (option `docrev`
+différente de "latest"), c'est son identifiant numérique qui sera utilisé même
+s'il possède un nom logique. Dans ce cas, un avertissement sera affiché.
+
+<span class="flag nota-bene inline"/>La réimportation d'une exportation qui
+comporte des révisions va créer de nouveaux documents si les identifiants
+n'existent pas déjà ou mettre à jour la révision courante avec les valeurs de
+révisions précédentes.
+
+
 <!-- links -->
 [ImportationCSV]: #core-ref:2fb3284a-2424-44b2-93ae-41dc3969e093
 [importArchive]: #core-ref:021b7db1-7baf-48c4-8eb9-4a388355dd86
@@ -189,3 +208,5 @@ XML][exportxml].
 [keys]: #core-ref:7eefc8e7-16a6-4188-99d5-c2c9d817a1fe
 [format]: #core-ref:e51257aa-3a16-41be-94ed-7ef2206a899b
 [visibility]:   #core-ref:3e67d45e-1fed-446d-82b5-ba941addc7e8
+[importcsvid]:  #core-ref:3acb8fbe-6e5a-4933-95fa-2cea0eae2fc5
+[docrev]:       #core-ref:9bcfd205-fb07-4a71-be06-ba07d4a9cc7c
