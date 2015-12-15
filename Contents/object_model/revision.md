@@ -75,6 +75,12 @@ l'`id` passé en paramètre ; ce qui veut dire que ce n'est pas nécessairement
 révision courante. Le troisième paramètre de `new_doc` permet de récupérer
 systématiquement la révision courante.
 
+Si l'identifiant de la fonction `new_doc` désigne un nom logique, c'est toujours
+la version courante qui est retournée. 
+
+<span class="flag inline nota-bene"/> Le nom logique est le même sur toute la 
+lignée documentaire.
+
 ## Révisions et recherche {#core-ref:0164de5f-5968-4a43-8963-30a087314a83}
 
 Lors des recherches de documents avec un critère sur une relation, si la
