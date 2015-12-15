@@ -72,6 +72,7 @@ Les quatre premières ont une signification particulière :
 
 1.  1ère colonne : toujours `DOC`,
 1.  2ème colonne : identifiant de la famille (nom logique)
+
 1.  3ème colonne : identifiant du document (numérique ou nom logique)
     
     *   s'il est saisi
@@ -83,6 +84,11 @@ Les quatre premières ont une signification particulière :
             [clés d'importation][keys], il est mis à jour,
         *   sinon, un nouveau document est créé, et porte un nouvel identifiant
             généré par la base de données.
+    
+    <span class="flag nota-bene inline"/>Il n'est pas possible d'importer une révision 
+    figée d'un document. Seules les révisions courantes peuvent faire l'objet 
+    de modification. Si un identifiant pointe sur une révision passée 
+    c'est la révision courante qui sera modifiée par l'importation.
 
 1.  4ème colonne : identifiant du dossier dans lequel le document importé doit
     être inséré.

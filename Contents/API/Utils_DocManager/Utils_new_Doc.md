@@ -42,8 +42,9 @@ zone de partage et non de la base de données.
 
 (int|string) `id`
 :   Identifiant du document que l'on souhaite récupérer. Cet identifiant est
-    soit la [propriété][properties] `id` du document, soit la propriété `name` 
-    du document.
+    soit la [propriété][properties] `id` du document, soit la [propriété][properties] `name` 
+    (nom logique) du document. Si l'identifiant désigne un nom logique, la révision 
+    courante du document est retournée (l'option `latest` est ignorée).
 
 (string) `latest` (défaut : `false`)
 :   Dans le cas d'un document [révisé][review] indique si l'on souhaite récupérer

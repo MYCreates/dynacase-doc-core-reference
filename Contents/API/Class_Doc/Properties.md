@@ -155,7 +155,11 @@ locked
 name
 :   Nom logique du document.
     
-    Référence toujours la version courante d'un document.
+    Référence toujours la version courante d'un document. Le nom logique est identique
+    quelque soit la révision d'un même document. Lorsqu'on affecte un nom logique 
+    il est affecté sur l'ensemble de la lignée documentaire.
+    Si le nom logique est utilisé comme référence pour [accèder][new_doc] à un document, c'est la
+    dernière révision qui sera retourné.
 
 owner
 :   Identifiant système de l'utilisateur ayant créé le document.
@@ -241,3 +245,4 @@ wid
 [WF_document]:      #core-ref:b541e22f-5ece-4d19-8460-0cb0c5f3ec7a
 [docprof]:          #core-ref:f1575705-10e8-4bf2-83b3-4c0b5bfb77cf
 [docprofdyn]:       #core-ref:bc24834a-b380-4681-ae94-08b93076a7e8
+[new_doc]:          #core-ref:e978cbd1-5f54-4a06-a6be-f1c079c2d734
