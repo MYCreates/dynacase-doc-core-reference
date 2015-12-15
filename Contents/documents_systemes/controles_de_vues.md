@@ -31,8 +31,8 @@ un *masque*
     cette vue
 
 un numéro d'*ordre*
-:   entier strictement positif (**Attention** : une vue avec l'ordre 0 n'est pas
-    prise en compte, il permet d'indiquer un ordre de préférence pour les vues.)
+:   entier utilisé pour le [choix automatique][cvorder], 
+    il permet d'indiquer un ordre de préférence pour les vues.
 
 un caractère *affichable*
 :   indique si la vue doit être présentée à l'utilisateur sous forme de menu
@@ -65,17 +65,45 @@ spécifiée. Dans le cas contraire, un message d'erreur est retourné. Si le
 paramètre `vid` référence une vue non existante, ou lorsqu'aucune vue n'est
 spécifiée, la vue est automatiquement choisie selon le mécanisme suivant :
 
-1.  restriction à la liste des vues pour lesquelles
-    *   le *type* correspond à l'action courante,
-    *   l'utilisateur [est autorisé à y accéder][cvprofil],
-2.  classement des vues restantes par numéro d'*ordre* croissant
-,
-3.  utilisation de la première des vues restantes.
+1.  Restriction à la liste des vues pour lesquelles
+    *   le *type* (consultation/édition) correspond à l'action courante,
+    *   l'utilisateur [est autorisé à y accéder ][cvprofil],
+    *   l'ordre est **strictement positif** (&ge; 1).
+
+2.  Classement des vues restantes par numéro d'*ordre* croissant.
+
+3.  Utilisation de la première des vues restantes (n° d'ordre le plus petit &ge; 1).
     Si aucune des vues n'est utilisable, c'est la vue par défaut qui est
     utilisée.
 
+Exemple : Soit le contrôle de vue suivant
 
-## libellé du menu *modifier* {#core-ref:bcf1d848-9abb-4260-a4c1-0c6fd5abc3c9}
+| Identifiant de la vue |  Label  |     Type     | Ordre de sélection | Affichable | Droit User #1 | Droit User #2 |
+| --------------------- | ------- | ------------ | ------------------ | ---------- | ------------- | ------------- |
+| VUE1                  | Vue n°1 | Consultation |                  0 | Oui        | X             | X             |
+| VUE2                  | Vue n°2 | Consultation |                 10 | Non        |               | X             |
+| VUE3                  | Vue n°3 | Consultation |                 30 | Non        | X             |               |
+| VUE4                  | Vue n°4 | Consultation |                 20 | Oui        |               | X             |
+| VUE5                  | Vue n°5 | Édition      |                  0 | Oui        | X             |               |
+| VUE6                  | Vue n°6 | Édition      |                 10 | Non        |               | X             |
+| VUE7                  | Vue n°7 | Édition      |                    | Non        | X             | X             |
+| VUE8                  | Vue n°8 | Édition      |                 20 | Oui        |               | X             |
+
+Soit l'url : ?app=FDL&action=OPENDOC&mode=view&id=1234
+
+Pour l'utilisateur n°1 :
+
+*    Vue utilisée : VUE3
+*    Vue de modification proposée dans le menu "Modifier" : _Défaut_ (aucune vue d'édition n'est sélectionnable automatiquement)
+*    Vue proposée sur le menu : VUE1, VUE5, VUE7
+
+Pour l'utilisateur n°2 :
+
+*    Vue utilisée : VUE2
+*    Vue de modification proposée dans le menu "Modifier" : VUE6
+*    Vues proposées sur le menu : VUE1, VUE4, VUE8
+
+## Libellé du menu *modifier* {#core-ref:bcf1d848-9abb-4260-a4c1-0c6fd5abc3c9}
 
 Lors de la consultation, le libellé du menu *modifier* correspondra au libellé
 de la vue de modification choisie selon l'algorithme précédent.
@@ -95,3 +123,4 @@ sans masque et avec un ordre supérieur.
 [masque]: #core-ref:327ad491-06df-4e5b-b49a-695c75439fe1 "Définition d'un masque"
 [document_view]: #core-ref:cb3e2b97-ee6d-4cdf-aa25-b2e41d0d3156
 [cvprofil]: #core-ref:65603797-5d8a-4a0d-954a-2dc69b5af11e "Détail sur le profilage d'un contrôle de vue"
+[cvorder]:  #core-ref:b74b3617-2085-47f8-9172-9f35c0290b5a

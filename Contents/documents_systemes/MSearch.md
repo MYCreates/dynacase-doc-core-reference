@@ -9,6 +9,9 @@ recherches (au niveau de la base de données, c'est également la construction
 Elle est implémentée au moyen de la famille `MSEARCH`, qui étend la famille
 `SEARCH`.
 
+La recherche groupée n'exécute que les documents "recherche" qui ont le
+[droit][profil] "execute" pour l'utilisateur courant.
+
 ## Éléments de paramétrage {#core-ref:e12621a9-0884-425b-9517-71494411ce5c}
 
 Lors de la construction d'une recherche groupée, il suffit de spécifier la liste
@@ -17,3 +20,4 @@ identique à la recherche simple.
 
 <!-- links -->
 [psql_union]: http://www.postgresql.org/docs/9.3/static/queries-union.html "Documentation officielle de la construction UNION"
+[profil]:   #core-ref:a99dcc5f-f42f-4574-bbfa-d7bb0573c95d
