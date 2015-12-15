@@ -6,11 +6,11 @@ Dynacase.
 
 ## Édition 10
 
-|                     Modifications                      |                                Chapitre                                |                 Version                  |
-| :----------------------------------------------------- | :--------------------------------------------------------------------- | :--------------------------------------- |
-| Explications de l'objet de partage de document         | [Objet de partage de document][shareddoc]                              | <span class="flag new">Nouveau</span>    |
-| Précision sur les exportations vis-à-vis des révisions | [Révision et exportation][exportrevision], [Révision XML][revisionxml] | <span class="flag new">Mis à jour</span> |
-|                                                        |                                                                        |                                          |
+|                      Modifications                      |                                Chapitre                                |                 Version                  |
+| :------------------------------------------------------ | :--------------------------------------------------------------------- | :--------------------------------------- |
+| Explications de l'objet de partage de document          | [Objet de partage de document][shareddoc]                              | <span class="flag new">Nouveau</span>    |
+| Précision sur les exportations vis-à-vis des révisions  | [Révision et exportation][exportrevision], [Révision XML][revisionxml] | <span class="flag new">Mis à jour</span> |
+| Ajout information sur la révision pour formatCollection | [Formatage des relations][fmtDocId]                                    | <span class="flag new">Mis à jour</span> |
 
 ## Édition 9  {#core-ref:568e128a-3a2b-493c-b59d-1c5cce8ae515}
 
@@ -250,3 +250,4 @@ retour d'erreur.
 [shareddoc]:            #core-ref:947948f6-242c-40a7-8f70-8013fe2ab1f1
 [exportrevision]:       #core-ref:c44857d2-6a33-4552-af61-3aafad359416
 [revisionxml]:          #core-ref:7b0f2e8f-bdd0-44b1-b664-2ab4e3975740
+[fmtDocId]:             #core-ref:95aee029-f729-41f9-9b18-a6c20813c24d

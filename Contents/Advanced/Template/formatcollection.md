@@ -453,6 +453,8 @@ Note : La largeur de la miniature peut être définie avec l'attribut
         ["familyRelation"] => "TST_FMTCOL"
         ["url"] => "?app=FDL&amp;OPENDOC&amp;mode=view&amp;id=84412&amp;latest=Y"
         ["icon"] => "resizeimg.php?img=Images/test.png&size=14"
+        ["revision"] => -1
+        ["initid"] => 84412
         ["value"] => "84412"
         ["displayValue"] => "Test 1"
     )
@@ -462,7 +464,16 @@ Note : La largeur de la miniature peut être définie avec l'attribut
 * `icon` : La taille de l'icône du document pointé est par défaut de 14px. Elle
 peut être modifiée avec l'attribut `relationIconSize` de la classe
 `FormatCollection`.
-* `value` : La valeur brute indique l'identifiant numérique du document'. 
+* `revision` : <span class="flag from release">3.2.21</span> Contient 
+    le numéro de la révision si l'option "[`docrev`][docrev]`=fixed`".  
+    Contient "`state:<état>`" si l'option est "[`docrev`][docrev]`=state(<état>)`".  
+    Sinon contient `-1` pour indiquer que c'est la dernière révision qui doit 
+    être utilisée.
+*  `initid` : <span class="flag from release">3.2.21</span>La propriété
+    [`initid`][properties] du document cible
+* `value` : La valeur brute indique l'identifiant numérique du document stocké.
+    Il est généralement différent de l'`initid` en cas de lien vers une révision
+    spécifique. 
 * `displayValue` : La valeur formatée indique le titre du document pointé. 
 
 ### type `enum` {#core-ref:ddcd138f-acbd-46f0-bf82-2227399536dc}
@@ -531,7 +542,9 @@ tableaux. Cela est limité à l'attribut docid.
                        ["familyRelation"] => "TST_FMTCOL"
                        ["url"] => "?app=FDL&amp;action=OPENDOC..."
                        ["icon"] => 
-                       ["value"] => 84412
+                       ["initid"] => 84412
+                       ["revision"] => -1
+                       ["value"] => "84412"
                        ["displayValue"] => "Test 1"
                    )
            )
@@ -542,7 +555,9 @@ tableaux. Cela est limité à l'attribut docid.
                        ["familyRelation"] => "TST_FMTCOL"
                        ["url"] => ?"app=FDL&amp;action=OPENDOC..."
                        ["icon"] => 
-                       ["value"] => 84412
+                       ["initid"] => 84412
+                       ["revision"] => -1
+                       ["value"] => "84412"
                        ["displayValue"] => "Test 1"
                    )
                [1] => docidAttributeValue Object
@@ -550,7 +565,9 @@ tableaux. Cela est limité à l'attribut docid.
                        ["familyRelation"] => "TST_FMTCOL"
                        ["url"] => "?app=FDL&amp;action=OPENDOC..."
                        ["icon"] => 
-                       ["value"] => 86854
+                       ["initid"] => 86854
+                       ["revision"] => -1
+                       ["value"] => "86854"
                        ["displayValue"] => "Test 2"
                    )
 
@@ -647,3 +664,5 @@ Elle doit retourner l'objet propertyValue modifié.
 [intro_collection]: #core-ref:a2c4bd53-c31f-4448-82e4-7ec1d2f7f346
 [propriete_doc]: #core-ref:9aa8edfa-2f2a-11e2-aaec-838a12b40353
 [visibility]:   #core-ref:3e67d45e-1fed-446d-82b5-ba941addc7e8
+[docrev]:       #core-ref:9bcfd205-fb07-4a71-be06-ba07d4a9cc7c
+[properties]:   #core-ref:9aa8edfa-2f2a-11e2-aaec-838a12b40353
