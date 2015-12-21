@@ -11,6 +11,8 @@ Dynacase.
 | Explications de l'objet de partage de document          | [Objet de partage de document][shareddoc]                              | <span class="flag new">Nouveau</span>    |
 | Précision sur les exportations vis-à-vis des révisions  | [Révision et exportation][exportrevision], [Révision XML][revisionxml] | <span class="flag new">Mis à jour</span> |
 | Ajout information sur la révision pour formatCollection | [Formatage des relations][fmtDocId]                                    | <span class="flag new">Mis à jour</span> |
+| Paramétrage du pied de document                         | [Document footer][docfoot]                                             | <span class="flag new">Nouveau</span>    |
+|                                                         |                                                                        |                                          |
 
 ## Édition 9  {#core-ref:568e128a-3a2b-493c-b59d-1c5cce8ae515}
 
@@ -251,3 +253,4 @@ retour d'erreur.
 [exportrevision]:       #core-ref:c44857d2-6a33-4552-af61-3aafad359416
 [revisionxml]:          #core-ref:7b0f2e8f-bdd0-44b1-b664-2ab4e3975740
 [fmtDocId]:             #core-ref:95aee029-f729-41f9-9b18-a6c20813c24d
+[docfoot]:              #core-ref:bc027994-70fd-4c17-9f55-577a21f717e6
