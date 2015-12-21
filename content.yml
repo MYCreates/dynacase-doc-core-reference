@@ -1011,6 +1011,8 @@ book:
       content:  "Actions_zones_ref/actions/action_fdl_exportfile.md"
     - level : 2
       content:  "Actions_zones_ref/actions/action_fdl_method.md"
+    - level : 2
+      content:  "Actions_zones_ref/zones/zone_footer.md"
 
 #
 # parametres de ref
