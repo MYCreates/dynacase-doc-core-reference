@@ -87,7 +87,7 @@ Quatre options permettent de spécifier le comportement d'importation des droits
     Les anciens droits sont conservés, les droits spécifiés seront ajoutés.
 *   DELETE : Suppression de droits.  
     Les droits spécifiés sont retirés.
-*   SET : Synchronisation des droits sans mise à jour systématique des documents.  <span class="flag from release">Release 3.2.17</span>
+*   SET : Synchronisation des droits sans mise à jour systématique des documents.  <span class="flag from release">3.2.17</span>
     Les droits à importer sont comparés aux droits en base et la mise à jour des documents n'est effectuée uniquement si les 
     droits à importer sont différents de ceux présents en base.
 *   RESET : Réinitialisation des droits.  

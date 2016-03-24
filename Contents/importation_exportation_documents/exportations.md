@@ -86,13 +86,13 @@ Choisir les colonnes
 Format
 :   Voir le [chapitre suivant][format]
 
-Délimiteur de texte  <span class="flag from release">Release 3.2.17</span>
+Délimiteur de texte  <span class="flag from release">3.2.17</span>
 :   Permet de configurer le format du CSV produit (uniquement dans le cas d'un format non XML)
     
     Ce paramètre permet de définir le délimiteur de cellule (enclosure) du CSV produit. Le défaut de 
     Dynacase est `Aucun délimiteur` (chaîne vide), le standard du CSV est `"`.
 
-Séparateur de cellule  <span class="flag from release">Release 3.2.17</span>
+Séparateur de cellule  <span class="flag from release">3.2.17</span>
 :   Permet de configurer le format du CSV produit (uniquement dans le cas d'un format non XML)
     
     Ce paramètre permet de définir le séparateur de cellule du CSV produit. Le défaut de Dynacase est `;`, le standard
