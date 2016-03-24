@@ -4,7 +4,7 @@
 Cette fonction permet de créer un nouveau document temporaire.
 </div>
 
-## Description {#core-ref:83d5ce37-f73b-4a4a-8e14-8838c39732c3}
+## Description {#core-ref:af2d35c2-4cbb-4e18-85cc-467ed8a65319}
 
     [php]
     [bool|Doc] createDoc ( string $dbaccess,
@@ -14,7 +14,7 @@ Cette fonction permet de créer un nouveau document temporaire.
 Cette fonction permet de créer un nouveau document temporaire. Les documents 
 temporaires stockés en base sont effacés par le script [`cleanContext`][cleancontext] .
 
-### Avertissements {#core-ref:ffd97441-2cec-4f71-a201-6f0c1d2f3e3c}
+### Avertissements  {#core-ref:d70154f2-ca8c-48b0-a2ea-68b040e1aa4b}
 
 Les documents temporaires n'ont pas de :
 
@@ -27,7 +27,7 @@ Si le paramètre `fromid` ne correspond pas à un nom logique de famille un obje
 de type `\Dcp\Family\Document` est retourné, cet objet n'est pas utilisable et
 doit être considéré comme un retour d'erreur.
 
-## Liste des paramètres {#core-ref:7d07e2fd-c2c2-4c69-8299-5b5b22322fa7}
+## Liste des paramètres  {#core-ref:aeae9a63-f567-4f1a-8950-10778027c098}
 
 (string) `dbaccess`
 :   Coordonnées de la base de données. Cet élément peut-être trouvé grâce à la
@@ -40,7 +40,7 @@ doit être considéré comme un retour d'erreur.
 :   Indique si les valeurs par défaut doivent être initialisées dans le document
     retourné.
 
-## Valeur de retour {#core-ref:250a7302-7feb-44b6-b545-e66ef65328b6}
+## Valeur de retour  {#core-ref:f5ca55dc-7323-4d6f-b164-d03c4883e445}
 
 Un document de la classe correspondant à la famille demandée.
 
@@ -48,17 +48,17 @@ Le document retourné n'est pas inséré en base, c'est à la charge du dévelop
 de procéder, si besoin, à cette insertion à l'aide de la méthode
 [Doc::store()][store].
 
-## Erreurs / Exceptions {#core-ref:a1b1854a-d854-4b33-a776-b3f76419f697}
+## Erreurs / Exceptions {#core-ref:f468f7e4-ef37-4c6c-b562-6d2a2e09e8c8}
 
 Si le paramètre `fromid` ne correspond pas à un nom logique de famille un objet
 de type `\Dcp\Family\Document` est retourné, cet objet n'est pas utilisable et
 doit être considéré comme un retour d'erreur.
 
-## Historique {#core-ref:846b4bf9-7e55-4f6b-9ec0-f7b67af3674a}
+## Historique  {#core-ref:80c1cf22-74e7-4511-814a-4a6f4172e966}
 
 Aucun
 
-## Exemple {#core-ref:c94038b0-45ac-4ed1-8ff1-a83d32d3dfa2}
+## Exemple  {#core-ref:014f33a3-c3ec-4fe9-8198-4f797cbaa44e}
 
     [php]
     
@@ -84,11 +84,11 @@ Résultat :
     is alive ? true
 
 
-## Notes {#core-ref:47db739d-510e-4a0c-aac8-b1ccc8d97237}
+## Notes  {#core-ref:0e1ef39f-932c-4886-a0be-48e1ac6f64f5}
 
 Aucune
 
-## Voir aussi {#core-ref:5762458e-0672-4dd7-b50a-e2c469f5ff97}
+## Voir aussi  {#core-ref:23e2bb8b-fc07-4d7a-8869-4669472e65f3}
 
 * [createDoc()][createDoc],
 * [new_Doc()][new_Doc].

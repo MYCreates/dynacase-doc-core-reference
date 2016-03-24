@@ -19,7 +19,7 @@ Aucuns
 
 Aucunes
 
-### Exemple {#core-ref:b459e7e1-a283-4ee5-970d-7572872a438a}
+### Exemple {#core-ref:275173f0-b74e-4cbc-8f34-0f5204811f9b}
 
     [php]
     $searchAccount = new SearchAccount();
