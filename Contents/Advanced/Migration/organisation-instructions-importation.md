@@ -96,7 +96,7 @@ Cela donne le XML suivant :
 Le module `dynacase-core` fournit un ensemble de scripts dans le sous-
 répertoire `programs`.
 
-### Commande *programs/app_post* {#core-ref:cc8bc194-900b-427a-9f5c-f4b629e81daa}
+### Commande *programs/app_post*  {#core-ref:c82d9997-b04e-45ae-b5ca-2aec5adc091d}
 
 Prototype :
 
@@ -146,7 +146,7 @@ ou un upgrade.
 
     "programs/app_post FOO I" --(execute)--> "FOO/FOO_post I"
 
-### Commande *programs/record_application* {#core-ref:c695dfd3-dcf6-4d52-a72e-ec95cb15450e}
+### Commande *programs/record_application*  {#core-ref:b604951e-758d-437c-afb4-e0ae40719a37}
 
 Prototype :
 
@@ -173,7 +173,7 @@ Exemple :
     [xml]
     <process command="programs/record_application FOO" />
 
-### Commande *programs/update_catalog* {#core-ref:a3b5b826-2476-4602-8772-4c8e264de1ed}
+### Commande *programs/update_catalog*  {#core-ref:dc30e923-64d8-4b1d-b30d-fd9d406f642a}
 
 Prototype :
 
@@ -196,7 +196,7 @@ Exemple :
      [xml]
     <process command="programs/update_catalog" />
 
-### Commande *programs/pre_migration* {#core-ref:1dbb94a3-763f-46f7-bb2d-d7029dcf8592}
+### Commande *programs/pre_migration*  {#core-ref:0ee3a781-3629-4fc5-9925-fdef22fe4a0d}
 
 Prototype :
 
@@ -219,7 +219,7 @@ Exemple :
      [xml]
     <process command="programs/pre_migration" />
 
-### Commande *programs/post_migration* {#core-ref:6a525876-dac7-40c3-8f87-01a9bec64837}
+### Commande *programs/post_migration*  {#core-ref:cdba3978-8fee-4b8c-b4e2-a65ae0340507}
  
 Prototype :
  
@@ -242,7 +242,7 @@ Exemple :
      [xml]
     <process command="programs/post_migration" />
 
-### Commande *programs/set_param* {#core-ref:39167ac3-e1e7-4d07-a784-ef9f365a6457}
+### Commande *programs/set_param*  {#core-ref:0a0b1508-8033-4a27-9e68-913097bb3794}
 
 Prototype :
  
@@ -270,7 +270,7 @@ Exemple :
       [...]
     </post-install>
 
-### Commande *wsh.php* {#core-ref:b7ad8be9-55d9-48e3-80e4-9245d6f4f345}
+### Commande *wsh.php*  {#core-ref:bf8b5de1-c722-4c91-b580-ad4f7edadb07}
 
 Prototype :
 

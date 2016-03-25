@@ -21,7 +21,7 @@ width
     alors dans ce cas le fichier est redimensionné avec la largeur en pixel de
     width tout en respectant son ratio.
 
-cvViewid <span class="flag from release">Release 3.2.12</span>
+cvViewid <span class="flag from release">3.2.12</span>
 :   Identifiant de la vue à utiliser en cas de contrôle de vue. Nécessaire
     seulement si l'attribut fichier à la [visibilité][visibility] `I` par défaut.
 

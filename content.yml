@@ -3,6 +3,7 @@ book:
   module: "Core"
   version: "3.2"
   edition: "10"
+  id_prefix: "core-ref"
   githubsrc: "https://github.com/Anakeen/dynacase-doc-core-reference"
   googleSearchAPI : "008147054905479727235:j5nj6h1_ye4"
   chapters:
@@ -183,8 +184,6 @@ book:
       content:  "importation_exportation_documents/importationsarchive.md"
     - level:   2
       content:  "importation_exportation_documents/importationswsh.md"
-      flags:
-        update: "mis à jour"
     - level:   2
       content:  "importation_exportation_documents/exportations.md"
       flags:
@@ -296,12 +295,6 @@ book:
     - level:   3
       element: "chapter"
       content:  "API/Class_Action/Method_getImageUrl.md"
-    - level:   3
-      element: "chapter"
-      content:  "API/Class_Action/Method_addWarningMsg.md"
-    - level:   3
-      element: "chapter"
-      content:  "API/Class_Action/Method_addLogMsg.md"
     - level:   2
       element: "chapter"
       content:  "API/Class_ActionUsage.md"
@@ -474,12 +467,6 @@ book:
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_postRefresh.md"
-    - level:   4
-      element: "chapter"
-      content:  "API/Class_Doc/Method_preAffect.md"
-    - level:   4
-      element: "chapter"
-      content:  "API/Class_Doc/Method_postAffect.md"
     - level:   4
       element: "chapter"
       content:  "API/Class_Doc/Method_preImport.md"
@@ -1011,8 +998,6 @@ book:
       content:  "Actions_zones_ref/actions/action_fdl_exportfile.md"
     - level : 2
       content:  "Actions_zones_ref/actions/action_fdl_method.md"
-    - level : 2
-      content:  "Actions_zones_ref/zones/zone_footer.md"
 
 #
 # parametres de ref
@@ -1030,8 +1015,6 @@ book:
       content: "parameters_ref/core_mailaction.md"
     - level: 3
       content: "parameters_ref/core_start_app.md"
-    - level: 3
-      content: "parameters_ref/core_allowguest.md"
 
     - level: 2
       content: "parameters_ref/system.md"
@@ -1039,21 +1022,9 @@ book:
     - level: 3
       content: "parameters_ref/core_loglevel.md"
     - level: 3
-      content: "parameters_ref/core_logduration.md"
-    - level: 3
       content: "parameters_ref/memory_limit.md"
     - level: 3
       content: "parameters_ref/core_sessionttl.md"
-    - level: 3
-      content: "parameters_ref/core_sessionmaxage.md"
-    - level: 3
-      content: "parameters_ref/core_sessiongcprobability.md"
-    - level: 3
-      content: "parameters_ref/core_tmpdir.md"
-    - level: 3
-      content: "parameters_ref/core_tmpdirmaxage.md"
-    - level: 3
-      content: "parameters_ref/freedom_uploaddir.md"
     - level: 3
       content: "parameters_ref/authent_pwdmindigitlength.md"
     - level: 3
@@ -1155,14 +1126,6 @@ book:
       content:  "wsh_ref/cleanVaultOrphans.md"
       flags:
         new: "nouveauté"
-    - level:   2
-      content:  "wsh_ref/wstop.md"
-      flags:
-        update: "mis à jour"
-    - level:   2
-      content:  "wsh_ref/wstart.md"
-      flags:
-        update: "mis à jour"
 
 ##
 # Advanced
@@ -1259,8 +1222,6 @@ book:
       content:  "Advanced/Database/dbsecurity.md"
     - level:   3
       content:  "Advanced/Database/dbhistory.md"
-    - level:   3
-      content:  "Advanced/Database/dbdoclog.md"
     - level:   3
       content:  "Advanced/Database/dbvault.md"
     - level:   3
@@ -1388,9 +1349,5 @@ book:
         new : "nouveauté"
     - level:   2
       content:  "Advanced/install-update-app-fam.md"
-      flags:
-        new : "nouveauté"
-    - level:   2
-      content:  "Advanced/core-shared-documents.md"
       flags:
         new : "nouveauté"

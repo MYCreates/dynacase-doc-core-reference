@@ -67,7 +67,7 @@ classname
     
     *   tout nom de classe valide.
 
-displayrowcount <span class="flag from release">Release 3.2.17</span>
+displayrowcount <span class="flag from release">3.2.17</span>
 :   Indique si le nombre de lignes du tableau est affiché dans l'entête de la première colonne.
     
     Les valeurs possibles sont un entier _n_ avec :
