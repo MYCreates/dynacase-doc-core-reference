@@ -291,7 +291,7 @@ donne le code XML suivant :
     </text:section>
 
 
-### Exemple 7 - Image
+### Exemple 7 - Image {#core-ref:5fbbd79f-a0a9-4f6c-b262-e8b1f309011d}
 
 <span class="flag from release">3.2.19</span>
 Le code HTML

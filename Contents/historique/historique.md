@@ -4,7 +4,7 @@ Ce chapitre contient un descriptif des améliorations entre les releases de
 Dynacase.
 
 
-## Édition 10
+## Édition 10 {#core-ref:94453692-21ca-4200-83cc-597a71400801}
 
 |                      Modifications                      |                                Chapitre                                |                 Version                  |
 | :------------------------------------------------------ | :--------------------------------------------------------------------- | :--------------------------------------- |

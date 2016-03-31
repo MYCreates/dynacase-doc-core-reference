@@ -84,7 +84,7 @@ Exemple de code javascript permettant d'utiliser le catalogue "JSON".
     </body>
     </html>
 
-## Limitation
+## Limitation {#core-ref:d9a3c4ac-aa89-43f4-8688-4e28759da201}
 
 Les formes plurielles ne sont pas prises en compte.
 

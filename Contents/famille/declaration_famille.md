@@ -1297,7 +1297,7 @@ L'importation se fait en ligne de commande, avec la commande suivante :
 Pour plus de détails sur l'API `importDocuments`, se référer à sa
 [documentation][importDocuments]
 
-## Erreur d'importation d'attributs
+## Erreur d'importation d'attributs {#core-ref:30ec0560-cd68-443a-aa00-587d58a1eb93}
 
 La liste des codes d'erreur possibles lors de l'importation d'attributs est
 consultable dans la documentation de l'API PHP : [ErrorCodeATTR Class
