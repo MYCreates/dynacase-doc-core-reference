@@ -1143,33 +1143,53 @@ book:
     - level:   3
       content:  "Advanced/Internationalisation/description.md"
     - level:   3
-      content:  "Advanced/Internationalisation/catalogue.md"
+      content:  "Advanced/Internationalisation/utilisation.md"
+      subtoc:   1
       flags:
         update: "mis à jour"
+    - level:   4
+      content:  "Advanced/Internationalisation/localephp.md"
+      flags:
+        update : "mis à jour"
     - level:   4
       content:  "Advanced/Internationalisation/localelayout.md"
       flags:
         update : "mis à jour"
     - level:   4
       content:  "Advanced/Internationalisation/localeworkflow.md"
+      flags:
+        update: "mis à jour"
+    - level:   4
+      content:  "Advanced/Internationalisation/localejavascript.md"
+      flags:
+        update: "mis à jour"
     - level:   3
+      content:  "Advanced/Internationalisation/localegen.md"
+      subtoc:   2
+      flags:
+        update : "mis à jour"
+    - level:   5
       content:  "Advanced/Internationalisation/localegenphp.md"
       flags:
         update : "mis à jour"
-    - level:   4
+    - level:   5
+      content:  "Advanced/Internationalisation/localegenwf.md"
+      flags:
+        update : "mis à jour"
+    - level:   5
       content:  "Advanced/Internationalisation/localegenfamily.md"
       flags:
         update : "mis à jour"
-    - level:   4
+    - level:   5
       content:  "Advanced/Internationalisation/localegencv.md"
       flags:
-        new : "nouveauté"
-    - level:   4
+        update: "mis à jour"
+    - level:   5
       content:  "Advanced/Internationalisation/localegenlayout.md"
       flags:
-        new: "nouveauté"
-    - level:   3
-      content:  "Advanced/Internationalisation/translate.md"
+        update: "mis à jour"
+    - level:   5
+      content:  "Advanced/Internationalisation/localegenjavascript.md"
       flags:
         update : "mis à jour"
     - level:   3
@@ -1182,10 +1202,6 @@ book:
         update : "mis à jour"
     - level:   3
       content:  "Advanced/Internationalisation/addlanguage.md"
-      flags:
-        update : "mis à jour"
-    - level:   3
-      content:  "Advanced/Internationalisation/javascript.md"
       flags:
         update : "mis à jour"
     - level:   2

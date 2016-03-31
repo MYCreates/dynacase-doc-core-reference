@@ -1,22 +1,28 @@
 # Ajouter une nouvelle langue {#core-ref:2b79d76a-fe0d-446e-bee4-c73e36f64a41}
 
-Pour disposer d'une nouvelle langue, il faut publier un nouveau fichier
-`lang.php` de définition de langue dans le sous-répertoire de la langue en
-dessous dans le répertoire `locale` .
+Pour disposer d'une nouvelle langue, il faut
 
-Exemple pour ajouter l'espagnol :
+-   Ajouter un répertoire `locale/<lang>`,
+-   ajouter le fichier `locale/<lang>/lang.php` de définition de langue,
+-   ajouter un répertoire `locale/<lang>/LC_MESSAGES`,
+-   ajouter le fichier
+    [`locale/<lang>/LC_MESSAGES/header.mo` (définissant notamment les formes plurielles)][core-ref:locale_header]
+-   vous assurer que la locale existe sur le serveur
 
-Fichier : `locale/es/lang.php`
+## Exemple : ajout de l'espagnol {#core-ref:b87c19ac-1fdc-4724-9a58-751c42abac62}
+
+### Fichier `locale/es/lang.php` {#core-ref:d1435a15-deb7-4376-8978-6b23fc9ae3b0}
 
     [php]
     $lang["es_ES"] = array(
-        "label" => "Espagnol",
-        "localeLabel" => _("Spanish"),
-        "flag" => "",
-        "locale" => "es",
-        "dateFormat" => "%d/%m/%Y",
-        "dateTimeFormat" => "%d/%m/%Y %H:%M",
-        "timeFormat" => "%H:%M:%S",
+        "label"             => "Espagnol",          // le label non traduit
+        "localeLabel"       => _("Spanish"),        // le label traduit
+        "flag"              => "es_ES.png",         // le nom du fichier de drapeau de la locale
+        "locale"            => "es",                // le code ISO 639-1 de la locale
+        "dateFormat"        => "%d/%m/%Y",          // le format de date utilisable par strftime
+        "dateTimeFormat"    => "%d/%m/%Y %H:%M",    // le format de datetime utilisable par strftime
+        "timeFormat"        => "%H:%M:%S",          // le format d'heure utilisable par strftime
+        "culture"           => "es-ES"              // le code RFC 3066 de la locale
     );
     /*
      ** Include local/override config
@@ -27,16 +33,11 @@ Fichier : `locale/es/lang.php`
         include ($local_lang);
     }
 
-Ensuite, il faut publier l'ensemble des traductions nécessaires dans le nouveau
-répertoire dédiée au nouveau langage `locale/es/LC_MESSAGES/`.
+### Fichier `locale/es/LC_MESSAGES/header.mo` {#core-ref:bc9f6ff1-c901-4a97-9897-8661685ca605}
 
-Pour éviter toute ambiguïté sur l'entête du catalogue principal, un fichier
-`header.mo` doit être installé dans le répertoire LC_MESSAGE de la nouvelle
-langue. Ce fichier doit contenir l'entête du catalogue qui précise l'encodage
-`UTF-8` et la forme plurielle.<span class="flag from release">3.2.12</span>
+Il résulte de la compilation par `msgfmt` du fichier po suivant :
 
-Exemple `header.po` :
-
+    [gettext]
     msgid ""
     msgstr ""
     "Project-Id-Version: Dynacase\n"
@@ -49,29 +50,5 @@ Exemple `header.po` :
     "Content-Transfer-Encoding: 8bit\n"
     "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-**Important** : Pour que les locales soient prises en compte, il faut que le
-système d'exploitation ait connaissance de ces locales. La liste des locales du 
-système est obtenue avec la commande `locale-gen`.
-
-    # locale-gen
-    Generating locales...
-      en_US.UTF-8... done
-      es_ES.UTF-8... up-to-date
-      fr_FR.UTF-8... done
-    Generation complete.
-
-Les locales **UTF-8** doivent être générées.
-Cette même commande permet aussi d'ajouter de nouvelles locales au système.
-
 <!-- link -->
-[wikiGettext]:       http://fr.wikipedia.org/wiki/GNU_gettext "Gettext sur Wikipédia"
-[phpGettext]:        http://www.php.net/manual/fr/function.gettext.php "gettext sur php.net"
-[actions]:           #core-ref:e67d8aeb-939c-46e3-9be8-6fc3ba75ebc2 "Action Dynacase"
-[wsh]:               #core-ref:4df1314f-9fdd-4a7f-af37-a18cc39f3505 "Script Dynacase"
-[gencatalog]:        #core-ref:2c163f00-8e94-4736-86f2-bb51352c52aa
-[pgettext]:          http://www.gnu.org/software/gettext/manual/html_node/Contexts.html "Contexte dans gettext"
-[ngettext]:          http://www.php.net/manual/fr/function.ngettext.php "ngettext sur php.net"
-[layout]:           #core-ref:5f4a2f4b-9ceb-42db-8ac1-2a7baa621ce2
-[xgettext]:         http://www.gnu.org/software/gettext/manual/html_node/xgettext-Invocation.htm "xgettext reference"
-[famdecl]:          #core-ref:cfc7f53b-7982-431e-a04b-7b54eddf4a75
-[gettextutil]:      http://www.gnu.org/software/gettext/manual/html_node/index.html#Top
+[core-ref:locale_header]:   #core-ref:a59b5c3f-502d-4679-8197-7654b4e2a5bb

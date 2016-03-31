@@ -1,4 +1,4 @@
-# Générer les catalogues pour les contrôles de vues {#core-ref:e01fa01e-4170-11e3-816c-60d7dc830245}
+# Extraction des clés pour les contrôles de vues {#core-ref:e01fa01e-4170-11e3-816c-60d7dc830245}
 
 Les libellés des vues des [contrôles de vues][cvdoc] peuvent être traduits.
 

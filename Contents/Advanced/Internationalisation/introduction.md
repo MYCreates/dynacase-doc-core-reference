@@ -5,10 +5,11 @@ et dans toutes les interfaces homme-machine.
 
 La processus d'internationalisation se déroule en plusieurs étapes :
 
-1. identification des éléments à traduire,
 1. extraction des éléments à traduire et production d'un catalogue par langue cible,
 1. traduction des éléments,
 1. publication des catalogues dans le contexte.
+
+Une fois ces étapes suivies, les traductions se font dans vos programmes.
 
 <!-- link -->
 [wikiGettext]:       http://fr.wikipedia.org/wiki/GNU_gettext "Gettext sur Wikipédia"

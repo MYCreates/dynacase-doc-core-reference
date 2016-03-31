@@ -1,4 +1,4 @@
-# Générer les catalogues pour les templates {#core-ref:0294a176-4171-11e3-b364-cffb8e583c34}
+# Extraction des clés pour les templates {#core-ref:0294a176-4171-11e3-b364-cffb8e583c34}
 
 
 Le programme [`xgettextLayout`][buildtools] permet d'extraire les clefs de
