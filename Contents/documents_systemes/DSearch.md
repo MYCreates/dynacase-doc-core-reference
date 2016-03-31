@@ -159,7 +159,7 @@ L'opérateur logique (attribut "condition") peut avoir 3 valeurs :
 Si la condition est personnalisée, les parenthèses permettent de prioriser les
 différents critères.
 
-## Erreur de requêtage
+## Erreur de requêtage {#core-ref:32f3b99a-b2f5-43ce-8335-cd503f629cea}
 
 Lors de la création de la requête, les erreurs "statique" pouvant être détectées
 (problème de parenthèse, argument incorrect,...) empêche l'enregistrement.

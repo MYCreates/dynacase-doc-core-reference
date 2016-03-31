@@ -27,7 +27,7 @@ Le document n'est pas récupéré de la zone de partage par la fonction
 *   le document est un [profil dynamique][dynprof] 
     (ceci inclus les contrôles de vue avec profilage dynamique)
 
-## Cas de modification de l'objet de partage 
+## Cas de modification de l'objet de partage  {#core-ref:a3c838cd-56a3-4016-a055-960736bc2806}
 
 Le noyau modifie cet objet de partage dans les fonctions suivantes :
 
