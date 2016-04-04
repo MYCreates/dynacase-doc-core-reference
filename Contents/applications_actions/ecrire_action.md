@@ -247,7 +247,7 @@ Les actions peuvent aussi être exécutées en mode console avec [_wsh_][actionw
 [application]: #core-ref:395f44f1-6699-4ad8-b525-31e65e9b6efb
 [my_app.app]: #core-ref:cf584c21-ebee-4444-8046-da3fa3a2db1b
 [class_layout]: #core-ref:9f9edc1b-17a5-4f54-86ee-69e33016fe18
-[exiterror]: #core-ref:D6845AA2-FACC-41B5-82D1-4681FCE55783
+[exiterror]: #core-ref:d6845aa2-facc-41b5-82d1-4681fce55783
 [actionusage]: #core-ref:7a8932eb-a59f-482a-9991-4ee1c634eae4
 [classapplication]: #core-ref:5fca4352-702f-44fb-8ffa-3686545c6c67
 [template]: #core-ref:af9ea76c-069e-49e1-a382-efc8ca35f1eb
