@@ -1,4 +1,4 @@
-# Générer les catalogues pour les familles de document {#core-ref:f5872ef4-4170-11e3-ba58-48f953959281}
+# Extraction des clés pour les familles de document {#core-ref:f5872ef4-4170-11e3-ba58-48f953959281}
 
 La description de la [structure de famille][famdecl] est définie dans une
 fichier CSV ou ODS. Ce fichier est utilisable pour produire un catalogue de traduction.

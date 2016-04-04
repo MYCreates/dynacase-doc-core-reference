@@ -14,7 +14,6 @@ modules installés. Il est dont important d'avoir des textes qui ne sont pas dé
 utilisés par un autre module pour éviter d'écraser les traductions d'un autre
 module, ce qui pourrait dégrader la traduction de ce module.
 
-
 <!-- link -->
 [wikiGettext]:       http://fr.wikipedia.org/wiki/GNU_gettext "Gettext sur Wikipédia"
 [phpGettext]:        http://www.php.net/manual/fr/function.gettext.php "gettext sur php.net"

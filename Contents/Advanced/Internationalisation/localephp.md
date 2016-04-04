@@ -1,8 +1,6 @@
-# Catalogue de traduction {#core-ref:ca73ff9e-ceb8-456b-bdd4-9b9056f1543d}
+# Utiliser une traduction dans un programme PHP {#core-ref:967cd878-e068-4c99-8266-adaed3f700ff}
 
-## Utiliser une traduction dans un programme PHP {#core-ref:967cd878-e068-4c99-8266-adaed3f700ff}
-
-### Utiliser une forme simple {#core-ref:3275febc-4171-11e3-9773-cffb8e583c34}
+## Utiliser une forme simple {#core-ref:3275febc-4171-11e3-9773-cffb8e583c34}
 
 La fonction fournie en standard par PHP et la fonction [gettext][phpGettext].
 Cette fonction permet de rechercher dans un catalogue la traduction
@@ -36,12 +34,12 @@ un autre module avec une traduction différente.
 
 Deux possibilités permettent de diminuer ce risque de doublon :
 
-1.  Mettre un préfixe :
+1.  Utiliser un préfixe :
     
         [php]
         print _("MyCatalog:This is a text");
 
-2.  Mettre un contexte : <span class="flag from release">3.2.12</span>
+2.  Utiliser un contexte : <span class="flag from release">3.2.12</span>
     
         [php]
         print ___("This is a text", "MyContext");
@@ -54,21 +52,9 @@ La fonction `___` (triple blancs soulignés) est un alias de la fonction
 `pgettext`. Si le contexte est vide, cela est équivalent à l'utilisation de la
 fonction `_` standard.
 
-La fonction `N_` permet d'ajouter une forme localisée au catalogue sans la
-traduite directement.
-
-    [php]
-    $a=N_("Hello world"); // to be added by xgettext
-    // can be save in session for example
-    $action->register("myText", $a);
-    
-    // reuse variable in other context
-    $b=$action->read("myText", "no text");
-    print _($b);
-
 Ces fonctions ne sont pas natives de PHP, elles sont ajoutées par Dynacase.
 
-### Utiliser une forme plurielle {#core-ref:3e6b8eee-4171-11e3-9688-cffb8e583c34}
+## Utiliser une forme plurielle {#core-ref:3e6b8eee-4171-11e3-9688-cffb8e583c34}
 
 <span class="flag from release">3.2.12</span>
 Les traductions des formes plurielles sont prises en compte par la bibliothèque
@@ -79,9 +65,7 @@ La forme plurielle est indiquée à l'aide la fonction php standard
 gèrent aussi les contextes.
 
     [php]
-    
     printf(n___("%d document found", "%d documents found", $num, "MyContext") , $num);
-
 
 | langue | $num |    texte traduit      |   forme   |
 | ------ | ---- | --------------------- | --------- |
@@ -95,33 +79,6 @@ gèrent aussi les contextes.
 | en     |    2 | 2 documents found     | pluriel   |
 | en     |  345 | 345 documents founds  | pluriel   |
 
-Les formes plurielles sont indiquées dans le catalogue par l'entête `Plural-Forms`
-
-    msgid ""
-    msgstr ""
-    "Project-Id-Version: Test 1.0\n"
-    "POT-Creation-Date: 2013-10-24 17:28+0200\n"
-    "PO-Revision-Date: 2013-10-25 08:53+0200\n"
-    "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-    "Language-Team: LANGUAGE <LL@li.org>\n"
-    "Language: French\n"
-    "MIME-Version: 1.0\n"
-    "Content-Type: text/plain; charset=UTF-8\n"
-    "Content-Transfer-Encoding: 8bit\n"
-    "Plural-Forms: nplurals=2; plural=n>1;\n"
-
-Pour un même langage, la définition des formes plurielles de tous les catalogues
-doivent être identique. Un catalogue français ne peut donc avoir deux plurielles
-alors qu'un autre en défini trois.
-
-Pour le français la définition de la forme plurielle doit être :
-
-    "Plural-Forms: nplurals=2; plural=n>1;\n"
-
-Pour l'anglais la définition de la forme plurielle doit être :
-
-    "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
 *Limitations* : La localisation des formes plurielles fonctionne de manière
 partielle avec les nombres décimaux. En effet, la variable numérique de choix de
 la traduction doit être un entier. Pour un nombre décimal, seule la partie
@@ -129,10 +86,6 @@ entière est prise en compte. Ainsi les nombres _1,3_ et _1,6_ seront pris comme
 _1_. Cela sera correct pour le français qui considère que tout nombre compris
 entre _]-2, 2[_ comme singulier. Mais cela sera incorrect en anglais qui
 considère que tout nombre différent de 1 ou -1 n'est pas singulier.
-
-Note : Lors de la génération du catalogue principal, c'est l'entête utilisée
-dans le fichier `header.mo` qui défini l'entête et donc la forme plurielle
-utilisée.
 
 <!-- link -->
 [wikiGettext]:       http://fr.wikipedia.org/wiki/GNU_gettext "Gettext sur Wikipédia"
