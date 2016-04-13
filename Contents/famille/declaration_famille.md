@@ -856,7 +856,7 @@ Ce fichier doit être présent dans le répertoire `EXTERNALS`.
 
 #### Caractéristique `[phpfunc]` {#core-ref:1128e658-48f5-440f-9fd1-2d714e99eecd}
 
-**Facultatif** (Non applicable pour les types "frame", "tab", "array", "menu")
+**Facultatif** (Non applicable pour les types "frame", "tab", "array")
 
 Cette caractéristique est utilisée pour trois usages différents :
 
@@ -876,6 +876,12 @@ Dans ce cas `[phpfile][phpfile]` doit être vide.
 Ne concerne que le cas des attributs de type `enum`.
 
 [Couples *clé*/*label*][def_enum] correspondant à l'énuméré.
+
+##### Définition de la visibilité d'un menu {#core-ref:0865183e-8356-47bb-a4ee-160e622445ab}
+
+Ne concerne que le cas des attributs de type `menu`.
+
+Méthode à utiliser pour la [visibilité][menuvis] du menu.
 
 #### Caractéristique `[elink]` {#core-ref:edf84026-7980-442f-bc86-88739e49e3b5}
 
@@ -1329,3 +1335,4 @@ Reference][ErrorCodeATTR].
 [constraint]:       {#core-ref:f0177c62-1774-4724-a337-f090406e2d08}
 [ErrorCodeATTR]: http://docs.anakeen.com/dynacase/3.2/dynacase-core-api-reference/class_error_code_a_t_t_r.html
 [urlindex]:     #core-ref:9081464e-dfc9-4836-8577-cfa59829eaa0
+[menuvis]:      #core-ref:0abcbf60-b1c5-4d78-b3a7-6574a369d99e
