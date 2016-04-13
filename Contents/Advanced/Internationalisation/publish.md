@@ -96,7 +96,7 @@ Ce programme fusionne l'ensemble des catalogues dans un catalogue principal.
 C'est ce catalogue qui est chargé lors de l'exécution des actions et scripts Dynacase.
 
 Ce programme va également générer les catalogues au format JSON en utilisant le programme `programs/po2js`.
-Ce sont ces catalogues qui sont [utilisables dans le code javascript][core-ref:translate_js].
+Ce sont ces catalogues qui sont [utilisables dans le code javascript][translate_js].
 
 ## Header {#core-ref:a59b5c3f-502d-4679-8197-7654b4e2a5bb}
 
@@ -138,4 +138,4 @@ inversement les catalogues sources peuvent être obtenus par le programme
 `msgunfmt`.
 
 <!-- link -->
-[core-ref:translate_js]:    #ddui-ref:b698d655-f021-41d3-9187-0703059bc7fc
+[translate_js]:    #ddui-ref:0a0ae356-3e7f-439c-8fac-d5dcd5fc6767

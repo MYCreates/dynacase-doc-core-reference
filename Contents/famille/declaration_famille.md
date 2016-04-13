@@ -809,6 +809,7 @@ L'hyperlien peut être :
     composition de l'URL :
     
     *   `%S%` : est remplacé par l'URL relative vers dynacase,
+    *   `%U%` : est remplacé par l'[URL absolue][urlindex] <span class="flag from release inline">3.2.21</span>,
     *   `%I%` : est remplacé par l'identifiant (équivalent à %ID%),
     *   `%T%` : est remplacé par le titre (équivalent à %TITLE%).
     
@@ -1327,3 +1328,4 @@ Reference][ErrorCodeATTR].
 [phpDocEmailRecipient]:     https://docs.anakeen.com/dynacase/3.2/dynacase-core-api-reference/interface_i_mail_recipient.html "PHPDoc : IMailRecipient"
 [constraint]:       {#core-ref:f0177c62-1774-4724-a337-f090406e2d08}
 [ErrorCodeATTR]: http://docs.anakeen.com/dynacase/3.2/dynacase-core-api-reference/class_error_code_a_t_t_r.html
+[urlindex]:     #core-ref:9081464e-dfc9-4836-8577-cfa59829eaa0

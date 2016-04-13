@@ -8,4 +8,4 @@ Afin que ces éléments soient traduits, il faut donc vous assurer que des entr�
 [ajoutées à votre catalogue][core-ref:generation_catalogue]
 
 <!-- links -->
-[core-ref:generation_catalogue]: #FIXME
+[core-ref:generation_catalogue]: #core-ref:2c163f00-8e94-4736-86f2-bb51352c52aa

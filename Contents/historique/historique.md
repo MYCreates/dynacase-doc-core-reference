@@ -6,25 +6,25 @@ Dynacase.
 
 ## Édition 10 {#core-ref:94453692-21ca-4200-83cc-597a71400801}
 
-|                      Modifications                      |                                Chapitre                                |                 Version                  |
-| :------------------------------------------------------ | :--------------------------------------------------------------------- | :--------------------------------------- |
-| Explications de l'objet de partage de document          | [Objet de partage de document][shareddoc]                              | <span class="flag new">Nouveau</span>    |
-| Précision sur les exportations vis-à-vis des révisions  | [Révision et exportation][exportrevision], [Révision XML][revisionxml] | <span class="flag new">Mis à jour</span> |
-| Ajout information sur la révision pour formatCollection | [Formatage des relations][fmtDocId]                                    | <span class="flag new">Mis à jour</span> |
-| Paramétrage du pied de document                         | [Document footer][docfoot]                                             | <span class="flag new">Nouveau</span>    |
-|                                                         |                                                                        |                                          |
+|                      Modifications                       |                                Chapitre                                |                 Version                  |
+| :------------------------------------------------------- | :--------------------------------------------------------------------- | :--------------------------------------- |
+| Explications de l'objet de partage de document           | [Objet de partage de document][shareddoc]                              | <span class="flag new">Nouveau</span>    |
+| Précision sur les exportations vis-à-vis des révisions   | [Révision et exportation][exportrevision], [Révision XML][revisionxml] | <span class="flag new">Mis à jour</span> |
+| Ajout information sur la révision pour formatCollection  | [Formatage des relations][fmtDocId]                                    | <span class="flag new">Mis à jour</span> |
+| Paramétrage du pied de document                          | [Document footer][docfoot]                                             | <span class="flag new">Nouveau</span>    |
+| Ajout de parties variables dans le paramètre MAIL_ACTION | [Paramètre MAIL_ACTION][mailaction]                                    | <span class="flag new">Mis à jour</span> |
 
 ## Édition 9  {#core-ref:568e128a-3a2b-493c-b59d-1c5cce8ae515}
 
-|                           Modifications                            |                                   Chapitre                                  |                   Version                   |
-| :----------------------------------------------------------------- | :-------------------------------------------------------------------------- | :------------------------------------------ |
-| Nouveau hook Doc::preAffect / postAffect                           | [Hook d'affectation][prepostaffect]                                         | <span class="flag new">Nouveau</span>       |
-| Nouvelle option d'attribut htmltext et vérification de la validité | [allowedcontent][htmltextopt]                                               | <span class="flag new">Nouveau</span>       |
-| Ajout description des méthodes addWarningMsg et addLogMsg          | [Action::addwarningmsg()][addwarningmsg],  [Action::addLogmsg()][addlogmsg] | <span class="flag update">Mis à jour</span> |
-| Précision sur la détection paramètre des CSV lors de l'importation | [Précaution sur l'importation de document][importlimits]                    | <span class="flag update">Mis à jour</span> |
-| Orientation des images jpeg                                        | [Vue des attributs images][imgview]                                         | <span class="flag update">Mis à jour</span> |
-| Script `wstop` et `wstart`                                         | [`wstop`][wstop], [`wstart`][wstart]                                        | <span class="flag update">Mis à jour</span> |
-| Ajout option `--cmd=unregister-all` à [manageContextCrontab][manageContextCrontab] | [manageContextCrontab][manageContextCrontab]                | <span class="flag update">Mis à jour</span> |
+|                                   Modifications                                    |                                   Chapitre                                  |                   Version                   |
+| :--------------------------------------------------------------------------------- | :-------------------------------------------------------------------------- | :------------------------------------------ |
+| Nouveau hook Doc::preAffect / postAffect                                           | [Hook d'affectation][prepostaffect]                                         | <span class="flag new">Nouveau</span>       |
+| Nouvelle option d'attribut htmltext et vérification de la validité                 | [allowedcontent][htmltextopt]                                               | <span class="flag new">Nouveau</span>       |
+| Ajout description des méthodes addWarningMsg et addLogMsg                          | [Action::addwarningmsg()][addwarningmsg],  [Action::addLogmsg()][addlogmsg] | <span class="flag update">Mis à jour</span> |
+| Précision sur la détection paramètre des CSV lors de l'importation                 | [Précaution sur l'importation de document][importlimits]                    | <span class="flag update">Mis à jour</span> |
+| Orientation des images jpeg                                                        | [Vue des attributs images][imgview]                                         | <span class="flag update">Mis à jour</span> |
+| Script `wstop` et `wstart`                                                         | [`wstop`][wstop], [`wstart`][wstart]                                        | <span class="flag update">Mis à jour</span> |
+| Ajout option `--cmd=unregister-all` à [manageContextCrontab][manageContextCrontab] | [manageContextCrontab][manageContextCrontab]                                | <span class="flag update">Mis à jour</span> |
 
 ## Édition 8 {#core-ref:f10874a8-78c8-42eb-9908-5eaaf04d247f}
 
@@ -236,7 +236,7 @@ retour d'erreur.
 [attributes_order]: #core-ref:e41116ee-a682-4033-a7ab-22dc1b99e56a
 [constraints_syntax]: #core-ref:28bfa7d5-918e-4f47-a28b-44ceefcd0a23
 [htmlopt] :         #core-ref:8e182116-8762-4157-a743-9abf43db0960
-[i18nsjs]:          #core-ref:c5e3821a-4170-11e3-9b2b-b38f13ee44c4
+[i18nsjs]:          #core-ref:5bd6f306-4171-11e3-999b-60d7dc830245
 [shutdown_function]: #core-ref:9f3475a2-b6a5-4927-b6b7-97f128cb4cd4
 [document_destinataire]: #core-ref:e717367f-7a29-473d-a65a-ac2c924bd0cb
 [api_refreshDocuments]: #core-ref:d42dccaf-2225-4727-b528-b66df42aa358
@@ -254,3 +254,4 @@ retour d'erreur.
 [revisionxml]:          #core-ref:7b0f2e8f-bdd0-44b1-b664-2ab4e3975740
 [fmtDocId]:             #core-ref:95aee029-f729-41f9-9b18-a6c20813c24d
 [docfoot]:              #core-ref:bc027994-70fd-4c17-9f55-577a21f717e6
+[mailaction]:           #core-ref:c1d9e009-49a5-47a4-9104-4d044ea24aa3
