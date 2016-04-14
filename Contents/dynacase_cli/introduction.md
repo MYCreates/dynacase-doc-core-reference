@@ -18,12 +18,20 @@ Son aide est disponible au moyen de l'option `--help` :
             wsh.php --api=API [--ARG=VAL] ....   :  execute an api function
             wsh.php --listapi                     : view api list
 
+Note :
+
+* Le script `wsh.php` doit être exécuté, en ligne de commande, sous le même
+  compte utilisateur que celui du serveur Apache (afin que les fichiers
+  produits soient accessibles par Dynacase en mode Web) et ne doit en aucun cas
+  être lancé sous le compte utilisateur`root`.
+
 ### Utilisateur effectuant l'opération {#core-ref:f266fa37-8d4c-45f9-806f-154861bfc547}
 
-Par défaut, les opérations sont lancées sous l'identité de l'utilisateur *Master
-Default* (administrateur principal - compte `admin`). Il est possible de changer
-cette identité au moyen de l'option `--userid`, qui prend comme paramètre le
-*login* d'un utilisateur, ou son *identifiant système*.
+Par défaut, les opérations sont lancées sous l'identité Dynacase de
+l'utilisateur *Master Default* (administrateur principal - compte `admin`). Il
+est possible de changer cette identité au moyen de l'option `--userid`, qui
+prend comme paramètre le *login* d'un utilisateur Dynacase, ou son *identifiant
+système* Dynacase.
 
 ### Passage d'arguments {#core-ref:fa9210eb-5bad-4867-a287-e732afc02251}
 
