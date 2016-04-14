@@ -209,7 +209,19 @@ book:
     - level:   2
       content:  "comptes_groupes_roles/roles.md"
     - level:   2
+      content:  "comptes_groupes_roles/importationxml_comptes.md"
+      flags:
+        new : "nouveauté"
+        release : "3.2.21"
+    - level:   2
+      content:  "comptes_groupes_roles/exportationxml_comptes.md"
+      flags:
+        new : "nouveauté"
+        release : "3.2.21"
+    - level:   2
       content:  "comptes_groupes_roles/importation_comptes.md"
+      flags:
+        obsolete : "Déprécié"
 ##
 # securite
 ##
