@@ -4,7 +4,7 @@
 
 Le paramètre `CORE_URLINDEX` permet de spécifier l'URL d'accès à l'index de
 Dynacase. Cette URL est utilisée pour composer les URLs présentes sur les
-interfaces HTML ou les mails émis par Dynacase.
+interfaces HTML ou les [courriels][mailaction] émis par Dynacase.
 
 *   App : `CORE`
 *   Portée : Global
@@ -25,3 +25,5 @@ L'URL ne doit pas contenir de requête (partie de la forme `?a=b&c=d`) ou de
 hash (partie finale de la forme `#anchor`).
 
 <!-- links -->
+
+[mailaction]: #core-ref:c1d9e009-49a5-47a4-9104-4d044ea24aa3

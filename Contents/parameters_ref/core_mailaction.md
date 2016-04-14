@@ -20,14 +20,39 @@ normalisée (e.g.
 En l'absence de valeur, la valeur du paramètre sera calculée à partir de la
 valeur du paramètre [CORE_URLINDEX][core_urlindex].
 
+La valeur par défaut est :
+
+    %U%?app=FDL&action=OPENDOC&mode=view&id=%ID%
+
 ## Notes {#core-ref:516b9485-981e-44f2-ad69-f4a1b2cf3277}
 
 L'URL doit contenir une chaîne de requête qui référence une application et une
 action Dynacase valide (e.g. `?app=MYAPP&action=MYACTION`).
 
-L'id du document est ajoutée à la suite du paramètre. Aussi, si vous utilisez
-un *hash* (partie finale de la forme `#anchor`), l'action n'aura pas accès à
-cet id. Cela peut être utile dans le cas ou le routage est fait coté client.
+<span class="flag from release inline">3.2.21</span> Si l'url comporte des
+ [parties variables][alink], ces parties (entre `%`) sont
+remplacées par les valeurs du document.
+
+Exemple :
+
+    ?app=MYAPP&action=MYACTION&myTitle=%TITLE%&myId=%ID%
+
+Si l'url ne comporte pas de caractère `%`, l'identifiant du document est ajoutée
+à la suite du paramètre avec la variable `id`.
+
+L'url :
+
+    ?app=MYAPP&action=MYACTION
+sera transformée en :
+
+    ?app=MYAPP&action=MYACTION&id=%ID%
+
+Si vous utilisez un *hash* (partie finale de la forme `#anchor`), l'action
+n'aura pas accès à cet id. Cela peut être utile dans le cas ou le routage est
+fait coté client. Dans ce cas, il faut utiliser la forme avec des variables.
+
+    ?app=MYAPP&action=MYACTION#%ID%
 
 <!-- links -->
 [core_urlindex]: #core-ref:9081464e-dfc9-4836-8577-cfa59829eaa0
+[alink]:         #core-ref:aaaa5d78-0982-4c3e-a8ed-a125c49572a8

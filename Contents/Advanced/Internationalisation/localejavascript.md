@@ -105,4 +105,4 @@ Elle s'utilise de la manière suivante (le catalogue peut être récupéré autr
 Les formes plurielles ne sont pas prises en compte.
 
 <!-- links -->
-[core-ref:generation_catalogue]:    #FIXME
+[core-ref:generation_catalogue]:    #core-ref:2c163f00-8e94-4736-86f2-bb51352c52aa
