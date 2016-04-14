@@ -6,13 +6,15 @@ Dynacase.
 
 ## Édition 10 {#core-ref:94453692-21ca-4200-83cc-597a71400801}
 
-|                      Modifications                       |                                Chapitre                                |                 Version                  |
-| :------------------------------------------------------- | :--------------------------------------------------------------------- | :--------------------------------------- |
-| Explications de l'objet de partage de document           | [Objet de partage de document][shareddoc]                              | <span class="flag new">Nouveau</span>    |
-| Précision sur les exportations vis-à-vis des révisions   | [Révision et exportation][exportrevision], [Révision XML][revisionxml] | <span class="flag new">Mis à jour</span> |
-| Ajout information sur la révision pour formatCollection  | [Formatage des relations][fmtDocId]                                    | <span class="flag new">Mis à jour</span> |
-| Paramétrage du pied de document                          | [Document footer][docfoot]                                             | <span class="flag new">Nouveau</span>    |
-| Ajout de parties variables dans le paramètre MAIL_ACTION | [Paramètre MAIL_ACTION][mailaction]                                    | <span class="flag new">Mis à jour</span> |
+|                      Modifications                       |                                        Chapitre                                        |                 Version                  |
+| :------------------------------------------------------- | :------------------------------------------------------------------------------------- | :--------------------------------------- |
+| Explications de l'objet de partage de document           | [Objet de partage de document][shareddoc]                                              | <span class="flag new">Nouveau</span>    |
+| Précision sur les exportations vis-à-vis des révisions   | [Révision et exportation][exportrevision], [Révision XML][revisionxml]                 | <span class="flag new">Mis à jour</span> |
+| Ajout information sur la révision pour formatCollection  | [Formatage des relations][fmtDocId]                                                    | <span class="flag new">Mis à jour</span> |
+| Paramétrage du pied de document                          | [Document footer][docfoot]                                                             | <span class="flag new">Nouveau</span>    |
+| Ajout de parties variables dans le paramètre MAIL_ACTION | [Paramètre MAIL_ACTION][mailaction]                                                    | <span class="flag new">Mis à jour</span> |
+| Facilité d'importation et d'exportation de comptes       | [Importation XML de comptes][ixmlaccounts], [Exportation XML de comptes][exmlaccounts] | <span class="flag new">Nouveau</span>    |
+
 
 ## Édition 9  {#core-ref:568e128a-3a2b-493c-b59d-1c5cce8ae515}
 
@@ -255,3 +257,5 @@ retour d'erreur.
 [fmtDocId]:             #core-ref:95aee029-f729-41f9-9b18-a6c20813c24d
 [docfoot]:              #core-ref:bc027994-70fd-4c17-9f55-577a21f717e6
 [mailaction]:           #core-ref:c1d9e009-49a5-47a4-9104-4d044ea24aa3
+[ixmlaccounts]:         #core-ref:d9e6f16a-6627-4f12-9d5f-a136b21e7cc3
+[exmlaccounts]:         #core-ref:3c9fc09e-4f7c-466e-a207-c0fdf948fe97

@@ -1,4 +1,12 @@
-# Importations de comptes {#core-ref:a0cb9a84-6bde-476c-b55c-95c8f12abd3a}
+# Importations de comptes (document) {#core-ref:a0cb9a84-6bde-476c-b55c-95c8f12abd3a}
+
+<span class="flag from release inline">3.2.21</span> Ce chapitre décrit une alternative
+à l'[importation XML][importxml] en utilisant l'importation de document. Il est
+toutefois préférable d'utiliser l'importation XML qui permet de mieux contrôler
+les caractéristiques spécifique à l'importation de comptes. Ce mode
+d'importation reste néanmoins opérationnel et est adapté pour la mise à jour de
+données fonctionnelles enregistré sur les documents liés aux comptes.
+
 
 L'importation de groupes, d'utilisateurs et de rôles est effectuée à l'aide d'un
 fichier d'importation `CSV` (texte séparé par des point-virgules) ou `ODS` comme
@@ -112,3 +120,4 @@ recherche" et "Chimiste" car ce rôle est explicitement indiqué dans l'attribut
 
 <!-- links -->
 [import_documents]: #core-ref:2fb3284a-2424-44b2-93ae-41dc3969e093
+[importxml]:        #core-ref:d9e6f16a-6627-4f12-9d5f-a136b21e7cc3
