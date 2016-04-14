@@ -483,9 +483,15 @@ peut être modifiée avec l'attribut `relationIconSize` de la classe
     (
         ["value"] => 1
         ["displayValue"] => "Un"
+        ["exists"] => true
     )
 
-La valeur formatée donne le libellé de l'énuméré.
+La valeur formatée donne le libellé de l'énuméré. 
+
+<span class="flag from release inline">3.2.21</span> La propriété "exists" indique
+si la valeur fait partie du référenciel de l'énuméré. Cette propriété peut être
+`false` dans le cas de l'option [`etype=free`][etype] : autorisation de pose 
+d'un autre choix par l'utilisateur.
 
 ### type `htmltext` {#core-ref:8564f4bc-d65d-43b4-8908-b510598e2a3c}
 
@@ -666,3 +672,4 @@ Elle doit retourner l'objet propertyValue modifié.
 [visibility]:   #core-ref:3e67d45e-1fed-446d-82b5-ba941addc7e8
 [docrev]:       #core-ref:9bcfd205-fb07-4a71-be06-ba07d4a9cc7c
 [properties]:   #core-ref:9aa8edfa-2f2a-11e2-aaec-838a12b40353
+[etype]:        #core-ref:4f14142f-6aac-473f-a0e3-87803febb883

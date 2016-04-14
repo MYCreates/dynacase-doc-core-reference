@@ -14,6 +14,7 @@ Dynacase.
 | Paramétrage du pied de document                          | [Document footer][docfoot]                                                             | <span class="flag new">Nouveau</span>    |
 | Ajout de parties variables dans le paramètre MAIL_ACTION | [Paramètre MAIL_ACTION][mailaction]                                                    | <span class="flag new">Mis à jour</span> |
 | Facilité d'importation et d'exportation de comptes       | [Importation XML de comptes][ixmlaccounts], [Exportation XML de comptes][exmlaccounts] | <span class="flag new">Nouveau</span>    |
+| Ajout de la propriété "exists" pour les énumérés         | [Formatage des énumérés][fmtenum]                                                      | <span class="flag new">Mis à jour</span> |
 
 
 ## Édition 9  {#core-ref:568e128a-3a2b-493c-b59d-1c5cce8ae515}
@@ -259,3 +260,4 @@ retour d'erreur.
 [mailaction]:           #core-ref:c1d9e009-49a5-47a4-9104-4d044ea24aa3
 [ixmlaccounts]:         #core-ref:d9e6f16a-6627-4f12-9d5f-a136b21e7cc3
 [exmlaccounts]:         #core-ref:3c9fc09e-4f7c-466e-a207-c0fdf948fe97
+[fmtenum]:              #core-ref:ddcd138f-acbd-46f0-bf82-2227399536dc
