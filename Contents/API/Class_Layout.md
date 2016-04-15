@@ -17,8 +17,8 @@ syntaxe des templates, et de produire le résultat.
     template.
 
 (Action) `action`:
-:   L'objet `Action` associée à l'évaluation du template. Par défaut,
-    l'action courante (`$action`) est utilisée.
+:   L'objet `Action` associée à l'évaluation du template. 
+    L'action rend disponible les clefs des paramètres applicatifs.
 
 (string) `template`:
 :   Contenu du template. Si `caneva` n'est pas spécifié, ou n'est pas
@@ -44,6 +44,10 @@ Instanciation à partir d'un template contenu dans une chaîne de caractères :
         null,
         "<p>Bonjour [NOM]&nbsp;[PRENOM].</p><p>La température est actuellement de [TEMPC]°C.</p>"
     );
+    $layout->eSet("NOM","Watson");
+    $layout->eSet("PRENOM","Robert");
+    $layout->eSet("TEMPC","23");
+    print $layout->gen();
 
 ### Voir aussi {#core-ref:bebe6da9-59d8-459e-9e60-6798800936e4}
 

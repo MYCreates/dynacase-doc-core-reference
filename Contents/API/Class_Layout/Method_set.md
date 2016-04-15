@@ -14,7 +14,13 @@ du template.
 
 ### Avertissements {#core-ref:d14189fa-d430-4772-b38d-f389737993f1}
 
-Aucun.
+Les valeurs ne sont pas encodées. Si vous avez un template HTML, il faut utiliser
+la méthode [eSet][eSet] pour encoder les valeurs si ce n'est pas un fragment
+HTML.
+
+Si la valeur contient une référence à une [zone][zone], (exemple :  "`[ZONE
+MY:MYZONE]`"), la zone sera interprétée au contrainte de la méthode
+[`eSet`][eset].
 
 ## Liste des paramètres {#core-ref:760dba7d-0669-43e4-999d-cb829bfdb820}
 
@@ -58,7 +64,7 @@ Contrôleur :
     
     $layout->set("NOM",    htmlspecialchars($nom));
     $layout->set("PRENOM", htmlspecialchars($prenom));
-    $layout->set("TEMPC",  htmlspecialchars($temp));
+    $layout->set("TEMPC",  sprintf("%02d",$temp));
     
     print $layout->gen();
 
@@ -86,3 +92,4 @@ résultat du template.
 [htmlspecialchars]: http://docs.php.net/manual/fr/function.htmlspecialchars.php "Définition sur php.net"
 [XSS]: http://fr.wikipedia.org/wiki/XSS "Définition sur wikipédia"
 [eset]:     #core-ref:2696710a-f491-4887-b953-e08d918ef4fb
+[zone]:     #core-ref:28f377e2-b9ee-4427-b2ef-7134eed2bf72
