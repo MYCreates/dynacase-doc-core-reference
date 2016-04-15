@@ -210,7 +210,7 @@ ajoutée à tous les éléments du multiple.
 
 ## Éxécution en tâche de fond {#core-ref:b491ee22-cd34-4c04-8483-c0d1d80ddcd7}
 
-Comme ces tâches peuvent être longue, il est possible de les lancer en tâche de
+Comme ces tâches peuvent être longues, il est possible de les lancer en tâche de
 fond. Cela est fait en remplaçant l'appel des fonctions de modification par leur
 équivalent en tâche de fond.
 
