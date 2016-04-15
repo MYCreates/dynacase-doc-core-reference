@@ -8,9 +8,9 @@ documents.
 La table `vaultdiskfsstorage` indique les différents coffres enregistrés.
 
 
-|      Colonne       |           Type          |                                 Définition                                  |
+|      Colonne       |           Type          |                                  Définition                                 |
 | ------------------ | ----------------------- | --------------------------------------------------------------------------- |
-| id_fs              | integer                 | Identifiant de coffre (issue de la séquence `seq_id_vaultdiskfsstorage`)    |
+| id_fs              | int                     | Identifiant de coffre (issue de la séquence `seq_id_vaultdiskfsstorage`)    |
 | fsname             | text                    | Nom du coffre                                                               |
 | max_size           | bigint                  | Capacité maximum du coffre (en octets)                                      |
 | free_size          | bigint                  | Capacité restante en octets (calculé en fonction de la taille des fichiers) |
@@ -62,23 +62,23 @@ Si _id_file=342_ et _name='mon test.pdf'_ alors le nom physique est `342.pdf`.
 Le fichier est placé dans le répertoire `r_path/l_path`. `r_path` provient du
 coffre lié (`id_fs`) et `l_path` provient du répertoire lié (`id_dir`).
 
-|    Colonne    |             Type            |                                           Définition                                          |
-| ------------- | --------------------------- | --------------------------------------------------------------------------------------------- |
-| id_file       | integer                     | Identificateur de fichier (issue de la séquence `seq_id_vaultdiskstorage)                     |
-| id_fs         | integer                     | Identificateur du coffre lié au fichier                                                       |
-| id_dir        | integer                     | Identificateur du répertoire lié au fichier                                                   |
-| public_access | boolean                     | Si vrai, l'[accès au fichier][expfile] est possible sans contrôle du droit d'accès au document |
-| size          | integer                     | Taille du fichier (en octets)                                                                 |
-| name          | character varying(2048)     | Nom du fichier original (basename)                                                            |
-| mime_t        | text                        | Type mime (humainement lisible, e.g. `PDF document, version 1.4`)                             |
-| mime_s        | text                        | Type mime système (e.g. `application/pdf`)                                                    |
-| cdate         | timestamp without time zone | Date d'insertion dans le coffre                                                               |
-| mdate         | timestamp without time zone | Date de modification dans le coffre                                                           |
-| adate         | timestamp without time zone | Date de dernier accès depuis le coffre                                                        |
-| teng_state    | integer                     | État du fichier converti                                                                      |
-| teng_lname    | text                        | Nom du fichier converti                                                                       |
-| teng_id_file  | integer                     | Identifiant du fichier converti                                                               |
-| teng_comment  | text                        | Message de conversion                                                                         |
+|    Colonne    |                             Type                             |                                           Définition                                           |
+| ------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| id_file       | bigint  <span class="flag from release inline">3.2.21</span> | Identificateur de fichier (issue de la séquence `seq_id_vaultdiskstorage)                      |
+| id_fs         | integer                                                      | Identificateur du coffre lié au fichier                                                        |
+| id_dir        | integer                                                      | Identificateur du répertoire lié au fichier                                                    |
+| public_access | boolean                                                      | Si vrai, l'[accès au fichier][expfile] est possible sans contrôle du droit d'accès au document |
+| size          | integer                                                      | Taille du fichier (en octets)                                                                  |
+| name          | character varying(2048)                                      | Nom du fichier original (basename)                                                             |
+| mime_t        | text                                                         | Type mime (humainement lisible, e.g. `PDF document, version 1.4`)                              |
+| mime_s        | text                                                         | Type mime système (e.g. `application/pdf`)                                                     |
+| cdate         | timestamp without time zone                                  | Date d'insertion dans le coffre                                                                |
+| mdate         | timestamp without time zone                                  | Date de modification dans le coffre                                                            |
+| adate         | timestamp without time zone                                  | Date de dernier accès depuis le coffre                                                         |
+| teng_state    | integer                                                      | État du fichier converti                                                                       |
+| teng_lname    | text                                                         | Nom du fichier converti                                                                        |
+| teng_id_file  | bigint <span class="flag from release inline">3.2.21</span>  | Identifiant du fichier converti                                                                |
+| teng_comment  | text                                                         | Message de conversion                                                                          |
 
 Les attributs de document de type [`file`][attrfile] et [`image`][attrimg]
 référencent l'identifiant du fichier. La valeur d'un tel attribut dans un
@@ -86,6 +86,19 @@ document est : `<Type Mime>|<Identifiant Fichier>|<Nom du fichier>`.
 
 L'_identifiant fichier_ référence la colonne `id_file` de la table
 `vaultdiskstorage`.
+
+
+<span class="flag until release inline">3.2.20</span> Lors de l'ajout d'un
+fichier, l'identifiant du fichier est calculé en incrémentant la séquence
+`seq_id_vaultdiskstorage`.
+
+<span class="flag from release inline">3.2.21</span> Lors de l'ajout d'un
+fichier, l'identifiant du fichier est calculé de manière aléatoire dans un
+ensemble [1 - 2^63].
+
+<span class="flag inline nota-bene"/> Sur un serveur 32 bits, l'ensemble
+possible  d'un identifiant de fichier sera limité à [1 - 2^31].
+
 
 ![ Relations entre les tables des coffres de fichiers ](advanced/dbvault.png)
 
