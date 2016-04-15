@@ -1423,3 +1423,7 @@ book:
       content:  "Advanced/core-shared-documents.md"
       flags:
         new : "nouveauté"
+    - level:   2
+      content:  "Advanced/updateAttributes.md"
+      flags:
+        new : "nouveauté"
