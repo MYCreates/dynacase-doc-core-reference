@@ -51,8 +51,7 @@ hiérarchie dans ce type d'attribut.
     include_once("FDL/Class.Doc.php");
     include_once("FDL/Lib.Dir.php");
     
-    $dbaccess=GetParam("FREEDOM_DB");
-    $tdoc=getKindDoc($dbaccess,
+    $tdoc=getKindDoc("",
         "USER",         // nom de la famille
         "us_type",      // attribut énuméré sur lequel s'applique le filtrage
         "chefserv"      // clef à rechercher
