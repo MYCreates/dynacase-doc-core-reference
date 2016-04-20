@@ -6,16 +6,17 @@ Dynacase.
 
 ## Édition 10 {#core-ref:94453692-21ca-4200-83cc-597a71400801}
 
-|                      Modifications                       |                                        Chapitre                                        |                 Version                  |
-| :------------------------------------------------------- | :------------------------------------------------------------------------------------- | :--------------------------------------- |
-| Explications de l'objet de partage de document           | [Objet de partage de document][shareddoc]                                              | <span class="flag new">Nouveau</span>    |
-| Précision sur les exportations vis-à-vis des révisions   | [Révision et exportation][exportrevision], [Révision XML][revisionxml]                 | <span class="flag new">Mis à jour</span> |
-| Ajout information sur la révision pour formatCollection  | [Formatage des relations][fmtDocId]                                                    | <span class="flag new">Mis à jour</span> |
-| Paramétrage du pied de document                          | [Document footer][docfoot]                                                             | <span class="flag new">Nouveau</span>    |
-| Ajout de parties variables dans le paramètre MAIL_ACTION | [Paramètre MAIL_ACTION][mailaction]                                                    | <span class="flag new">Mis à jour</span> |
-| Facilité d'importation et d'exportation de comptes       | [Importation XML de comptes][ixmlaccounts], [Exportation XML de comptes][exmlaccounts] | <span class="flag new">Nouveau</span>    |
-| Ajout de la propriété "exists" pour les énumérés         | [Formatage des énumérés][fmtenum]                                                      | <span class="flag new">Mis à jour</span> |
-
+|                      Modifications                       |                                        Chapitre                                        |                   Version                   |
+| :------------------------------------------------------- | :------------------------------------------------------------------------------------- | :------------------------------------------ |
+| Explications de l'objet de partage de document           | [Objet de partage de document][shareddoc]                                              | <span class="flag new">Nouveau</span>       |
+| Précision sur les exportations vis-à-vis des révisions   | [Révision et exportation][exportrevision], [Révision XML][revisionxml]                 | <span class="flag update">Mis à jour</span> |
+| Ajout information sur la révision pour formatCollection  | [Formatage des relations][fmtDocId]                                                    | <span class="flag update">Mis à jour</span> |
+| Paramétrage du pied de document                          | [Document footer][docfoot]                                                             | <span class="flag new">Nouveau</span>       |
+| Ajout de parties variables dans le paramètre MAIL_ACTION | [Paramètre MAIL_ACTION][mailaction]                                                    | <span class="flag update">Mis à jour</span> |
+| Facilité d'importation et d'exportation de comptes       | [Importation XML de comptes][ixmlaccounts], [Exportation XML de comptes][exmlaccounts] | <span class="flag new">Nouveau</span>       |
+| Ajout de la propriété "exists" pour les énumérés         | [Formatage des énumérés][fmtenum]                                                      | <span class="flag update">Mis à jour</span> |
+| Explication classe `UpdateAttribute`                     | [Mise à jour par lot][updateAttribute]                                                 | <span class="flag new">Nouveau</span>       |
+| Modification sur l'identififiant de fichier              | [Table vaultdiskstorage][vaultid]                                                      | <span class="flag update">Mis à jour</span> |
 
 ## Édition 9  {#core-ref:568e128a-3a2b-493c-b59d-1c5cce8ae515}
 
@@ -261,3 +262,5 @@ retour d'erreur.
 [ixmlaccounts]:         #core-ref:d9e6f16a-6627-4f12-9d5f-a136b21e7cc3
 [exmlaccounts]:         #core-ref:3c9fc09e-4f7c-466e-a207-c0fdf948fe97
 [fmtenum]:              #core-ref:ddcd138f-acbd-46f0-bf82-2227399536dc
+[updateAttribute]:      #core-ref:c28bea37-1f15-4157-aa79-40b5181d53f5
+[vaultid]:              #core-ref:4e91a88e-66a3-46e7-824d-d11adb0c39fe

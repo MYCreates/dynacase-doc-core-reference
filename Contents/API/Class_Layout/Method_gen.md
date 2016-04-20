@@ -178,14 +178,15 @@ Résultat :
 
 L'expansion des balises est faite dans l'ordre suivant :
 
-* balise de bloc (e.g. `[BLOCK xxx]...[ENDBLOCK xxx]`) ;
-* balise conditionnelle (e.g. `[IF xxx]...[ENDIF xxx]`, `[IFNOT xxx]...[ENDIF xxx]`) ;
-* balise d'internationalisation de texte (e.g. `[TEXT:xxx]`) ;
-* balise de clef atomique (e.g. `[V_xxx]`) ;
-* balise de référence d'image (e.g. `[IMG:xxx]`) ;
-* balise de zone (e.g. `[ZONE xxx]`) ;
-* balise de référence ou de code JavaScript (e.g. `[JS:REF]`, `[JS:CODE]`) ;
-* balise de référence ou de code CSS (e.g `[CSS:REF]`, `[CSS:CODE]`).
+1. balise de bloc (e.g. `[BLOCK xxx]...[ENDBLOCK xxx]`) ;
+2. balise conditionnelle (e.g. `[IF xxx]...[ENDIF xxx]`, `[IFNOT xxx]...[ENDIF xxx]`) ;
+3. balise d'internationalisation de texte (e.g. `[TEXT:xxx]`) ;
+4. balise de clef atomique (e.g. `[xxx]`) définie via les méthodes [`eSet()`][eset] ou [`set()`][set] ;
+5. balise de paramètre applicatif (si $action présent dans le [constructeur][layoutconstruct]).
+6. balise de référence d'image (e.g. `[IMG:xxx]`) ;
+7. balise de zone (e.g. `[ZONE xxx]`) ;
+8. balise de référence ou de code JavaScript (e.g. `[JS:REF]`, `[JS:CODE]`) ;
+9. balise de référence ou de code CSS (e.g `[CSS:REF]`, `[CSS:CODE]`).
 
 ## Voir aussi {#core-ref:41d41bf4-a619-4db7-9d33-dd630d866244}
 
@@ -194,6 +195,8 @@ L'expansion des balises est faite dans l'ordre suivant :
 - [Liste des balises utilisables en texte][tag_list_texte]
 
 <!-- links -->
-[set]: #core-ref:812c30ed-11cb-4b59-84d2-ba10e4ab7e88
-[setBlockData]: #core-ref:fb8a6d38-0bc7-469b-97d3-7cb8d6d3ea4b
-[tag_list_texte]: #core-ref:32dea245-37e6-4a4c-a65e-06c577c0effa
+[set]:              #core-ref:812c30ed-11cb-4b59-84d2-ba10e4ab7e88
+[setBlockData]:     #core-ref:fb8a6d38-0bc7-469b-97d3-7cb8d6d3ea4b
+[tag_list_texte]:   #core-ref:32dea245-37e6-4a4c-a65e-06c577c0effa
+[eset]:             #core-ref:2696710a-f491-4887-b953-e08d918ef4fb
+[layoutconstruct]:  #core-ref:d0038e8d-b915-4d84-ac28-4f6c0aeb20a0

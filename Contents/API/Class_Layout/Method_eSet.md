@@ -30,6 +30,9 @@ Liste des caractères encodés :
 Cette méthode doit être utilisée si le champ est entre `'` (quote) ou `"`
 (double-quote).
 
+Si la valeur contient une référence à une [zone][zone], (exemple :  "`[ZONE
+MY:MYZONE]`"), la zone ne sera pas interprétée.
+
 ## Liste des paramètres  {#core-ref:df082e35-f98b-4e8b-b199-34889eb1a71e}
 
 (string) `tag`
@@ -79,7 +82,7 @@ Contrôleur :
 
 Résultat :
 
-    [html]
+    [xml]
     <div>
         <p data-name="Doe" data-firstname="John dit &quot;l&#039;inconnu&quot;>
           Écart admissible : 20 &lt; x &lt; 30
