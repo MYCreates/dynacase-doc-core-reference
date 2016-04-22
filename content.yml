@@ -483,6 +483,12 @@ book:
       content:  "API/Class_Doc/Method_postStore.md"
     - level:   4
       element: "chapter"
+      content:  "API/Class_Doc/Method_customSearchValues.md"
+      flags:
+        new : "nouveauté"
+        release : "3.2.21"
+    - level:   4
+      element: "chapter"
       content:  "API/Class_Doc/Method_preRefresh.md"
     - level:   4
       element: "chapter"

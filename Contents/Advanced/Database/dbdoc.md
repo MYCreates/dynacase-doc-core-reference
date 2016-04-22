@@ -166,6 +166,8 @@ Ces deux colonnes sont calculées par trigger. Toutes modifications
 d'enregistrements sur les tables documentaires déclenchent le recalcul de ces
 colonnes.
 
+
+
 <!-- links -->
 [docprop]:          #core-ref:9aa8edfa-2f2a-11e2-aaec-838a12b40353 "Propriétés de la classe Doc" 
 [docrevise]:        #core-ref:882e3730-0483-4dbc-9b9d-0d0b5cc31d38

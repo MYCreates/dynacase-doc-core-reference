@@ -16,6 +16,7 @@ Les méthode surchargeables appelées lors de la création d'un document sont :
 *   Lors de la création avec [`Doc::store()`][doc_store]
     *   [`Doc::preStore()`][doc_prestore]
     *   [`Doc::preCreated()`][doc_precreated]
+    *   [`Doc::customSearchValues()`][doc_customSearchValues]
     *   [`Doc::postCreated()`][doc_postcreated]
     *   [`Doc::preRefresh()`][doc_prerefresh]
     *   [`Doc::postRefresh()`][doc_postrefresh]
@@ -30,7 +31,9 @@ Les méthode surchargeables appelées lors de la modification d'un document sont
 
 *   Lors de la modification avec [`Doc::store()`][doc_store]
     *   [`Doc::preStore()`][doc_prestore]
+    *   [`Doc::customSearchValues()`][doc_customSearchValues]
     *   [`Doc::preRefresh()`][doc_prerefresh]
+    *   ([`Doc::customSearchValues()`][doc_customSearchValues] si modification)
     *   [`Doc::postRefresh()`][doc_postrefresh]
     *   [`Doc::postStore()`][doc_poststore]
 *   Lors de la modification avec `Doc::modify()`
@@ -113,3 +116,4 @@ dans un dossier avec [`Dir::removeDocument()`][dir_removedocument] sont :
 [dbobjadd]:             #core-ref:28379dfc-7f6d-450f-b994-834d4fba7452
 [new_doc]:              #core-ref:e978cbd1-5f54-4a06-a6be-f1c079c2d734
 [searchdoc]:            #core-ref:a5216d5c-4e0f-4e3c-9553-7cbfda6b3255
+[doc_customSearchValues]: #core-ref:f1aaac21-085c-4ef6-bddc-962530c4efaa
