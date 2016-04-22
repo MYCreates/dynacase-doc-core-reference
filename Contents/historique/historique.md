@@ -17,6 +17,7 @@ Dynacase.
 | Ajout de la propriété "exists" pour les énumérés         | [Formatage des énumérés][fmtenum]                                                      | <span class="flag update">Mis à jour</span> |
 | Explication classe `UpdateAttribute`                     | [Mise à jour par lot][updateAttribute]                                                 | <span class="flag new">Nouveau</span>       |
 | Modification sur l'identififiant de fichier              | [Table vaultdiskstorage][vaultid]                                                      | <span class="flag update">Mis à jour</span> |
+| Enregistrement des valeurs affichées                     | [Hook customSearchValues][customSearchValues]                                          | <span class="flag new">Nouveau</span>       |
 
 ## Édition 9  {#core-ref:568e128a-3a2b-493c-b59d-1c5cce8ae515}
 
@@ -264,3 +265,4 @@ retour d'erreur.
 [fmtenum]:              #core-ref:ddcd138f-acbd-46f0-bf82-2227399536dc
 [updateAttribute]:      #core-ref:c28bea37-1f15-4157-aa79-40b5181d53f5
 [vaultid]:              #core-ref:4e91a88e-66a3-46e7-824d-d11adb0c39fe
+[customSearchValues]:   #core-ref:f1aaac21-085c-4ef6-bddc-962530c4efaa
