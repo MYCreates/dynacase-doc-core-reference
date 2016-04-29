@@ -11,13 +11,13 @@ Méthode utilisée pour supprimer un document.
                     bool $control = true, 
                     bool $nopost  = false )
 
-Cette méthode met le statut du document à "supprimé". La propriété `doctype`
-est affectée à `Z` (Zombie) et `locked` est affectée à `-1` dans le cas d'une
-suppression logique.
+Cette méthode met le statut du document à "supprimé". La [propriété][docprop]
+`doctype` est affectée à `Z` (Zombie) et `locked` est affectée à `-1` dans le
+cas d'une suppression logique.
 
 ### Avertissements {#core-ref:7f58a2d6-2123-4d52-b7d3-cfe8a2516ebd}
 
-Aucun.
+Cette méthode supprime toutes les [révisions][revision] du document.
 
 ## Liste des paramètres {#core-ref:d199b08d-6d29-4055-8451-a28eae527f3c}
 
@@ -102,6 +102,8 @@ en utilisant l'attribut `trash`.
 [docpreundelete]:   #core-ref:6ec8e3bc-90d2-4577-9152-a1a1f9341751  "Hameçon Doc::preUndelete()"
 [docpostundelete]:  #core-ref:7d851f54-d167-4ecd-bbec-d3670023cc36  "Hameçon Doc::postUndelete()"
 [undelete]:         #core-ref:e48b02c7-c684-4f71-a731-ac92064d13ae
-[docpostDelete]:   #core-ref:8db8e5e0-b15e-4cfe-a891-66850df15b1e "Hameçon Doc::postDelete()"
-[docpreDelete]:    #core-ref:dca7b2bd-fc69-4f6f-ab12-fb0de91dce8c "Hameçon Doc::preDelete()"
+[docpostDelete]:    #core-ref:8db8e5e0-b15e-4cfe-a891-66850df15b1e "Hameçon Doc::postDelete()"
+[docpreDelete]:     #core-ref:dca7b2bd-fc69-4f6f-ab12-fb0de91dce8c "Hameçon Doc::preDelete()"
 [searchdoc]:        #core-ref:a5216d5c-4e0f-4e3c-9553-7cbfda6b3255
+[docprop]:          #core-ref:9aa8edfa-2f2a-11e2-aaec-838a12b40353
+[revision]:         #core-ref:8c947ef6-8da5-4fca-93cf-897c81ebb53d

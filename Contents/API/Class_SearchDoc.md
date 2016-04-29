@@ -72,11 +72,12 @@ sur la notion de [famille][famintro] et les structures associées ([attributs][a
 
 (string) trash (valeur par défaut `no`)
 :   Indique si la recherche doit chercher aussi dans les documents supprimés.  
+    La [propriété][docprop] `doctype` est à `Z` si le document est supprimé.  
     Valeurs possibles :  
     
     *   `no` : Les documents supprimés sont exclus,
     *   `also` : Les documents supprimés sont inclus,
-    *   `only` : Les documents non supprimés sont exclus, seul les supprimés 
+    *   `only` : Les documents non supprimés sont exclus, seuls les supprimés 
     sont inclus.
 
 (bool) latest (valeur par défaut `true`)
@@ -134,3 +135,4 @@ Recherche sur les documents de la famille IUSER :
 [advancedSearchDoc]:        #core-ref:7291dea8-a2db-46be-8194-bc6f100cc467
 [search]:                   #core-ref:6f5cc024-66e4-429e-9071-67d4523a8e08
 [reset]:                    #core-ref:39efa6f3-4d70-452c-b14b-891adca3a56d
+[docprop]:                  #core-ref:9aa8edfa-2f2a-11e2-aaec-838a12b40353
