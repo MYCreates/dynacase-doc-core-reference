@@ -19,7 +19,7 @@ Dynacase.
 | Modification sur l'identififiant de fichier              | [Table vaultdiskstorage][vaultid]                                                      | <span class="flag update">Mis à jour</span> |
 | Enregistrement des valeurs affichées                     | [Hook customSearchValues][customSearchValues]                                          | <span class="flag new">Nouveau</span>       |
 | Nouvelle option d'importation de droits                  | [Pose de droits sur les documents][docprofil], [Exportation des profils][profilexport] | <span class="flag update">Mis à jour</span> |
-|                                                          |                                                                                        |                                             |
+| Précision sur l'include path                             | [include_path][includepath]                                                            | <span class="flag update">Mis à jour</span> |
 
 ## Édition 9  {#core-ref:568e128a-3a2b-493c-b59d-1c5cce8ae515}
 
@@ -270,3 +270,4 @@ retour d'erreur.
 [customSearchValues]:   #core-ref:f1aaac21-085c-4ef6-bddc-962530c4efaa
 [docprofil]:           #core-ref:2ec1ae6f-4b2a-4bc2-a100-4e5873538bb5
 [profilexport]:        #core-ref:602c6331-7cdb-4b24-8a56-ffd11e00502f
+[includepath]:         #core-ref:c4f7a45f-9cb2-45e1-a22d-20880fa9e5d1
