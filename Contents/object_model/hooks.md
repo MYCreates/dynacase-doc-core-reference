@@ -44,8 +44,8 @@ Les méthode surchargeables appelées lors de la modification d'un document sont
 Les méthode surchargeables appelées lors de la suppression d'un document 
 avec [`Doc::delete()`][doc_delete] sont :
 
-*   `Doc::preDelete()`
-*   `Doc::postDelete()`
+*   [`Doc::preDelete()`][doc_predelete]
+*   [`Doc::postDelete()`][doc_postdelete]
 
 ## Affectation de document {#core-ref:e11b3532-6d5b-4a1a-ad20-0667409f1f65}
 
@@ -107,6 +107,8 @@ dans un dossier avec [`Dir::removeDocument()`][dir_removedocument] sont :
 [doc_duplicate]:   #core-ref:f7d4f454-0e45-40bd-9f4c-b149ab620295
 [doc_preimport]: #core-ref:adb6ba8b-15c4-42d3-97dc-1da16c2112ae
 [doc_postimport]: #core-ref:9de7e922-150a-416b-b846-b6e195bf0921
+[doc_predelete]: #core-ref:dca7b2bd-fc69-4f6f-ab12-fb0de91dce8c
+[doc_postdelete]: #core-ref:8db8e5e0-b15e-4cfe-a891-66850df15b1e
 
 [doc_preaffect]:        #core-ref:e6f36fea-9f42-4751-ba9b-c3aafec56559
 [doc_postaffect]:       #core-ref:7e9f3b6f-f801-4fa9-8215-f02d575b357f

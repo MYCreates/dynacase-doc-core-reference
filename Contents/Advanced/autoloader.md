@@ -119,7 +119,24 @@ Exemple d'utilisation dans `info.xml` :
     
     </module>
 
+
+## Chemins d'inclusion (include_path) {#core-ref:c4f7a45f-9cb2-45e1-a22d-20880fa9e5d1}
+
+Le paramètre [include_path][include_path] est défini en ajoutant le
+répertoire d'installation.
+
+<span class="flag from release inline">3.2.21</span>Le répertoire d'installation
+est prioritaire aux autres chemins définis par votre configuration PHP. Les
+chemins sont :
+
+1.   `DEFAULT_PUBDIR`
+2.   `DEFAULT_PUBDIR`/WHAT
+3.   _Include path configuré par PHP_
+
+
+
 <!-- links -->
-[fnmatch]: http://docs.php.net/manual/en/function.fnmatch.php
+[fnmatch]: http://docs.php.net/manual/en/function.fnmatch.php "php.net : fonction fnmatch"
 [action]: #core-ref:e67d8aeb-939c-46e3-9be8-6fc3ba75ebc2
 [scripts_cli]: #core-ref:1566c46d-a53d-44cf-8c3f-0d0e21c0b117
+[include_path]: http://php.net/manual/fr/ini.core.php#ini.include-path "php.net : include_path"

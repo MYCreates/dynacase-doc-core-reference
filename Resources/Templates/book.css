@@ -1,1 +1,31 @@
 /* special book css */
+
+.ok {
+    background-color: #71F379;
+    padding: 0.2em;
+    border-radius: 50%;
+    min-width:1.8em;
+    display:inline-block;
+}
+.ko {
+    background-color:#F39571;
+    padding: 0.2em;
+    border-radius: 50%;
+    min-width:1.8em;
+    display:inline-block;
+}
+
+.aclgreen {
+    background-color: #71F379;
+    padding: 0.2em;
+    border-radius: 50%;
+    min-width:1.8em;
+    display:inline-block;
+}
+.aclgrey {
+    background-color: #c2c2c2;
+    padding: 0.2em;
+    border-radius: 50%;
+    min-width:1.8em;
+    display:inline-block;
+}
