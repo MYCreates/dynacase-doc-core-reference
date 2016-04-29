@@ -32,13 +32,18 @@ Encodage
     automatiquement et ces 2 encodages sont supportés.
 
 Profil
-:   Permet d'exporter les profils associés aux documents.
+:   Permet d'[exporter les profils][exportprofile] associés aux documents.
     
     Si des profils sont liés à des documents, le document profil et son
     profilage sont aussi exportés.
     
     Cette option est utile lorsqu'un concepteur de famille veut récupérer son
     [paramétrage profil][exportprofil].
+    
+    <span class="flag from release inline">3.2.21</span> Une option supplémentaire
+    permet de récupérer les droits avec les références aux comptes (utilisation de
+        [`:useAccount`][importprofile]) ou avec les
+    références aux documents  (utilisation de  [`:useDocument`][importprofile])
 
 Fichiers
 :   Permet d'exporter également les fichiers attachés aux documents.
@@ -210,3 +215,5 @@ révisions précédentes.
 [visibility]:   #core-ref:3e67d45e-1fed-446d-82b5-ba941addc7e8
 [importcsvid]:  #core-ref:3acb8fbe-6e5a-4933-95fa-2cea0eae2fc5
 [docrev]:       #core-ref:9bcfd205-fb07-4a71-be06-ba07d4a9cc7c
+[importprofile]:    #core-ref:2ec1ae6f-4b2a-4bc2-a100-4e5873538bb5
+[exportprofile]:    #core-ref:602c6331-7cdb-4b24-8a56-ffd11e00502f

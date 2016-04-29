@@ -55,8 +55,11 @@ La clef `PROFIL` contient l'ensemble des droits explicites mis sur les
 [profils][profilage].
 
 <span class="flag from release inline">3.2.21</span> L'affectation des droits
-est faite avec les références (login) des [comptes][userid] _Utilisateurs_,
-_Groupes_ et _Rôles_ .
+est faite par défaut avec les références ([:useAccount][importprofil]) des
+[comptes][userid] _Utilisateurs_, _Groupes_ et _Rôles_ . Si l'option "Utiliser
+les références aux comptes" est indiquée depuis l'[interface
+d'exportation][exporrtfld], l'exportation sera effectuée en utilisant l'option
+[`:useDocument`][importprofil].
 
 Les différents notations de profils sont :
 
@@ -131,3 +134,5 @@ pas les droits supprimés. Il existe différentes [options][options_profil_impor
 [options_profil_import]: #core-ref:2ec1ae6f-4b2a-4bc2-a100-4e5873538bb5
 [cleancontext]:  #core-ref:100b123b-da1a-45b4-848b-0622f3e09a40
 [userid]:        #core-ref:4842d6c2-f88d-41d9-aa30-04437ffdb67e
+[importprofil]:  #core-ref:2ec1ae6f-4b2a-4bc2-a100-4e5873538bb5
+[exporrtfld]:    #core-ref:88fb91b5-51a3-4b33-ac2e-5f20eddd8210
