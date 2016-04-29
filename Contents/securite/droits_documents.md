@@ -32,22 +32,22 @@ Légende :
 *    `S` : Pour les profils de Recherche (_Search_),
 *    `C` : Pour les profils de Famille (_Class_).
 
-| Nom interne  |        Description         |                                                                                                                                                                                                                 Description longue                                                                                                                                                                                                                 | `D` | `F` | `S` | `C` |
-| ------------ | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- | --- | --- | --- |
-| view         | Voir                       | Voir les caractéristiques du document, du dossier ou de la recherche. Le fait de ne pas voir un dossier n'implique pas de ne pas voir les documents contenus dans le dossier.                                                                                                                                                                                                                                                                      | X   | X   | X   |     |
-| edit         | Modifier                   | Modifier les caractéristiques du document, du dossier.                                                                                                                                                                                                                                                                                                                                                                                             | X   | X   | X   |     |
-| delete       | Supprimer                  | Supprimer le document, le dossier, la recherche ; c'est à dire le mettre à la poubelle.                                                                                                                                                                                                                                                                                                                                                            | X   | X   | X   |     |
-| unlock       | Déverrouiller              | Déverrouiller le document.                                                                                                                                                                                                                                                                                                                                                                                                                         | X   | X   | X   |     |
-| viewacl      | Voir les droits            | Voir les droits du document.                                                                                                                                                                                                                                                                                                                                                                                                                       | X   | X   | X   |     |
-| modifyacl    | Modifier les droits        | Modifier les droits du document.                                                                                                                                                                                                                                                                                                                                                                                                                   | X   | X   | X   |     |
-| confidential | Voir document confidentiel | Permet d'utiliser normalement un document qui est confidentiel. (Confidentiel est une propriété de document).                                                                                                                                                                                                                                                                                                                                      | X   | X   | X   |     |
-| send         | Envoyer                    | Envoyer par courriel le document.                                                                                                                                                                                                                                                                                                                                                                                                                  | X   |     |     |     |
-| open         | Ouvrir                     | Ouvrir le dossier. Permet de voir le contenu du dossier.                                                                                                                                                                                                                                                                                                                                                                                           |     | X   |     |     |
-| modify       | Contenu                    | Modifier le contenu du dossier. Permet d'ajouter ou de supprimer des documents dans le dossier.                                                                                                                                                                                                                                                                                                                                                    |     | X   |     |     |
-| execute      | Executer                   | Permet d'exécuter la recherche.                                                                                                                                                                                                                                                                                                                                                                                                                    |     |     | X   |     |
-| create       | Créer                      | Autorise la création de document de cette famille.                                                                                                                                                                                                                                                                                                                                                                                                 |     |     |     | X   |
-| icreate      | Créer manuellement         | Autorise la création de document de cette famille à partir de l'interface. Si ce droit n'est pas mis et que `create` est mis, l'utilisateur ne pourra créer le document que de manière indirecte (soit sur une transition, soit sur toute autre action particulière mis en place par l'administrateur). Sans ce droit les menus de création de cette famille sont inaccessibles. Si ce droit est mis il faut que le droit `create` soit aussi mis. |     |     |     | X   |
-|              |                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                    |     |     |     |     |
+| Nom interne  |        Description         |                                                                                                                                                                                                                 Description longue                                                                                                                                                                                                                 |            `D`            |            `F`            |            `S`            |            `C`            |
+| ------------ | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-----------------------: | :-----------------------: | :-----------------------: | :-----------------------: |
+| view         | Voir                       | Voir les caractéristiques du document, du dossier ou de la recherche. Le fait de ne pas voir un dossier n'implique pas de ne pas voir les documents contenus dans le dossier.                                                                                                                                                                                                                                                                      | <span class="ok">X</span> | <span class="ok">X</span> | <span class="ok">X</span> |                           |
+| edit         | Modifier                   | Modifier les caractéristiques du document, du dossier.                                                                                                                                                                                                                                                                                                                                                                                             | <span class="ok">X</span> | <span class="ok">X</span> | <span class="ok">X</span> |                           |
+| delete       | Supprimer                  | Supprimer le document, le dossier, la recherche ; c'est à dire le mettre à la poubelle.                                                                                                                                                                                                                                                                                                                                                            | <span class="ok">X</span> | <span class="ok">X</span> | <span class="ok">X</span> |                           |
+| unlock       | Déverrouiller              | Déverrouiller le document.                                                                                                                                                                                                                                                                                                                                                                                                                         | <span class="ok">X</span> | <span class="ok">X</span> | <span class="ok">X</span> |                           |
+| viewacl      | Voir les droits            | Voir les droits du document.                                                                                                                                                                                                                                                                                                                                                                                                                       | <span class="ok">X</span> | <span class="ok">X</span> | <span class="ok">X</span> |                           |
+| modifyacl    | Modifier les droits        | Modifier les droits du document.                                                                                                                                                                                                                                                                                                                                                                                                                   | <span class="ok">X</span> | <span class="ok">X</span> | <span class="ok">X</span> |                           |
+| confidential | Voir document confidentiel | Permet d'utiliser normalement un document qui est confidentiel. (Confidentiel est une propriété de document).                                                                                                                                                                                                                                                                                                                                      | <span class="ok">X</span> | <span class="ok">X</span> | <span class="ok">X</span> |                           |
+| send         | Envoyer                    | Envoyer par courriel le document.                                                                                                                                                                                                                                                                                                                                                                                                                  | <span class="ok">X</span> |                           |                           |                           |
+| open         | Ouvrir                     | Ouvrir le dossier. Permet de voir le contenu du dossier.                                                                                                                                                                                                                                                                                                                                                                                           |                           | <span class="ok">X</span> |                           |                           |
+| modify       | Contenu                    | Modifier le contenu du dossier. Permet d'ajouter ou de supprimer des documents dans le dossier.                                                                                                                                                                                                                                                                                                                                                    |                           | <span class="ok">X</span> |                           |                           |
+| execute      | Executer                   | Permet d'exécuter la recherche.                                                                                                                                                                                                                                                                                                                                                                                                                    |                           |                           | <span class="ok">X</span> |                           |
+| create       | Créer                      | Autorise la création de document de cette famille.                                                                                                                                                                                                                                                                                                                                                                                                 |                           |                           |                           | <span class="ok">X</span> |
+| icreate      | Créer manuellement         | Autorise la création de document de cette famille à partir de l'interface. Si ce droit n'est pas mis et que `create` est mis, l'utilisateur ne pourra créer le document que de manière indirecte (soit sur une transition, soit sur toute autre action particulière mis en place par l'administrateur). Sans ce droit les menus de création de cette famille sont inaccessibles. Si ce droit est mis il faut que le droit `create` soit aussi mis. |                           |                           |                           | <span class="ok">X</span> |
+|              |                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                           |                           |                           |                           |
 
 
 ## Profil liés {#core-ref:edc17da5-bc7c-4d13-9887-e75a9d5ee519}
@@ -81,16 +81,62 @@ Un droit peut être posé sur un rôle, un groupe ou un utilisateur. Pour indiqu
 ce compte, il faut utiliser le nom logique du document lié à ce compte ou
 l'identifiant système du compte (attribut _us_whatid_ donné sur le document).
 
+<span class="flag from release inline">3.2.21</span> Le compte peut être
+identifié avec son [login][xmllogin] pour les utilisateurs et la "référence"
+pour les [groupes][xmlgroup] et [rôles][xmlrole]. Le type de compte peut être
+indiqué dans la troisième colonne  ou directement dans l'expression de la
+référence au compte. Le type précisé dans la référence est prioritaire au type
+indiqué dans la troisième colonne.
+
+Exemple :
+
+|            | Identifiant du profil | Type de compte |  Option |                Droit                 |           Droit            |     Droit     |
+| ---------- | --------------------- | -------------- | ------- | ------------------------------------ | -------------------------- | ------------- |
+| __PROFIL__ | MY_FIRST_PROFIL       | `:useAccount`  | `RESET` | view=attribute(tst_writer), john.doe | edit=attribute(tst_writer) | delete=gadmin |
+| __PROFIL__ | MY_SECOND_PROFIL      | `:useDocument` | `RESET` | view=DOC_JOHN, SPECIAL_GROUP         | edit=DOC_JOHN              | delete=GADMIN |
+
+Soit le compte utilisateur X : login : `john.doe` (id système : `23`), nom
+logique : `DOC_JOHN`. Le profil est dynamique et son document lié à un attribut
+[account][account] nommé `my_account`.
+
+
+|       Type      |       Référence       |          Résultat          |
+| --------------- | --------------------- | -------------------------- |
+| _vide_          | john.doe              | <span class="ko">KO</span> |
+| _vide_          | DOC_JOHN              | <span class="ok">OK</span> |
+| _vide_          | my_account            | <span class="ok">OK</span> |
+| _vide_          | 23                    | <span class="ok">OK</span> |
+|                 |                       |                            |
+| _tout type_     | account(john.doe)     | <span class="ok">OK</span> |
+| _tout type_     | document(DOC_JOHN)    | <span class="ok">OK</span> |
+| _tout type_     | attribute(my_account) | <span class="ok">OK</span> |
+|                 |                       |                            |
+| `:useAccount`   | john.doe              | <span class="ok">OK</span> |
+| `:useAccount`   | DOC_JOHN              | <span class="ko">KO</span> |
+| `:useAccount`   | my_account            | <span class="ko">KO</span> |
+| `:useAccount`   | 23                    | <span class="ko">KO</span> |
+|                 |                       |                            |
+| `:useDocument`  | john.doe              | <span class="ko">KO</span> |
+| `:useDocument`  | DOC_JOHN              | <span class="ok">OK</span> |
+| `:useDocument`  | my_account            | <span class="ko">KO</span> |
+| `:useDocument`  | 23                    | <span class="ko">KO</span> |
+|                 |                       |                            |
+| `:useAttribute` | john.doe              | <span class="ko">KO</span> |
+| `:useAttribute` | DOC_JOHN              | <span class="ko">KO</span> |
+| `:useAttribute` | my_account            | <span class="ok">OK</span> |
+| `:useAttribute` | 23                    | <span class="ko">KO</span> |
+
+
 Quatre options permettent de spécifier le comportement d'importation des droits :
 
 *   **`ADD`** : Ajout de droits (option par défaut).  
     Les anciens droits sont conservés, les droits spécifiés seront ajoutés.
-*   DELETE : Suppression de droits.  
+*   `DELETE `: Suppression de droits.  
     Les droits spécifiés sont retirés.
-*   SET : Synchronisation des droits sans mise à jour systématique des documents.  <span class="flag from release">3.2.17</span>
+*   `SET `: Synchronisation des droits sans mise à jour systématique des documents.  <span class="flag from release">3.2.17</span>
     Les droits à importer sont comparés aux droits en base et la mise à jour des documents n'est effectuée uniquement si les 
     droits à importer sont différents de ceux présents en base.
-*   RESET : Réinitialisation des droits.  
+*   `RESET `: Réinitialisation des droits.  
     Les anciens droits sont retirés, les droits spécifiés sont ajoutés et un calcul des droits est lancé sur tous les
     documents associés à ce profil. **Attention** : Cette opération peut-être consommatrice en temps et en ressources.
 
@@ -100,10 +146,12 @@ compte doit être indiqué. Si plusieurs comptes sont associés à un droit ils
 doivent être dans la même cellule séparés par une virgule ou alors dans des
 cellules séparées.
 
-|            | Identifiant du profil |  /  | Option |       Droit       |       Droit       |       Droit        |
-| ---------- | --------------------- | --- | ------ | ----------------- | ----------------- | ------------------ |
-| __PROFIL__ | MY_PROFIL             |     | RESET  | view=GALL, GADMIN | edit=GADMIN       | delete=GADMIN      |
-| __PROFIL__ | MY_OTHER_PROFIL       |     |        | view=GALL         | edit=MY_FIRSTROLE | view=MY_FIRSTGROUP |
+|            | Identifiant du profil | Type de compte |  Option |      Droit       |      Droit       |       Droit       |
+| ---------- | --------------------- | -------------- | ------- | ---------------- | ---------------- | ----------------- |
+| __PROFIL__ | MY_PROFIL             | `:useAccount`  | `RESET` | view=all, gadmin | edit=gadmin      | delete=gadmin     |
+| __PROFIL__ | MY_OTHER_PROFIL       | `:useAccount`  |         | view=all         | edit=myfirstrole | view=myfirstgroup |
+|            |                       |                |         |                  |                  |                   |
+
 
 ### Lier un profil par programmation {#core-ref:b8065dc8-8f14-4749-91a8-a07acc671f1a}
 
@@ -166,15 +214,24 @@ l'identifiant de l'attribut à la place de l'identifiant d'un rôle, d'un groupe
 ou d'un utilisateur. Un profil dynamique peut aussi avoir une partie statique
 comme les profils standards.
 
-|            | Identifiant du profil |  /  | Option |             Droit              |      Droit      |     Droit     |
-| ---------- | --------------------- | --- | ------ | ------------------------------ | --------------- | ------------- |
-| __PROFIL__ | MY_DYNAMIC_PROFIL     |     | RESET  | view=tst_writer, tst_observers | edit=tst_writer | delete=GADMIN |
+|            |  Identifiant du profil  |  Type de compte |  Option |                Droit                 |           Droit            |         Droit          |
+| ---------- | ----------------------- | --------------- | ------- | ------------------------------------ | -------------------------- | ---------------------- |
+| __PROFIL__ | MY_DYNAMIC_PROFIL       | `:useAttribute` | `RESET` | view=tst_writer, tst_observers       | edit=tst_writer            | delete=account(gadmin) |
+| __PROFIL__ | MY_DYNAMIC_OTHER_PROFIL | `:useAccount`   | `RESET` | view=attribute(tst_writer), john.doe | edit=attribute(tst_writer) | delete=gadmin          |
+|            |                         |                 |         |                                      |                            |                        |
 
 Les noms des attributs peuvent être écrits sans prendre en compte la casse dans
 le [fichier d'importation][importdoc].
 
-*Note* : Si l'identifiant d'un attribut est le même qu'un nom logique de compte
-c'est le nom logique du compte qui est utilisé.
+<span class="flag inline nota-bene"/> : Si l'identifiant d'un attribut est le
+même qu'un nom logique de compte c'est le nom logique du compte qui est utilisé
+dans le cas où le type de compte n'est pas précisé.
+
+
+<span class="flag inline nota-bene"/> : Si la référence d'un compte est en
+conflit avec la notation de type (exemple  "`attribute(test)`"), il est
+nécessaire de préciser sa référence avec le type explicite :
+"`account(attribute(test))`"
 
 ## Profil privé {#core-ref:1a8bca3d-2599-4ef7-8f31-e58b36ee1588}
 
@@ -209,3 +266,7 @@ ces documents privés.
 [accounttype]:      #core-ref:87230967-8155-421c-8bbe-70a3c1adc3c0
 [docidtype]:        #core-ref:d461d5f5-b635-47a0-944d-473c227587ab
 [importdoc]:        #core-ref:2fb3284a-2424-44b2-93ae-41dc3969e093
+[xmllogin]:         #core-ref:d9e6f16a-6627-4f12-9d5f-a136b21e7cc3
+[xmlgroup]:         #core-ref:c1618ed2-e910-4f60-984c-a0b741708987
+[xmlrole]:          #core-ref:ec461788-4379-4f48-b090-9de0df0e66ec
+[account]:          #core-ref:87230967-8155-421c-8bbe-70a3c1adc3c0

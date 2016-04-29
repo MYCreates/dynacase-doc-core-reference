@@ -29,46 +29,44 @@ Soit les 4 documents suivants :
 
 Le fichier _csv_ produit sera comme décrit ci-dessous :
 
-|   //FAM    |            animal(ZOO_ANIMAL)           |               Identifiant               |  Dossier  |        nom         |       espèce       |       classe       |             |
-| ---------- | --------------------------------------- | --------------------------------------- | --------- | ------------------ | ------------------ | ------------------ | ----------- |
-| ORDER      | ZOO_ANIMAL                              |                                         |           | an_nom             | an_espece          | an_classe          |             |
-| DOC        | ZOO_ANIMAL                              | aliRotor                                |           | Rotor              | ZOO_ESP_ALLI       | Reptilia           |             |
-|            |                                         |                                         |           |                    |                    |                    |             |
-| _//FAM_    | _profil de document(PDOC) _             | _Identifiant_                           | _Dossier_ | _titre_            | _description _     | _family id_        | _famille_   |
-| ORDER      | PDOC                                    |                                         |           | ba_title           | prf_desc           | dpdoc_famid        | dpdoc_fam   |
-| DOC        | PDOC                                    | __ZOO_PRF_CLASSIFICATION__              |           | Classification     |                    |                    |             |
-| __PROFIL__ | __ZOO_PRF_CLASSIFICATION__              |                                         |           | view=ZOO_ROLE_VETO | edit=ZOO_ROLE_VETO | view=ZOO_ROLE_SURV | view=GADMIN |
-| __PROFIL__ | aliRotor                                | __ZOO_PRF_CLASSIFICATION__              |           |                    |                    |                    |             |
-| ORDER      | ZOO_ANIMAL                              |                                         |           | an_nom             | an_espece          | an_classe          |             |
-| DOC        | ZOO_ANIMAL                              | TEMPORARY_ZOO_ANIMAL_2079_51a707c53aa48 |           | Théodor            | ZOO_ESP_ALLI       | Reptilia           |             |
-| __PROFIL__ | TEMPORARY_ZOO_ANIMAL_2079_51a707c53aa48 | __ZOO_PRF_CLASSIFICATION__              |           |                    |                    |                    |             |
-| DOC        | ZOO_ANIMAL                              | TEMPORARY_ZOO_ANIMAL_2080_51a707c54ae36 |           | Éléonore           | ZOO_ESP_ALLI       | Reptilia           |             |
-| __PROFIL__ | TEMPORARY_ZOO_ANIMAL_2080_51a707c54ae36 | __ZOO_PRF_CLASSIFICATION__              |           |                    |                    |                    |             |
-| DOC        | ZOO_ANIMAL                              | TEMPORARY_ZOO_ANIMAL_3296_51a707c54ce55 |           | Gastor             | ZOO_ESP_ALLI       | Reptilia           |             |
-| __PROFIL__ | TEMPORARY_ZOO_ANIMAL_3296_51a707c54ce55 |                                         |           | view=ZOO_ROLE_SURV | view=ZOO_ROLE_VETO | edit=ZOO_ROLE_VETO |             |
+|   //FAM    |            animal(ZOO_ANIMAL)           |               Identifiant               |  Dossier  |          nom          |         espèce        |         classe        |                            |
+| ---------- | --------------------------------------- | --------------------------------------- | --------- | --------------------- | --------------------- | --------------------- | -------------------------- |
+| ORDER      | ZOO_ANIMAL                              |                                         |           | an_nom                | an_espece             | an_classe             |                            |
+| DOC        | ZOO_ANIMAL                              | aliRotor                                |           | Rotor                 | ZOO_ESP_ALLI          | Reptilia              |                            |
+|            |                                         |                                         |           |                       |                       |                       |                            |
+| _//FAM_    | _profil de document(PDOC) _             | _Identifiant_                           | _Dossier_ | _titre_               | _description _        | _family id_           | _famille_                  |
+| ORDER      | PDOC                                    |                                         |           | ba_title              | prf_desc              | dpdoc_famid           | dpdoc_fam                  |
+| DOC        | PDOC                                    | __ZOO_PRF_CLASSIFICATION__              |           | Classification        |                       |                       |                            |
+| __PROFIL__ | __ZOO_PRF_CLASSIFICATION__              | :useAccount                             |           | view=role_vetérinaire | edit=role_vetérinaire | view=role_surveillant | view=attribute(an_gardien) |
+| __PROFIL__ | aliRotor                                | __ZOO_PRF_CLASSIFICATION__              |           |                       |                       |                       |                            |
+| ORDER      | ZOO_ANIMAL                              |                                         |           | an_nom                | an_espece             | an_classe             |                            |
+| DOC        | ZOO_ANIMAL                              | TEMPORARY_ZOO_ANIMAL_2079_51a707c53aa48 |           | Théodor               | ZOO_ESP_ALLI          | Reptilia              |                            |
+| __PROFIL__ | TEMPORARY_ZOO_ANIMAL_2079_51a707c53aa48 | __ZOO_PRF_CLASSIFICATION__              |           |                       |                       |                       |                            |
+| DOC        | ZOO_ANIMAL                              | TEMPORARY_ZOO_ANIMAL_2080_51a707c54ae36 |           | Éléonore              | ZOO_ESP_ALLI          | Reptilia              |                            |
+| __PROFIL__ | TEMPORARY_ZOO_ANIMAL_2080_51a707c54ae36 | __ZOO_PRF_CLASSIFICATION__              |           |                       |                       |                       |                            |
+| DOC        | ZOO_ANIMAL                              | TEMPORARY_ZOO_ANIMAL_3296_51a707c54ce55 |           | Gastor                | ZOO_ESP_ALLI          | Reptilia              |                            |
+| __PROFIL__ | TEMPORARY_ZOO_ANIMAL_3296_51a707c54ce55 | :useAccount                             |           | view=role_surveillant | view=role_vetérinaire | edit=role_vetérinaire |                            |
 
 Un nom logique temporaire est généré pour les documents n'ayant pas de nom
 logique. Cet identifiant temporaire est supprimé tous les soirs avec le
 programme _wsh_ [`cleanContext`][cleancontext].
 
 La clef `PROFIL` contient l'ensemble des droits explicites mis sur les
-[profils][profilage]. L'affectation des droits est faite avec les noms logiques
-des documents _Utilisateurs_,  _Groupes_ et _Rôles_ associés aux comptes. Si le
-nom logique n'est pas présent, l'identifiant système du compte est utilisé.
-Attention dans ce cas, il s'agit de l'[identifiant du compte][userid] et non du
-document lié au compte.
+[profils][profilage].
+
+<span class="flag from release inline">3.2.21</span> L'affectation des droits
+est faite avec les références (login) des [comptes][userid] _Utilisateurs_,
+_Groupes_ et _Rôles_ .
 
 Les différents notations de profils sont :
 
-*   [aclName]=[documentName]
-*   [aclName]=[accountIdentifier]
-*   [attributeName]=[documentName] // Cas des profils dynamiques
-*   [attributeName]=[accountIdentifier]
+*   `[aclName]=[accountIdentifier]`
+*   `[attributeName]=attribute([attributeIdentifier])` // Cas des profils dynamiques
 
-**Attention** : Par défaut, l'import des éléments ci-dessus ne fait qu'ajouter
-les nouveaux droits et ne supprime pas les droits supprimés. Il existe
-différentes [options][options_profil_import] pour l'importation des profils
-permettant de  modifier ce comportement.
+**Attention** : Par défaut, l'importation des éléments ci-dessus ne fait
+qu'ajouter les nouveaux droits et ne supprime pas les droits supprimés. Il
+existe différentes [options][options_profil_import] pour l'importation des
+profils permettant de  modifier ce comportement.
 
 ## Exportation de profil de famille {#core-ref:8701cd51-0767-4620-8770-57dff9c4460a}
 
@@ -86,14 +84,14 @@ profil exportera les documents suivants :
 | //FAM      | profil de document(PDOC)                     | Identifiant                               | Dossier | titre             | description                          |
 | ORDER      | PDOC                                         |                                           |         | ba_title          | prf_desc                             |
 | DOC        | PDOC                                         | ZOO_PRF_CLASSIFICATION                    |         | Classification    |                                      |
-| __PROFIL__ | ZOO_PRF_CLASSIFICATION                       |                                           |         | view=GADMIN       | viewacl=GADMIN                       |
+| __PROFIL__ | ZOO_PRF_CLASSIFICATION                       | :useAccount                               |         | view=gadmin       | viewacl=gadmin                       |
 | //FAM      | modèle de mail(MAILTEMPLATE)                 | Identifiant                               | Dossier | Titre             | Famille                              |
 | ORDER      | MAILTEMPLATE                                 |                                           |         | tmail_title       | tmail_family                         |
 | DOC        | MAILTEMPLATE                                 | TEMPORARY_MAILTEMPLATE_3801_51a8c23b99679 |         | Couriel rédacteur | ZOO_DEMANDEADOPTION                  |
 | //FAM      | profil de document(PDOC)                     | Identifiant                               | Dossier | titre             | description                          |
 | ORDER      | PDOC                                         |                                           |         | ba_title          | prf_desc                             |
 | DOC        | PDOC                                         | PRF_ADMIN_EDIT                            |         | Administration    | lecture seule sauf pour groupe admin |
-| __PROFIL__ | PRF_ADMIN_EDIT                               |                                           |         | view=GDEFAULT     | edit=GADMIN                          |
+| __PROFIL__ | PRF_ADMIN_EDIT                               | :useAccount                               |         | view=all          | edit=gadmin                          |
 | __PROFIL__ | TEMPORARY_MAILTEMPLATE_3801_51a8c23b99679    | PRF_ADMIN_EDIT                            |         |                   |                                      |
 | //FAM      | Cycle demande Adoption(ZOO_WDEMANDEADOPTION) | Identifiant                               | Dossier | titre             | description                          |
 | ORDER      | ZOO_WDEMANDEADOPTION                         |                                           |         | ba_title          | wf_desc                              |
@@ -101,7 +99,7 @@ profil exportera les documents suivants :
 | //FAM      | profil de document(PDOC)                     | Identifiant                               | Dossier | titre             | description                          |
 | ORDER      | PDOC                                         |                                           |         | ba_title          | prf_desc                             |
 | DOC        | PDOC                                         | ZOO_PRF_HYGIENE                           |         | Hygiène           |                                      |
-| __PROFIL__ | ZOO_PRF_HYGIENE                              |                                           |         | view=GADMIN       | viewacl=GADMIN                       |
+| __PROFIL__ | ZOO_PRF_HYGIENE                              | :useAccount                               |         | view=gadmin       | viewacl=gadmin                       |
 | //FAM      | masque de saisie(MASK)                       | Identifiant                               | Dossier | titre             | Famille                              |
 | ORDER      | MASK                                         |                                           |         | ba_title          | msk_famid                            |
 | DOC        | MASK                                         | TEMPORARY_MASK_3802_51a8c23bac7c6         |         | Initialisé        | ZOO_DEMANDEADOPTION                  |
@@ -109,7 +107,7 @@ profil exportera les documents suivants :
 | //FAM      | profil de famille(PFAM)                      | Identifiant                               | Dossier | titre             | description                          |
 | ORDER      | PFAM                                         |                                           |         | ba_title          | prf_desc                             |
 | DOC        | PFAM                                         | ZOO_PRF_FAM                               |         | Profil Zoo        | Pour les familles du zoo             |
-| __PROFIL__ | ZOO_PRF_FAM                                  |                                           |         | edit=GADMIN       | viewacl=GADMIN                       |
+| __PROFIL__ | ZOO_PRF_FAM                                  | :useAccount                               |         | edit=gadmin       | viewacl=gadmin                       |
 |            |                                              |                                           |         |                   |                                      |
 | BEGIN      |                                              |                                           |         |                   | ZOO_DEMANDEADOPTION                  |
 | __PROFID__ | ZOO_PRF_FAM                                  |                                           |         |                   |                                      |

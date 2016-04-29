@@ -18,6 +18,8 @@ Dynacase.
 | Explication classe `UpdateAttribute`                     | [Mise à jour par lot][updateAttribute]                                                 | <span class="flag new">Nouveau</span>       |
 | Modification sur l'identififiant de fichier              | [Table vaultdiskstorage][vaultid]                                                      | <span class="flag update">Mis à jour</span> |
 | Enregistrement des valeurs affichées                     | [Hook customSearchValues][customSearchValues]                                          | <span class="flag new">Nouveau</span>       |
+| Nouvelle option d'importation de droits                  | [Pose de droits sur les documents][docprofil], [Exportation des profils][profilexport] | <span class="flag update">Mis à jour</span> |
+|                                                          |                                                                                        |                                             |
 
 ## Édition 9  {#core-ref:568e128a-3a2b-493c-b59d-1c5cce8ae515}
 
@@ -266,3 +268,5 @@ retour d'erreur.
 [updateAttribute]:      #core-ref:c28bea37-1f15-4157-aa79-40b5181d53f5
 [vaultid]:              #core-ref:4e91a88e-66a3-46e7-824d-d11adb0c39fe
 [customSearchValues]:   #core-ref:f1aaac21-085c-4ef6-bddc-962530c4efaa
+[docprofil]:           #core-ref:2ec1ae6f-4b2a-4bc2-a100-4e5873538bb5
+[profilexport]:        #core-ref:602c6331-7cdb-4b24-8a56-ffd11e00502f
