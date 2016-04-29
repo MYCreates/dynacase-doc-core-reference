@@ -23,16 +23,27 @@ La classe `ActionUsage` hérite de la classe [`ApiUsage`][ApiUsage].
 
     [php]
     function mon_action(Action & $action) {
-    	$usage = new ActionUsage($action);
-    	$docId = $usage->addRequiredParameter("id", "document id");
-    	$usage->verify();
-    	
-    	doSomethingWith($docId);
+        $usage = new ActionUsage($action);
+        $docId = $usage->addRequiredParameter("id", "document identifier");
+        $usage->verify();
+        
+        doSomethingWith($docId);
     }
 
 ### Notes {#core-ref:9429d447-08ae-40db-a4cd-e3f24eb41b21}
 
-Aucune.
+Cette classe est utilisée pour les actions déclenchés par le serveur web ou via
+le script [wsh][wsh].
+
+Lorqu'il est déclenché par le serveur web, les paramètres sont récupérées par
+les variables suivantes dans l'ordre indiqué :
+
+1.   [`$_GET`][GET] : Variable HTTP GET
+2.   [`$_POST`][POST] : Variable HTTP POST (formulaire)
+3.   [`$_FILES`][FILES] : <span class="flag from release inline">3.2.21</span>  Formulaire avec fichier
+
+Les variables GET sont prioritaires aux variables POST qui sont prioritaires aux
+variables FILES.
 
 ### Voir aussi {#core-ref:2895e6de-d570-491e-8a13-d0840b511e57}
 
@@ -40,3 +51,7 @@ Aucune.
 
 <!-- links -->
 [ApiUsage]: #core-ref:dac6d107-3e77-48ba-8912-ffccd0061cbf
+[wsh]:      #core-ref:bab8c1c9-fe71-4629-9773-5cd67a8693bf
+[GET]:      http://php.net/manual/fr/reserved.variables.get.php "php.net : super globale $_GET"
+[POST]:     http://php.net/manual/fr/reserved.variables.post.php "php.net : super globale $_POST"
+[FILES]:     http://php.net/manual/fr/reserved.variables.files.php "php.net : super globale $_FILES"
