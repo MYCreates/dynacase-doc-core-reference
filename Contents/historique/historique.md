@@ -21,6 +21,7 @@ Dynacase.
 | Nouvelle option d'importation de droits                  | [Pose de droits sur les documents][docprofil], [Exportation des profils][profilexport] | <span class="flag update">Mis à jour</span> |
 | Précision sur l'include path                             | [include_path][includepath]                                                            | <span class="flag update">Mis à jour</span> |
 | Précision sur ActionUsage                                | [Classe ActionUsage][actionusage]                                                      |     <span class="flag update">Mis à jour</span>                                        |
+| Précisions sur la modification des valeurs par défaut et valeurs initiiales des paramètres de familles par l'interface | [Définition de valeurs par défaut](#core-ref:94fa51e2-3488-11e2-9e34-1f7c912168cf), [Définition de valeur initiale de paramètre](#core-ref:da804e2e-3573-11e2-8974-4ba96567fbf9) | <span class="flag update">Mis à jour</span> |
 
 ## Édition 9  {#core-ref:568e128a-3a2b-493c-b59d-1c5cce8ae515}
 

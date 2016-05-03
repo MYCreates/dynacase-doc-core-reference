@@ -930,6 +930,10 @@ création d'un nouveau document, alors qu'appliquées aux paramètres,
 elles déterminent la valeur du paramètre lorsque l'utilisateur n'a saisi aucune
 valeur.
 
+La valeur par défaut d'un attribut peut être modifiée depuis le document de la
+famille via l'interface "Valeurs par défaut et paramètres" puis "Modifier les
+valeurs par défaut".
+
 Une valeur par défaut est définie par la syntaxe suivante :
 
     DEFAULT;[attrid|paramid];[value];force=yes
@@ -1018,6 +1022,10 @@ Les paramètres de familles peuvent avoir des valeurs par défaut,
 utilisées lorsque ces paramètres n'ont pas de valeur explicite ;
 mais il est parfois nécessaire de définir la valeur initiale du paramètre en
 plus de sa valeur par défaut.
+
+La valeur initiale d'un attribut peut être modifiée depuis le document de la
+famille via l'interface "Valeurs par défaut et paramètres" puis "Modifier les
+paramètres".
 
 Une valeur initiale de paramètre est définie par la syntaxe suivante :
 
