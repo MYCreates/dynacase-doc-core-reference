@@ -33,6 +33,10 @@ Cette méthode doit être utilisée si le champ est entre `'` (quote) ou `"`
 Si la valeur contient une référence à une [zone][zone], (exemple :  "`[ZONE
 MY:MYZONE]`"), la zone ne sera pas interprétée.
 
+<span class="flag release from">3.2.21</span> Si la valeur contient une 
+référence à un [paramètre applicatif][param], (exemple :
+"`[CORE_CLIENT]`"), le paramètre ne sera pas interprété.
+
 ## Liste des paramètres  {#core-ref:df082e35-f98b-4e8b-b199-34889eb1a71e}
 
 (string) `tag`
@@ -106,5 +110,6 @@ afin de garantir l'intégrité de l'url. Dans ce cas, il faut utiliser la métho
 [htmlspecialchars]: http://docs.php.net/manual/fr/function.htmlspecialchars.php "Définition sur php.net"
 [urlencode]: http://docs.php.net/manual/fr/function.urlencode.php "Définition sur php.net"
 [XSS]: http://fr.wikipedia.org/wiki/XSS "Définition sur wikipédia"
-[set]:     #core-ref:812c30ed-11cb-4b59-84d2-ba10e4ab7e88
-[encode]:   #core-ref:751e00d9-eec7-41b7-835f-14df8c0b7821
+[set]:          #core-ref:812c30ed-11cb-4b59-84d2-ba10e4ab7e88
+[encode]:       #core-ref:751e00d9-eec7-41b7-835f-14df8c0b7821
+[param]:        #core-ref:ec3701e6-fec8-45d9-afde-be61331d618b
