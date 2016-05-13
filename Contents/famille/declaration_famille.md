@@ -920,6 +920,9 @@ aux exceptions suivantes :
     paramètre.
 *   Les méthodes de calcul et de contrainte doivent être statiques (elles sont
     spécifiées par la syntaxe `class::method`).
+*   Le caractère obligatoire n'est applicable que dans le cadre de l'utilisation
+    du [paramètre][wask] dans un cycle de vie. Il n'est pas pris en compte dans 
+    les interfaces d'administration des paramètres.
 
 ### Définition de valeurs par défaut {#core-ref:94fa51e2-3488-11e2-9e34-1f7c912168cf}
 
@@ -1023,7 +1026,7 @@ utilisées lorsque ces paramètres n'ont pas de valeur explicite ;
 mais il est parfois nécessaire de définir la valeur initiale du paramètre en
 plus de sa valeur par défaut.
 
-La valeur initiale d'un attribut peut être modifiée depuis le document de la
+La valeur d'un paramètre peut être modifiée depuis le document de la
 famille via l'interface "Valeurs par défaut et paramètres" puis "Modifier les
 paramètres".
 
@@ -1344,3 +1347,4 @@ Reference][ErrorCodeATTR].
 [ErrorCodeATTR]: http://docs.anakeen.com/dynacase/3.2/dynacase-core-api-reference/class_error_code_a_t_t_r.html
 [urlindex]:     #core-ref:9081464e-dfc9-4836-8577-cfa59829eaa0
 [menuvis]:      #core-ref:0abcbf60-b1c5-4d78-b3a7-6574a369d99e
+[wask]:         #core-ref:9e248e52-ad6b-4089-ab83-11a534b307e9
