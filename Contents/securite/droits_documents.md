@@ -77,9 +77,7 @@ l'[exportation de profil][exportprofid].
 
 ### Affecter les droits d'un profil par importation {#core-ref:2ec1ae6f-4b2a-4bc2-a100-4e5873538bb5}
 
-Un droit peut être posé sur un rôle, un groupe ou un utilisateur. Pour indiquer
-ce compte, il faut utiliser le nom logique du document lié à ce compte ou
-l'identifiant système du compte (attribut _us_whatid_ donné sur le document).
+Un droit peut être posé sur un rôle, un groupe ou un utilisateur. 
 
 <span class="flag from release inline">3.2.21</span> Le compte peut être
 identifié avec son [login][xmllogin] pour les utilisateurs et la "référence"
@@ -87,6 +85,15 @@ pour les [groupes][xmlgroup] et [rôles][xmlrole]. Le type de compte peut être
 indiqué dans la troisième colonne  ou directement dans l'expression de la
 référence au compte. Le type précisé dans la référence est prioritaire au type
 indiqué dans la troisième colonne.
+
+
+Pour indiquer ce compte, le nom logique du document lié à ce compte aussi être
+utilisé.
+
+Pour compatibilité avec les anciennes versions (<span class="flag until release
+inline">3.2.20</span>) l'identifiant système du compte (attribut _us_whatid_
+donné sur le document) est utilisable si le type de compte n'est pas indiqué.
+
 
 Exemple :
 
@@ -239,7 +246,7 @@ Le profil privé est un profil personnel associé à chacun des utilisateurs. C'
 un profil de dossier. Il est applicable aussi aux documents.
 
 Le nom logique de ce profil est `PERSONAL-PROFIL-<uid>`. `uid` est l'identifiant
-système du compte.
+système (numérique) du compte.
 
 La fonction `getMyProfil()` permet de récupérer le profil privé de l'utilisateur
 courant. Par défaut, le profil privée donne tous les droits à l'utilisateur
