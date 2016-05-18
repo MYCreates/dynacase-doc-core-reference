@@ -6,23 +6,24 @@ Dynacase.
 
 ## Édition 10 {#core-ref:94453692-21ca-4200-83cc-597a71400801}
 
-|                      Modifications                       |                                        Chapitre                                        |                   Version                   |
-| :------------------------------------------------------- | :------------------------------------------------------------------------------------- | :------------------------------------------ |
-| Explications de l'objet de partage de document           | [Objet de partage de document][shareddoc]                                              | <span class="flag new">Nouveau</span>       |
-| Précision sur les exportations vis-à-vis des révisions   | [Révision et exportation][exportrevision], [Révision XML][revisionxml]                 | <span class="flag update">Mis à jour</span> |
-| Ajout information sur la révision pour formatCollection  | [Formatage des relations][fmtDocId]                                                    | <span class="flag update">Mis à jour</span> |
-| Paramétrage du pied de document                          | [Document footer][docfoot]                                                             | <span class="flag new">Nouveau</span>       |
-| Ajout de parties variables dans le paramètre MAIL_ACTION | [Paramètre MAIL_ACTION][mailaction]                                                    | <span class="flag update">Mis à jour</span> |
-| Facilité d'importation et d'exportation de comptes       | [Importation XML de comptes][ixmlaccounts], [Exportation XML de comptes][exmlaccounts] | <span class="flag new">Nouveau</span>       |
-| Ajout de la propriété "exists" pour les énumérés         | [Formatage des énumérés][fmtenum]                                                      | <span class="flag update">Mis à jour</span> |
-| Explication classe `UpdateAttribute`                     | [Mise à jour par lot][updateAttribute]                                                 | <span class="flag new">Nouveau</span>       |
-| Modification sur l'identififiant de fichier              | [Table vaultdiskstorage][vaultid]                                                      | <span class="flag update">Mis à jour</span> |
-| Enregistrement des valeurs affichées                     | [Hook customSearchValues][customSearchValues]                                          | <span class="flag new">Nouveau</span>       |
-| Nouvelle option d'importation de droits                  | [Pose de droits sur les documents][docprofil], [Exportation des profils][profilexport] | <span class="flag update">Mis à jour</span> |
-| Précision sur l'include path                             | [include_path][includepath]                                                            | <span class="flag update">Mis à jour</span> |
-| Précision sur ActionUsage                                | [Classe ActionUsage][actionusage]                                                      | <span class="flag update">Mis à jour</span> |
-| Précisions sur les paramètres de familles                | [Les paramètres de famille][defparam]                                                  | <span class="flag update">Mis à jour</span> |
-| Échappement des paramètres dans les templates            | [Layout::eset][eset]                                                                   | <span class="flag update">Mis à jour</span> |
+|                        Modifications                         |                                        Chapitre                                        |                   Version                   |
+| :----------------------------------------------------------- | :------------------------------------------------------------------------------------- | :------------------------------------------ |
+| Explications de l'objet de partage de document               | [Objet de partage de document][shareddoc]                                              | <span class="flag new">Nouveau</span>       |
+| Précision sur les exportations vis-à-vis des révisions       | [Révision et exportation][exportrevision], [Révision XML][revisionxml]                 | <span class="flag update">Mis à jour</span> |
+| Ajout information sur la révision pour formatCollection      | [Formatage des relations][fmtDocId]                                                    | <span class="flag update">Mis à jour</span> |
+| Paramétrage du pied de document                              | [Document footer][docfoot]                                                             | <span class="flag new">Nouveau</span>       |
+| Ajout de parties variables dans le paramètre MAIL_ACTION     | [Paramètre MAIL_ACTION][mailaction]                                                    | <span class="flag update">Mis à jour</span> |
+| Facilité d'importation et d'exportation de comptes           | [Importation XML de comptes][ixmlaccounts], [Exportation XML de comptes][exmlaccounts] | <span class="flag new">Nouveau</span>       |
+| Ajout de la propriété "exists" pour les énumérés             | [Formatage des énumérés][fmtenum]                                                      | <span class="flag update">Mis à jour</span> |
+| Explication classe `UpdateAttribute`                         | [Mise à jour par lot][updateAttribute]                                                 | <span class="flag new">Nouveau</span>       |
+| Modification sur l'identifiant de fichier                    | [Table vaultdiskstorage][vaultid]                                                      | <span class="flag update">Mis à jour</span> |
+| Enregistrement des valeurs affichées                         | [Hook customSearchValues][customSearchValues]                                          | <span class="flag new">Nouveau</span>       |
+| Nouvelle option d'importation de droits                      | [Pose de droits sur les documents][docprofil], [Exportation des profils][profilexport] | <span class="flag update">Mis à jour</span> |
+| Précision sur l'include path                                 | [include_path][includepath]                                                            | <span class="flag update">Mis à jour</span> |
+| Précision sur ActionUsage                                    | [Classe ActionUsage][actionusage]                                                      | <span class="flag update">Mis à jour</span> |
+| Précisions sur les paramètres de familles                    | [Les paramètres de famille][defparam]                                                  | <span class="flag update">Mis à jour</span> |
+| Échappement des paramètres dans les templates                | [Layout::eset][eset]                                                                   | <span class="flag update">Mis à jour</span> |
+| Modification du script de suppression des fichiers orphelins | [script checkvault][checkvault] et [cleanVaultOrphans][cleanVaultOrphans]              | <span class="flag update">Mis à jour</span> |
 
 ## Édition 9  {#core-ref:568e128a-3a2b-493c-b59d-1c5cce8ae515}
 
@@ -277,3 +278,5 @@ retour d'erreur.
 [actionusage]:         #core-ref:9429d447-08ae-40db-a4cd-e3f24eb41b21
 [eset]:                 #core-ref:2696710a-f491-4887-b953-e08d918ef4fb
 [defparam]:             #core-ref:c28824e2-3486-11e2-be3b-337d2321d8ee
+[checkvault]:           #core-ref:f9750692-1e3d-4671-bc01-91a0e73c5963
+[cleanVaultOrphans]:       #core-ref:8bc46f84-c5f1-40f4-981a-37a15e67a46e

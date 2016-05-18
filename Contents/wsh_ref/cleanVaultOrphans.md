@@ -24,6 +24,31 @@ les fichiers orphelins.
     
     * Suppression de la référence en base de données.
     * Suppression du fichier correspondant sur le système de fichiers du vault.
+    
+    <span class="flag inline nota-bene"/> Cette opération est irréversible. Les
+    fichiers sont définitivement supprimés.
+
+
+Exemple : 
+
+    ./wsh.php --api=cleanVaultOrphans --analyze
+    * Analyzing... Done.
+    
+    Analyze
+    -------
+    
+    All:
+        count = 418635
+        size  = 207835025933 (194 GB)
+        
+    Used:
+        count = 310387
+        size  = 177660324178 (165 GB) (85.48%)
+        
+    Orphan:
+        count = 108248
+        size  = 30174701755 (28 GB) (14.52%)
+
 
 ## Limite d'usage {#core-ref:2c91141b-d0dc-4908-aaa2-644a964dccd8}
 
