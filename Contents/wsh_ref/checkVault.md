@@ -35,7 +35,10 @@ Le script permet ensuite de supprimer ces fichiers orphelins.
         n'existent plus dans le vault.
     
     `clean-unref`
-    :   Supprime les fichiers orphelins (fichiers qui ne sont référencés par
+    :   Plus utilisable depuis la version 
+        <span class="flag from release inline">3.2.21</span>.
+        Le script [`cleanVaultOrphans`][cleanVaultOrphans] permet la suppression 
+        des fichiers orphelins (fichiers qui ne sont référencés par
         aucun document Dynacase).
 
 `csv` 
@@ -52,3 +55,4 @@ documents Dynacase.
 
 <!-- links -->
 [refreshVaultIndex]: #core-ref:17575c41-0b44-4164-8876-c08f4c2c3eb3
+[cleanVaultOrphans]:    #core-ref:8bc46f84-c5f1-40f4-981a-37a15e67a46e
