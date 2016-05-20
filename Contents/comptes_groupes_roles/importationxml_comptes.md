@@ -1,9 +1,10 @@
 # Importation des comptes en XML {#core-ref:d9e6f16a-6627-4f12-9d5f-a136b21e7cc3}
 
-Les comptes utilisateurs peuvent être créés ou modifiés en important un fichier
-XML de description de comptes. Ce fichier permet d'indiquer les données systèmes
-des comptes comme le login, le mot de passe, les [groupes][group] d'appartenance
-et les [rôles][role] associés.
+<span class="flag inline release from">3.2.21</span> Les comptes utilisateurs
+peuvent être créés ou modifiés en important un fichier XML de description de
+comptes. Ce fichier permet d'indiquer les données systèmes des comptes comme le
+login, le mot de passe, les [groupes][group] d'appartenance et les [rôles][role]
+associés.
 
 L'importation purement système utilise le [schéma][xsd] qui ne référence que les
 données système et aucune donnée documentaire fonctionnelle.
