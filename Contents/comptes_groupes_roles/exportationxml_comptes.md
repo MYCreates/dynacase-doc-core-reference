@@ -1,6 +1,7 @@
 # Exportation XML des comptes {#core-ref:3c9fc09e-4f7c-466e-a207-c0fdf948fe97}
 
-Les formats d'exportation des comptes suivent les mêmes schémas que ceux de
+<span class="flag inline release from">3.2.21</span> Les formats d'exportation 
+des comptes suivent les mêmes schémas que ceux de
 l'[importation XML][importXML].
 
 Les fichiers produits par l'exportation peuvent être réutilisés pour l'importation.
