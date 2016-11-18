@@ -3,6 +3,12 @@
 Ce chapitre contient un descriptif des améliorations entre les releases de 
 Dynacase.
 
+## Édition 11  {#core-ref:94b90781-930b-4c73-9a7a-cf018da481a1}
+
+|                  Modifications                  |                 Chapitre                |                   Version                   |
+| :---------------------------------------------- | :-------------------------------------- | :------------------------------------------ |
+| Possibilité de mettre le jeton dans les headers | [Authentification par jeton][opentoken] | <span class="flag update">Mis à jour</span> |
+
 
 ## Édition 10 {#core-ref:94453692-21ca-4200-83cc-597a71400801}
 
@@ -280,3 +286,4 @@ retour d'erreur.
 [defparam]:             #core-ref:c28824e2-3486-11e2-be3b-337d2321d8ee
 [checkvault]:           #core-ref:f9750692-1e3d-4671-bc01-91a0e73c5963
 [cleanVaultOrphans]:       #core-ref:8bc46f84-c5f1-40f4-981a-37a15e67a46e
+[opentoken]:            #core-ref:d6e188ac-814e-4566-9155-2591d2ee5e9c
