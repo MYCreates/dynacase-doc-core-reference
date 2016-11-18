@@ -120,6 +120,12 @@ Pour la définition de `$app_desc` se reporter au chapitre [applications]
     requête sql.
 
 
+**openaccess** (facultatif)
+:   (`Y` ou `N`) Indique que l'action est exécutable avec un [jeton d'authentification][opentoken].
+    
+    Par défaut, une action n'est pas accessible en via une authentifiactin par jeton.
+    Pour autoriser, l'action à être exécutée, il faut mettre `Y` dans ce paramètre.
+
 ### Contenu d'un fichier exemple d'action: `myaction1.php` {#core-ref:47071800-7b9a-4ef1-b428-324ffa6293e9}
 
 Le fichier `myaction1.php` contient une fonction du même nom que l'action avec
@@ -255,3 +261,4 @@ Les actions peuvent aussi être exécutées en mode console avec [_wsh_][actionw
 [parametre_applicatif]: #core-ref:c3d9cb18-16d0-435a-b8c2-5fa6ac06c522
 [view_representation]: #core-ref:9073f5b0-3cde-4690-a7a2-ffb5c4c7b94f
 [zone]: #core-ref:fed06a0c-3fd6-11e3-9658-88d5dc830245
+[opentoken]:    #core-ref:9edc8f2e-6929-11e2-8610-0021e9fffec1
