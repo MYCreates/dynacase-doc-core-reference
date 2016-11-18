@@ -45,6 +45,26 @@ les variables suivantes dans l'ordre indiqué :
 Les variables GET sont prioritaires aux variables POST qui sont prioritaires aux
 variables FILES.
 
+Les variables HTTP suivantes sont déclarées :
+
+*   `sole` : indicateur du format de la page (obsolète) - gardé pour compatibilité
+*   `authtype` : mode d'authentification <span class="flag from release inline">3.2.23</span>
+*   `dcpopen-authorization` : [jeton d'authentification][token] <span class="flag from release inline">3.2.23</span>
+*   `privateid` : si authtype=open (obsolète) - gardé pour compatibilité. <span class="flag from release inline">3.2.23</span>
+
+Si le mode [`strict`][strict] n'est pas désactivé, ces variables restent 
+autorisées.
+
+Dans le cas d'un fichier, la valeur retournée par les méthodes `add*Parameter()`
+est un tableau contenant le contenu de la [variable HTTP][FILESATTR] :
+
+*   `name` : Le nom original du fichier, tel que sur la machine du client web.
+*   `type` :Le type MIME du fichier, si le navigateur a fourni cette information. 
+*   `size` : La taille, en octets, du fichier téléchargé.
+*   `tmp_name` : Le nom temporaire du fichier qui sera chargé sur la machine serveur.
+*   `error` : Le code d'erreur associé au téléchargement de fichier.
+
+
 ### Voir aussi {#core-ref:2895e6de-d570-491e-8a13-d0840b511e57}
 
 - [`ApiUsage`][ApiUsage]
@@ -55,3 +75,6 @@ variables FILES.
 [GET]:      http://php.net/manual/fr/reserved.variables.get.php "php.net : super globale $_GET"
 [POST]:     http://php.net/manual/fr/reserved.variables.post.php "php.net : super globale $_POST"
 [FILES]:     http://php.net/manual/fr/reserved.variables.files.php "php.net : super globale $_FILES"
+[token]:    #core-ref:9edc8f2e-6929-11e2-8610-0021e9fffec1
+[strict]:   #core-ref:d7b41169-85c7-4075-ae1f-a3a2d7ea4ff5
+[FILESATTR]:    http://php.net/manual/fr/features.file-upload.post-method.php "PHP FILES"
