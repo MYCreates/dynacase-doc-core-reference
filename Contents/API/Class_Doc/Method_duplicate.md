@@ -64,6 +64,10 @@ Retourne un message d'erreur dans les cas suivants :
 *   retour du [`preDuplicate()`][precopy] non vide,
 *   des attributs sont en [visibilité][attrvis] `I`.
 
+Exceptions :
+
+-   `\Dcp\Exception('DOC0203')` si le document à dupliquer est invalide.
+
 ## Historique {#core-ref:814cfd8e-3541-4062-af7d-56f8add3411d}
 
 Anciennement `Doc::copy()`.
