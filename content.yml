@@ -299,6 +299,8 @@ book:
     - level:   2
       element: "chapter"
       content:  "API/Class_Action.md"
+      flags:
+        update : "mis à jour"
       subtoc:   1
     - level:   3
       element: "chapter"
@@ -312,6 +314,12 @@ book:
     - level:   3
       element: "chapter"
       content:  "API/Class_Action/Method_addWarningMsg.md"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_Action/Method_getWarningMsg.md"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_Action/Method_clearWarningMsg.md"
     - level:   3
       element: "chapter"
       content:  "API/Class_Action/Method_addLogMsg.md"
