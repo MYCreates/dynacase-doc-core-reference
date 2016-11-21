@@ -5,12 +5,13 @@ Dynacase.
 
 ## Édition 11  {#core-ref:94b90781-930b-4c73-9a7a-cf018da481a1}
 
-|                      Modifications                       |                 Chapitre                |                   Version                   |
-| :------------------------------------------------------- | :-------------------------------------- | :------------------------------------------ |
-| Possibilité de mettre le jeton dans les headers          | [Authentification par jeton][opentoken] | <span class="flag update">Mis à jour</span> |
-| Possibilité d'utilisé le header d'authentification Basic | [Authentification Basic][httpbasic]     | <span class="flag new">Nouveau</span>       |
-| Ordre relatif des attributs                              | [Ordre relatif][attrrelorder]           | <span class="flag new">Nouveau</span>       |
-| Modification du calcul des ordres absolus                | [Ordre absolu][attrabsorder]            | <span class="flag update">Mis à jour</span> |
+| Modifications                                            | Chapitre                                                | Version                                     |
+| :------------------------------------------------------- | :------------------------------------------------------ | :------------------------------------------ |
+| Possibilité de mettre le jeton dans les headers          | [Authentification par jeton][opentoken]                 | <span class="flag update">Mis à jour</span> |
+| Possibilité d'utilisé le header d'authentification Basic | [Authentification Basic][httpbasic]                     | <span class="flag new">Nouveau</span>       |
+| Ordre relatif des attributs                              | [Ordre relatif][attrrelorder]                           | <span class="flag new">Nouveau</span>       |
+| Modification du calcul des ordres absolus                | [Ordre absolu][attrabsorder]                            | <span class="flag update">Mis à jour</span> |
+| Ajout du paramètre `CORE_NOTIFY_SENDMAIL`                | [`CORE_NOTIFY_SENDMAIL`][core-ref:CORE_NOTIFY_SENDMAIL] | <span class="flag new">Nouveau</span>       |
 
 
 ## Édition 10 {#core-ref:94453692-21ca-4200-83cc-597a71400801}
@@ -293,3 +294,4 @@ retour d'erreur.
 [attrrelorder]:            #core-ref:6b4b44c9-8fd6-4154-9d11-fff2a7b02523
 [attrabsorder]:            #core-ref:eb3da9f5-c277-4312-bac1-f14276e8e9bb
 [httpbasic]:               #core-ref:4b928227-d235-46ea-822e-7726f04a3564
+[core-ref:CORE_NOTIFY_SENDMAIL]: #core-ref:acafeba4-2532-4511-96cf-aaf197c0c701

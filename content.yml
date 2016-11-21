@@ -1048,6 +1048,10 @@ book:
     - level: 3
       content: "parameters_ref/core_mailaction.md"
     - level: 3
+      content: "parameters_ref/core_notify_sendmail.md"
+      flags:
+        new: "nouveauté"
+    - level: 3
       content: "parameters_ref/core_start_app.md"
     - level: 3
       content: "parameters_ref/core_allowguest.md"
