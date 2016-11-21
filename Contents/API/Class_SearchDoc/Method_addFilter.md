@@ -32,6 +32,10 @@ de construire correctement les filtres et afin d'éviter l'injection SQL.
 Si les variables contiennent du texte, celui-ci doit être encodé en
 [UTF-8][utf8].
 
+Cette méthode n'est pas utilisable conjointement avec une
+[recherche spécialisée][core-ref:ssearch] en tant que
+[collection de base][core-ref:SearchDoc::useCollection].
+
 ## Liste des paramètres {#core-ref:8596430f-cc20-46d7-9a9f-025dd48b0c51}
 
 (string) `filter`
@@ -154,14 +158,17 @@ Aucunes.
 *   [`SearchDoc::addGeneralFilter()][addgeneralfilter]
 
 <!-- links -->
-[addgeneralfilter]:         #core-ref:453cff11-09d9-4607-ab81-7acd36e99750
-[wikipediaInjectionSQL]:    https://fr.wikipedia.org/wiki/Injection_SQL "Injection SQL"
-[pgEscape]:                 http://us1.php.net/manual/en/function.pg-escape-string.php "pg_escape_string"
-[multiple]:                 #core-ref:324c7c7e-bd80-4c19-ad24-daf0f39caa61
-[separateurMultiplicite]:   #core-ref:1b8cd020-a2ed-4997-aefe-a4fcbb3564f1
-[postgresREGEXP]:           http://www.postgresql.org/docs/9.1/static/functions-matching.html#FUNCTIONS-POSIX-REGEXP "Postgres : POSIX Regular Expressions"
-[postgresARRAY]:            http://www.postgresql.org/docs/9.1/static/functions-array.html "Postgres : Array"
-[phpSprintf]:               http://us3.php.net/manual/en/function.sprintf.php "PHP : sprintf"
-[postgresArrayOperator]:    http://www.postgresql.org/docs/9.1/static/functions-comparisons.html "Postgres : Array operators"
-[preg_quote]:               http://us2.php.net/preg_quote "PHP : preg_quote"
-[utf8]:                     http://fr.wikipedia.org/wiki/UTF-8 "UTF-8 sur Wikipédia"
+
+[addgeneralfilter]:                     #core-ref:453cff11-09d9-4607-ab81-7acd36e99750
+[core-ref:SearchDoc::useCollection]:    #core-ref:881c9fcb-81c2-45af-b89f-70be3a7f24b7
+[core-ref:ssearch]:                     #core-ref:1eb7c0ad-dabd-47e9-83bf-f9e3d4eca806
+[multiple]:                             #core-ref:324c7c7e-bd80-4c19-ad24-daf0f39caa61
+[pgEscape]:                             http://us1.php.net/manual/en/function.pg-escape-string.php "pg_escape_string"
+[phpSprintf]:                           http://us3.php.net/manual/en/function.sprintf.php "PHP : sprintf"
+[postgresARRAY]:                        http://www.postgresql.org/docs/9.1/static/functions-array.html "Postgres : Array"
+[postgresArrayOperator]:                http://www.postgresql.org/docs/9.1/static/functions-comparisons.html "Postgres : Array operators"
+[postgresREGEXP]:                       http://www.postgresql.org/docs/9.1/static/functions-matching.html#FUNCTIONS-POSIX-REGEXP "Postgres : POSIX Regular Expressions"
+[preg_quote]:                           http://us2.php.net/preg_quote "PHP : preg_quote"
+[separateurMultiplicite]:               #core-ref:1b8cd020-a2ed-4997-aefe-a4fcbb3564f1
+[utf8]:                                 http://fr.wikipedia.org/wiki/UTF-8 "UTF-8 sur Wikipédia"
+[wikipediaInjectionSQL]:                https://fr.wikipedia.org/wiki/Injection_SQL "Injection SQL"
