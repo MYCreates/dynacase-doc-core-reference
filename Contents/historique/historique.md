@@ -12,6 +12,7 @@ Dynacase.
 | Ordre relatif des attributs                              | [Ordre relatif][attrrelorder]                           | <span class="flag new">Nouveau</span>       |
 | Modification du calcul des ordres absolus                | [Ordre absolu][attrabsorder]                            | <span class="flag update">Mis à jour</span> |
 | Ajout du paramètre `CORE_NOTIFY_SENDMAIL`                | [`CORE_NOTIFY_SENDMAIL`][core-ref:CORE_NOTIFY_SENDMAIL] | <span class="flag new">Nouveau</span>       |
+| Ajout de vérifications lors de l'import des masques      | [Masque][core-ref:masque]                               | <span class="flag update">Mis à jour</span> |
 
 
 ## Édition 10 {#core-ref:94453692-21ca-4200-83cc-597a71400801}
@@ -294,4 +295,5 @@ retour d'erreur.
 [attrrelorder]:            #core-ref:6b4b44c9-8fd6-4154-9d11-fff2a7b02523
 [attrabsorder]:            #core-ref:eb3da9f5-c277-4312-bac1-f14276e8e9bb
 [httpbasic]:               #core-ref:4b928227-d235-46ea-822e-7726f04a3564
-[core-ref:CORE_NOTIFY_SENDMAIL]: #core-ref:acafeba4-2532-4511-96cf-aaf197c0c701
+[core-ref:CORE_NOTIFY_SENDMAIL]:    #core-ref:acafeba4-2532-4511-96cf-aaf197c0c701
+[core-ref:masque]:                  #core-ref:327ad491-06df-4e5b-b49a-695c75439fe1
