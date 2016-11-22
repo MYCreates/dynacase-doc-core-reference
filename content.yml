@@ -1078,7 +1078,11 @@ book:
     - level: 3
       content: "parameters_ref/core_tmpdir.md"
     - level: 3
-      content: "parameters_ref/core_tmpdirmaxage.md"
+      content: "parameters_ref/core_tmpdir_maxage.md"
+    - level: 3
+      content: "parameters_ref/core_tmpdoc_maxage.md"
+      flags:
+        new: "nouveauté"
     - level: 3
       content: "parameters_ref/freedom_uploaddir.md"
     - level: 3

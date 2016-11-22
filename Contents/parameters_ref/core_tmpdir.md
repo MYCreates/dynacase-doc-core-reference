@@ -18,7 +18,7 @@ La valeur doit désigner un répertoire accessible en écriture par le serveur w
 
 ## Notes  {#core-ref:bbd196fb-b9c4-4ec4-9280-edcab1e0886b}
 
-Voir aussi [`CORE_TMPDIRMAXAGE`][core_tmpdirmaxage].
+Voir aussi [`CORE_TMPDIR_MAXAGE`][core_tmpdirmaxage].
 
 Lors de la restauration d'une archive de contexte, si la valeur de
 `CORE_TMPDIR` référence un répertoire à l'extérieur du répertoire du contexte,
