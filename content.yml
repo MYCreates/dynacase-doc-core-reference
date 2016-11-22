@@ -1056,10 +1056,6 @@ book:
     - level: 3
       content: "parameters_ref/core_mailaction.md"
     - level: 3
-      content: "parameters_ref/core_notify_sendmail.md"
-      flags:
-        new: "nouveauté"
-    - level: 3
       content: "parameters_ref/core_start_app.md"
     - level: 3
       content: "parameters_ref/core_allowguest.md"
@@ -1097,6 +1093,18 @@ book:
       content: "parameters_ref/authent_accountexpiredelay.md"
     - level: 3
       content: "parameters_ref/authent_failurecount.md"
+    - level: 3
+      content: "parameters_ref/core_notify_sendmail.md"
+      flags:
+        new: "nouveauté"
+    - level: 3
+      content: "parameters_ref/core_wsh_mailto.md"
+      flags:
+        new: "nouveauté"
+    - level: 3
+      content: "parameters_ref/core_wsh_mail_subject.md"
+      flags:
+        new: "nouveauté"
 
     - level: 2
       content: "parameters_ref/smtp.md"
