@@ -128,6 +128,19 @@ Les minuteurs peuvent être gérés par [programmation][doctimers]. Cette
 programmation permet d'attacher ou de détacher les minuteurs associés à un
 document.
 
+## Gestion des erreurs {#core-ref:d0388efe-e19a-4208-bc22-1b192031d03c}
+
+Lorsqu'un shell non interactif[^core-ref:shell non interactif] sort en erreur,
+un mail contenant le détail de l'erreur peut être envoyé.
+
+Ce mail est envoyé uniquement si le paramètre [`CORE_WSH_MAILTO`][core-ref:CORE_WSH_MAILTO] est non vide.
+
+<span class="flag inline nota-bene"/> Lorsque le traitement d'un minuteur provoque une erreur,
+le document concerné est à nouvau traité par les minuteurs suivants
+tant que sa date de déclenchement reste valide (voir FDL_TIMERHOURLIMIT).
+
 <!-- links -->
+
+[core-ref:CORE_WSH_MAILTO]: #core-ref:6457a9c1-8b3e-4fd1-913a-8f9e133fc7a4
 [date_de_reference]: #core-ref:386637d4-ab5b-4b3b-bf80-f2e6c226c555
 [doctimers]:   #core-ref:6403d0d7-9e4c-42e9-8a07-a2256a7c43f7
