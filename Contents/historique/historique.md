@@ -15,6 +15,7 @@ Dynacase.
 | Ajout de vérifications lors de l'import des masques              | [Masque][core-ref:masque]                                                                                | <span class="flag update">Mis à jour</span> |
 | Ajout des mails d'erreur sur wsh                                 | [`CORE_WSH_MAILTO`][core-ref:CORE_WSH_MAILTO], [`CORE_WSH_MAIL_SUBJECT`][core-ref:CORE_WSH_MAIL_SUBJECT] | <span class="flag new">Nouveau</span>       |
 | Ajout de la gestion d'erreur pour les processus et les minuteurs | [Processus][core-ref:processus_errors], [minuteurs][core-ref:minuteur_errors]                            | <span class="flag update">Mis à jour</span> |
+| gestion des caractères de contrôle dans les templates odt        | [Gestion des caractères de contrôle][core-ref:odt_control_chars]                                         | <span class="flag update">Mis à jour</span> |
 
 
 ## Édition 10 {#core-ref:94453692-21ca-4200-83cc-597a71400801}
@@ -303,3 +304,4 @@ retour d'erreur.
 [core-ref:CORE_WSH_MAIL_SUBJECT]: #core-ref:19f573cf-a1ea-4fa1-8eb8-a69c54139f9a
 [core-ref:processus_errors]: #core-ref:24c23619-519d-42e2-9437-c21869c3363c
 [core-ref:minuteur_errors]: #core-ref:d0388efe-e19a-4208-bc22-1b192031d03c
+[core-ref:odt_control_chars]: #core-ref:a7818933-910b-4ab9-a82d-02d369fc45cd

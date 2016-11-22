@@ -15,17 +15,21 @@ La classe PHP de manipulation de template est la classe `OooLayout` qui dérivé
 
 Les précautions d'usages sont les suivantes :
 
-* lors de l'affectation d'une variable, il ne faut pas que celle-ci corrompe le 
-XML pour ce faire, on peut : 
-    * utiliser la fonction d'affectation dédiée 
-        `$this->lay->eSet("VAR", $var);`, 
-    * encoder par avance la valeur avant de l'insérer 
+-   lors de l'affectation d'une variable, il ne faut pas que celle-ci corrompe le 
+    XML pour ce faire, on peut :
+    
+    +   utiliser la fonction d'affectation dédiée :
         
             [php]
-            $society = $this->lay->xmlEntities("Bob & Compagnie") ;
-            $this->lay->set("SOCIETY",$society) ;
+            $this->lay->eSet("VAR", $var);
+        
+    +   encoder par avance la valeur avant de l'insérer :
+        
+            [php]
+            $society = $this->lay->xmlEntities("Bob & Compagnie");
+            $this->lay->set("SOCIETY",$society);
     
-    * ou encore si la valeur provient d'un document :
+    +   ou encore si la valeur provient d'un document :
         
             [php]
             $myAnimal = new_Doc("", "MY_ANIMAL");
@@ -34,14 +38,14 @@ XML pour ce faire, on peut :
             $this->lay->set("MY_ATTR",$name);
 
 *Note* : La méthode `set` permet d'insérer du 
-XML dans l'ODT, comme dans l'exemple ci-dessous :
+XML dans l'ODT, comme dans l'exemple ci-dessous :
 
     [php]
     $society="Bob <text:line-break/> Compagnie" ;
     $this->lay->set("SOCIETY",$society) ; // insertion d'un retour à la ligne
 
 *Note* : La valeur `null` est considérée comme non-instanciée, comme dans
-l'exemple ci-dessous :
+l'exemple ci-dessous :
 
     [php]
     $this->lay->set("KEY",null) ; // [KEY] non remplacé
@@ -54,15 +58,15 @@ Les templates ODT peuvent gérer les éléments multiples. Le chapitre [répéta
 des vues ODT][odt_repeat] indique les différentes possibilités d'emplacement des
 répétables.
 
-L'affectation de valeurs multiples passe par deux méthodes :
+L'affectation de valeurs multiples passe par deux méthodes :
 
-* `OOoLayout::setColumn` : Cette méthode prend en entrée une clef et un array.
-Si la clef est déclarée dans une liste ou un tableau alors une entrée est 
-ajoutée par valeur dans le tableau,
-* `OOoLayout::setRepeatable` : Cette méthode prend une matrice en entrée (array
-de array). La méthode rend alors toutes les colonnes du tableau à la même 
-taille que la plus grande des colonnes et ajoute les colonnes ainsi créées 
-grâce à `OOoLayout::setColumn`.
+-   `OOoLayout::setColumn` : Cette méthode prend en entrée une clef et un array.
+    Si la clef est déclarée dans une liste ou un tableau alors une entrée est 
+    ajoutée par valeur dans le tableau,
+-   `OOoLayout::setRepeatable` : Cette méthode prend une matrice en entrée (array
+    de array). La méthode rend alors toutes les colonnes du tableau à la même 
+    taille que la plus grande des colonnes et ajoute les colonnes ainsi créées 
+    grâce à `OOoLayout::setColumn`.
 
     [php]
     /**
@@ -162,6 +166,11 @@ accessible depuis le poste où le fichier produit est lu.
 De même, si le fichier résultat est utilisée pour une transformation PDF via le
 [moteur de transformation][te]. il est nécessaire que le serveur openOffice est
 accès à l'image externe pour l'insérer dans le fichier PDF produit.
+
+### Gestion des caractères de contrôle {#core-ref:a7818933-910b-4ab9-a82d-02d369fc45cd}
+
+Conformément à la spécification XML, [certains caractères de contrôle ne sont pas supportés][w3-xml:characters].
+Dynacase remplace ces caractères par le [pictogramme unicode][codepoints:control_pictures] leur correspondant.
 
 ### Exemple 1 - Paragraphe {#core-ref:cdcb4bad-9296-4f70-949f-e4ffdfef9fca}
 
@@ -346,3 +355,5 @@ Un paragraphe ne peut pas contenir d'autres paragraphes.
 [classlayout]:          #core-ref:9f9edc1b-17a5-4f54-86ee-69e33016fe18
 [te]:                   https://docs.anakeen.com/dynacase/3.2/dynacase-doc-tengine-installation-operating/website/book/index.html "Moteur de transformation"
 [attrimage]:            #core-ref:4fca7712-59e0-4186-bfd0-6214104a0f60
+[w3-xml:characters]:    https://www.w3.org/TR/xml/#charsets
+[codepoints:control_pictures]: https://codepoints.net/control_pictures
