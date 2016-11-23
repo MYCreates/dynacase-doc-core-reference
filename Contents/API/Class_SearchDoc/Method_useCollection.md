@@ -16,7 +16,8 @@ une recherche ou encore un rapport.
 
 ### Avertissements {#core-ref:54e9705a-8bf0-4325-b595-e5f88226d9c6}
 
-Aucun.
+Lorsque la collection indiquée en entrée est une [recherche spécialisée][core-ref:ssearch],
+il est impossible d'utiliser la méthode [`SearchDoc::addFilter()`][core-ref:SearchDoc::addFilter].
 
 ## Liste des paramètres {#core-ref:eea6abe1-2f54-49e0-bd17-c643a9244d11}
 
@@ -82,11 +83,13 @@ Aucune.
 ## Voir aussi {#core-ref:3dcb20cd-3e84-4d9b-ad56-956af84494df}
 
 *   [`SearchDoc::setRecursiveSearch()`][setrecursivefolder]
-
-Le chapitre avancé sur la [recherche dans les collections][advancedUseCollection].
+*   Le chapitre avancé sur la [recherche dans les collections][advancedUseCollection].
 
 
 <!-- links -->
-[searchDocGetError]:        #core-ref:e57302ed-319e-4d63-b817-7a22d0ead3f2
-[advancedUseCollection]:    #core-ref:7f084be4-ceb8-464d-81e4-8902da361aff
-[setrecursivefolder]:       #core-ref:b99a6125-5a8b-420b-b1ce-f6a459f11612
+
+[advancedUseCollection]:            #core-ref:7f084be4-ceb8-464d-81e4-8902da361aff
+[core-ref:SearchDoc::addFilter]:    #core-ref:ec525c92-ab30-4861-aba1-7c2678df130a
+[core-ref:ssearch]:                 #core-ref:1eb7c0ad-dabd-47e9-83bf-f9e3d4eca806
+[searchDocGetError]:                #core-ref:e57302ed-319e-4d63-b817-7a22d0ead3f2
+[setrecursivefolder]:               #core-ref:b99a6125-5a8b-420b-b1ce-f6a459f11612

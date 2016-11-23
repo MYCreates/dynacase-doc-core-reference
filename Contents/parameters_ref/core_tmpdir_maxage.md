@@ -1,4 +1,4 @@
-# `CORE_TMPDIRMAXAGE`  {#core-ref:24a36fc9-b3bb-4bab-a06c-ac28c4372d57}
+# `CORE_TMPDIR_MAXAGE`  {#core-ref:24a36fc9-b3bb-4bab-a06c-ac28c4372d57}
 
 ## Description  {#core-ref:7d7f20ea-fc45-44f6-a21a-38c8a6b23625}
 

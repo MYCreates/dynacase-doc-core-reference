@@ -5,12 +5,17 @@ Dynacase.
 
 ## Édition 11  {#core-ref:94b90781-930b-4c73-9a7a-cf018da481a1}
 
-|                      Modifications                       |                 Chapitre                |                   Version                   |
-| :------------------------------------------------------- | :-------------------------------------- | :------------------------------------------ |
-| Possibilité de mettre le jeton dans les headers          | [Authentification par jeton][opentoken] | <span class="flag update">Mis à jour</span> |
-| Possibilité d'utilisé le header d'authentification Basic | [Authentification Basic][httpbasic]     | <span class="flag new">Nouveau</span>       |
-| Ordre relatif des attributs                              | [Ordre relatif][attrrelorder]           | <span class="flag new">Nouveau</span>       |
-| Modification du calcul des ordres absolus                | [Ordre absolu][attrabsorder]            | <span class="flag update">Mis à jour</span> |
+| Modifications                                                    | Chapitre                                                                                                 | Version                                     |
+| :--------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- | :------------------------------------------ |
+| Possibilité de mettre le jeton dans les headers                  | [Authentification par jeton][opentoken]                                                                  | <span class="flag update">Mis à jour</span> |
+| Possibilité d'utilisé le header d'authentification Basic         | [Authentification Basic][httpbasic]                                                                      | <span class="flag new">Nouveau</span>       |
+| Ordre relatif des attributs                                      | [Ordre relatif][attrrelorder]                                                                            | <span class="flag new">Nouveau</span>       |
+| Modification du calcul des ordres absolus                        | [Ordre absolu][attrabsorder]                                                                             | <span class="flag update">Mis à jour</span> |
+| Ajout du paramètre `CORE_NOTIFY_SENDMAIL`                        | [`CORE_NOTIFY_SENDMAIL`][core-ref:CORE_NOTIFY_SENDMAIL]                                                  | <span class="flag new">Nouveau</span>       |
+| Ajout de vérifications lors de l'import des masques              | [Masque][core-ref:masque]                                                                                | <span class="flag update">Mis à jour</span> |
+| Ajout des mails d'erreur sur wsh                                 | [`CORE_WSH_MAILTO`][core-ref:CORE_WSH_MAILTO], [`CORE_WSH_MAIL_SUBJECT`][core-ref:CORE_WSH_MAIL_SUBJECT] | <span class="flag new">Nouveau</span>       |
+| Ajout de la gestion d'erreur pour les processus et les minuteurs | [Processus][core-ref:processus_errors], [minuteurs][core-ref:minuteur_errors]                            | <span class="flag update">Mis à jour</span> |
+| gestion des caractères de contrôle dans les templates odt        | [Gestion des caractères de contrôle][core-ref:odt_control_chars]                                         | <span class="flag update">Mis à jour</span> |
 
 
 ## Édition 10 {#core-ref:94453692-21ca-4200-83cc-597a71400801}
@@ -293,3 +298,10 @@ retour d'erreur.
 [attrrelorder]:            #core-ref:6b4b44c9-8fd6-4154-9d11-fff2a7b02523
 [attrabsorder]:            #core-ref:eb3da9f5-c277-4312-bac1-f14276e8e9bb
 [httpbasic]:               #core-ref:4b928227-d235-46ea-822e-7726f04a3564
+[core-ref:CORE_NOTIFY_SENDMAIL]:    #core-ref:acafeba4-2532-4511-96cf-aaf197c0c701
+[core-ref:masque]:                  #core-ref:327ad491-06df-4e5b-b49a-695c75439fe1
+[core-ref:CORE_WSH_MAILTO]: #core-ref:6457a9c1-8b3e-4fd1-913a-8f9e133fc7a4
+[core-ref:CORE_WSH_MAIL_SUBJECT]: #core-ref:19f573cf-a1ea-4fa1-8eb8-a69c54139f9a
+[core-ref:processus_errors]: #core-ref:24c23619-519d-42e2-9437-c21869c3363c
+[core-ref:minuteur_errors]: #core-ref:d0388efe-e19a-4208-bc22-1b192031d03c
+[core-ref:odt_control_chars]: #core-ref:a7818933-910b-4ab9-a82d-02d369fc45cd

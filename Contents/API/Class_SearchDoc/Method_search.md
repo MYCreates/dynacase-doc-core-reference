@@ -29,10 +29,10 @@ Aucun.
 
 La valeur du retour [dépend du type de recherche][advancedSearch] :
 
-* Résultats bruts : le retour est alors un tableau `array`, si la préparation de
-la recherche à échoué alors le résultat est un tableau vide,
-* Résultats documents : le retour est alors l'objet `searchDoc` lui-même ou
-`null` si la préparation de la recherche a échoué.
+-   Résultats bruts : le retour est alors un tableau `array`, si la préparation de
+    la recherche à échoué alors le résultat est un tableau vide,
+-   Résultats documents : le retour est alors l'objet `searchDoc` lui-même ou
+    `null` si la préparation de la recherche a échoué.
 
 **Note** : Le changement du type de recherche se fait uniquement avant que la 
 recherche ne soit déclenchée avec la méthode 
@@ -42,10 +42,15 @@ recherche ne soit déclenchée avec la méthode
 
 Si la préparation de la recherche a échoué alors si la recherche :
 
-* retourne des résultats brut : le retour est un array vide,
-* retourne des documents : le retour est `null`.
+-   retourne des résultats brut : le retour est un array vide,
+-   retourne des documents : le retour est `null`.
 
-Exception : `\Dcp\Db\Exception` si la requête n'a pas pu être exécutée..
+Exceptions :
+
+-   `\Dcp\Db\Exception` si la requête n'a pas pu être exécutée.
+-   `\Dcp\SearchDoc\Exception("SD0008")` si la méthode [`SearchDoc::addFilter`][core-ref:SearchDoc::addFilter]
+    est utilisée conjointement avec une [recherche spécialisée][core-ref:ssearch] en tant que
+    [collection de base][core-ref:SearchDoc::useCollection].
 
 ## Historique {#core-ref:c718b9c4-c3aa-4666-ac81-9af3286235cb}
 
@@ -108,11 +113,13 @@ Aucune.
 
 <!-- links -->
 
-[reset]:                #core-ref:18f98a7d-7db0-4270-97b2-0a1759a5b0e6
-[advancedExcluded]:     #core-ref:d0a89548-a743-4dfc-bf43-49192ef1b6a8
-[advancedSearch]:       #core-ref:7291dea8-a2db-46be-8194-bc6f100cc467
-[setObjectReturn]:      #core-ref:3a0b4882-81ff-4030-9f60-a0ed0ff1f958
-[recherche]:            #core-ref:bda916b0-e564-40fd-b195-c62bbab7b8be
-[excludeConfidential]:  #core-ref:17be152c-0844-40d5-bfc5-a9aa2f2695fc
-[overrideViewControl]:  #core-ref:18f98a7d-7db0-4270-97b2-0a1759a5b0e6
-[searchprop]:           #core-ref:72ce807f-a392-4579-ab46-d58a3d18c214
+[advancedExcluded]:                 #core-ref:d0a89548-a743-4dfc-bf43-49192ef1b6a8
+[advancedSearch]:                   #core-ref:7291dea8-a2db-46be-8194-bc6f100cc467
+[core-ref:SearchDoc::addFilter]:    #core-ref:ec525c92-ab30-4861-aba1-7c2678df130a
+[core-ref:ssearch]:                 #core-ref:1eb7c0ad-dabd-47e9-83bf-f9e3d4eca806
+[excludeConfidential]:              #core-ref:17be152c-0844-40d5-bfc5-a9aa2f2695fc
+[overrideViewControl]:              #core-ref:18f98a7d-7db0-4270-97b2-0a1759a5b0e6
+[recherche]:                        #core-ref:bda916b0-e564-40fd-b195-c62bbab7b8be
+[reset]:                            #core-ref:18f98a7d-7db0-4270-97b2-0a1759a5b0e6
+[searchprop]:                       #core-ref:72ce807f-a392-4579-ab46-d58a3d18c214
+[setObjectReturn]:                  #core-ref:3a0b4882-81ff-4030-9f60-a0ed0ff1f958

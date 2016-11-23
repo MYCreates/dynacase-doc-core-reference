@@ -299,6 +299,8 @@ book:
     - level:   2
       element: "chapter"
       content:  "API/Class_Action.md"
+      flags:
+        update : "mis à jour"
       subtoc:   1
     - level:   3
       element: "chapter"
@@ -312,6 +314,12 @@ book:
     - level:   3
       element: "chapter"
       content:  "API/Class_Action/Method_addWarningMsg.md"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_Action/Method_getWarningMsg.md"
+    - level:   3
+      element: "chapter"
+      content:  "API/Class_Action/Method_clearWarningMsg.md"
     - level:   3
       element: "chapter"
       content:  "API/Class_Action/Method_addLogMsg.md"
@@ -1070,7 +1078,11 @@ book:
     - level: 3
       content: "parameters_ref/core_tmpdir.md"
     - level: 3
-      content: "parameters_ref/core_tmpdirmaxage.md"
+      content: "parameters_ref/core_tmpdir_maxage.md"
+    - level: 3
+      content: "parameters_ref/core_tmpdoc_maxage.md"
+      flags:
+        new: "nouveauté"
     - level: 3
       content: "parameters_ref/freedom_uploaddir.md"
     - level: 3
@@ -1085,6 +1097,18 @@ book:
       content: "parameters_ref/authent_accountexpiredelay.md"
     - level: 3
       content: "parameters_ref/authent_failurecount.md"
+    - level: 3
+      content: "parameters_ref/core_notify_sendmail.md"
+      flags:
+        new: "nouveauté"
+    - level: 3
+      content: "parameters_ref/core_wsh_mailto.md"
+      flags:
+        new: "nouveauté"
+    - level: 3
+      content: "parameters_ref/core_wsh_mail_subject.md"
+      flags:
+        new: "nouveauté"
 
     - level: 2
       content: "parameters_ref/smtp.md"

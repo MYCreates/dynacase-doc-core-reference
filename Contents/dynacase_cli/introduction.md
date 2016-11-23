@@ -67,6 +67,13 @@ Enfin, il est possible de passer des arguments booléens avec la notation
 `--argumentName` (sans valaur). Ainsi, `--foo` assignera la valeur `true` à
 l'argument `foo`.
 
+## Gestion des erreurs `wsh` {#core-ref:5ada82f5-0f47-4345-b99b-e33901d9bc3a}
+
+Lorsqu'un shell non interactif[^core-ref:shell non interactif] sort en erreur,
+un mail contenant le détail de l'erreur peut être envoyé.
+
+Ce mail est envoyé uniquement si le paramètre [`CORE_WSH_MAILTO`][core-ref:CORE_WSH_MAILTO] est non vide.
+
 ## Exécuter des scripts avec _wsh_ {#core-ref:c47cdda0-0221-4dfc-ba14-56376e570372}
 
 Exemple d'appel :
@@ -171,10 +178,13 @@ l'intégralité des fonctions et méthodes de Dynacase peuvent être utilisées 
 contrainte spécifique.
 
 <!-- links -->
-[wsh_script]: #core-ref:c47cdda0-0221-4dfc-ba14-56376e570372
-[wsh_action]: #core-ref:63832d9f-61a8-4846-a9d5-c34ee58de4a6
+[^core-ref:shell non interactif]: Il s'agit d'un script lancé via le `CLI PHP SAPI`, qui n'a ni `TTY`, ni `STDIN`, ni `STDOUT`, ni `STDERR`.
+
 [ApiUsage]: #core-ref:dac6d107-3e77-48ba-8912-ffccd0061cbf
-[wsh_api]: #core-ref:c47cdda0-0221-4dfc-ba14-56376e570372
-[classe_action]: #core-ref:29553eba-bcea-4baf-bef8-103c3a3510fa
 [args]: #core-ref:fa9210eb-5bad-4867-a287-e732afc02251
+[classe_action]: #core-ref:29553eba-bcea-4baf-bef8-103c3a3510fa
+[core-ref:CORE_WSH_MAILTO]: #core-ref:6457a9c1-8b3e-4fd1-913a-8f9e133fc7a4
 [error_log]: http://php.net/manual/fr/errorfunc.configuration.php#ini.error-log "Configuration error_log"
+[wsh_action]: #core-ref:63832d9f-61a8-4846-a9d5-c34ee58de4a6
+[wsh_api]: #core-ref:c47cdda0-0221-4dfc-ba14-56376e570372
+[wsh_script]: #core-ref:c47cdda0-0221-4dfc-ba14-56376e570372

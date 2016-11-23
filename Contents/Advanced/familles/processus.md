@@ -5,8 +5,8 @@ traitements à exécuter de manière récurrente.
 
 Le traitement est soit :
 
-* une [actions][action],
-* un [script CLI][script].
+-   une [actions][core-ref:action],
+-   un [script CLI][core-ref:script].
 
 ## Paramétrage {#core-ref:a269c14f-e5c8-45f1-a874-882221de7c3d}
 
@@ -29,15 +29,22 @@ l'exécution automatique il faut éditer et sauvegarder le document processus.
 
 Les limites sont les suivantes :
 
-* la périodicité ne peut être inférieure à 5 minutes,
-* le calcul de la périodicité prend en compte la fin de l'exécution de la tâche.
-Par exemple, si on défini une tâche démarrant le 31/12 à 00h00, ayant une 
-périodicité de 1 jour et durant 2H00. Cette tâche s'exécute le 31/12 à 00H00, 
-le 01/01 à 02h00, le 02/01 à 04h00 car le calcul de la périodicité de 1 jour ne
-commence qu'après la fin de la tâche.
+-   la périodicité ne peut être inférieure à 5 minutes,
+-   le calcul de la périodicité prend en compte la fin de l'exécution de la tâche.
+    Par exemple, si on définit une tâche démarrant le 31/12 à 00h00, ayant une 
+    périodicité de 1 jour et durant 2H00. Cette tâche s'exécute le 31/12 à 00H00, 
+    le 01/01 à 02h00, le 02/01 à 04h00 car le calcul de la périodicité de 1 jour ne
+    commence qu'après la fin de la tâche.
 
+## Gestion des erreurs {#core-ref:24c23619-519d-42e2-9437-c21869c3363c}
+
+Lorsqu'un shell non interactif[^core-ref:shell non interactif] sort en erreur,
+un mail contenant le détail de l'erreur peut être envoyé.
+
+Ce mail est envoyé uniquement si le paramètre [`CORE_WSH_MAILTO`][core-ref:CORE_WSH_MAILTO] est non vide.
 
 <!-- links -->
 
-[action]:   #core-ref:e67d8aeb-939c-46e3-9be8-6fc3ba75ebc2
-[script]:   #core-ref:4df1314f-9fdd-4a7f-af37-a18cc39f3505
+[core-ref:CORE_WSH_MAILTO]: #core-ref:6457a9c1-8b3e-4fd1-913a-8f9e133fc7a4
+[core-ref:action]:   #core-ref:e67d8aeb-939c-46e3-9be8-6fc3ba75ebc2
+[core-ref:script]:   #core-ref:4df1314f-9fdd-4a7f-af37-a18cc39f3505
