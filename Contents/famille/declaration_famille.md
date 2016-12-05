@@ -503,19 +503,19 @@ TAG
 :   Initialise les valeurs de la propriété *atags*.
     
     Chaque utilisation de la balise TAG ajoutera une valeur à la propriété
-    *atags*.
+    *atags* (tag applicatif).
     
     **Note** : Les tags applicatifs ne peuvent être supprimés par cette
-    directive.
+    directive. Il faut, pour ce cas utiliser la clef [`DOCATAG`][DOCATAG]
     
     Certains tags sont déjà prédéfinis par Dynacase :
+
+MAILRECIPIENT
+:   Déclare la famille comme *destinataire de mail*.
+    Cela permet aux documents de cette famille d'être présentés dans la
+    liste de destinataires lors des envois de mail.
     
-    MAILRECIPIENT
-    :   Déclare la famille comme *destinataire de mail*.
-        Cela permet aux documents de cette famille d'être présentés dans la
-        liste de destinataires lors des envois de mail.
-        
-        La famille doit alors implémenter l'interface [`IMailRecipient`][phpDocEmailRecipient].
+    La famille doit alors implémenter l'interface [`IMailRecipient`][phpDocEmailRecipient].
 
 TYPE
 :   Valeur par défaut de la propriété *type*.
@@ -1669,3 +1669,4 @@ Reference][ErrorCodeATTR].
 [wask]:         #core-ref:9e248e52-ad6b-4089-ab83-11a534b307e9
 [phpfunc]:      #core-ref:1128e658-48f5-440f-9fd1-2d714e99eecd
 [titleis]:      #core-ref:b0e414c0-b795-4bbe-b70e-a308b7f1b4ab
+[DOCATAG]:      #core-ref:0ecabad3-6086-41fd-909c-9cfaa6f705dd
