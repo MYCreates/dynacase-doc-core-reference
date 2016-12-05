@@ -139,5 +139,6 @@ ne soit pas utilisé.
 Pour plus de détails sur la création des jetons : voir la documentation du
 fichier de la classe `Class.UserToken.php`.
 
+En cas de jeton invalide, le statut HTTP retourné est 403.
 
 [actiondesc]:   #core-ref:e67d8aeb-939c-46e3-9be8-6fc3ba75ebc2
