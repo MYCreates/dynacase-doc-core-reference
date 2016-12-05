@@ -5,7 +5,7 @@ Dynacase.
 
 ## Édition 11  {#core-ref:94b90781-930b-4c73-9a7a-cf018da481a1}
 
-| Modifications                                                    | Chapitre                                                                                                 | Version                                     |
+|                          Modifications                           |                                                 Chapitre                                                 |                   Version                   |
 | :--------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- | :------------------------------------------ |
 | Possibilité de mettre le jeton dans les headers                  | [Authentification par jeton][opentoken]                                                                  | <span class="flag update">Mis à jour</span> |
 | Possibilité d'utilisé le header d'authentification Basic         | [Authentification Basic][httpbasic]                                                                      | <span class="flag new">Nouveau</span>       |
@@ -16,6 +16,7 @@ Dynacase.
 | Ajout des mails d'erreur sur wsh                                 | [`CORE_WSH_MAILTO`][core-ref:CORE_WSH_MAILTO], [`CORE_WSH_MAIL_SUBJECT`][core-ref:CORE_WSH_MAIL_SUBJECT] | <span class="flag new">Nouveau</span>       |
 | Ajout de la gestion d'erreur pour les processus et les minuteurs | [Processus][core-ref:processus_errors], [minuteurs][core-ref:minuteur_errors]                            | <span class="flag update">Mis à jour</span> |
 | gestion des caractères de contrôle dans les templates odt        | [Gestion des caractères de contrôle][core-ref:odt_control_chars]                                         | <span class="flag update">Mis à jour</span> |
+| Possibilité d'importer des tags applicatifs sur les documents    | [Importation tag applicatif][DOCATAG]                                                                    | <span class="flag new">Nouveau</span>       |
 
 
 ## Édition 10 {#core-ref:94453692-21ca-4200-83cc-597a71400801}
@@ -305,3 +306,4 @@ retour d'erreur.
 [core-ref:processus_errors]: #core-ref:24c23619-519d-42e2-9437-c21869c3363c
 [core-ref:minuteur_errors]: #core-ref:d0388efe-e19a-4208-bc22-1b192031d03c
 [core-ref:odt_control_chars]: #core-ref:a7818933-910b-4ab9-a82d-02d369fc45cd
+[DOCATAG]:      #core-ref:0ecabad3-6086-41fd-909c-9cfaa6f705dd

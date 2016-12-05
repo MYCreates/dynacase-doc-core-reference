@@ -307,6 +307,37 @@ L'ordre des colonnes est  :
 Le nom de l'image doit référencer un fichier présent dans le répertoire
 `./Images` à la racine du répertoire d'installation sur le serveur.
 
+
+## Modifier un tag applicatif d'un document  {#core-ref:0ecabad3-6086-41fd-909c-9cfaa6f705dd}
+
+<span class="flag from release inline">3.2.23</span>
+Les tags applicatifs peuvent être ajoutés ou supprimés par le fichier d'importation *CSV*.
+
+Il est possible de modifier le tag applicatif d'un document au moyen d'une ligne
+`DOCATAG`.
+
+L'ordre des colonnes est  :
+
+1. 1ère colonne : toujours `DOCATAG`,
+1. 2ème colonne : identifiant du document (nom logique),
+1. 3ème colonne : non utilisée
+1. 4ème colonne : action à réaliser : ADD, DELETE ou SET (par défaut ADD)
+    1.  ADD : Ajout d'un nouveau tag
+    2.  DELETE : Suppression du tag indiqué
+    3.  SET : Suppression des précédents tag, puis ajout des nouveaux
+1. Colonnes suivantes : autres tags à ajouter ou à supprimer
+
+|      #      |      famille       |          |                |                   |                    |
+| ----------- | ------------------ | -------- | -------------- | ----------------- | ------------------ |
+| __ORDER__   | __ZOO_CLASSE__     |          |                | __cl\_latinname__ | __cl\_commonname__ |
+| DOC         | ZOO\_CLASSE        | CL\_ACTI | -              | Actinopterygii    | Poissons           |
+| DOC         | ZOO\_CLASSE        | CL\_AVES | -              | Aves              | Oiseau             |
+| __#TAGKEY__ | __DOC IDENTIFIER__ |          | __TAG ACTION__ | __First Tag__     | __Second tag__     |
+| DOCATAG     | CL\_ACTI           |          | ADD            | MyFishTag         |                    |
+| DOCATAG     | CL\_AVES           |          | SET            | MyBirdTag         | MyOtherTag         |
+
+Le tag ne doit pas contenir de retour chariot `\n`.
+
 ## Précautions d'utilisation {#core-ref:a3f0e390-b967-4de4-8bf8-85bedb173085}
 
 Lors de l'import de documents quelques précautions d'usage sont à prendre en compte :
